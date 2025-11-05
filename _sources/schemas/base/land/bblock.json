@@ -1,0 +1,17 @@
+{
+  "name": "land",
+  "itemClass": "schema",
+  "abstract": "Physical representations of land surfaces. Global land derived from the inverse of OSM Coastlines. Translates `natural` tags from OpenStreetMap.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+  "dateOfLastChange": "2025-11-05",
+  "register": "ogc-building-blocks-register",
+  "version": "0.1",
+  "tags": [
+    "overture-maps",
+    "schemas",
+    "gers",
+    "base"
+  ],
+  "schema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/land.yaml"
+}

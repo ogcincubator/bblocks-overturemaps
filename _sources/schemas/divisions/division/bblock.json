@@ -1,0 +1,17 @@
+{
+  "name": "division",
+  "itemClass": "schema",
+  "abstract": "Divisions are recognized official or non-official organizations of people as seen from a given political perspective. Examples include countries, provinces, cities, towns, neighborhoods, etc.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+  "dateOfLastChange": "2025-11-05",
+  "register": "ogc-building-blocks-register",
+  "version": "0.1",
+  "tags": [
+    "overture-maps",
+    "schemas",
+    "gers",
+    "divisions"
+  ],
+  "schema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/division.yaml"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Overture Maps Schema",
+  "itemClass": "schema",
+  "abstract": "A JSON Schema for the canonical GeoJSON form of Overture Maps Features.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+  "dateOfLastChange": "2025-11-05",
+  "register": "ogc-building-blocks-register",
+  "version": "0.1",
+  "tags": [
+    "overture-maps", "schemas", "gers"
+  ]
+}

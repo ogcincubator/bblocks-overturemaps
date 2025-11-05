@@ -1,0 +1,17 @@
+{
+  "name": "Infrastructure Schema",
+  "itemClass": "schema",
+  "abstract": "Various features from OpenStreetMap such as bridges, airport runways, aerialways, or communication towers and lines.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+  "dateOfLastChange": "2025-11-05",
+  "register": "ogc-building-blocks-register",
+  "version": "0.1",
+  "tags": [
+    "overture-maps",
+    "schemas",
+    "gers",
+    "base"
+  ],
+  "schema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/infrastructure.yaml"
+}

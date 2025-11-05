@@ -1,0 +1,17 @@
+{
+  "name": "boundary",
+  "itemClass": "schema",
+  "abstract": "Boundaries represent borders between divisions of the same subtype. Some boundaries may be disputed by the divisions on one or both sides.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+  "dateOfLastChange": "2025-11-05",
+  "register": "ogc-building-blocks-register",
+  "version": "0.1",
+  "tags": [
+    "overture-maps",
+    "schemas",
+    "gers",
+    "divisions"
+  ],
+  "schema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/division_boundary.yaml"
+}

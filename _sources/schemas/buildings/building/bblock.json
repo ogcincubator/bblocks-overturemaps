@@ -1,0 +1,17 @@
+{
+  "name": "building",
+  "itemClass": "schema",
+  "abstract": "A building is a man-made structure with a roof that exists permanently in one place. Buildings are compatible with GeoJSON Polygon features.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+  "dateOfLastChange": "2025-11-05",
+  "register": "ogc-building-blocks-register",
+  "version": "0.1",
+  "tags": [
+    "overture-maps",
+    "schemas",
+    "gers",
+    "buildings"
+  ],
+  "schema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/buildings/building.yaml"
+}
