@@ -1,0 +1,102 @@
+
+# division_area (Schema)
+
+`ogc.overturemaps.schemas.divisions.division_area` *v0.1*
+
+Division areas are polygons that represent the land or maritime area covered by a division.
+Each division area belongs to a division which it references by ID, and for which the division area provides an area polygon. For ease of use, every division area repeats the subtype, names, country, and region properties of the division it belongs to.
+
+[*Status*](http://www.opengis.net/def/status): Under development
+
+## Schema
+
+```yaml
+$schema: https://json-schema.org/draft/2020-12/schema
+title: division_area
+description: 'Division areas are polygons that represent the land or maritime area
+  covered by a division.
+
+  Each division area belongs to a division which it references by ID, and for which
+  the division area provides an area polygon. For ease of use, every division area
+  repeats the subtype, names, country, and region properties of the division it belongs
+  to.'
+type: object
+properties:
+  id:
+    $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id
+  geometry:
+    description: Division area geometries MUST be polygons or multi-polygons as defined
+      by the GeoJSON schema.
+    unevaluatedProperties: false
+    oneOf:
+    - $ref: https://geojson.org/schema/Polygon.json
+    - $ref: https://geojson.org/schema/MultiPolygon.json
+  properties:
+    unevaluatedProperties: false
+    required:
+    - names
+    - subtype
+    - class
+    - country
+    - division_id
+    - is_land
+    - is_territorial
+    allOf:
+    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer
+    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/namesContainer
+    anyOf:
+    - properties:
+        is_land:
+          const: true
+    - properties:
+        is_territorial:
+          const: true
+    properties:
+      subtype:
+        $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/defs.yaml#/$defs/propertyDefinitions/placetype
+      class:
+        type: string
+        enum:
+        - land
+        - maritime
+      is_land:
+        description: A boolean to indicate whether or not the feature geometry represents
+          the land-clipped, non-maritime boundary. The geometry can be used for map
+          rendering, cartographic display, and similar purposes.
+        type: boolean
+      is_territorial:
+        description: A boolean to indicate whether or not the feature geometry represents
+          Overture's best approximation of this place's maritime boundary. For coastal
+          places, this would tend to include the water area. The geometry can be used
+          for data processing, reverse-geocoding, and similar purposes.
+        type: boolean
+      division_id:
+        description: Division ID of the division this area belongs to.
+        allOf:
+        - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id
+      country:
+        description: ISO 3166-1 alpha-2 country code of the division this area belongs
+          to.
+        allOf:
+        - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/iso3166_1Alpha2CountryCode
+      region:
+        description: ISO 3166-2 principal subdivision code of the division this area
+          belongs to.
+        allOf:
+        - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/iso3166_2SubdivisionCode
+
+```
+
+Links to the schema:
+
+* YAML version: [schema.yaml](https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_area/schema.json)
+* JSON version: [schema.json](https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_area/schema.yaml)
+
+
+# For developers
+
+The source code for this Building Block can be found in the following repository:
+
+* URL: [https://github.com/ogcincubator/bblocks-overturemaps](https://github.com/ogcincubator/bblocks-overturemaps)
+* Path: `_sources/schemas/divisions/division_area`
+

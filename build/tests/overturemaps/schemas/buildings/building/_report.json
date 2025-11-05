@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.overturemaps.schemas.buildings.building - building",
+  "bblockName": "building",
+  "bblockId": "ogc.overturemaps.schemas.buildings.building",
+  "generated": "2025-11-05T13:53:32.027492+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

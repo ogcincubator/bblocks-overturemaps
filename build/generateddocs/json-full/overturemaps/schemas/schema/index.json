@@ -1,0 +1,49 @@
+
+
+{
+  "itemIdentifier": "ogc.overturemaps.schemas.schema",
+  "name": "Overture Maps Schema",
+  "itemClass": "schema",
+  "abstract": "A JSON Schema for the canonical GeoJSON form of Overture Maps Features.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+  "dateOfLastChange": "2025-11-05",
+  "register": "ogc-building-blocks-register",
+  "version": "0.1",
+  "tags": [
+    "overture-maps",
+    "schemas",
+    "gers"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.overturemaps.schemas.base.bathymetry",
+    "ogc.overturemaps.schemas.addresses.address",
+    "ogc.overturemaps.schemas.buildings.building_part",
+    "ogc.overturemaps.schemas.base.water",
+    "ogc.overturemaps.schemas.transportation.connector",
+    "ogc.overturemaps.schemas.base.infrastructure",
+    "ogc.overturemaps.schemas.base.land_use",
+    "ogc.overturemaps.schemas.base.land_cover",
+    "ogc.overturemaps.schemas.divisions.division_boundary",
+    "ogc.overturemaps.schemas.divisions.division",
+    "ogc.overturemaps.schemas.divisions.division_area",
+    "ogc.overturemaps.schemas.base.land",
+    "ogc.overturemaps.schemas.places.place",
+    "ogc.overturemaps.schemas.transportation.segment",
+    "ogc.overturemaps.schemas.buildings.building",
+    "ogc.geo.common.data_types.geojson"
+  ],
+  "schema": {
+    "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/schema/schema.yaml",
+    "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/schema/schema.json"
+  },
+  "sourceSchema": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/schema/schema.yaml",
+  "ldContext": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/schema/context.jsonld",
+  "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/schema/",
+  "rdfData": [],
+  "validationPassed": true,
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Overture Maps Schema\ndescription: A JSON Schema for the canonical GeoJSON form of Overture Maps Features.\ntype: object\nunevaluatedProperties: false\nallOf:\n- $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/common/data_types/geojson/schema.yaml\n  $comment: Every Overture feature IS A GeoJSON feature\noneOf:\n- if:\n    properties:\n      properties:\n        properties:\n          theme:\n            enum:\n            - addresses\n          type:\n            enum:\n            - address\n  then:\n    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/addresses/address/schema.yaml\n  else:\n    propertyNames: false\n- if:\n    properties:\n      properties:\n        properties:\n          theme:\n            enum:\n            - base\n          type:\n            enum:\n            - bathymetry\n  then:\n    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/bathymetry/schema.yaml\n  else:\n    propertyNames: false\n- if:\n    properties:\n      properties:\n        properties:\n          theme:\n            enum:\n            - base\n          type:\n            enum:\n            - infrastructure\n  then:\n    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/infrastructure/schema.yaml\n  else:\n    propertyNames: false\n- if:\n    properties:\n      properties:\n        properties:\n          theme:\n            enum:\n            - base\n          type:\n            enum:\n            - land\n  then:\n    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land/schema.yaml\n  else:\n    propertyNames: false\n- if:\n    properties:\n      properties:\n        properties:\n          theme:\n            enum:\n            - base\n          type:\n            enum:\n            - land_cover\n  then:\n    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_cover/schema.yaml\n  else:\n    propertyNames: false\n- if:\n    properties:\n      properties:\n        properties:\n          theme:\n            enum:\n            - base\n          type:\n            enum:\n            - land_use\n  then:\n    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_use/schema.yaml\n  else:\n    propertyNames: false\n- if:\n    properties:\n      properties:\n        properties:\n          theme:\n            enum:\n            - base\n          type:\n            enum:\n            - water\n  then:\n    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/water/schema.yaml\n  else:\n    propertyNames: false\n- if:\n    properties:\n      properties:\n        properties:\n          theme:\n            enum:\n            - buildings\n          type:\n            enum:\n            - building\n  then:\n    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building/schema.yaml\n  else:\n    propertyNames: false\n- if:\n    properties:\n      properties:\n        properties:\n          theme:\n            enum:\n            - buildings\n          type:\n            enum:\n            - building_part\n  then:\n    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building_part/schema.yaml\n  else:\n    propertyNames: false\n- if:\n    properties:\n      properties:\n        properties:\n          theme:\n            enum:\n            - divisions\n          type:\n            enum:\n            - division_boundary\n  then:\n    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.yaml\n  else:\n    propertyNames: false\n- if:\n    properties:\n      properties:\n        properties:\n          theme:\n            enum:\n            - divisions\n          type:\n            enum:\n            - division\n  then:\n    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division/schema.yaml\n  else:\n    propertyNames: false\n- if:\n    properties:\n      properties:\n        properties:\n          theme:\n            enum:\n            - divisions\n          type:\n            enum:\n            - division_area\n  then:\n    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_area/schema.yaml\n  else:\n    propertyNames: false\n- if:\n    properties:\n      properties:\n        properties:\n          theme:\n            enum:\n            - places\n          type:\n            enum:\n            - place\n  then:\n    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/places/place/schema.yaml\n  else:\n    propertyNames: false\n- if:\n    properties:\n      properties:\n        properties:\n          theme:\n            enum:\n            - transportation\n          type:\n            enum:\n            - connector\n  then:\n    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/connector/schema.yaml\n  else:\n    propertyNames: false\n- if:\n    properties:\n      properties:\n        properties:\n          theme:\n            enum:\n            - transportation\n          type:\n            enum:\n            - segment\n  then:\n    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/segment/schema.yaml\n  else:\n    propertyNames: false\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-overturemaps",
+  "gitPath": "_sources/schemas/schema"
+}

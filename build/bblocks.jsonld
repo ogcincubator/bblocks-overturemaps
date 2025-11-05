@@ -1,0 +1,891 @@
+{
+  "@context": [
+    {
+      "@base": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined"
+    },
+    {
+      "bblocks": "https://www.opengis.net/def/bblocks/",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "skos": "http://www.w3.org/2004/02/skos/core#",
+      "dct": "http://purl.org/dc/terms/",
+      "xsd": "http://www.w3.org/2001/XMLSchema#",
+      "prof": "http://www.w3.org/ns/dx/prof/",
+      "dcat": "http://www.w3.org/ns/dcat#",
+      "modspec": "http://www.opengis.net/def/ont/modspec/",
+      "itemIdentifier": "@id",
+      "baseURL": "@id",
+      "name": "rdfs:label",
+      "abstract": {
+        "@id": "dct:abstract",
+        "@type": "https://www.w3.org/ns/iana/media-types/text/markdown"
+      },
+      "description": {
+        "@id": "dct:description",
+        "@type": "https://www.w3.org/ns/iana/media-types/text/markdown"
+      },
+      "status": {
+        "@id": "bblocks:status",
+        "@type": "@id",
+        "@context": {
+          "@base": "http://www.opengis.net/def/status/"
+        }
+      },
+      "dateTimeAddition": {
+        "@id": "dct:created",
+        "@type": "xsd:dateTime"
+      },
+      "version": "dct:hasVersion",
+      "dateOfLastChange": {
+        "@id": "dct:modified",
+        "@type": "xsd:date"
+      },
+      "scope": {
+        "@id": "bblocks:scope",
+        "@type": "@id",
+        "@context": {
+          "@base": "http://www.opengis.net/def/bblocks/scope/"
+        }
+      },
+      "sources": {
+        "@id": "dct:source",
+        "@context": {
+          "title": "rdfs:label",
+          "link": "@id"
+        }
+      },
+      "schema": {
+        "@id": "bblocks:hasSchema",
+        "@type": "@id",
+        "@container": "@index",
+        "@index": "dct:format"
+      },
+      "ldContext": {
+        "@id": "bblocks:hasJsonLdContext",
+        "@type": "@id"
+      },
+      "sourceLdContext": {
+        "@id": "bblocks:hasSourceJsonLdContext",
+        "@type": "@id"
+      },
+      "documentation": {
+        "@id": "dct:description",
+        "@type": "@id",
+        "@container": "@index",
+        "@index": "dct:identifier",
+        "@context": {
+          "mediatype": "dct:format",
+          "url": "rdfs:isDefinedBy"
+        }
+      },
+      "hasConcepts": {
+        "@reverse": "skos:inScheme"
+      },
+      "dependsOn": {
+        "@id": "bblocks:dependsOn",
+        "@type": "@id"
+      },
+      "profileOf": {
+        "@id": "prof:isProfileOf",
+        "@type": "@id"
+      },
+      "tags": "dcat:keyword",
+      "shaclShapes": {
+        "@id": "bblocks:hasShaclRule",
+        "@type": "@id",
+        "@container": "@index",
+        "@index": "rdfs:seeAlso"
+      },
+      "validationReport": {
+        "@id": "bblocks:hasValidationReport",
+        "@type": "@id"
+      },
+      "imports": {
+        "@id": "bblocks:imports",
+        "@type": "@id"
+      },
+      "conformanceClasses": {
+        "@id": "modspec:class",
+        "@type": "@id"
+      }
+    }
+  ],
+  "name": "Building Blocks - Overture Maps",
+  "abstract": "This repository contains GERS and other Overture Maps-related building blocks.\n",
+  "modified": "2025-11-05T13:53:17.264977",
+  "tooling": {
+    "bblocks-postprocess": {
+      "commitId": "\"ce6b2c78a47c380d461f9254868929c547c106e4",
+      "shortCommitId": "\"ce6b2c",
+      "date": "2025-11-04T11:34:14+00:00\""
+    }
+  },
+  "gitRepository": "https://github.com/ogcincubator/bblocks-overturemaps",
+  "gitHubRepository": "https://github.com/ogcincubator/bblocks-overturemaps/blob/master/",
+  "baseURL": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/",
+  "viewerURL": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/",
+  "validationReport": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/tests/report.html",
+  "imports": [
+    "https://opengeospatial.github.io/bblocks/register.json"
+  ],
+  "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/_cache",
+  "@type": [
+    "skos:ConceptScheme",
+    "dcat:Catalog"
+  ],
+  "skos:prefLabel": "Building Blocks - Overture Maps",
+  "hasConcepts": [
+    {
+      "itemIdentifier": "ogc.overturemaps.schemas.addresses.address",
+      "name": "address",
+      "itemClass": "schema",
+      "abstract": "Addresses are geographic points used for locating businesses and individuals. The rules, fields, and fieldnames of an address can vary extensively between locations. We use a simplified schema to capture worldwide address points. This initial schema is largely based on the OpenAddresses (www.openaddresses.io) project.\nThe address schema allows up to 5 \"admin levels\". Rather than have field names that apply across all countries, we provide an array called \"address_levels\" containing the necessary administrative levels for an address.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+      "dateOfLastChange": "2025-11-05",
+      "register": "ogc-building-blocks-register",
+      "version": "0.1",
+      "tags": [
+        "overture-maps",
+        "schemas",
+        "gers",
+        "addresses"
+      ],
+      "schema": {
+        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/addresses/address/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/addresses/address/schema.json"
+      },
+      "shaclShapes": {},
+      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/addresses/address/remote_cache/",
+      "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/addresses/address.yaml",
+      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/addresses/address/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/addresses/address/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/addresses/address/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.addresses.address"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.overturemaps.schemas.base.bathymetry",
+      "name": "bathymetry",
+      "itemClass": "schema",
+      "abstract": "Topographic representation of an underwater area, such as a part of the ocean floor.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+      "dateOfLastChange": "2025-11-05",
+      "register": "ogc-building-blocks-register",
+      "version": "0.1",
+      "tags": [
+        "overture-maps",
+        "schemas",
+        "gers",
+        "base"
+      ],
+      "schema": {
+        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/bathymetry/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/bathymetry/schema.json"
+      },
+      "shaclShapes": {},
+      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/bathymetry/remote_cache/",
+      "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/bathymetry.yaml",
+      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/base/bathymetry/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/base/bathymetry/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/base/bathymetry/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.base.bathymetry"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.overturemaps.schemas.base.infrastructure",
+      "name": "Infrastructure Schema",
+      "itemClass": "schema",
+      "abstract": "Various features from OpenStreetMap such as bridges, airport runways, aerialways, or communication towers and lines.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+      "dateOfLastChange": "2025-11-05",
+      "register": "ogc-building-blocks-register",
+      "version": "0.1",
+      "tags": [
+        "overture-maps",
+        "schemas",
+        "gers",
+        "base"
+      ],
+      "schema": {
+        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/infrastructure/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/infrastructure/schema.json"
+      },
+      "shaclShapes": {},
+      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/infrastructure/remote_cache/",
+      "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/infrastructure.yaml",
+      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/base/infrastructure/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/base/infrastructure/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/base/infrastructure/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.base.infrastructure"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.overturemaps.schemas.base.land",
+      "name": "land",
+      "itemClass": "schema",
+      "abstract": "Physical representations of land surfaces. Global land derived from the inverse of OSM Coastlines. Translates `natural` tags from OpenStreetMap.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+      "dateOfLastChange": "2025-11-05",
+      "register": "ogc-building-blocks-register",
+      "version": "0.1",
+      "tags": [
+        "overture-maps",
+        "schemas",
+        "gers",
+        "base"
+      ],
+      "schema": {
+        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land/schema.json"
+      },
+      "shaclShapes": {},
+      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land/remote_cache/",
+      "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/land.yaml",
+      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/base/land/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/base/land/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/base/land/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.base.land"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.overturemaps.schemas.base.land_cover",
+      "name": "land_cover",
+      "itemClass": "schema",
+      "abstract": "Representation of the Earth's natural surfaces",
+      "status": "under-development",
+      "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+      "dateOfLastChange": "2025-11-05",
+      "register": "ogc-building-blocks-register",
+      "version": "0.1",
+      "tags": [
+        "overture-maps",
+        "schemas",
+        "gers",
+        "base"
+      ],
+      "schema": {
+        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_cover/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_cover/schema.json"
+      },
+      "shaclShapes": {},
+      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_cover/remote_cache/",
+      "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/land_cover.yaml",
+      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/base/land_cover/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/base/land_cover/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/base/land_cover/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.base.land_cover"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.overturemaps.schemas.base.land_use",
+      "name": "land_use",
+      "itemClass": "schema",
+      "abstract": "Land use features from OpenStreetMap",
+      "status": "under-development",
+      "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+      "dateOfLastChange": "2025-11-05",
+      "register": "ogc-building-blocks-register",
+      "version": "0.1",
+      "tags": [
+        "overture-maps",
+        "schemas",
+        "gers",
+        "base"
+      ],
+      "schema": {
+        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_use/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_use/schema.json"
+      },
+      "shaclShapes": {},
+      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_use/remote_cache/",
+      "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/land_use.yaml",
+      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/base/land_use/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/base/land_use/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/base/land_use/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.base.land_use"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.overturemaps.schemas.base.water",
+      "name": "water",
+      "itemClass": "schema",
+      "abstract": "Physical representations of inland and ocean marine surfaces. Translates `natural` and `waterway` tags from OpenStreetMap.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+      "dateOfLastChange": "2025-11-05",
+      "register": "ogc-building-blocks-register",
+      "version": "0.1",
+      "tags": [
+        "overture-maps",
+        "schemas",
+        "gers",
+        "base"
+      ],
+      "schema": {
+        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/water/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/water/schema.json"
+      },
+      "shaclShapes": {},
+      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/water/remote_cache/",
+      "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/water.yaml",
+      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/base/water/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/base/water/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/base/water/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.base.water"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.overturemaps.schemas.buildings.building",
+      "name": "building",
+      "itemClass": "schema",
+      "abstract": "A building is a man-made structure with a roof that exists permanently in one place. Buildings are compatible with GeoJSON Polygon features.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+      "dateOfLastChange": "2025-11-05",
+      "register": "ogc-building-blocks-register",
+      "version": "0.1",
+      "tags": [
+        "overture-maps",
+        "schemas",
+        "gers",
+        "buildings"
+      ],
+      "schema": {
+        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building/schema.json"
+      },
+      "shaclShapes": {},
+      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building/remote_cache/",
+      "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/buildings/building.yaml",
+      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/buildings/building/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/buildings/building/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/buildings/building/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.buildings.building"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.overturemaps.schemas.buildings.building_part",
+      "name": "part",
+      "itemClass": "schema",
+      "abstract": "A single building part. Parts describe their shape and color and other properties. Each building part must contain the building with which it is associated.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+      "dateOfLastChange": "2025-11-05",
+      "register": "ogc-building-blocks-register",
+      "version": "0.1",
+      "tags": [
+        "overture-maps",
+        "schemas",
+        "gers",
+        "buildings"
+      ],
+      "schema": {
+        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building_part/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building_part/schema.json"
+      },
+      "shaclShapes": {},
+      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building_part/remote_cache/",
+      "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/buildings/building_part.yaml",
+      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/buildings/building_part/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/buildings/building_part/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/buildings/building_part/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.buildings.building_part"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.overturemaps.schemas.divisions.division",
+      "name": "division",
+      "itemClass": "schema",
+      "abstract": "Divisions are recognized official or non-official organizations of people as seen from a given political perspective. Examples include countries, provinces, cities, towns, neighborhoods, etc.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+      "dateOfLastChange": "2025-11-05",
+      "register": "ogc-building-blocks-register",
+      "version": "0.1",
+      "tags": [
+        "overture-maps",
+        "schemas",
+        "gers",
+        "divisions"
+      ],
+      "schema": {
+        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division/schema.json"
+      },
+      "shaclShapes": {},
+      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division/remote_cache/",
+      "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/division.yaml",
+      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/divisions/division/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/divisions/division/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/divisions/division/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.divisions.division"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.overturemaps.schemas.divisions.division_area",
+      "name": "division_area",
+      "itemClass": "schema",
+      "abstract": "Division areas are polygons that represent the land or maritime area covered by a division.\nEach division area belongs to a division which it references by ID, and for which the division area provides an area polygon. For ease of use, every division area repeats the subtype, names, country, and region properties of the division it belongs to.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+      "dateOfLastChange": "2025-11-05",
+      "register": "ogc-building-blocks-register",
+      "version": "0.1",
+      "tags": [
+        "overture-maps",
+        "schemas",
+        "gers",
+        "divisions"
+      ],
+      "schema": {
+        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_area/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_area/schema.json"
+      },
+      "shaclShapes": {},
+      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_area/remote_cache/",
+      "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/division_area.yaml",
+      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/divisions/division_area/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/divisions/division_area/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/divisions/division_area/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.divisions.division_area"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.overturemaps.schemas.divisions.division_boundary",
+      "name": "boundary",
+      "itemClass": "schema",
+      "abstract": "Boundaries represent borders between divisions of the same subtype. Some boundaries may be disputed by the divisions on one or both sides.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+      "dateOfLastChange": "2025-11-05",
+      "register": "ogc-building-blocks-register",
+      "version": "0.1",
+      "tags": [
+        "overture-maps",
+        "schemas",
+        "gers",
+        "divisions"
+      ],
+      "schema": {
+        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.json"
+      },
+      "shaclShapes": {},
+      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_boundary/remote_cache/",
+      "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/division_boundary.yaml",
+      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/divisions/division_boundary/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/divisions/division_boundary/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/divisions/division_boundary/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.divisions.division_boundary"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.overturemaps.schemas.places.place",
+      "name": "place",
+      "itemClass": "schema",
+      "abstract": "A Place is a point representation of a real-world facility, service, or amenity. Place features are compatible with GeoJSON Point features.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+      "dateOfLastChange": "2025-11-05",
+      "register": "ogc-building-blocks-register",
+      "version": "0.1",
+      "tags": [
+        "overture-maps",
+        "schemas",
+        "gers",
+        "places"
+      ],
+      "schema": {
+        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/places/place/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/places/place/schema.json"
+      },
+      "shaclShapes": {},
+      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/places/place/remote_cache/",
+      "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/places/place.yaml",
+      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/places/place/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/places/place/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/places/place/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.places.place"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.overturemaps.schemas.transportation.connector",
+      "name": "connector",
+      "itemClass": "schema",
+      "abstract": "Connectors create physical connections between segments. Connectors are compatible with GeoJSON Point features.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+      "dateOfLastChange": "2025-11-05",
+      "register": "ogc-building-blocks-register",
+      "version": "0.1",
+      "tags": [
+        "overture-maps",
+        "schemas",
+        "gers",
+        "transportation"
+      ],
+      "schema": {
+        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/connector/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/connector/schema.json"
+      },
+      "shaclShapes": {},
+      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/connector/remote_cache/",
+      "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/transportation/connector.yaml",
+      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/transportation/connector/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/transportation/connector/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/transportation/connector/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.transportation.connector"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.overturemaps.schemas.transportation.segment",
+      "name": "segment",
+      "itemClass": "schema",
+      "abstract": "Segments are paths which can be traveled by people or things. Segments are compatible with GeoJSON LineString features.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+      "dateOfLastChange": "2025-11-05",
+      "register": "ogc-building-blocks-register",
+      "version": "0.1",
+      "tags": [
+        "overture-maps",
+        "schemas",
+        "gers",
+        "transportation"
+      ],
+      "schema": {
+        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/segment/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/segment/schema.json"
+      },
+      "shaclShapes": {},
+      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/segment/remote_cache/",
+      "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/transportation/segment.yaml",
+      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/transportation/segment/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/transportation/segment/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/transportation/segment/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.transportation.segment"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.overturemaps.schemas.schema",
+      "name": "Overture Maps Schema",
+      "itemClass": "schema",
+      "abstract": "A JSON Schema for the canonical GeoJSON form of Overture Maps Features.",
+      "status": "under-development",
+      "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+      "dateOfLastChange": "2025-11-05",
+      "register": "ogc-building-blocks-register",
+      "version": "0.1",
+      "tags": [
+        "overture-maps",
+        "schemas",
+        "gers"
+      ],
+      "shaclShapes": {},
+      "dependsOn": [
+        "ogc.overturemaps.schemas.base.bathymetry",
+        "ogc.overturemaps.schemas.addresses.address",
+        "ogc.overturemaps.schemas.buildings.building_part",
+        "ogc.overturemaps.schemas.base.water",
+        "ogc.overturemaps.schemas.transportation.connector",
+        "ogc.overturemaps.schemas.base.infrastructure",
+        "ogc.overturemaps.schemas.base.land_use",
+        "ogc.overturemaps.schemas.base.land_cover",
+        "ogc.overturemaps.schemas.divisions.division_boundary",
+        "ogc.overturemaps.schemas.divisions.division",
+        "ogc.overturemaps.schemas.divisions.division_area",
+        "ogc.overturemaps.schemas.base.land",
+        "ogc.overturemaps.schemas.places.place",
+        "ogc.overturemaps.schemas.transportation.segment",
+        "ogc.overturemaps.schemas.buildings.building",
+        "ogc.geo.common.data_types.geojson"
+      ],
+      "schema": {
+        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/schema/schema.yaml",
+        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/schema/schema.json"
+      },
+      "sourceSchema": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/schema/schema.yaml",
+      "ldContext": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/schema/context.jsonld",
+      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/schema/",
+      "rdfData": [],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/schema/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/schema/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.schema"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    }
+  ]
+}

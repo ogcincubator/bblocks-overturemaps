@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "land_cover",
+  "description": "Representation of the Earth's natural surfaces",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+    },
+    "geometry": {
+      "unevaluatedProperties": false,
+      "oneOf": [
+        {
+          "$ref": "https://geojson.org/schema/Polygon.json"
+        },
+        {
+          "$ref": "https://geojson.org/schema/MultiPolygon.json"
+        }
+      ]
+    },
+    "properties": {
+      "unevaluatedProperties": false,
+      "allOf": [
+        {
+          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+        },
+        {
+          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+        },
+        {
+          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+        }
+      ],
+      "required": [
+        "subtype"
+      ],
+      "properties": {
+        "subtype": {
+          "description": "type of surface represented",
+          "type": "string",
+          "enum": [
+            "barren",
+            "crop",
+            "forest",
+            "grass",
+            "mangrove",
+            "moss",
+            "shrub",
+            "snow",
+            "urban",
+            "wetland"
+          ]
+        }
+      }
+    }
+  }
+}

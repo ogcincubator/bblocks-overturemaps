@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "bathymetry",
+  "description": "Topographic representation of an underwater area, such as a part of the ocean floor.",
+  "type": "object",
+  "properties": {
+    "id": {
+      "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+    },
+    "geometry": {
+      "unevaluatedProperties": false,
+      "oneOf": [
+        {
+          "$ref": "https://geojson.org/schema/Polygon.json"
+        },
+        {
+          "$ref": "https://geojson.org/schema/MultiPolygon.json"
+        }
+      ]
+    },
+    "properties": {
+      "unevaluatedProperties": false,
+      "allOf": [
+        {
+          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+        },
+        {
+          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+        },
+        {
+          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+        }
+      ],
+      "required": [
+        "depth"
+      ],
+      "properties": {
+        "depth": {
+          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/defs.yaml"
+        }
+      }
+    }
+  }
+}

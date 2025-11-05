@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.overturemaps.schemas.base.land_cover - land_cover",
+  "bblockName": "land_cover",
+  "bblockId": "ogc.overturemaps.schemas.base.land_cover",
+  "generated": "2025-11-05T13:53:31.998453+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}
