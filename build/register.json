@@ -1,7 +1,7 @@
 {
   "name": "Overture Maps",
   "abstract": "This repository contains GERS and other Overture Maps-related building blocks.\n",
-  "modified": "2025-11-05T13:56:43.284109",
+  "modified": "2025-11-05T14:56:51.340075",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"ce6b2c78a47c380d461f9254868929c547c106e4",
@@ -648,24 +648,25 @@
         "schemas",
         "gers"
       ],
+      "highlighted": true,
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.overturemaps.schemas.divisions.division_boundary",
-        "ogc.overturemaps.schemas.base.land",
-        "ogc.overturemaps.schemas.transportation.connector",
-        "ogc.overturemaps.schemas.base.land_use",
-        "ogc.geo.common.data_types.geojson",
-        "ogc.overturemaps.schemas.base.bathymetry",
-        "ogc.overturemaps.schemas.places.place",
-        "ogc.overturemaps.schemas.transportation.segment",
-        "ogc.overturemaps.schemas.buildings.building_part",
         "ogc.overturemaps.schemas.base.land_cover",
-        "ogc.overturemaps.schemas.divisions.division_area",
+        "ogc.overturemaps.schemas.buildings.building_part",
+        "ogc.overturemaps.schemas.places.place",
+        "ogc.overturemaps.schemas.base.bathymetry",
+        "ogc.overturemaps.schemas.base.infrastructure",
+        "ogc.overturemaps.schemas.buildings.building",
         "ogc.overturemaps.schemas.divisions.division",
         "ogc.overturemaps.schemas.base.water",
-        "ogc.overturemaps.schemas.buildings.building",
+        "ogc.overturemaps.schemas.divisions.division_area",
+        "ogc.overturemaps.schemas.transportation.connector",
         "ogc.overturemaps.schemas.addresses.address",
-        "ogc.overturemaps.schemas.base.infrastructure"
+        "ogc.overturemaps.schemas.transportation.segment",
+        "ogc.overturemaps.schemas.base.land_use",
+        "ogc.geo.common.data_types.geojson",
+        "ogc.overturemaps.schemas.base.land",
+        "ogc.overturemaps.schemas.divisions.division_boundary"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/schema/schema.yaml",
