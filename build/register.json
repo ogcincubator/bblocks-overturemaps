@@ -1,7 +1,7 @@
 {
   "name": "Overture Maps",
   "abstract": "This repository contains GERS and other Overture Maps-related building blocks.\n",
-  "modified": "2025-11-05T13:53:17.264977",
+  "modified": "2025-11-05T13:56:43.284109",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"ce6b2c78a47c380d461f9254868929c547c106e4",
@@ -11,9 +11,9 @@
   },
   "gitRepository": "https://github.com/ogcincubator/bblocks-overturemaps",
   "gitHubRepository": "https://github.com/ogcincubator/bblocks-overturemaps/blob/master/",
-  "baseURL": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/",
-  "viewerURL": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/",
-  "validationReport": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/tests/report.html",
+  "baseURL": "https://ogcincubator.github.io/bblocks-overturemaps/",
+  "viewerURL": "https://ogcincubator.github.io/bblocks-overturemaps/",
+  "validationReport": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/report.html",
   "imports": [
     "https://opengeospatial.github.io/bblocks/register.json"
   ],
@@ -35,27 +35,27 @@
         "addresses"
       ],
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/addresses/address/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/addresses/address/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/schema.json"
       },
       "shaclShapes": {},
-      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/addresses/address/remote_cache/",
+      "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/remote_cache/",
       "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/addresses/address.yaml",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/addresses/address/",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/addresses/address/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/addresses/address/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/addresses/address/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/addresses/address/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/addresses/address/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.addresses.address"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.addresses.address"
         }
       }
     },
@@ -76,27 +76,27 @@
         "base"
       ],
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/bathymetry/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/bathymetry/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/bathymetry/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/bathymetry/schema.json"
       },
       "shaclShapes": {},
-      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/bathymetry/remote_cache/",
+      "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/bathymetry/remote_cache/",
       "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/bathymetry.yaml",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/base/bathymetry/",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/bathymetry/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/base/bathymetry/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/bathymetry/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/base/bathymetry/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/bathymetry/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.base.bathymetry"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.bathymetry"
         }
       }
     },
@@ -117,27 +117,27 @@
         "base"
       ],
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/infrastructure/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/infrastructure/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/schema.json"
       },
       "shaclShapes": {},
-      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/infrastructure/remote_cache/",
+      "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/remote_cache/",
       "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/infrastructure.yaml",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/base/infrastructure/",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/infrastructure/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/base/infrastructure/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/infrastructure/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/base/infrastructure/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/infrastructure/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.base.infrastructure"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.infrastructure"
         }
       }
     },
@@ -158,27 +158,27 @@
         "base"
       ],
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land/schema.json"
       },
       "shaclShapes": {},
-      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land/remote_cache/",
+      "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land/remote_cache/",
       "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/land.yaml",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/base/land/",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/land/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/base/land/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/land/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/base/land/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/land/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.base.land"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.land"
         }
       }
     },
@@ -199,27 +199,27 @@
         "base"
       ],
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_cover/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_cover/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/schema.json"
       },
       "shaclShapes": {},
-      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_cover/remote_cache/",
+      "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/remote_cache/",
       "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/land_cover.yaml",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/base/land_cover/",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/land_cover/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/base/land_cover/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/land_cover/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/base/land_cover/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/land_cover/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.base.land_cover"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.land_cover"
         }
       }
     },
@@ -240,27 +240,27 @@
         "base"
       ],
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_use/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_use/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/schema.json"
       },
       "shaclShapes": {},
-      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_use/remote_cache/",
+      "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/remote_cache/",
       "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/land_use.yaml",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/base/land_use/",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/land_use/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/base/land_use/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/land_use/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/base/land_use/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/land_use/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.base.land_use"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.land_use"
         }
       }
     },
@@ -281,27 +281,27 @@
         "base"
       ],
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/water/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/water/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/water/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/water/schema.json"
       },
       "shaclShapes": {},
-      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/water/remote_cache/",
+      "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/water/remote_cache/",
       "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/water.yaml",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/base/water/",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/water/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/base/water/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/water/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/base/water/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/water/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.base.water"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.water"
         }
       }
     },
@@ -322,27 +322,27 @@
         "buildings"
       ],
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/schema.json"
       },
       "shaclShapes": {},
-      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building/remote_cache/",
+      "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/remote_cache/",
       "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/buildings/building.yaml",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/buildings/building/",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/buildings/building/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/buildings/building/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/buildings/building/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/buildings/building/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/buildings/building/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.buildings.building"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.buildings.building"
         }
       }
     },
@@ -363,27 +363,27 @@
         "buildings"
       ],
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building_part/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building_part/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.json"
       },
       "shaclShapes": {},
-      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building_part/remote_cache/",
+      "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/remote_cache/",
       "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/buildings/building_part.yaml",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/buildings/building_part/",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/buildings/building_part/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/buildings/building_part/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/buildings/building_part/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/buildings/building_part/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/buildings/building_part/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.buildings.building_part"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.buildings.building_part"
         }
       }
     },
@@ -404,27 +404,27 @@
         "divisions"
       ],
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/schema.json"
       },
       "shaclShapes": {},
-      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division/remote_cache/",
+      "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/remote_cache/",
       "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/division.yaml",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/divisions/division/",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/divisions/division/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/divisions/division/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/divisions/division/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/divisions/division/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/divisions/division/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.divisions.division"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.divisions.division"
         }
       }
     },
@@ -445,27 +445,27 @@
         "divisions"
       ],
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_area/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_area/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_area/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_area/schema.json"
       },
       "shaclShapes": {},
-      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_area/remote_cache/",
+      "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_area/remote_cache/",
       "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/division_area.yaml",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/divisions/division_area/",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/divisions/division_area/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/divisions/division_area/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/divisions/division_area/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/divisions/division_area/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/divisions/division_area/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.divisions.division_area"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.divisions.division_area"
         }
       }
     },
@@ -486,27 +486,27 @@
         "divisions"
       ],
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.json"
       },
       "shaclShapes": {},
-      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_boundary/remote_cache/",
+      "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/remote_cache/",
       "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/division_boundary.yaml",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/divisions/division_boundary/",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/divisions/division_boundary/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/divisions/division_boundary/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/divisions/division_boundary/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/divisions/division_boundary/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/divisions/division_boundary/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.divisions.division_boundary"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.divisions.division_boundary"
         }
       }
     },
@@ -527,27 +527,27 @@
         "places"
       ],
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/places/place/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/places/place/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/schema.json"
       },
       "shaclShapes": {},
-      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/places/place/remote_cache/",
+      "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/remote_cache/",
       "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/places/place.yaml",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/places/place/",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/places/place/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/places/place/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/places/place/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/places/place/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/places/place/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.places.place"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.places.place"
         }
       }
     },
@@ -568,27 +568,27 @@
         "transportation"
       ],
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/connector/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/connector/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/schema.json"
       },
       "shaclShapes": {},
-      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/connector/remote_cache/",
+      "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/remote_cache/",
       "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/transportation/connector.yaml",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/transportation/connector/",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/transportation/connector/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/transportation/connector/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/transportation/connector/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/transportation/connector/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/transportation/connector/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.transportation.connector"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.transportation.connector"
         }
       }
     },
@@ -609,27 +609,27 @@
         "transportation"
       ],
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/segment/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/segment/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/segment/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/segment/schema.json"
       },
       "shaclShapes": {},
-      "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/segment/remote_cache/",
+      "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/segment/remote_cache/",
       "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/transportation/segment.yaml",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/transportation/segment/",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/transportation/segment/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/transportation/segment/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/transportation/segment/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/transportation/segment/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/transportation/segment/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.transportation.segment"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.transportation.segment"
         }
       }
     },
@@ -650,47 +650,47 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.overturemaps.schemas.base.bathymetry",
-        "ogc.overturemaps.schemas.addresses.address",
-        "ogc.overturemaps.schemas.buildings.building_part",
-        "ogc.overturemaps.schemas.base.water",
-        "ogc.overturemaps.schemas.transportation.connector",
-        "ogc.overturemaps.schemas.base.infrastructure",
-        "ogc.overturemaps.schemas.base.land_use",
-        "ogc.overturemaps.schemas.base.land_cover",
         "ogc.overturemaps.schemas.divisions.division_boundary",
-        "ogc.overturemaps.schemas.divisions.division",
-        "ogc.overturemaps.schemas.divisions.division_area",
         "ogc.overturemaps.schemas.base.land",
+        "ogc.overturemaps.schemas.transportation.connector",
+        "ogc.overturemaps.schemas.base.land_use",
+        "ogc.geo.common.data_types.geojson",
+        "ogc.overturemaps.schemas.base.bathymetry",
         "ogc.overturemaps.schemas.places.place",
         "ogc.overturemaps.schemas.transportation.segment",
+        "ogc.overturemaps.schemas.buildings.building_part",
+        "ogc.overturemaps.schemas.base.land_cover",
+        "ogc.overturemaps.schemas.divisions.division_area",
+        "ogc.overturemaps.schemas.divisions.division",
+        "ogc.overturemaps.schemas.base.water",
         "ogc.overturemaps.schemas.buildings.building",
-        "ogc.geo.common.data_types.geojson"
+        "ogc.overturemaps.schemas.addresses.address",
+        "ogc.overturemaps.schemas.base.infrastructure"
       ],
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/schema/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/schema/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/schema/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/schema/schema.json"
       },
-      "sourceSchema": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/schema/schema.yaml",
-      "ldContext": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/schema/context.jsonld",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/schema/",
+      "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/schema/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/schema/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/schema/",
       "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/markdown/overturemaps/schemas/schema/index.md"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/schema/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/generateddocs/json-full/overturemaps/schemas/schema/index.json"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/schema/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/bblock/ogc.overturemaps.schemas.schema"
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.schema"
         }
       }
     }
   ],
-  "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/_cache"
+  "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/_cache"
 }

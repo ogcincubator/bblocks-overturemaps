@@ -30,7 +30,7 @@ oneOf:
             enum:
             - address
   then:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/addresses/address/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/schema.yaml
   else:
     propertyNames: false
 - if:
@@ -44,7 +44,7 @@ oneOf:
             enum:
             - bathymetry
   then:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/bathymetry/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/bathymetry/schema.yaml
   else:
     propertyNames: false
 - if:
@@ -58,7 +58,7 @@ oneOf:
             enum:
             - infrastructure
   then:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/infrastructure/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/schema.yaml
   else:
     propertyNames: false
 - if:
@@ -72,7 +72,7 @@ oneOf:
             enum:
             - land
   then:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land/schema.yaml
   else:
     propertyNames: false
 - if:
@@ -86,7 +86,7 @@ oneOf:
             enum:
             - land_cover
   then:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_cover/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/schema.yaml
   else:
     propertyNames: false
 - if:
@@ -100,7 +100,7 @@ oneOf:
             enum:
             - land_use
   then:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_use/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/schema.yaml
   else:
     propertyNames: false
 - if:
@@ -114,7 +114,7 @@ oneOf:
             enum:
             - water
   then:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/water/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/water/schema.yaml
   else:
     propertyNames: false
 - if:
@@ -128,7 +128,7 @@ oneOf:
             enum:
             - building
   then:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/schema.yaml
   else:
     propertyNames: false
 - if:
@@ -142,7 +142,7 @@ oneOf:
             enum:
             - building_part
   then:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building_part/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.yaml
   else:
     propertyNames: false
 - if:
@@ -156,7 +156,7 @@ oneOf:
             enum:
             - division_boundary
   then:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.yaml
   else:
     propertyNames: false
 - if:
@@ -170,7 +170,7 @@ oneOf:
             enum:
             - division
   then:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/schema.yaml
   else:
     propertyNames: false
 - if:
@@ -184,7 +184,7 @@ oneOf:
             enum:
             - division_area
   then:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_area/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_area/schema.yaml
   else:
     propertyNames: false
 - if:
@@ -198,7 +198,7 @@ oneOf:
             enum:
             - place
   then:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/places/place/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/schema.yaml
   else:
     propertyNames: false
 - if:
@@ -212,7 +212,7 @@ oneOf:
             enum:
             - connector
   then:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/connector/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/schema.yaml
   else:
     propertyNames: false
 - if:
@@ -226,7 +226,7 @@ oneOf:
             enum:
             - segment
   then:
-    $ref: https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/segment/schema.yaml
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/segment/schema.yaml
   else:
     propertyNames: false
 
@@ -234,8 +234,8 @@ oneOf:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/schema/schema.json)
-* JSON version: [schema.json](https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/schema/schema.yaml)
+* YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/schema/schema.json)
+* JSON version: [schema.json](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/schema/schema.yaml)
 
 
 # JSON-LD Context
@@ -279,7 +279,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/schema/context.jsonld)
+[context.jsonld](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/schema/context.jsonld)
 
 
 # For developers

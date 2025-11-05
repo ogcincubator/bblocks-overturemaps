@@ -31,7 +31,7 @@
         }
       },
       "then": {
-        "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/addresses/address/schema.json"
+        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/schema.json"
       },
       "else": {
         "propertyNames": false
@@ -57,7 +57,7 @@
         }
       },
       "then": {
-        "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/bathymetry/schema.json"
+        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/bathymetry/schema.json"
       },
       "else": {
         "propertyNames": false
@@ -83,7 +83,7 @@
         }
       },
       "then": {
-        "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/infrastructure/schema.json"
+        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/schema.json"
       },
       "else": {
         "propertyNames": false
@@ -109,7 +109,7 @@
         }
       },
       "then": {
-        "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land/schema.json"
+        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land/schema.json"
       },
       "else": {
         "propertyNames": false
@@ -135,7 +135,7 @@
         }
       },
       "then": {
-        "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_cover/schema.json"
+        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/schema.json"
       },
       "else": {
         "propertyNames": false
@@ -161,7 +161,7 @@
         }
       },
       "then": {
-        "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_use/schema.json"
+        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/schema.json"
       },
       "else": {
         "propertyNames": false
@@ -187,7 +187,7 @@
         }
       },
       "then": {
-        "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/water/schema.json"
+        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/water/schema.json"
       },
       "else": {
         "propertyNames": false
@@ -213,7 +213,7 @@
         }
       },
       "then": {
-        "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building/schema.json"
+        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/schema.json"
       },
       "else": {
         "propertyNames": false
@@ -239,7 +239,7 @@
         }
       },
       "then": {
-        "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building_part/schema.json"
+        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.json"
       },
       "else": {
         "propertyNames": false
@@ -265,7 +265,7 @@
         }
       },
       "then": {
-        "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.json"
+        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.json"
       },
       "else": {
         "propertyNames": false
@@ -291,7 +291,7 @@
         }
       },
       "then": {
-        "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division/schema.json"
+        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/schema.json"
       },
       "else": {
         "propertyNames": false
@@ -317,7 +317,7 @@
         }
       },
       "then": {
-        "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/divisions/division_area/schema.json"
+        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_area/schema.json"
       },
       "else": {
         "propertyNames": false
@@ -343,7 +343,7 @@
         }
       },
       "then": {
-        "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/places/place/schema.json"
+        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/schema.json"
       },
       "else": {
         "propertyNames": false
@@ -369,7 +369,7 @@
         }
       },
       "then": {
-        "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/connector/schema.json"
+        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/schema.json"
       },
       "else": {
         "propertyNames": false
@@ -395,7 +395,7 @@
         }
       },
       "then": {
-        "$ref": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/segment/schema.json"
+        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/segment/schema.json"
       },
       "else": {
         "propertyNames": false

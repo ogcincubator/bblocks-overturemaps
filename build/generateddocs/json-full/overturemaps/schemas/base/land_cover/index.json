@@ -17,13 +17,13 @@
     "base"
   ],
   "schema": {
-    "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_cover/schema.yaml",
-    "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_cover/schema.json"
+    "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/schema.json"
   },
   "shaclShapes": {},
-  "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/base/land_cover/remote_cache/",
+  "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/remote_cache/",
   "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/land_cover.yaml",
-  "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/base/land_cover/",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/land_cover/",
   "rdfData": [],
   "validationPassed": true,
   "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: land_cover\ndescription: Representation of the Earth's natural surfaces\ntype: object\nproperties:\n  id:\n    $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id\n  geometry:\n    unevaluatedProperties: false\n    oneOf:\n    - $ref: https://geojson.org/schema/Polygon.json\n    - $ref: https://geojson.org/schema/MultiPolygon.json\n  properties:\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/levelContainer\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/cartographyContainer\n    required:\n    - subtype\n    properties:\n      subtype:\n        description: type of surface represented\n        type: string\n        enum:\n        - barren\n        - crop\n        - forest\n        - grass\n        - mangrove\n        - moss\n        - shrub\n        - snow\n        - urban\n        - wetland\n",

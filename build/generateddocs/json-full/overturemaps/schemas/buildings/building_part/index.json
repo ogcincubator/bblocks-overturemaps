@@ -17,13 +17,13 @@
     "buildings"
   ],
   "schema": {
-    "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building_part/schema.yaml",
-    "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building_part/schema.json"
+    "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.json"
   },
   "shaclShapes": {},
-  "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/buildings/building_part/remote_cache/",
+  "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/remote_cache/",
   "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/buildings/building_part.yaml",
-  "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/buildings/building_part/",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/buildings/building_part/",
   "rdfData": [],
   "validationPassed": true,
   "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: part\ndescription: A single building part. Parts describe their shape and color and other\n  properties. Each building part must contain the building with which it is associated.\ntype: object\nproperties:\n  geometry:\n    description: The part's geometry. It must be a polygon or multipolygon.\n    unevaluatedProperties: false\n    oneOf:\n    - $ref: https://geojson.org/schema/Polygon.json\n    - $ref: https://geojson.org/schema/MultiPolygon.json\n  properties:\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/namesContainer\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/levelContainer\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/buildings/defs.yaml#/$defs/propertyContainers/shapeContainer\n    required:\n    - building_id\n    properties:\n      building_id:\n        description: The building ID to which this part belongs\n        type: string\n",

@@ -17,13 +17,13 @@
     "transportation"
   ],
   "schema": {
-    "application/yaml": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/connector/schema.yaml",
-    "application/json": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/connector/schema.json"
+    "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/schema.json"
   },
   "shaclShapes": {},
-  "remoteCacheDir": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/build/annotated/overturemaps/schemas/transportation/connector/remote_cache/",
+  "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/remote_cache/",
   "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/transportation/connector.yaml",
-  "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/bblocks-overturemaps/undefined/_sources/schemas/transportation/connector/",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/transportation/connector/",
   "rdfData": [],
   "validationPassed": true,
   "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: connector\ndescription: Connectors create physical connections between segments. Connectors are\n  compatible with GeoJSON Point features.\ntype: object\nproperties:\n  id:\n    $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id\n  geometry:\n    description: Connector's geometry which MUST be a Point as defined by GeoJSON\n      schema.\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://geojson.org/schema/Point.json\n  properties:\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer\n",
