@@ -7,6 +7,162 @@ Various features from OpenStreetMap such as bridges, airport runways, aerialways
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
+## Examples
+
+### Example 1
+#### json
+```json
+{
+  "id": "08b2748cc1383fff0001b38438099b73",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -85.6743541,
+          42.9676009
+        ],
+        [
+          -85.6743623,
+          42.9674649
+        ],
+        [
+          -85.6744114,
+          42.9674803
+        ],
+        [
+          -85.6744559,
+          42.9674919
+        ],
+        [
+          -85.6745302,
+          42.9675058
+        ],
+        [
+          -85.6746036,
+          42.9675151
+        ],
+        [
+          -85.6746959,
+          42.9675171
+        ],
+        [
+          -85.675835,
+          42.9674967
+        ],
+        [
+          -85.6758985,
+          42.9674915
+        ],
+        [
+          -85.6759656,
+          42.967483
+        ],
+        [
+          -85.6760399,
+          42.9674711
+        ],
+        [
+          -85.676099,
+          42.9674566
+        ],
+        [
+          -85.6761817,
+          42.9674324
+        ],
+        [
+          -85.676227,
+          42.9674184
+        ],
+        [
+          -85.6762149,
+          42.9675911
+        ],
+        [
+          -85.6761726,
+          42.9675857
+        ],
+        [
+          -85.676106,
+          42.9675781
+        ],
+        [
+          -85.6760499,
+          42.9675741
+        ],
+        [
+          -85.6759947,
+          42.9675723
+        ],
+        [
+          -85.6743541,
+          42.9676009
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "base",
+    "type": "infrastructure",
+    "subtype": "bridge",
+    "class": "bridge",
+    "names": {
+      "primary": "Gillett Bridge",
+      "rules": [
+        {
+          "variant": "alternate",
+          "value": "Interurban Bridge"
+        }
+      ]
+    },
+    "sources": [
+      {
+        "property": "",
+        "record_id": "w556368546@3",
+        "dataset": "OpenStreetMap"
+      }
+    ],
+    "version": 0
+  }
+}
+```
+
+
+### Example 2
+#### json
+```json
+{
+  "id": "08b4035ac1518fff0001a9e45d5e1c9d",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      111.5341723,
+      25.1110193
+    ]
+  },
+  "properties": {
+    "theme": "base",
+    "type": "infrastructure",
+    "subtype": "power",
+    "class": "generator",
+    "height": 160.0,
+    "names": {
+      "primary": "DEW-G5000-195"
+    },
+    "sources": [
+      {
+        "property": "",
+        "record_id": "n10707323715@5",
+        "dataset": "OpenStreetMap"
+      }
+    ],
+    "version": 0
+  }
+}
+```
+
 ## Schema
 
 ```yaml
@@ -17,7 +173,7 @@ description: Various features from OpenStreetMap such as bridges, airport runway
 type: object
 properties:
   id:
-    $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id
   geometry:
     unevaluatedProperties: false
     oneOf:
@@ -28,14 +184,20 @@ properties:
   properties:
     unevaluatedProperties: false
     allOf:
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/namesContainer
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/levelContainer
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/defs.yaml#/$defs/propertyContainers/osmPropertiesContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/namesContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/levelContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.yaml#/$defs/propertyContainers/osmPropertiesContainer
     required:
+    - theme
+    - type
     - subtype
     - class
     properties:
+      theme:
+        const: base
+      type:
+        const: infrastructure
       subtype:
         description: Further description of the type of infrastructure.
         type: string
@@ -187,6 +349,7 @@ properties:
         - regional_airport
         - reservoir_covered
         - retaining_wall
+        - roller_coaster
         - rope_tow
         - runway
         - sally_port
@@ -226,9 +389,9 @@ properties:
         - weir
         - zip_line
       height:
-        $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/defs.yaml#/$defs/propertyDefinitions/height
+        $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.yaml#/$defs/propertyDefinitions/height
       surface:
-        $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/defs.yaml#/$defs/propertyDefinitions/surface
+        $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.yaml#/$defs/propertyDefinitions/surface
 
 ```
 

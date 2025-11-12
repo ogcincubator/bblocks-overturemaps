@@ -6,7 +6,7 @@ description: Divisions are recognized official or non-official organizations of 
 type: object
 properties:
   id:
-    $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id
   geometry:
     description: Division geometry MUST be a Point as defined by GeoJSON schema. It
       represents the approximate location of a position commonly associated with the
@@ -17,9 +17,9 @@ properties:
   properties:
     unevaluatedProperties: false
     allOf:
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/namesContainer
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/cartographyContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/namesContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/cartographyContainer
     - if:
         properties:
           subtype:
@@ -41,9 +41,16 @@ properties:
         - country
         - hierarchies
         - parent_division_id
+    - required:
+      - theme
+      - type
     properties:
+      theme:
+        const: divisions
+      type:
+        const: division
       subtype:
-        $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/defs.yaml#/$defs/propertyDefinitions/placetype
+        $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/definitions/schema.yaml#/$defs/propertyDefinitions/placetype
       class:
         type: string
         enum:
@@ -66,7 +73,7 @@ properties:
           of Switzerland''s official languages as, ''canton'' in French, ''kanton''
           in German, ''cantone'' in Italian, and ''chantun'' in Romansh.'
         allOf:
-        - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/commonNames
+        - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/commonNames
       country:
         description: "ISO 3166-1 alpha-2 country code of the country or country-like
           entity, that this division represents or belongs to.\nIf the entity this
@@ -82,7 +89,7 @@ properties:
           a synthetic code may be used provided it does not conflict with any internationally-recognized
           codes."
         allOf:
-        - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/iso3166_1Alpha2CountryCode
+        - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/iso3166_1Alpha2CountryCode
       region:
         description: "ISO 3166-2 principal subdivision code of the subdivision-like
           entity this division represents or belongs to.\nIf the entity this division
@@ -94,7 +101,7 @@ properties:
           \ - The region value for New York City is 'US-NY', which it\n    inherits
           from the state of New York.\n  - The region value for Puerto Rico is 'US-PR'."
         allOf:
-        - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/iso3166_2SubdivisionCode
+        - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/iso3166_2SubdivisionCode
       hierarchies:
         description: 'Hierarchies in which this division participates.
 
@@ -110,7 +117,7 @@ properties:
           the first one is arbitrary.'
         type: array
         items:
-          $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/defs.yaml#/$defs/propertyDefinitions/hierarchy
+          $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/definitions/schema.yaml#/$defs/propertyDefinitions/hierarchy
         minItems: 1
         uniqueItems: true
       parent_division_id:
@@ -124,7 +131,7 @@ properties:
           arbitrarily. The hierarchies property can be used to inspect the exhaustive
           list of parent divisions.'
         allOf:
-        - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id
+        - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id
       perspectives:
         description: "Political perspectives from which this division is considered
           to be an accurate representation.\nIf this property is absent, then this
@@ -142,7 +149,7 @@ properties:
           to that first all divisions explicitly accepted by the country, and second
           all divisions not explicitly disputed by the country."
         allOf:
-        - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/defs.yaml#/$defs/propertyDefinitions/perspectives
+        - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/definitions/schema.yaml#/$defs/propertyDefinitions/perspectives
       norms:
         description: 'Collects information about local norms and rules within the
           division that are generally useful for mapping and map-related use cases.
@@ -159,7 +166,7 @@ properties:
           driving_side:
             description: Side of the road on which vehicles drive in the division.
             allOf:
-            - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/side
+            - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/side
       population:
         description: Population of the division
         type: integer
@@ -172,7 +179,7 @@ properties:
         minItems: 1
         uniqueItems: true
         items:
-          $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id
+          $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id
       capital_of_divisions:
         description: Division IDs and subtypes of divisions this division is a capital
           of.
@@ -180,6 +187,6 @@ properties:
         minItems: 1
         uniqueItems: true
         items:
-          $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/defs.yaml#/$defs/propertyDefinitions/capitalOfDivisionItem
+          $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/definitions/schema.yaml#/$defs/propertyDefinitions/capitalOfDivisionItem
       wikidata:
-        $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/wikidata
+        $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/wikidata

@@ -1,0 +1,9 @@
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<overture:bathymetry:example:1> a <file:///github/workspace/bathymetry>,
+        geojson:Feature ;
+    geojson:geometry [ a geojson:Polygon ;
+            geojson:coordinates ( ( ( -7.319023e+01 4.16678e+01 ) ( -7.318963e+01 4.166782e+01 ) ( -7.318904e+01 4.166677e+01 ) ( -7.318992e+01 4.16667e+01 ) ( -7.319023e+01 4.16678e+01 ) ) ) ] .
+

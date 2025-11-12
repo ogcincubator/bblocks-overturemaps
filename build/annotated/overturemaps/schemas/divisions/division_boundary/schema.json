@@ -5,7 +5,7 @@
   "type": "object",
   "properties": {
     "id": {
-      "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyDefinitions/id"
     },
     "geometry": {
       "description": "Boundary's geometry which MUST be a LineString or MultiLineString as defined by the GeoJSON schema.",
@@ -23,7 +23,7 @@
       "unevaluatedProperties": false,
       "allOf": [
         {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/overtureFeaturePropertiesContainer"
         },
         {
           "if": {
@@ -59,6 +59,12 @@
               "country"
             ]
           }
+        },
+        {
+          "required": [
+            "theme",
+            "type"
+          ]
         }
       ],
       "oneOf": [
@@ -78,8 +84,14 @@
         }
       ],
       "properties": {
+        "theme": {
+          "const": "divisions"
+        },
+        "type": {
+          "const": "division_boundary"
+        },
         "subtype": {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/definitions/schema.json#/$defs/propertyDefinitions/placetype"
         },
         "class": {
           "type": "string",
@@ -100,7 +112,7 @@
           "description": "Identifies the two divisions to the left and right, respectively, of the boundary line. The left- and right-hand sides of the boundary are considered from the perspective of a person standing on the line facing in the direction in which the geometry is oriented, i.e. facing toward the end of the line.\nThe first array element is the Overture ID of the left division. The second element is the Overture ID of the right division.",
           "type": "array",
           "items": {
-            "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+            "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyDefinitions/id"
           },
           "minItems": 2,
           "maxItems": 2,
@@ -110,7 +122,7 @@
           "description": "ISO 3166-1 alpha-2 country code of the country or country-like entity that both sides of the boundary share.\nThis property will be present on boundaries between two regions, counties, or similar entities within the same country, but will not be present on boundaries between two countries or country-like entities.",
           "allOf": [
             {
-              "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+              "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyDefinitions/iso3166_1Alpha2CountryCode"
             }
           ]
         },
@@ -118,7 +130,7 @@
           "description": "ISO 3166-2 principal subdivision code of the subdivision-like entity that both sides of the boundary share.\nThis property will be present on boundaries between two counties, localadmins or similar entities within the same principal subdivision, but will not be present on boundaries between different principal subdivisions or countries.",
           "allOf": [
             {
-              "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+              "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyDefinitions/iso3166_2SubdivisionCode"
             }
           ]
         },
@@ -130,7 +142,7 @@
           "description": "Political perspectives from which this division boundary is considered to be an accurate representation.\nIf this property is absent, then this boundary is not known to be disputed from any political perspective. Consequently, there is only one boundary feature representing the entire real world entity.\nIf this property is present, it means the boundary represents one of several alternative perspectives on the same real-world entity.\nThere are two modes of perspective:\n\n  1. `accepted_by` means the representation of the boundary is\n     accepted by the listed entities and would be included on\n     a map drawn from their perspective.\n\n  2. `disputed_by` means the representation of the boundary is\n     disputed by the listed entities and would be excluded\n     from a map drawn from their perspective.\n    \nWhen drawing a map from the perspective of a given country, one would start by gathering all the undisputed boundary (with no `perspectives` property), and then adding to that first all boundary explicitly accepted by the country, and second all boundary not explicitly disputed by the country.",
           "allOf": [
             {
-              "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/defs.yaml"
+              "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/definitions/schema.json#/$defs/propertyDefinitions/perspectives"
             }
           ]
         }

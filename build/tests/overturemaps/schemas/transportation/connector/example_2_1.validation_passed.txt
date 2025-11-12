@@ -1,0 +1,10 @@
+Validation report for ogc.overturemaps.schemas.transportation.connector - connector
+Generated 2025-11-12T15:58:05.620562+00:00
+=== Files ===
+Using example_2_1.json from examples
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

@@ -7,6 +7,66 @@ Land use features from OpenStreetMap
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
+## Examples
+
+### Example 1
+#### json
+```json
+{
+  "id": "overture:land_use:example:1",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -83.8710175,
+          10.3469578
+        ],
+        [
+          -83.8700924,
+          10.3470179
+        ],
+        [
+          -83.870043,
+          10.3462819
+        ],
+        [
+          -83.8709681,
+          10.3462218
+        ],
+        [
+          -83.8710175,
+          10.3469578
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "base",
+    "type": "land_use",
+    "subtype": "recreation",
+    "class": "pitch",
+    "surface": "recreation_grass",
+    "source_tags": {
+      "leisure": "pitch",
+      "sport": "soccer"
+    },
+    "names": {
+      "primary": "Plaza Deportes Finca Tres"
+    },
+    "sources": [
+      {
+        "record_id": "w509487233@1",
+        "property": "",
+        "dataset": "OpenStreetMap"
+      }
+    ],
+    "version": 0
+  }
+}
+```
+
 ## Schema
 
 ```yaml
@@ -16,7 +76,7 @@ description: Land use features from OpenStreetMap
 type: object
 properties:
   id:
-    $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id
   geometry:
     description: Classifications of the human use of a section of land. Translates
       `landuse` from OpenStreetMap tag from OpenStreetMap.
@@ -29,14 +89,20 @@ properties:
   properties:
     unevaluatedProperties: false
     allOf:
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/namesContainer
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/levelContainer
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/defs.yaml#/$defs/propertyContainers/osmPropertiesContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/namesContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/levelContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.yaml#/$defs/propertyContainers/osmPropertiesContainer
     required:
+    - theme
+    - type
     - subtype
     - class
     properties:
+      theme:
+        const: base
+      type:
+        const: land_use
       subtype:
         description: Broad type of land
         type: string
@@ -179,9 +245,9 @@ properties:
         - works
         - zoo
       elevation:
-        $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/defs.yaml#/$defs/propertyDefinitions/elevation
+        $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.yaml#/$defs/propertyDefinitions/elevation
       surface:
-        $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/defs.yaml#/$defs/propertyDefinitions/surface
+        $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.yaml#/$defs/propertyDefinitions/surface
 
 ```
 

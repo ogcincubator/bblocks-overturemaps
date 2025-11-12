@@ -11,7 +11,7 @@ description: 'Addresses are geographic points used for locating businesses and i
 type: object
 properties:
   id:
-    $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id
   geometry:
     description: An address geometry MUST be a Point as defined by GeoJSON schema.
     unevaluatedProperties: false
@@ -19,11 +19,18 @@ properties:
     - $ref: https://geojson.org/schema/Point.json
   properties:
     unevaluatedProperties: false
+    required:
+    - theme
+    - type
     allOf:
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer
     properties:
+      theme:
+        const: addresses
+      type:
+        const: address
       country:
-        $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/iso3166_1Alpha2CountryCode
+        $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/iso3166_1Alpha2CountryCode
       postcode:
         description: The postcode for the address
         type: string

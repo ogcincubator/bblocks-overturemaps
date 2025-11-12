@@ -7,6 +7,277 @@ Boundaries represent borders between divisions of the same subtype. Some boundar
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
+## Examples
+
+### Example 1
+#### json
+```json
+{
+  "id": "example:division_boundary:disputed_both",
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division_boundary",
+    "version": 1,
+    "subtype": "country",
+    "class": "land",
+    "is_land": true,
+    "is_territorial": false,
+    "division_ids": [
+      "example:division:country:left",
+      "example:division:country:right"
+    ],
+    "is_disputed": true,
+    "perspectives": {
+      "mode": "disputed_by",
+      "countries": [
+        "XX"
+      ]
+    }
+  }
+}
+```
+
+
+### Example 2
+#### json
+```json
+{
+  "id": "example:division_boundary:disputed_both",
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division_boundary",
+    "version": 1,
+    "subtype": "country",
+    "class": "land",
+    "is_land": true,
+    "is_territorial": false,
+    "division_ids": [
+      "example:division:country:left",
+      "example:division:country:right"
+    ],
+    "is_disputed": true,
+    "perspectives": {
+      "mode": "disputed_by",
+      "countries": [
+        "XX",
+        "XY"
+      ]
+    }
+  }
+}
+```
+
+
+### Example 3
+#### json
+```json
+{
+  "id": "example:division_boundary:is_land:country:us",
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division_boundary",
+    "version": 1,
+    "subtype": "country",
+    "is_land": true,
+    "is_territorial": false,
+    "class": "land",
+    "division_ids": [
+      "example:division:country:left",
+      "example:division:country:right"
+    ]
+  }
+}
+```
+
+
+### Example 4
+#### json
+```json
+{
+  "id": "example:division_boundary:is_territorial:country:fi",
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division_boundary",
+    "version": 1,
+    "subtype": "country",
+    "is_territorial": true,
+    "is_land": false,
+    "class": "maritime",
+    "division_ids": [
+      "example:division:country:left",
+      "example:division:country:right"
+    ]
+  }
+}
+```
+
+
+### Example 5
+#### json
+```json
+{
+  "id": "example:division_boundary:land",
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division_boundary",
+    "version": 1,
+    "subtype": "region",
+    "class": "land",
+    "country": "XX",
+    "region": "XX-01",
+    "is_land": true,
+    "is_territorial": false,
+    "division_ids": [
+      "example:division:region:left",
+      "example:division:region:right"
+    ]
+  }
+}
+```
+
+
+### Example 6
+#### json
+```json
+{
+  "id": "example:division_boundary:land",
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division_boundary",
+    "version": 1,
+    "subtype": "region",
+    "class": "land",
+    "country": "XX",
+    "is_land": true,
+    "is_territorial": false,
+    "division_ids": [
+      "example:division:region:left",
+      "example:division:region:right"
+    ]
+  }
+}
+```
+
+
+### Example 7
+#### json
+```json
+{
+  "id": "example:division_boundary:maritime",
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division_boundary",
+    "version": 1,
+    "subtype": "country",
+    "class": "maritime",
+    "is_territorial": true,
+    "is_land": false,
+    "division_ids": [
+      "example:division:region:left",
+      "example:division:region:right"
+    ]
+  }
+}
+```
+
 ## Schema
 
 ```yaml
@@ -17,7 +288,7 @@ description: Boundaries represent borders between divisions of the same subtype.
 type: object
 properties:
   id:
-    $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id
   geometry:
     description: Boundary's geometry which MUST be a LineString or MultiLineString
       as defined by the GeoJSON schema.
@@ -28,7 +299,7 @@ properties:
   properties:
     unevaluatedProperties: false
     allOf:
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer
     - if:
         properties:
           subtype:
@@ -52,6 +323,9 @@ properties:
         - is_land
         - is_territorial
         - country
+    - required:
+      - theme
+      - type
     oneOf:
     - properties:
         is_land:
@@ -60,8 +334,12 @@ properties:
         is_territorial:
           const: true
     properties:
+      theme:
+        const: divisions
+      type:
+        const: division_boundary
       subtype:
-        $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/defs.yaml#/$defs/propertyDefinitions/placetype
+        $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/definitions/schema.yaml#/$defs/propertyDefinitions/placetype
       class:
         type: string
         enum:
@@ -89,7 +367,7 @@ properties:
           element is the Overture ID of the right division.'
         type: array
         items:
-          $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id
+          $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id
         minItems: 2
         maxItems: 2
         uniqueItems: true
@@ -101,7 +379,7 @@ properties:
           or similar entities within the same country, but will not be present on
           boundaries between two countries or country-like entities.'
         allOf:
-        - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/iso3166_1Alpha2CountryCode
+        - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/iso3166_1Alpha2CountryCode
       region:
         description: 'ISO 3166-2 principal subdivision code of the subdivision-like
           entity that both sides of the boundary share.
@@ -110,7 +388,7 @@ properties:
           or similar entities within the same principal subdivision, but will not
           be present on boundaries between different principal subdivisions or countries.'
         allOf:
-        - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/iso3166_2SubdivisionCode
+        - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/iso3166_2SubdivisionCode
       is_disputed:
         description: 'Indicator if there are entities disputing this division boundary.
           Information about entities disputing this boundary should be included in
@@ -138,7 +416,7 @@ properties:
           and then adding to that first all boundary explicitly accepted by the country,
           and second all boundary not explicitly disputed by the country."
         allOf:
-        - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/defs.yaml#/$defs/propertyDefinitions/perspectives
+        - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/definitions/schema.yaml#/$defs/propertyDefinitions/perspectives
 
 ```
 

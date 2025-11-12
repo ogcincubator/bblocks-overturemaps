@@ -20,22 +20,30 @@
       "unevaluatedProperties": false,
       "allOf": [
         {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/overtureFeaturePropertiesContainer"
         },
         {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/namesContainer"
         },
         {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/levelContainer"
         },
         {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/buildings/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/definitions/schema.json#/$defs/propertyContainers/shapeContainer"
         }
       ],
       "required": [
+        "theme",
+        "type",
         "building_id"
       ],
       "properties": {
+        "theme": {
+          "const": "buildings"
+        },
+        "type": {
+          "const": "building_part"
+        },
         "building_id": {
           "description": "The building ID to which this part belongs",
           "type": "string"

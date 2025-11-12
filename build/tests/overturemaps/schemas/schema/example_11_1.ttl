@@ -1,0 +1,9 @@
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<example:division_boundary:disputed_both> a <file:///github/workspace/division_boundary>,
+        geojson:Feature ;
+    geojson:geometry [ a geojson:LineString ;
+            geojson:coordinates ( ( 0 1 ) ( 1 2 ) ) ] .
+

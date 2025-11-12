@@ -12,394 +12,49 @@
   ],
   "oneOf": [
     {
-      "if": {
-        "properties": {
-          "properties": {
-            "properties": {
-              "theme": {
-                "enum": [
-                  "addresses"
-                ]
-              },
-              "type": {
-                "enum": [
-                  "address"
-                ]
-              }
-            }
-          }
-        }
-      },
-      "then": {
-        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/schema.json"
-      },
-      "else": {
-        "propertyNames": false
-      }
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/schema.json"
     },
     {
-      "if": {
-        "properties": {
-          "properties": {
-            "properties": {
-              "theme": {
-                "enum": [
-                  "base"
-                ]
-              },
-              "type": {
-                "enum": [
-                  "bathymetry"
-                ]
-              }
-            }
-          }
-        }
-      },
-      "then": {
-        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/bathymetry/schema.json"
-      },
-      "else": {
-        "propertyNames": false
-      }
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/bathymetry/schema.json"
     },
     {
-      "if": {
-        "properties": {
-          "properties": {
-            "properties": {
-              "theme": {
-                "enum": [
-                  "base"
-                ]
-              },
-              "type": {
-                "enum": [
-                  "infrastructure"
-                ]
-              }
-            }
-          }
-        }
-      },
-      "then": {
-        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/schema.json"
-      },
-      "else": {
-        "propertyNames": false
-      }
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/schema.json"
     },
     {
-      "if": {
-        "properties": {
-          "properties": {
-            "properties": {
-              "theme": {
-                "enum": [
-                  "base"
-                ]
-              },
-              "type": {
-                "enum": [
-                  "land"
-                ]
-              }
-            }
-          }
-        }
-      },
-      "then": {
-        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land/schema.json"
-      },
-      "else": {
-        "propertyNames": false
-      }
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land/schema.json"
     },
     {
-      "if": {
-        "properties": {
-          "properties": {
-            "properties": {
-              "theme": {
-                "enum": [
-                  "base"
-                ]
-              },
-              "type": {
-                "enum": [
-                  "land_cover"
-                ]
-              }
-            }
-          }
-        }
-      },
-      "then": {
-        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/schema.json"
-      },
-      "else": {
-        "propertyNames": false
-      }
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/schema.json"
     },
     {
-      "if": {
-        "properties": {
-          "properties": {
-            "properties": {
-              "theme": {
-                "enum": [
-                  "base"
-                ]
-              },
-              "type": {
-                "enum": [
-                  "land_use"
-                ]
-              }
-            }
-          }
-        }
-      },
-      "then": {
-        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/schema.json"
-      },
-      "else": {
-        "propertyNames": false
-      }
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/schema.json"
     },
     {
-      "if": {
-        "properties": {
-          "properties": {
-            "properties": {
-              "theme": {
-                "enum": [
-                  "base"
-                ]
-              },
-              "type": {
-                "enum": [
-                  "water"
-                ]
-              }
-            }
-          }
-        }
-      },
-      "then": {
-        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/water/schema.json"
-      },
-      "else": {
-        "propertyNames": false
-      }
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/water/schema.json"
     },
     {
-      "if": {
-        "properties": {
-          "properties": {
-            "properties": {
-              "theme": {
-                "enum": [
-                  "buildings"
-                ]
-              },
-              "type": {
-                "enum": [
-                  "building"
-                ]
-              }
-            }
-          }
-        }
-      },
-      "then": {
-        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/schema.json"
-      },
-      "else": {
-        "propertyNames": false
-      }
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/schema.json"
     },
     {
-      "if": {
-        "properties": {
-          "properties": {
-            "properties": {
-              "theme": {
-                "enum": [
-                  "buildings"
-                ]
-              },
-              "type": {
-                "enum": [
-                  "building_part"
-                ]
-              }
-            }
-          }
-        }
-      },
-      "then": {
-        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.json"
-      },
-      "else": {
-        "propertyNames": false
-      }
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.json"
     },
     {
-      "if": {
-        "properties": {
-          "properties": {
-            "properties": {
-              "theme": {
-                "enum": [
-                  "divisions"
-                ]
-              },
-              "type": {
-                "enum": [
-                  "division_boundary"
-                ]
-              }
-            }
-          }
-        }
-      },
-      "then": {
-        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.json"
-      },
-      "else": {
-        "propertyNames": false
-      }
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.json"
     },
     {
-      "if": {
-        "properties": {
-          "properties": {
-            "properties": {
-              "theme": {
-                "enum": [
-                  "divisions"
-                ]
-              },
-              "type": {
-                "enum": [
-                  "division"
-                ]
-              }
-            }
-          }
-        }
-      },
-      "then": {
-        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/schema.json"
-      },
-      "else": {
-        "propertyNames": false
-      }
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/schema.json"
     },
     {
-      "if": {
-        "properties": {
-          "properties": {
-            "properties": {
-              "theme": {
-                "enum": [
-                  "divisions"
-                ]
-              },
-              "type": {
-                "enum": [
-                  "division_area"
-                ]
-              }
-            }
-          }
-        }
-      },
-      "then": {
-        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_area/schema.json"
-      },
-      "else": {
-        "propertyNames": false
-      }
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_area/schema.json"
     },
     {
-      "if": {
-        "properties": {
-          "properties": {
-            "properties": {
-              "theme": {
-                "enum": [
-                  "places"
-                ]
-              },
-              "type": {
-                "enum": [
-                  "place"
-                ]
-              }
-            }
-          }
-        }
-      },
-      "then": {
-        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/schema.json"
-      },
-      "else": {
-        "propertyNames": false
-      }
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/schema.json"
     },
     {
-      "if": {
-        "properties": {
-          "properties": {
-            "properties": {
-              "theme": {
-                "enum": [
-                  "transportation"
-                ]
-              },
-              "type": {
-                "enum": [
-                  "connector"
-                ]
-              }
-            }
-          }
-        }
-      },
-      "then": {
-        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/schema.json"
-      },
-      "else": {
-        "propertyNames": false
-      }
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/schema.json"
     },
     {
-      "if": {
-        "properties": {
-          "properties": {
-            "properties": {
-              "theme": {
-                "enum": [
-                  "transportation"
-                ]
-              },
-              "type": {
-                "enum": [
-                  "segment"
-                ]
-              }
-            }
-          }
-        }
-      },
-      "then": {
-        "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/segment/schema.json"
-      },
-      "else": {
-        "propertyNames": false
-      }
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/segment/schema.json"
     }
   ]
 }

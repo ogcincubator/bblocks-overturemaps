@@ -7,7 +7,7 @@
   "abstract": "A building is a man-made structure with a roof that exists permanently in one place. Buildings are compatible with GeoJSON Polygon features.",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
-  "dateOfLastChange": "2025-11-05",
+  "dateOfLastChange": "2025-11-12",
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
@@ -16,17 +16,123 @@
     "gers",
     "buildings"
   ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.overturemaps.schemas.buildings.definitions",
+    "ogc.overturemaps.schemas.definitions"
+  ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/schema.json"
   },
-  "shaclShapes": {},
-  "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/remote_cache/",
-  "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/buildings/building.yaml",
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/buildings/building/schema.yaml",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/buildings/building/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: building\ndescription: A building is a man-made structure with a roof that exists permanently\n  in one place. Buildings are compatible with GeoJSON Polygon features.\ntype: object\nproperties:\n  id:\n    $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id\n  geometry:\n    description: A regular building's geometry is defined as its footprint or roofprint\n      (if traced from aerial/satellite imagery). It MUST be a Polygon or MultiPolygon\n      as defined by the GeoJSON schema.\n    unevaluatedProperties: false\n    oneOf:\n    - $ref: https://geojson.org/schema/Polygon.json\n    - $ref: https://geojson.org/schema/MultiPolygon.json\n  properties:\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/namesContainer\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/levelContainer\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/buildings/defs.yaml#/$defs/propertyContainers/shapeContainer\n    properties:\n      subtype:\n        description: A broad category of the building type/purpose. When the current\n          use of the building does not match the built purpose, the subtype should\n          be set to represent the current use of the building.\n        type: string\n        enum:\n        - agricultural\n        - civic\n        - commercial\n        - education\n        - entertainment\n        - industrial\n        - medical\n        - military\n        - outbuilding\n        - religious\n        - residential\n        - service\n        - transportation\n      class:\n        description: Further delineation of the building's built purpose.\n        type: string\n        enum:\n        - agricultural\n        - allotment_house\n        - apartments\n        - barn\n        - beach_hut\n        - boathouse\n        - bridge_structure\n        - bungalow\n        - bunker\n        - cabin\n        - carport\n        - cathedral\n        - chapel\n        - church\n        - civic\n        - college\n        - commercial\n        - cowshed\n        - detached\n        - digester\n        - dormitory\n        - dwelling_house\n        - factory\n        - farm\n        - farm_auxiliary\n        - fire_station\n        - garage\n        - garages\n        - ger\n        - glasshouse\n        - government\n        - grandstand\n        - greenhouse\n        - guardhouse\n        - hangar\n        - hospital\n        - hotel\n        - house\n        - houseboat\n        - hut\n        - industrial\n        - kindergarten\n        - kiosk\n        - library\n        - manufacture\n        - military\n        - monastery\n        - mosque\n        - office\n        - outbuilding\n        - parking\n        - pavilion\n        - post_office\n        - presbytery\n        - public\n        - religious\n        - residential\n        - retail\n        - roof\n        - school\n        - semi\n        - semidetached_house\n        - service\n        - shed\n        - shrine\n        - silo\n        - slurry_tank\n        - sports_centre\n        - sports_hall\n        - stable\n        - stadium\n        - static_caravan\n        - stilt_house\n        - storage_tank\n        - sty\n        - supermarket\n        - synagogue\n        - temple\n        - terrace\n        - toilets\n        - train_station\n        - transformer_tower\n        - transportation\n        - trullo\n        - university\n        - warehouse\n        - wayside_shrine\n      has_parts:\n        description: Flag indicating whether the building has parts\n        type: boolean\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-overturemaps/blob/master/build/tests/overturemaps/schemas/buildings/building/",
+  "examples": [
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/basic-sources.yaml",
+          "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          1,\n          1\n        ],\n        [\n          1,\n          0\n        ],\n        [\n          0,\n          0\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"sources\": [\n      {\n        \"dataset\": \"MyGreatDataset\",\n        \"property\": \"/geometry\",\n        \"update_time\": \"2024-04-26T23:55:01-08:00\",\n        \"confidence\": 0.3\n      }\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_1_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/building-multipolygon.yaml",
+          "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"MultiPolygon\",\n    \"coordinates\": [\n      [\n        [\n          [\n            0,\n            0\n          ],\n          [\n            0,\n            1\n          ],\n          [\n            1,\n            1\n          ],\n          [\n            1,\n            0\n          ],\n          [\n            0,\n            0\n          ]\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 0\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_2_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/building-polygon.yaml",
+          "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -77.036873,\n          38.897804\n        ],\n        [\n          -77.036873,\n          38.897559\n        ],\n        [\n          -77.03626,\n          38.897559\n        ],\n        [\n          -77.03626,\n          38.897804\n        ],\n        [\n          -77.036873,\n          38.897804\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"level\": 1,\n    \"height\": 21.34,\n    \"num_floors\": 4,\n    \"num_floors_underground\": 1,\n    \"subtype\": \"transportation\",\n    \"class\": \"parking\",\n    \"is_underground\": false,\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"microsoftMLBuildings,\",\n        \"confidence\": 1\n      },\n      {\n        \"property\": \"/properties/height\",\n        \"dataset\": \"metaLidarExtractions,\",\n        \"confidence\": 0.95\n      }\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_3_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/license-basic.yaml",
+          "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          1,\n          1\n        ],\n        [\n          1,\n          0\n        ],\n        [\n          0,\n          0\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"sources\": [\n      {\n        \"dataset\": \"MyGreatDataset\",\n        \"property\": \"/geometry\",\n        \"update_time\": \"2024-04-26T23:55:01-08:00\",\n        \"confidence\": 0.3,\n        \"license\": \"beep\"\n      }\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_4_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/name-basic.yaml",
+          "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          1,\n          1\n        ],\n        [\n          1,\n          0\n        ],\n        [\n          0,\n          0\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"names\": {\n      \"primary\": \"Empire State Building\"\n    }\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_5_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/name-multiple.yaml",
+          "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"names\": {\n      \"primary\": \"The White house\",\n      \"common\": {\n        \"es\": \"La Casa Blanca\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"official\",\n          \"value\": \"The White House\"\n        },\n        {\n          \"variant\": \"alternate\",\n          \"value\": \"White House\"\n        }\n      ]\n    }\n  },\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -77.036873,\n          38.897804\n        ],\n        [\n          -77.036873,\n          38.897559\n        ],\n        [\n          -77.03626,\n          38.897559\n        ],\n        [\n          -77.03626,\n          38.897804\n        ],\n        [\n          -77.036873,\n          38.897804\n        ]\n      ]\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_6_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/name-variations.yaml",
+          "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          1,\n          1\n        ],\n        [\n          1,\n          0\n        ],\n        [\n          0,\n          0\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"names\": {\n      \"primary\": \"Local value\",\n      \"common\": {\n        \"ru-Latn\": \"Language Script\",\n        \"en-US\": \"Language Region\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"official\",\n          \"language\": \"es\",\n          \"value\": \"Official Name\"\n        },\n        {\n          \"variant\": \"short\",\n          \"language\": \"es\",\n          \"value\": \"Official Spanish Name\"\n        },\n        {\n          \"variant\": \"alternate\",\n          \"language\": \"ru\",\n          \"value\": \"Official Russian Name\"\n        }\n      ]\n    }\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_7_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/outline.yaml",
+          "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -117.1710888,\n          32.7238481\n        ],\n        [\n          -117.1711025,\n          32.7239038\n        ],\n        [\n          -117.1711923,\n          32.7238882\n        ],\n        [\n          -117.1712198,\n          32.724\n        ],\n        [\n          -117.1712713,\n          32.7242091\n        ],\n        [\n          -117.1706665,\n          32.7243145\n        ],\n        [\n          -117.1705738,\n          32.7239379\n        ],\n        [\n          -117.1707783,\n          32.7239022\n        ],\n        [\n          -117.1710888,\n          32.7238481\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"level\": 1,\n    \"names\": {\n      \"primary\": \"Valentina by Alta\"\n    },\n    \"num_floors\": 8,\n    \"subtype\": \"commercial\",\n    \"class\": \"commercial\",\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\"\n      }\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_8_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/time-basic.yaml",
+          "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          1,\n          1\n        ],\n        [\n          1,\n          0\n        ],\n        [\n          0,\n          0\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_9_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/time-precision-seconds.yaml",
+          "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          1,\n          1\n        ],\n        [\n          1,\n          0\n        ],\n        [\n          0,\n          0\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_10_1.json"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: building\ndescription: A building is a man-made structure with a roof that exists permanently\n  in one place. Buildings are compatible with GeoJSON Polygon features.\ntype: object\nproperties:\n  id:\n    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id\n  geometry:\n    description: A regular building's geometry is defined as its footprint or roofprint\n      (if traced from aerial/satellite imagery). It MUST be a Polygon or MultiPolygon\n      as defined by the GeoJSON schema.\n    unevaluatedProperties: false\n    oneOf:\n    - $ref: https://geojson.org/schema/Polygon.json\n    - $ref: https://geojson.org/schema/MultiPolygon.json\n  properties:\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer\n    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/namesContainer\n    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/levelContainer\n    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/definitions/schema.yaml#/$defs/propertyContainers/shapeContainer\n    required:\n    - theme\n    - type\n    properties:\n      theme:\n        const: buildings\n      type:\n        const: building\n      subtype:\n        description: A broad category of the building type/purpose. When the current\n          use of the building does not match the built purpose, the subtype should\n          be set to represent the current use of the building.\n        type: string\n        enum:\n        - agricultural\n        - civic\n        - commercial\n        - education\n        - entertainment\n        - industrial\n        - medical\n        - military\n        - outbuilding\n        - religious\n        - residential\n        - service\n        - transportation\n      class:\n        description: Further delineation of the building's built purpose.\n        type: string\n        enum:\n        - agricultural\n        - allotment_house\n        - apartments\n        - barn\n        - beach_hut\n        - boathouse\n        - bridge_structure\n        - bungalow\n        - bunker\n        - cabin\n        - carport\n        - cathedral\n        - chapel\n        - church\n        - civic\n        - college\n        - commercial\n        - cowshed\n        - detached\n        - digester\n        - dormitory\n        - dwelling_house\n        - factory\n        - farm\n        - farm_auxiliary\n        - fire_station\n        - garage\n        - garages\n        - ger\n        - glasshouse\n        - government\n        - grandstand\n        - greenhouse\n        - guardhouse\n        - hangar\n        - hospital\n        - hotel\n        - house\n        - houseboat\n        - hut\n        - industrial\n        - kindergarten\n        - kiosk\n        - library\n        - manufacture\n        - military\n        - monastery\n        - mosque\n        - office\n        - outbuilding\n        - parking\n        - pavilion\n        - post_office\n        - presbytery\n        - public\n        - religious\n        - residential\n        - retail\n        - roof\n        - school\n        - semi\n        - semidetached_house\n        - service\n        - shed\n        - shrine\n        - silo\n        - slurry_tank\n        - sports_centre\n        - sports_hall\n        - stable\n        - stadium\n        - static_caravan\n        - stilt_house\n        - storage_tank\n        - sty\n        - supermarket\n        - synagogue\n        - temple\n        - terrace\n        - toilets\n        - train_station\n        - transformer_tower\n        - transportation\n        - trullo\n        - university\n        - warehouse\n        - wayside_shrine\n      has_parts:\n        description: Flag indicating whether the building has parts\n        type: boolean\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-overturemaps",
   "gitPath": "_sources/schemas/buildings/building"
 }

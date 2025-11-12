@@ -1,0 +1,9 @@
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<overture:land:example:1> a <file:///github/workspace/land>,
+        geojson:Feature ;
+    geojson:geometry [ a geojson:Polygon ;
+            geojson:coordinates ( ( ( 3.443792e+01 2.875927e+01 ) ( 3.443801e+01 2.875958e+01 ) ( 3.443802e+01 2.876016e+01 ) ( 3.443805e+01 2.876062e+01 ) ( 3.443815e+01 2.876099e+01 ) ( 3.443807e+01 2.876125e+01 ) ( 3.443773e+01 2.876084e+01 ) ( 3.443772e+01 2.876061e+01 ) ( 3.443771e+01 2.876055e+01 ) ( 3.443763e+01 2.876043e+01 ) ( 3.443764e+01 2.876036e+01 ) ( 3.443765e+01 2.876025e+01 ) ( 3.443769e+01 2.875997e+01 ) ( 3.443767e+01 2.87598e+01 ) ( 3.443769e+01 2.875962e+01 ) ( 3.443792e+01 2.875927e+01 ) ) ) ] .
+

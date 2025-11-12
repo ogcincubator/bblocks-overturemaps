@@ -1,0 +1,21 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/schema/context.jsonld",
+  "id": "timestamp-utc",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      0,
+      0
+    ]
+  },
+  "properties": {
+    "categories": {
+      "primary": "some_category"
+    },
+    "theme": "places",
+    "type": "place",
+    "version": 1,
+    "operating_status": "open"
+  }
+}

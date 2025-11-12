@@ -5,7 +5,7 @@
   "type": "object",
   "properties": {
     "id": {
-      "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyDefinitions/id"
     },
     "geometry": {
       "description": "An address geometry MUST be a Point as defined by GeoJSON schema.",
@@ -18,14 +18,24 @@
     },
     "properties": {
       "unevaluatedProperties": false,
+      "required": [
+        "theme",
+        "type"
+      ],
       "allOf": [
         {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/overtureFeaturePropertiesContainer"
         }
       ],
       "properties": {
+        "theme": {
+          "const": "addresses"
+        },
+        "type": {
+          "const": "address"
+        },
         "country": {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyDefinitions/iso3166_1Alpha2CountryCode"
         },
         "postcode": {
           "description": "The postcode for the address",

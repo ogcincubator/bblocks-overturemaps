@@ -7,7 +7,7 @@
   "abstract": "Representation of the Earth's natural surfaces",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
-  "dateOfLastChange": "2025-11-05",
+  "dateOfLastChange": "2025-11-12",
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
@@ -16,17 +16,32 @@
     "gers",
     "base"
   ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.overturemaps.schemas.definitions"
+  ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/schema.json"
   },
-  "shaclShapes": {},
-  "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/remote_cache/",
-  "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/land_cover.yaml",
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/land_cover/schema.yaml",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/land_cover/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: land_cover\ndescription: Representation of the Earth's natural surfaces\ntype: object\nproperties:\n  id:\n    $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id\n  geometry:\n    unevaluatedProperties: false\n    oneOf:\n    - $ref: https://geojson.org/schema/Polygon.json\n    - $ref: https://geojson.org/schema/MultiPolygon.json\n  properties:\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/levelContainer\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/cartographyContainer\n    required:\n    - subtype\n    properties:\n      subtype:\n        description: type of surface represented\n        type: string\n        enum:\n        - barren\n        - crop\n        - forest\n        - grass\n        - mangrove\n        - moss\n        - shrub\n        - snow\n        - urban\n        - wetland\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-overturemaps/blob/master/build/tests/overturemaps/schemas/base/land_cover/",
+  "examples": [
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/land-cover-example.yaml",
+          "code": "{\n  \"id\": \"overture:land_cover:example:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -73.1902319,\n          41.6678018\n        ],\n        [\n          -73.1896302,\n          41.667817\n        ],\n        [\n          -73.1890448,\n          41.6667723\n        ],\n        [\n          -73.1899188,\n          41.6666994\n        ],\n        [\n          -73.1902319,\n          41.6678018\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"base\",\n    \"type\": \"land_cover\",\n    \"subtype\": \"forest\",\n    \"cartography\": {\n      \"min_zoom\": 11,\n      \"max_zoom\": 23,\n      \"sort_key\": 2\n    },\n    \"sources\": [\n      {\n        \"record_id\": \"x123\",\n        \"property\": \"\",\n        \"dataset\": \"some source\"\n      }\n    ],\n    \"version\": 0\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/base/land_cover/example_1_1.json"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: land_cover\ndescription: Representation of the Earth's natural surfaces\ntype: object\nproperties:\n  id:\n    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id\n  geometry:\n    unevaluatedProperties: false\n    oneOf:\n    - $ref: https://geojson.org/schema/Polygon.json\n    - $ref: https://geojson.org/schema/MultiPolygon.json\n  properties:\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer\n    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/levelContainer\n    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/cartographyContainer\n    required:\n    - theme\n    - type\n    - subtype\n    properties:\n      theme:\n        const: base\n      type:\n        const: land_cover\n      subtype:\n        description: type of surface represented\n        type: string\n        enum:\n        - barren\n        - crop\n        - forest\n        - grass\n        - mangrove\n        - moss\n        - shrub\n        - snow\n        - urban\n        - wetland\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-overturemaps",
   "gitPath": "_sources/schemas/base/land_cover"
 }

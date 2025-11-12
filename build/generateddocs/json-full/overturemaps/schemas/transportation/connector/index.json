@@ -7,7 +7,7 @@
   "abstract": "Connectors create physical connections between segments. Connectors are compatible with GeoJSON Point features.",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
-  "dateOfLastChange": "2025-11-05",
+  "dateOfLastChange": "2025-11-12",
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
@@ -16,17 +16,102 @@
     "gers",
     "transportation"
   ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.overturemaps.schemas.definitions"
+  ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/schema.json"
   },
-  "shaclShapes": {},
-  "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/remote_cache/",
-  "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/transportation/connector.yaml",
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/transportation/connector/schema.yaml",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/transportation/connector/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: connector\ndescription: Connectors create physical connections between segments. Connectors are\n  compatible with GeoJSON Point features.\ntype: object\nproperties:\n  id:\n    $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id\n  geometry:\n    description: Connector's geometry which MUST be a Point as defined by GeoJSON\n      schema.\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://geojson.org/schema/Point.json\n  properties:\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-overturemaps/blob/master/build/tests/overturemaps/schemas/transportation/connector/",
+  "examples": [
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/timestamp-with-tz-offset.yaml",
+          "code": "{\n  \"id\": \"timestamp-with-tz-offset\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 0\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_1_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/connector.yaml",
+          "code": "{\n  \"id\": \"overture:transportation:connector:example\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 0\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_2_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/connector.yaml",
+          "code": "{\n  \"id\": \"overture:transportation:connector:example\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 0\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_3_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/turn-restriction-01-connector1.yaml",
+          "code": "{\n  \"id\": \"overture:transportation:example:simple-turn-restriction-connector1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -113.57831482025354,\n      50.018860947117304\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 0\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_4_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/turn-restriction-01-connector2.yaml",
+          "code": "{\n  \"id\": \"overture:transportation:example:simple-turn-restriction-connector2\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -113.57851814418316,\n      50.01923724443006\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 1\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_5_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/turn-restriction-01-connector3.yaml",
+          "code": "{\n  \"id\": \"overture:transportation:example:simple-turn-restriction-connector3\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -113.57816369068271,\n      50.01919400284882\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 1\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_6_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/turn-restriction-02-connector1.yaml",
+          "code": "{\n  \"id\": \"overture:transportation:example:via-turn-restriction-connector1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -71.11234408150312,\n      42.30149091145671\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 1\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_7_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/turn-restriction-02-connector2.yaml",
+          "code": "{\n  \"id\": \"overture:transportation:example:via-turn-restriction-connector2\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -71.11248901211202,\n      42.3013264259736\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 1\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_8_1.json"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: connector\ndescription: Connectors create physical connections between segments. Connectors are\n  compatible with GeoJSON Point features.\ntype: object\nproperties:\n  id:\n    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id\n  geometry:\n    description: Connector's geometry which MUST be a Point as defined by GeoJSON\n      schema.\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://geojson.org/schema/Point.json\n  properties:\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer\n    required:\n    - theme\n    - type\n    properties:\n      theme:\n        const: transportation\n      type:\n        const: connector\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-overturemaps",
   "gitPath": "_sources/schemas/transportation/connector"
 }

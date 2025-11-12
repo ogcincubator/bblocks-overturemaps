@@ -5,7 +5,7 @@ description: A Place is a point representation of a real-world facility, service
 type: object
 properties:
   id:
-    $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id
   geometry:
     description: Place's geometry which MUST be a Point as defined by GeoJSON schema.
     unevaluatedProperties: false
@@ -14,9 +14,15 @@ properties:
   properties:
     unevaluatedProperties: false
     allOf:
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/namesContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/namesContainer
+    required:
+    - operating_status
     properties:
+      theme:
+        const: places
+      type:
+        const: place
       categories:
         description: 'The categories of the place. Complete list is available on
 
@@ -29,7 +35,7 @@ properties:
         properties:
           primary:
             description: The primary or main category of the place. This can be empty.
-            $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/places/defs.yaml#/$defs/typeDefinitions/category
+            $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/definitions/schema.yaml#/$defs/typeDefinitions/category
           alternate:
             description: Alternate categories of the place. Some places might fit
               into two categories, e.g. a book store and a coffee shop. In such a
@@ -37,7 +43,7 @@ properties:
               categories.
             type: array
             items:
-              $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/places/defs.yaml#/$defs/typeDefinitions/category
+              $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/definitions/schema.yaml#/$defs/typeDefinitions/category
             uniqueItems: true
       basic_category:
         description: The basic level category of a place. At present this is a mapping
@@ -50,7 +56,7 @@ properties:
           hierarchy, with generalization proceeding upward and specialization proceeding
           downward.  The full list of basic level categories is available at:(todo)
         type: string
-        $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/places/defs.yaml#/$defs/typeDefinitions/category
+        $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/definitions/schema.yaml#/$defs/typeDefinitions/category
       confidence:
         description: The confidence of the existence of the place. It's a number between
           0 and 1. 0 means that we're sure that the place doesn't exist (anymore).
@@ -96,15 +102,15 @@ properties:
           as multiple separate places, each with its own brand.
         type: object
         allOf:
-        - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/namesContainer
+        - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/namesContainer
         properties:
           wikidata:
-            $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/wikidata
+            $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/wikidata
       addresses:
         description: The addresses of the place.
         type: array
         items:
-          $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/address
+          $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/address
         uniqueItems: true
         minItems: 1
       operating_status:
@@ -117,5 +123,3 @@ properties:
         - open
         - permanently_closed
         - temporarily_closed
-    required:
-    - operating_status

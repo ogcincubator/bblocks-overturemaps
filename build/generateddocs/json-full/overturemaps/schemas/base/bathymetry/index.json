@@ -7,7 +7,7 @@
   "abstract": "Topographic representation of an underwater area, such as a part of the ocean floor.",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
-  "dateOfLastChange": "2025-11-05",
+  "dateOfLastChange": "2025-11-12",
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
@@ -16,17 +16,33 @@
     "gers",
     "base"
   ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.overturemaps.schemas.base.definitions",
+    "ogc.overturemaps.schemas.definitions"
+  ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/bathymetry/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/bathymetry/schema.json"
   },
-  "shaclShapes": {},
-  "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/bathymetry/remote_cache/",
-  "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/bathymetry.yaml",
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/bathymetry/schema.yaml",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/bathymetry/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: bathymetry\ndescription: Topographic representation of an underwater area, such as a part of the\n  ocean floor.\ntype: object\nproperties:\n  id:\n    $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id\n  geometry:\n    unevaluatedProperties: false\n    oneOf:\n    - $ref: https://geojson.org/schema/Polygon.json\n    - $ref: https://geojson.org/schema/MultiPolygon.json\n  properties:\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/levelContainer\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/cartographyContainer\n    required:\n    - depth\n    properties:\n      depth:\n        $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/defs.yaml#/$defs/propertyDefinitions/depth\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-overturemaps/blob/master/build/tests/overturemaps/schemas/base/bathymetry/",
+  "examples": [
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/bathymetry-example.yaml",
+          "code": "{\n  \"id\": \"overture:bathymetry:example:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -73.1902319,\n          41.6678018\n        ],\n        [\n          -73.1896302,\n          41.667817\n        ],\n        [\n          -73.1890448,\n          41.6667723\n        ],\n        [\n          -73.1899188,\n          41.6666994\n        ],\n        [\n          -73.1902319,\n          41.6678018\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"base\",\n    \"type\": \"bathymetry\",\n    \"depth\": 2500,\n    \"cartography\": {\n      \"min_zoom\": 0,\n      \"max_zoom\": 23,\n      \"sort_key\": 7\n    },\n    \"sources\": [\n      {\n        \"record_id\": \"x123\",\n        \"property\": \"\",\n        \"dataset\": \"some source\"\n      }\n    ],\n    \"version\": 0\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/base/bathymetry/example_1_1.json"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: bathymetry\ndescription: Topographic representation of an underwater area, such as a part of the\n  ocean floor.\ntype: object\nproperties:\n  id:\n    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id\n  geometry:\n    unevaluatedProperties: false\n    oneOf:\n    - $ref: https://geojson.org/schema/Polygon.json\n    - $ref: https://geojson.org/schema/MultiPolygon.json\n  properties:\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer\n    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/levelContainer\n    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/cartographyContainer\n    required:\n    - depth\n    - theme\n    - type\n    properties:\n      theme:\n        const: base\n      type:\n        const: bathymetry\n      depth:\n        $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.yaml#/$defs/propertyDefinitions/depth\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-overturemaps",
   "gitPath": "_sources/schemas/base/bathymetry"
 }

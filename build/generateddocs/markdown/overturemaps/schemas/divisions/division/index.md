@@ -7,6 +7,586 @@ Divisions are recognized official or non-official organizations of people as see
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
+## Examples
+
+### Example 1
+#### json
+```json
+{
+  "id": "example:division:locality:lj",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      14.5845,
+      46.057
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "locality",
+    "local_type": {
+      "en": "city"
+    },
+    "names": {
+      "primary": "Ljubljana"
+    },
+    "sources": [
+      {
+        "property": "",
+        "dataset": "OpenStreetMap",
+        "record_id": "N6968827.V76"
+      }
+    ],
+    "country": "SI",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:division:country:si",
+          "subtype": "country",
+          "name": "Slovenia"
+        }
+      ]
+    ],
+    "capital_of_divisions": [
+      {
+        "division_id": "example:division:country:si",
+        "subtype": "country"
+      }
+    ],
+    "parent_division_id": "example:division:country:si",
+    "population": 335509
+  }
+}
+```
+
+
+### Example 2
+#### json
+```json
+{
+  "id": "example:division:locality:dk",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      12.0819247,
+      55.6433478
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "locality",
+    "local_type": {
+      "en": "city"
+    },
+    "names": {
+      "primary": "Roskilde"
+    },
+    "sources": [
+      {
+        "property": "",
+        "dataset": "OpenStreetMap",
+        "record_id": "N21040334"
+      }
+    ],
+    "country": "DK",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:division:country:dk",
+          "subtype": "country",
+          "name": "Denmark"
+        }
+      ]
+    ],
+    "capital_of_divisions": [
+      {
+        "division_id": "example:division:country:dk",
+        "subtype": "country"
+      }
+    ],
+    "parent_division_id": "example:division:country:dk",
+    "population": 50781,
+    "class": "city"
+  }
+}
+```
+
+
+### Example 3
+#### json
+```json
+{
+  "id": "example:division:country:us",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -100.445882,
+      39.7837304
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "country",
+    "names": {
+      "primary": "United States"
+    },
+    "country": "US",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:division:country:us",
+          "subtype": "country",
+          "name": "United States"
+        }
+      ]
+    ],
+    "norms": {
+      "driving_side": "right"
+    },
+    "capital_division_ids": [
+      "example:division:locality:washington_dc"
+    ]
+  }
+}
+```
+
+
+### Example 4
+#### json
+```json
+{
+  "id": "example:division:dependency:pr",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -66.4858295,
+      18.2247706
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "dependency",
+    "local_type": {
+      "en": "territory"
+    },
+    "names": {
+      "primary": "Puerto Rico",
+      "common": {
+        "en": "Puerto Rico",
+        "fr": "Porto Rico",
+        "es": "Puerto Rico",
+        "zh": "\u6ce2\u591a\u9ece\u5404"
+      },
+      "rules": [
+        {
+          "variant": "official",
+          "language": "es",
+          "value": "Estado Libre Asociado de Puerto Rico"
+        }
+      ]
+    },
+    "sources": [
+      {
+        "property": "",
+        "dataset": "OpenStreetMap",
+        "record_id": "R4422604.V41"
+      }
+    ],
+    "country": "PR",
+    "region": "US-PR",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:division:country:us",
+          "subtype": "country",
+          "name": "United States"
+        }
+      ]
+    ],
+    "norms": {
+      "driving_side": "right"
+    },
+    "capital_division_ids": [
+      "example:division:locality:san_juan"
+    ],
+    "parent_division_id": "example:division:country:us"
+  }
+}
+```
+
+
+### Example 5
+#### json
+```json
+{
+  "id": "example:division:borough:bronx",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -73.8785937,
+      40.8466508
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "borough",
+    "local_type": {
+      "en": "borough"
+    },
+    "names": {
+      "primary": "The Bronx"
+    },
+    "country": "US",
+    "region": "US-NY",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:division:country:us",
+          "subtype": "country",
+          "name": "United States"
+        },
+        {
+          "division_id": "example:division:region:us-ny",
+          "subtype": "region",
+          "name": "New York"
+        },
+        {
+          "division_id": "example:division:locality:nyc",
+          "subtype": "locality",
+          "name": "New York City"
+        },
+        {
+          "division_id": "example:division:borough:bronx",
+          "subtype": "borough",
+          "name": "The Bronx"
+        }
+      ],
+      [
+        {
+          "division_id": "example:division:country:us",
+          "subtype": "country",
+          "name": "United States"
+        },
+        {
+          "division_id": "example:division:region:us-ny",
+          "subtype": "region",
+          "name": "New York"
+        },
+        {
+          "division_id": "example:division:county:bronx",
+          "subtype": "county",
+          "name": "Bronx County"
+        },
+        {
+          "division_id": "example:division:borough:bronx",
+          "subtype": "borough",
+          "name": "The Bronx"
+        }
+      ]
+    ],
+    "parent_division_id": "example:division:locality:nyc"
+  }
+}
+```
+
+
+### Example 6
+#### json
+```json
+{
+  "id": "example:division:region:pl-04",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      18.3392939,
+      53.3220016
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "region",
+    "local_type": {
+      "en": "province"
+    },
+    "names": {
+      "primary": "Woj Kujawsko-Pomorskie"
+    },
+    "sources": [
+      {
+        "property": "",
+        "dataset": "OpenStreetMap",
+        "record_id": "R223407.V254"
+      }
+    ],
+    "country": "PL",
+    "region": "PL-04",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:division:country:pl",
+          "subtype": "country",
+          "name": "Poland"
+        },
+        {
+          "division_id": "example:division:region:pl-04",
+          "subtype": "region",
+          "name": "Woj Kujawsko-Pomorskie"
+        }
+      ]
+    ],
+    "capital_division_ids": [
+      "example:division:locality:bydgoszcz",
+      "example:division:locality:torun"
+    ],
+    "parent_division_id": "example:division:country:pl"
+  }
+}
+```
+
+
+### Example 7
+#### json
+```json
+{
+  "id": "example:division:perspectives:trnc",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      33.6252379,
+      35.2245313
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "country",
+    "names": {
+      "primary": "Kuzey K\u0131br\u0131s",
+      "common": {
+        "en": "Northern Cyprus"
+      },
+      "rules": [
+        {
+          "variant": "short",
+          "value": "TRNC"
+        },
+        {
+          "variant": "official",
+          "language": "en",
+          "value": "Turkish Republic of Northern Cyprus"
+        }
+      ]
+    },
+    "country": "XX",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:perspectives:trnc",
+          "subtype": "country",
+          "name": "Kuzey K\u0131br\u0131s"
+        }
+      ]
+    ],
+    "perspectives": {
+      "mode": "accepted_by",
+      "countries": [
+        "TR"
+      ]
+    }
+  }
+}
+```
+
+
+### Example 8
+#### json
+```json
+{
+  "id": "example:division:region:ca-on",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -86.000977,
+      50.000678
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "region",
+    "local_type": {
+      "en": "province"
+    },
+    "names": {
+      "primary": "Ontario"
+    },
+    "sources": [
+      {
+        "property": "",
+        "dataset": "OpenStreetMap",
+        "record_id": "R68841.V267"
+      }
+    ],
+    "country": "CA",
+    "region": "CA-ON",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:division:country:ca",
+          "subtype": "country",
+          "name": "Canada"
+        },
+        {
+          "division_id": "example:division:region:ca-on",
+          "subtype": "region",
+          "name": "Ontario"
+        }
+      ]
+    ],
+    "capital_division_ids": [
+      "example:division:locality:toronto"
+    ],
+    "parent_division_id": "example:division:country:ca",
+    "population": 13550900
+  }
+}
+```
+
+
+### Example 9
+#### json
+```json
+{
+  "id": "example:division:locality:dk",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      12.0819247,
+      55.6433478
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "locality",
+    "local_type": {
+      "en": "city"
+    },
+    "names": {
+      "primary": "Roskilde"
+    },
+    "sources": [
+      {
+        "property": "",
+        "dataset": "OpenStreetMap",
+        "record_id": "N21040334"
+      }
+    ],
+    "country": "DK",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:division:country:dk",
+          "subtype": "country",
+          "name": "Denmark"
+        }
+      ]
+    ],
+    "capital_of_divisions": [
+      {
+        "division_id": "example:division:country:dk",
+        "subtype": "country"
+      }
+    ],
+    "parent_division_id": "example:division:country:dk",
+    "population": 50781,
+    "cartography": {
+      "prominence": 5
+    }
+  }
+}
+```
+
+
+### Example 10
+#### json
+```json
+{
+  "id": "example:division:region:us-ny",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -75.8449946,
+      43.1561681
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "region",
+    "local_type": {
+      "en": "state"
+    },
+    "names": {
+      "primary": "New York"
+    },
+    "sources": [
+      {
+        "property": "",
+        "dataset": "OpenStreetMap",
+        "record_id": "R61320.V468"
+      }
+    ],
+    "country": "US",
+    "region": "US-NY",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:division:country:us",
+          "subtype": "country",
+          "name": "United States"
+        },
+        {
+          "division_id": "example:division:region:us-ny",
+          "subtype": "region",
+          "name": "New York"
+        }
+      ]
+    ],
+    "capital_division_ids": [
+      "example:division:locality:albany"
+    ],
+    "parent_division_id": "example:division:country:us"
+  }
+}
+```
+
 ## Schema
 
 ```yaml
@@ -18,7 +598,7 @@ description: Divisions are recognized official or non-official organizations of 
 type: object
 properties:
   id:
-    $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id
   geometry:
     description: Division geometry MUST be a Point as defined by GeoJSON schema. It
       represents the approximate location of a position commonly associated with the
@@ -29,9 +609,9 @@ properties:
   properties:
     unevaluatedProperties: false
     allOf:
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/namesContainer
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/cartographyContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/namesContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/cartographyContainer
     - if:
         properties:
           subtype:
@@ -53,9 +633,16 @@ properties:
         - country
         - hierarchies
         - parent_division_id
+    - required:
+      - theme
+      - type
     properties:
+      theme:
+        const: divisions
+      type:
+        const: division
       subtype:
-        $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/defs.yaml#/$defs/propertyDefinitions/placetype
+        $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/definitions/schema.yaml#/$defs/propertyDefinitions/placetype
       class:
         type: string
         enum:
@@ -78,7 +665,7 @@ properties:
           of Switzerland''s official languages as, ''canton'' in French, ''kanton''
           in German, ''cantone'' in Italian, and ''chantun'' in Romansh.'
         allOf:
-        - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/commonNames
+        - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/commonNames
       country:
         description: "ISO 3166-1 alpha-2 country code of the country or country-like
           entity, that this division represents or belongs to.\nIf the entity this
@@ -94,7 +681,7 @@ properties:
           a synthetic code may be used provided it does not conflict with any internationally-recognized
           codes."
         allOf:
-        - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/iso3166_1Alpha2CountryCode
+        - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/iso3166_1Alpha2CountryCode
       region:
         description: "ISO 3166-2 principal subdivision code of the subdivision-like
           entity this division represents or belongs to.\nIf the entity this division
@@ -106,7 +693,7 @@ properties:
           \ - The region value for New York City is 'US-NY', which it\n    inherits
           from the state of New York.\n  - The region value for Puerto Rico is 'US-PR'."
         allOf:
-        - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/iso3166_2SubdivisionCode
+        - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/iso3166_2SubdivisionCode
       hierarchies:
         description: 'Hierarchies in which this division participates.
 
@@ -122,7 +709,7 @@ properties:
           the first one is arbitrary.'
         type: array
         items:
-          $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/defs.yaml#/$defs/propertyDefinitions/hierarchy
+          $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/definitions/schema.yaml#/$defs/propertyDefinitions/hierarchy
         minItems: 1
         uniqueItems: true
       parent_division_id:
@@ -136,7 +723,7 @@ properties:
           arbitrarily. The hierarchies property can be used to inspect the exhaustive
           list of parent divisions.'
         allOf:
-        - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id
+        - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id
       perspectives:
         description: "Political perspectives from which this division is considered
           to be an accurate representation.\nIf this property is absent, then this
@@ -154,7 +741,7 @@ properties:
           to that first all divisions explicitly accepted by the country, and second
           all divisions not explicitly disputed by the country."
         allOf:
-        - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/defs.yaml#/$defs/propertyDefinitions/perspectives
+        - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/definitions/schema.yaml#/$defs/propertyDefinitions/perspectives
       norms:
         description: 'Collects information about local norms and rules within the
           division that are generally useful for mapping and map-related use cases.
@@ -171,7 +758,7 @@ properties:
           driving_side:
             description: Side of the road on which vehicles drive in the division.
             allOf:
-            - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/side
+            - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/side
       population:
         description: Population of the division
         type: integer
@@ -184,7 +771,7 @@ properties:
         minItems: 1
         uniqueItems: true
         items:
-          $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id
+          $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id
       capital_of_divisions:
         description: Division IDs and subtypes of divisions this division is a capital
           of.
@@ -192,9 +779,9 @@ properties:
         minItems: 1
         uniqueItems: true
         items:
-          $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/defs.yaml#/$defs/propertyDefinitions/capitalOfDivisionItem
+          $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/definitions/schema.yaml#/$defs/propertyDefinitions/capitalOfDivisionItem
       wikidata:
-        $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/wikidata
+        $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/wikidata
 
 ```
 

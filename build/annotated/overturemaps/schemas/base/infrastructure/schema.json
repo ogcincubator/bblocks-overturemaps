@@ -5,7 +5,7 @@
   "type": "object",
   "properties": {
     "id": {
-      "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyDefinitions/id"
     },
     "geometry": {
       "unevaluatedProperties": false,
@@ -28,23 +28,31 @@
       "unevaluatedProperties": false,
       "allOf": [
         {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/overtureFeaturePropertiesContainer"
         },
         {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/namesContainer"
         },
         {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/levelContainer"
         },
         {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.json#/$defs/propertyContainers/osmPropertiesContainer"
         }
       ],
       "required": [
+        "theme",
+        "type",
         "subtype",
         "class"
       ],
       "properties": {
+        "theme": {
+          "const": "base"
+        },
+        "type": {
+          "const": "infrastructure"
+        },
         "subtype": {
           "description": "Further description of the type of infrastructure.",
           "type": "string",
@@ -198,6 +206,7 @@
             "regional_airport",
             "reservoir_covered",
             "retaining_wall",
+            "roller_coaster",
             "rope_tow",
             "runway",
             "sally_port",
@@ -239,10 +248,10 @@
           ]
         },
         "height": {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.json#/$defs/propertyDefinitions/height"
         },
         "surface": {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.json#/$defs/propertyDefinitions/surface"
         }
       }
     }

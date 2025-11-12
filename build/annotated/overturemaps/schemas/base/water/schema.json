@@ -5,7 +5,7 @@
   "type": "object",
   "properties": {
     "id": {
-      "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyDefinitions/id"
     },
     "geometry": {
       "unevaluatedProperties": false,
@@ -28,23 +28,31 @@
       "unevaluatedProperties": false,
       "allOf": [
         {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/overtureFeaturePropertiesContainer"
         },
         {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/levelContainer"
         },
         {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/namesContainer"
         },
         {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.json#/$defs/propertyContainers/osmPropertiesContainer"
         }
       ],
       "required": [
+        "theme",
+        "type",
         "subtype",
         "class"
       ],
       "properties": {
+        "theme": {
+          "const": "base"
+        },
+        "type": {
+          "const": "water"
+        },
         "subtype": {
           "description": "The type of water body such as an river, ocean or lake.",
           "default": [

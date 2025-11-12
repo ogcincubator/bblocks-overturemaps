@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.overturemaps.schemas.divisions.definitions - Shared divisions properties",
+  "bblockName": "Shared divisions properties",
+  "bblockId": "ogc.overturemaps.schemas.divisions.definitions",
+  "generated": "2025-11-12T15:58:05.477223+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

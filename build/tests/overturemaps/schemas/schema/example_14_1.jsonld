@@ -1,0 +1,17 @@
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/schema/context.jsonld",
+  "id": "timestamp-with-tz-offset",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      0,
+      0
+    ]
+  },
+  "properties": {
+    "theme": "transportation",
+    "type": "connector",
+    "version": 0
+  }
+}

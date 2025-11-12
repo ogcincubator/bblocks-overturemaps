@@ -1,0 +1,13 @@
+Validation report for ogc.overturemaps.schemas.schema - Overture Maps Schema
+Generated 2025-11-12T15:58:11.090544+00:00
+=== Files ===
+Using example_14_1.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_14_1.jsonld created
+Output Turtle example_14_1.ttl created
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

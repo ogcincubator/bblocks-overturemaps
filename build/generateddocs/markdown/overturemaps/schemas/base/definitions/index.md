@@ -1,0 +1,87 @@
+
+# Base layer properties (Schema)
+
+`ogc.overturemaps.schemas.base.definitions` *v0.1*
+
+Common schema definitions the base theme (primarily from OSM)
+
+[*Status*](http://www.opengis.net/def/status): Under development
+
+## Schema
+
+```yaml
+$schema: https://json-schema.org/draft/2020-12/schema
+title: Base layer properties
+description: Common schema definitions the base theme (primarily from OSM)
+$defs:
+  propertyDefinitions:
+    elevation:
+      description: Elevation above sea level (in meters) of the feature.
+      type: integer
+      maximum: 9000
+    depth:
+      description: Depth below surface level (in meters) of the feature.
+      type: integer
+      minimum: 0
+    height:
+      description: Height of the feature in meters.
+      type: number
+      exclusiveMinimum: 0
+    sourceTags:
+      description: Any attributes/tags from the original source data that should be
+        passed through.
+      type: object
+    surface:
+      description: Surface material, mostly from the OSM tag, with some normalization.
+      type: string
+      enum:
+      - asphalt
+      - cobblestone
+      - compacted
+      - concrete
+      - concrete_plates
+      - dirt
+      - earth
+      - fine_gravel
+      - grass
+      - gravel
+      - ground
+      - paved
+      - paving_stones
+      - pebblestone
+      - recreation_grass
+      - recreation_paved
+      - recreation_sand
+      - rubber
+      - sand
+      - sett
+      - tartan
+      - unpaved
+      - wood
+      - woodchips
+  propertyContainers:
+    osmPropertiesContainer:
+      title: OSM Properties
+      description: OSM Properties
+      type: object
+      properties:
+        source_tags:
+          $ref: '#/$defs/propertyDefinitions/sourceTags'
+        wikidata:
+          $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/wikidata
+
+```
+
+Links to the schema:
+
+* YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.json)
+* JSON version: [schema.json](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.yaml)
+
+
+# For developers
+
+The source code for this Building Block can be found in the following repository:
+
+* URL: [https://github.com/ogcincubator/bblocks-overturemaps](https://github.com/ogcincubator/bblocks-overturemaps)
+* Path: `_sources/schemas/base/definitions`
+

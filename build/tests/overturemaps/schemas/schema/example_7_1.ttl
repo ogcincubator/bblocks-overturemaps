@@ -1,0 +1,9 @@
+@prefix geojson: <https://purl.org/geojson/vocab#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<file:///github/workspace/OXOXOXOXOX> a <file:///github/workspace/water>,
+        geojson:Feature ;
+    geojson:geometry [ a geojson:Polygon ;
+            geojson:coordinates ( ( ( -9.183078e+01 4.378999e+01 ) ( -9.183093e+01 4.379013e+01 ) ( -9.183152e+01 4.379062e+01 ) ( -9.183208e+01 4.379118e+01 ) ( -9.183258e+01 4.379176e+01 ) ( -9.183284e+01 4.379216e+01 ) ( -9.183078e+01 4.378999e+01 ) ) ) ] .
+

@@ -1,0 +1,33 @@
+
+
+{
+  "itemIdentifier": "ogc.overturemaps.schemas.base.definitions",
+  "name": "Base layer properties",
+  "itemClass": "schema",
+  "abstract": "Common schema definitions the base theme (primarily from OSM)",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+  "dateOfLastChange": "2025-11-12",
+  "register": "ogc-building-blocks-register",
+  "version": "0.1",
+  "tags": [
+    "overture-maps",
+    "schemas",
+    "gers"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.overturemaps.schemas.definitions"
+  ],
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/definitions/schema.yaml",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/definitions/",
+  "rdfData": [],
+  "validationPassed": true,
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Base layer properties\ndescription: Common schema definitions the base theme (primarily from OSM)\n$defs:\n  propertyDefinitions:\n    elevation:\n      description: Elevation above sea level (in meters) of the feature.\n      type: integer\n      maximum: 9000\n    depth:\n      description: Depth below surface level (in meters) of the feature.\n      type: integer\n      minimum: 0\n    height:\n      description: Height of the feature in meters.\n      type: number\n      exclusiveMinimum: 0\n    sourceTags:\n      description: Any attributes/tags from the original source data that should be\n        passed through.\n      type: object\n    surface:\n      description: Surface material, mostly from the OSM tag, with some normalization.\n      type: string\n      enum:\n      - asphalt\n      - cobblestone\n      - compacted\n      - concrete\n      - concrete_plates\n      - dirt\n      - earth\n      - fine_gravel\n      - grass\n      - gravel\n      - ground\n      - paved\n      - paving_stones\n      - pebblestone\n      - recreation_grass\n      - recreation_paved\n      - recreation_sand\n      - rubber\n      - sand\n      - sett\n      - tartan\n      - unpaved\n      - wood\n      - woodchips\n  propertyContainers:\n    osmPropertiesContainer:\n      title: OSM Properties\n      description: OSM Properties\n      type: object\n      properties:\n        source_tags:\n          $ref: '#/$defs/propertyDefinitions/sourceTags'\n        wikidata:\n          $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/wikidata\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-overturemaps",
+  "gitPath": "_sources/schemas/base/definitions"
+}

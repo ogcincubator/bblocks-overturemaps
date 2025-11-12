@@ -5,7 +5,7 @@
   "type": "object",
   "properties": {
     "id": {
-      "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyDefinitions/id"
     },
     "geometry": {
       "description": "Segment's geometry which MUST be a LineSting as defined by GeoJSON schema.",
@@ -19,6 +19,8 @@
     "properties": {
       "unevaluatedProperties": false,
       "required": [
+        "theme",
+        "type",
         "subtype"
       ],
       "allOf": [
@@ -32,7 +34,7 @@
               "$ref": "#/$defs/propertyContainers/accessContainer"
             },
             "level": {
-              "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+              "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyDefinitions/level"
             },
             "level_rules": {
               "$ref": "#/$defs/propertyContainers/levelRulesContainer"
@@ -40,10 +42,10 @@
           }
         },
         {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/overtureFeaturePropertiesContainer"
         },
         {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/namesContainer"
         }
       ],
       "oneOf": [
@@ -109,6 +111,12 @@
         }
       ],
       "properties": {
+        "theme": {
+          "const": "transportation"
+        },
+        "type": {
+          "const": "segment"
+        },
         "subtype": {
           "description": "Broad category of transportation segment.",
           "type": "string",
@@ -132,10 +140,10 @@
             ],
             "properties": {
               "connector_id": {
-                "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+                "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyDefinitions/id"
               },
               "at": {
-                "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+                "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyDefinitions/linearlyReferencedPosition"
               }
             }
           },
@@ -385,7 +393,7 @@
           "unevaluatedProperties": false,
           "allOf": [
             {
-              "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+              "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/geometricRangeScopeContainer"
             }
           ],
           "properties": {
@@ -414,7 +422,7 @@
               "pattern": "^(\\S.*)?\\S$"
             },
             "wikidata": {
-              "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+              "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyDefinitions/wikidata"
             }
           }
         }
@@ -836,7 +844,7 @@
         "$comment": "Temporal scoping properties defining the time spans when a recurring rule is active.",
         "properties": {
           "during": {
-            "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+            "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyDefinitions/openingHours"
           }
         }
       },
@@ -926,7 +934,7 @@
           ],
           "allOf": [
             {
-              "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+              "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/geometricRangeScopeContainer"
             }
           ],
           "unevaluatedProperties": false,
@@ -979,7 +987,7 @@
           "unevaluatedProperties": false,
           "allOf": [
             {
-              "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+              "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/geometricRangeScopeContainer"
             }
           ],
           "required": [
@@ -1031,7 +1039,7 @@
           "unevaluatedProperties": false,
           "allOf": [
             {
-              "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+              "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/geometricRangeScopeContainer"
             }
           ],
           "required": [
@@ -1087,7 +1095,7 @@
           "type": "object",
           "allOf": [
             {
-              "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+              "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/geometricRangeScopeContainer"
             }
           ],
           "unevaluatedProperties": false,
@@ -1112,7 +1120,7 @@
           "type": "object",
           "allOf": [
             {
-              "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+              "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/geometricRangeScopeContainer"
             }
           ],
           "unevaluatedProperties": false,
@@ -1138,7 +1146,7 @@
           "type": "object",
           "allOf": [
             {
-              "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+              "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/geometricRangeScopeContainer"
             }
           ],
           "unevaluatedProperties": false,
@@ -1147,7 +1155,7 @@
           ],
           "properties": {
             "value": {
-              "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+              "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyDefinitions/level"
             }
           }
         }
@@ -1159,7 +1167,7 @@
           "type": "object",
           "allOf": [
             {
-              "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+              "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/geometricRangeScopeContainer"
             }
           ],
           "unevaluatedProperties": false,
@@ -1177,7 +1185,7 @@
           "type": "object",
           "allOf": [
             {
-              "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+              "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/geometricRangeScopeContainer"
             }
           ],
           "unevaluatedProperties": false,
@@ -1198,7 +1206,7 @@
           "type": "object",
           "allOf": [
             {
-              "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+              "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/geometricRangeScopeContainer"
             }
           ],
           "required": [

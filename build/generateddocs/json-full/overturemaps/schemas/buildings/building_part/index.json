@@ -7,7 +7,7 @@
   "abstract": "A single building part. Parts describe their shape and color and other properties. Each building part must contain the building with which it is associated.",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
-  "dateOfLastChange": "2025-11-05",
+  "dateOfLastChange": "2025-11-12",
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
@@ -16,17 +16,63 @@
     "gers",
     "buildings"
   ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.overturemaps.schemas.buildings.definitions",
+    "ogc.overturemaps.schemas.definitions"
+  ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.json"
   },
-  "shaclShapes": {},
-  "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/remote_cache/",
-  "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/buildings/building_part.yaml",
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/buildings/building_part/schema.yaml",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/buildings/building_part/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: part\ndescription: A single building part. Parts describe their shape and color and other\n  properties. Each building part must contain the building with which it is associated.\ntype: object\nproperties:\n  geometry:\n    description: The part's geometry. It must be a polygon or multipolygon.\n    unevaluatedProperties: false\n    oneOf:\n    - $ref: https://geojson.org/schema/Polygon.json\n    - $ref: https://geojson.org/schema/MultiPolygon.json\n  properties:\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/namesContainer\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/levelContainer\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/buildings/defs.yaml#/$defs/propertyContainers/shapeContainer\n    required:\n    - building_id\n    properties:\n      building_id:\n        description: The building ID to which this part belongs\n        type: string\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-overturemaps/blob/master/build/tests/overturemaps/schemas/buildings/building_part/",
+  "examples": [
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/building-part-basic.yaml",
+          "code": "{\n  \"id\": \"overture:buildings:part:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -77.036873,\n          38.897804\n        ],\n        [\n          -77.036873,\n          38.897559\n        ],\n        [\n          -77.03626,\n          38.897559\n        ],\n        [\n          -77.03626,\n          38.897804\n        ],\n        [\n          -77.036873,\n          38.897804\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building_part\",\n    \"version\": 1,\n    \"level\": 1,\n    \"building_id\": \"abc123\",\n    \"height\": 21.34,\n    \"num_floors\": 4,\n    \"min_height\": 15.0,\n    \"min_floor\": 2,\n    \"roof_shape\": \"dome\",\n    \"roof_orientation\": \"across\",\n    \"roof_direction\": 23.4,\n    \"roof_height\": 3.4,\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"microsoftMLBuildings\"\n      },\n      {\n        \"property\": \"/properties/height\",\n        \"dataset\": \"metaLidarExtractions\"\n      }\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building_part/example_1_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/building-part-name.yaml",
+          "code": "{\n  \"id\": \"overture:buildings:part:2345\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -77.036873,\n          38.897804\n        ],\n        [\n          -77.036873,\n          38.897559\n        ],\n        [\n          -77.03626,\n          38.897559\n        ],\n        [\n          -77.03626,\n          38.897804\n        ],\n        [\n          -77.036873,\n          38.897804\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"buildings\",\n    \"type\": \"building_part\",\n    \"version\": 1,\n    \"level\": 1,\n    \"building_id\": \"abc1234\",\n    \"names\": {\n      \"primary\": \"East Wing\"\n    },\n    \"height\": 21.34,\n    \"num_floors\": 4,\n    \"min_height\": 15.0,\n    \"min_floor\": 2,\n    \"roof_shape\": \"dome\",\n    \"roof_orientation\": \"across\",\n    \"roof_direction\": 23.4,\n    \"roof_height\": 3.4,\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\"\n      }\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building_part/example_2_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/part1.yaml",
+          "code": "{\n  \"id\": \"overture:buildings:part:100\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -117.1707971,\n          32.7240658\n        ],\n        [\n          -117.1712198,\n          32.724\n        ],\n        [\n          -117.1712713,\n          32.7242091\n        ],\n        [\n          -117.1706665,\n          32.7243145\n        ],\n        [\n          -117.1705738,\n          32.7239379\n        ],\n        [\n          -117.1707783,\n          32.7239022\n        ],\n        [\n          -117.1707949,\n          32.7240226\n        ],\n        [\n          -117.1707279,\n          32.7240319\n        ],\n        [\n          -117.1707635,\n          32.7241786\n        ],\n        [\n          -117.1708208,\n          32.7241677\n        ],\n        [\n          -117.1707971,\n          32.7240658\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"building_id\": \"1234\",\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building_part\",\n    \"version\": 1,\n    \"level\": 1,\n    \"num_floors\": 8,\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\"\n      }\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building_part/example_3_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/part2.yaml",
+          "code": "{\n  \"id\": \"overture:buildings:part:101\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -117.1712198,\n          32.724\n        ],\n        [\n          -117.1711923,\n          32.7238882\n        ],\n        [\n          -117.1711025,\n          32.7239038\n        ],\n        [\n          -117.1710888,\n          32.7238481\n        ],\n        [\n          -117.1707783,\n          32.7239022\n        ],\n        [\n          -117.1707949,\n          32.7240226\n        ],\n        [\n          -117.1707279,\n          32.7240319\n        ],\n        [\n          -117.1707635,\n          32.7241786\n        ],\n        [\n          -117.1708208,\n          32.7241677\n        ],\n        [\n          -117.1707971,\n          32.7240658\n        ],\n        [\n          -117.1712198,\n          32.724\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"building_id\": \"1234\",\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building_part\",\n    \"version\": 1,\n    \"level\": 1,\n    \"num_floors\": 3,\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\"\n      }\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building_part/example_4_1.json"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: part\ndescription: A single building part. Parts describe their shape and color and other\n  properties. Each building part must contain the building with which it is associated.\ntype: object\nproperties:\n  geometry:\n    description: The part's geometry. It must be a polygon or multipolygon.\n    unevaluatedProperties: false\n    oneOf:\n    - $ref: https://geojson.org/schema/Polygon.json\n    - $ref: https://geojson.org/schema/MultiPolygon.json\n  properties:\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer\n    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/namesContainer\n    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/levelContainer\n    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/definitions/schema.yaml#/$defs/propertyContainers/shapeContainer\n    required:\n    - theme\n    - type\n    - building_id\n    properties:\n      theme:\n        const: buildings\n      type:\n        const: building_part\n      building_id:\n        description: The building ID to which this part belongs\n        type: string\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-overturemaps",
   "gitPath": "_sources/schemas/buildings/building_part"
 }

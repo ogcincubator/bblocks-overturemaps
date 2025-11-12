@@ -1,0 +1,10 @@
+Validation report for ogc.overturemaps.schemas.transportation.segment - segment
+Generated 2025-11-12T15:58:05.956494+00:00
+=== Files ===
+Using example_37_1.json from examples
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

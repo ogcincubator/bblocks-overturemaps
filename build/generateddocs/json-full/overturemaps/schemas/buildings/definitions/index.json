@@ -1,0 +1,30 @@
+
+
+{
+  "itemIdentifier": "ogc.overturemaps.schemas.buildings.definitions",
+  "name": "Overture Maps Shared Building Properties",
+  "itemClass": "schema",
+  "abstract": "Common schema definitions shared by building footprints and building parts",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+  "dateOfLastChange": "2025-11-12",
+  "register": "ogc-building-blocks-register",
+  "version": "0.1",
+  "tags": [
+    "overture-maps",
+    "schemas",
+    "gers"
+  ],
+  "shaclShapes": {},
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/definitions/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/definitions/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/buildings/definitions/schema.yaml",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/buildings/definitions/",
+  "rdfData": [],
+  "validationPassed": true,
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: Overture Maps Shared Building Properties\ndescription: Common schema definitions shared by building footprints and building\n  parts\n$defs:\n  propertyContainers:\n    shapeContainer:\n      title: shape\n      description: Properties of the buildings shape, such as height or roof type.\n      properties:\n        height:\n          description: Height of the building or part in meters. The height is the\n            distance from the lowest point to the highest point.\n          type: number\n          exclusiveMinimum: 0\n        is_underground:\n          description: Whether the entire building or part is completely below ground.\n            This is useful for rendering which typically omits these buildings or\n            styles them differently because they are not visible above ground. This\n            is different than the level column which is used to indicate z-ordering\n            of elements and negative values may be above ground.\n          type: boolean\n        num_floors:\n          description: Number of above-ground floors of the building or part.\n          type: integer\n          exclusiveMinimum: 0\n        num_floors_underground:\n          description: Number of below-ground floors of the building or part.\n          type: integer\n          exclusiveMinimum: 0\n        min_height:\n          description: The height of the bottom part of building in meters. Used if\n            a building or part of building starts above the ground level.\n          type: number\n        min_floor:\n          description: The \"start\" floor of this building or part. Indicates that\n            the building or part is \"floating\" and its bottom-most floor is above\n            ground level, usually because it is part of a larger building in which\n            some parts do reach down to ground level. An example is a building that\n            has an entry road or driveway at ground level into an interior courtyard,\n            where part of the building bridges above the entry road. This property\n            may sometimes be populated when min_height is missing and in these cases\n            can be used as a proxy for min_height.\n          type: integer\n          exclusiveMinimum: 0\n        facade_color:\n          description: The color (name or color triplet) of the facade of a building\n            or building part in hexadecimal\n          type: string\n        facade_material:\n          description: The outer surface material of building facade.\n          type: string\n          enum:\n          - brick\n          - cement_block\n          - clay\n          - concrete\n          - glass\n          - metal\n          - plaster\n          - plastic\n          - stone\n          - timber_framing\n          - wood\n        roof_material:\n          description: The outermost material of the roof.\n          type: string\n          enum:\n          - concrete\n          - copper\n          - eternit\n          - glass\n          - grass\n          - gravel\n          - metal\n          - plastic\n          - roof_tiles\n          - slate\n          - solar_panels\n          - thatch\n          - tar_paper\n          - wood\n        roof_shape:\n          description: The shape of the roof\n          type: string\n          enum:\n          - dome\n          - flat\n          - gabled\n          - gambrel\n          - half_hipped\n          - hipped\n          - mansard\n          - onion\n          - pyramidal\n          - round\n          - saltbox\n          - sawtooth\n          - skillion\n          - spherical\n        roof_direction:\n          description: Bearing of the roof ridge line in degrees.\n          type: number\n          inclusiveMinimum: 0\n          exclusiveMaximum: 360\n        roof_orientation:\n          description: Orientation of the roof shape relative to the footprint shape.\n            Either \"along\" or \"across\".\n          type: string\n          enum:\n          - across\n          - along\n        roof_color:\n          description: The color (name or color triplet) of the roof of a building\n            or building part in hexadecimal\n          type: string\n        roof_height:\n          description: The height of the building roof in meters. This represents\n            the distance from the base of the roof to the highest point of the roof.\n          type: number\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-overturemaps",
+  "gitPath": "_sources/schemas/buildings/definitions"
+}

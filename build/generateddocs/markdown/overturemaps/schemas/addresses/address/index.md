@@ -8,6 +8,138 @@ The address schema allows up to 5 "admin levels". Rather than have field names t
 
 [*Status*](http://www.opengis.net/def/status): Under development
 
+## Examples
+
+### Example 1
+#### json
+```json
+{
+  "id": "overture:addresses:address:1",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -71.2086153,
+      42.3373725
+    ]
+  },
+  "properties": {
+    "theme": "addresses",
+    "type": "address",
+    "version": 0,
+    "country": "US",
+    "address_levels": [
+      {
+        "value": "MA"
+      },
+      {
+        "value": "NEWTON CENTRE"
+      }
+    ],
+    "postcode": "02459",
+    "street": "COMMONWEALTH AVE",
+    "number": "1000"
+  }
+}
+```
+
+
+### Example 2
+#### json
+```json
+{
+  "id": "overture:addresses:addres:1",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -71.2086153,
+      42.3373725
+    ]
+  },
+  "properties": {
+    "theme": "addresses",
+    "type": "address",
+    "version": 0,
+    "country": "US",
+    "address_levels": [
+      {},
+      {}
+    ],
+    "postcode": "02459",
+    "street": "COMMONWEALTH AVE",
+    "number": "1000"
+  }
+}
+```
+
+
+### Example 3
+#### json
+```json
+{
+  "id": "overture:addresses:addres:1",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -71.2086153,
+      42.3373725
+    ]
+  },
+  "properties": {
+    "theme": "addresses",
+    "type": "address",
+    "version": 0,
+    "country": "US",
+    "address_levels": [
+      {
+        "value": "MA"
+      },
+      {}
+    ],
+    "postcode": "02459",
+    "street": "COMMONWEALTH AVE",
+    "number": "1000"
+  }
+}
+```
+
+
+### Example 4
+#### json
+```json
+{
+  "id": "overture:addresses:address:1",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -71.2086153,
+      42.3373725
+    ]
+  },
+  "properties": {
+    "theme": "addresses",
+    "type": "address",
+    "version": 0,
+    "country": "US",
+    "address_levels": [
+      {
+        "value": "MA"
+      },
+      {
+        "value": "NEWTON CENTRE"
+      }
+    ],
+    "postcode": "02459",
+    "street": "COMMONWEALTH AVE",
+    "number": "1000",
+    "postal_city": "Some City"
+  }
+}
+```
+
 ## Schema
 
 ```yaml
@@ -24,7 +156,7 @@ description: 'Addresses are geographic points used for locating businesses and i
 type: object
 properties:
   id:
-    $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id
+    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id
   geometry:
     description: An address geometry MUST be a Point as defined by GeoJSON schema.
     unevaluatedProperties: false
@@ -32,11 +164,18 @@ properties:
     - $ref: https://geojson.org/schema/Point.json
   properties:
     unevaluatedProperties: false
+    required:
+    - theme
+    - type
     allOf:
-    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer
+    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer
     properties:
+      theme:
+        const: addresses
+      type:
+        const: address
       country:
-        $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/iso3166_1Alpha2CountryCode
+        $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/iso3166_1Alpha2CountryCode
       postcode:
         description: The postcode for the address
         type: string

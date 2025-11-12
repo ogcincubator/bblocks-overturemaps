@@ -5,7 +5,7 @@
   "type": "object",
   "properties": {
     "id": {
-      "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+      "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyDefinitions/id"
     },
     "geometry": {
       "description": "Connector's geometry which MUST be a Point as defined by GeoJSON schema.",
@@ -20,9 +20,21 @@
       "unevaluatedProperties": false,
       "allOf": [
         {
-          "$ref": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml"
+          "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyContainers/overtureFeaturePropertiesContainer"
         }
-      ]
+      ],
+      "required": [
+        "theme",
+        "type"
+      ],
+      "properties": {
+        "theme": {
+          "const": "transportation"
+        },
+        "type": {
+          "const": "connector"
+        }
+      }
     }
   }
 }

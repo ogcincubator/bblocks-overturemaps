@@ -1,0 +1,33 @@
+
+
+{
+  "itemIdentifier": "ogc.overturemaps.schemas.divisions.definitions",
+  "name": "Shared divisions properties",
+  "itemClass": "schema",
+  "abstract": "Common schema definitions for divisions theme",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+  "dateOfLastChange": "2025-11-12",
+  "register": "ogc-building-blocks-register",
+  "version": "0.1",
+  "tags": [
+    "overture-maps",
+    "schemas",
+    "gers"
+  ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.overturemaps.schemas.definitions"
+  ],
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/definitions/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/definitions/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/divisions/definitions/schema.yaml",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/divisions/definitions/",
+  "rdfData": [],
+  "validationPassed": true,
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ndescription: Common schema definitions for divisions theme\n$defs:\n  propertyDefinitions:\n    placetype:\n      description: Category of the division from a finite, hierarchical, ordered list\n        of categories (e.g. country, region, locality, etc.) similar to a Who's on\n        First placetype.\n      type: string\n      enum:\n      - country\n      - dependency\n      - macroregion\n      - region\n      - macrocounty\n      - county\n      - localadmin\n      - locality\n      - borough\n      - macrohood\n      - neighborhood\n      - microhood\n    hierarchy:\n      description: 'A hierarchy of divisions, with the first entry being a country;\n        each subsequent entry, if any, being a division that is a direct child of\n        the previous entry; and the last entry representing the division that contains\n        the hierarchy.\n\n        For example, a hierarchy for the United States is simply [United States].\n        A hierarchy for the U.S. state of New Hampshire would be [United States, New\n        Hampshire], and a hierarchy for the city of Concord, NH would be [United States,\n        New Hampshire, Merrimack County, Concord].'\n      type: array\n      items:\n        $ref: '#/$defs/propertyDefinitions/hierarchyItem'\n      minItems: 1\n      uniqueItems: true\n    hierarchyItem:\n      description: One division in a hierarchy\n      type: object\n      unevaluatedProperties: false\n      required:\n      - division_id\n      - name\n      - subtype\n      properties:\n        division_id:\n          description: ID of the division\n          allOf:\n          - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id\n        subtype:\n          $ref: '#/$defs/propertyDefinitions/placetype'\n        name:\n          description: Primary name of the division\n          type: string\n          minLength: 1\n          pattern: ^(\\S.*)?\\S$\n    perspectives:\n      description: Political perspectives from which division is viewed.\n      type: object\n      unevaluatedProperties: false\n      required:\n      - mode\n      - countries\n      properties:\n        mode:\n          description: Whether perspective holder accept or dispute this division.\n          type: string\n          enum:\n          - accepted_by\n          - disputed_by\n        countries:\n          description: Countries holding the given mode of perspective.\n          type: array\n          items:\n            $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/iso3166_1Alpha2CountryCode\n          minItems: 1\n          uniqueItems: true\n    capitalOfDivisionItem:\n      description: One division that has capital\n      type: object\n      unevaluatedProperties: false\n      required:\n      - division_id\n      - subtype\n      properties:\n        division_id:\n          description: ID of the division\n          allOf:\n          - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id\n        subtype:\n          $ref: '#/$defs/propertyDefinitions/placetype'\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-overturemaps",
+  "gitPath": "_sources/schemas/divisions/definitions"
+}

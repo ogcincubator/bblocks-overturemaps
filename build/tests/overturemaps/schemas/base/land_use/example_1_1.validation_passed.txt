@@ -1,0 +1,10 @@
+Validation report for ogc.overturemaps.schemas.base.land_use - land_use
+Generated 2025-11-12T15:58:08.376906+00:00
+=== Files ===
+Using example_1_1.json from examples
+=== End Files ===
+
+=== JSON Schema ===
+Validation passed
+=== End JSON Schema ===
+

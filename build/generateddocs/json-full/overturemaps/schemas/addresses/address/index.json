@@ -7,7 +7,7 @@
   "abstract": "Addresses are geographic points used for locating businesses and individuals. The rules, fields, and fieldnames of an address can vary extensively between locations. We use a simplified schema to capture worldwide address points. This initial schema is largely based on the OpenAddresses (www.openaddresses.io) project.\nThe address schema allows up to 5 \"admin levels\". Rather than have field names that apply across all countries, we provide an array called \"address_levels\" containing the necessary administrative levels for an address.",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
-  "dateOfLastChange": "2025-11-05",
+  "dateOfLastChange": "2025-11-12",
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
@@ -16,17 +16,62 @@
     "gers",
     "addresses"
   ],
+  "shaclShapes": {},
+  "dependsOn": [
+    "ogc.overturemaps.schemas.definitions"
+  ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/schema.json"
   },
-  "shaclShapes": {},
-  "remoteCacheDir": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/remote_cache/",
-  "sourceSchema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/addresses/address.yaml",
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/addresses/address/schema.yaml",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/addresses/address/",
   "rdfData": [],
   "validationPassed": true,
-  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: address\ndescription: 'Addresses are geographic points used for locating businesses and individuals.\n  The rules, fields, and fieldnames of an address can vary extensively between locations.\n  We use a simplified schema to capture worldwide address points. This initial schema\n  is largely based on the OpenAddresses (www.openaddresses.io) project.\n\n  The address schema allows up to 5 \"admin levels\". Rather than have field names that\n  apply across all countries, we provide an array called \"address_levels\" containing\n  the necessary administrative levels for an address.'\ntype: object\nproperties:\n  id:\n    $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/id\n  geometry:\n    description: An address geometry MUST be a Point as defined by GeoJSON schema.\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://geojson.org/schema/Point.json\n  properties:\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer\n    properties:\n      country:\n        $ref: https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/defs.yaml#/$defs/propertyDefinitions/iso3166_1Alpha2CountryCode\n      postcode:\n        description: The postcode for the address\n        type: string\n        minLength: 1\n        pattern: ^(\\S.*)?\\S$\n      street:\n        description: The street name associated with this address. The street name\n          can include the street \"type\" or street suffix, e.g., Main Street. Ideally\n          this is fully spelled out and not abbreviated but we acknowledge that many\n          address datasets abbreviate the street name so it is acceptable.\n        type: string\n        minLength: 1\n        pattern: ^(\\S.*)?\\S$\n      number:\n        description: The house number for this address.  This field may not strictly\n          be a number. Values such as \"74B\", \"189 1/2\", \"208.5\" are common as the\n          number part of an address and they are not part of the \"unit\" of this address.\n        type: string\n        minLength: 1\n        pattern: ^(\\S.*)?\\S$\n      unit:\n        description: The suite/unit/apartment/floor number\n        type: string\n        minLength: 1\n        pattern: ^(\\S.*)?\\S$\n      address_levels:\n        description: 'The administrative levels present in an address. The number\n          of values in this list and their meaning is country-dependent. For example,\n          in the United States we expect two values: the state and the municipality.\n          In other countries there might be only one. Other countries could have three\n          or more. The array is ordered with the highest levels first.\n\n          Note: when a level is not known - most likely because the data provider\n          has not supplied it and we have not derived it from another source, the\n          array element container must be present, but the \"value\" field should be\n          omitted'\n        type: array\n        items:\n          $ref: '#/$defs/propertyContainers/addressLevelContainer'\n        minItems: 1\n        maxItems: 5\n      postal_city:\n        description: 'In some countries or regions, a mailing address may need to\n          specify a different city name than the city that actually contains the address\n          coordinates. This optional field can be used to specify the alternate city\n          name to use.\n\n          Example from US National Address Database: 716 East County Road, Winchester,\n          Indiana has \"Ridgeville\" as its postal city\n\n          Another example in Slovenia: Tomaj 71, 6221 Dutovlje, Slovenia'\n        type: string\n        pattern: ^(\\S.*)?\\S$\n$defs:\n  propertyContainers:\n    addressLevelContainer:\n      description: An address \"admin level\". We want to avoid the phrase \"admin level\"\n        and have chosen \"address level\". These represent states, regions, districts,\n        cities, neighborhoods, etc. The address schema defines several numbered levels\n        with per-country rules indicating which parts of a country's address goes\n        to which numbered level.\n      type: object\n      properties:\n        value:\n          type: string\n          minLength: 1\n          pattern: ^(\\S.*)?\\S$\n",
+  "testOutputs": "https://github.com/ogcincubator/bblocks-overturemaps/blob/master/build/tests/overturemaps/schemas/addresses/address/",
+  "examples": [
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/address.yaml",
+          "code": "{\n  \"id\": \"overture:addresses:address:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -71.2086153,\n      42.3373725\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"addresses\",\n    \"type\": \"address\",\n    \"version\": 0,\n    \"country\": \"US\",\n    \"address_levels\": [\n      {\n        \"value\": \"MA\"\n      },\n      {\n        \"value\": \"NEWTON CENTRE\"\n      }\n    ],\n    \"postcode\": \"02459\",\n    \"street\": \"COMMONWEALTH AVE\",\n    \"number\": \"1000\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/addresses/address/example_1_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/address_all_missing_address_levels.yaml",
+          "code": "{\n  \"id\": \"overture:addresses:addres:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -71.2086153,\n      42.3373725\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"addresses\",\n    \"type\": \"address\",\n    \"version\": 0,\n    \"country\": \"US\",\n    \"address_levels\": [\n      {},\n      {}\n    ],\n    \"postcode\": \"02459\",\n    \"street\": \"COMMONWEALTH AVE\",\n    \"number\": \"1000\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/addresses/address/example_2_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/address_missing_address_level.yaml",
+          "code": "{\n  \"id\": \"overture:addresses:addres:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -71.2086153,\n      42.3373725\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"addresses\",\n    \"type\": \"address\",\n    \"version\": 0,\n    \"country\": \"US\",\n    \"address_levels\": [\n      {\n        \"value\": \"MA\"\n      },\n      {}\n    ],\n    \"postcode\": \"02459\",\n    \"street\": \"COMMONWEALTH AVE\",\n    \"number\": \"1000\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/addresses/address/example_3_1.json"
+        }
+      ]
+    },
+    {
+      "snippets": [
+        {
+          "language": "json",
+          "ref": "examples/address_postal_city.yaml",
+          "code": "{\n  \"id\": \"overture:addresses:address:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -71.2086153,\n      42.3373725\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"addresses\",\n    \"type\": \"address\",\n    \"version\": 0,\n    \"country\": \"US\",\n    \"address_levels\": [\n      {\n        \"value\": \"MA\"\n      },\n      {\n        \"value\": \"NEWTON CENTRE\"\n      }\n    ],\n    \"postcode\": \"02459\",\n    \"street\": \"COMMONWEALTH AVE\",\n    \"number\": \"1000\",\n    \"postal_city\": \"Some City\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/addresses/address/example_4_1.json"
+        }
+      ]
+    }
+  ],
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntitle: address\ndescription: 'Addresses are geographic points used for locating businesses and individuals.\n  The rules, fields, and fieldnames of an address can vary extensively between locations.\n  We use a simplified schema to capture worldwide address points. This initial schema\n  is largely based on the OpenAddresses (www.openaddresses.io) project.\n\n  The address schema allows up to 5 \"admin levels\". Rather than have field names that\n  apply across all countries, we provide an array called \"address_levels\" containing\n  the necessary administrative levels for an address.'\ntype: object\nproperties:\n  id:\n    $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/id\n  geometry:\n    description: An address geometry MUST be a Point as defined by GeoJSON schema.\n    unevaluatedProperties: false\n    allOf:\n    - $ref: https://geojson.org/schema/Point.json\n  properties:\n    unevaluatedProperties: false\n    required:\n    - theme\n    - type\n    allOf:\n    - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer\n    properties:\n      theme:\n        const: addresses\n      type:\n        const: address\n      country:\n        $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/iso3166_1Alpha2CountryCode\n      postcode:\n        description: The postcode for the address\n        type: string\n        minLength: 1\n        pattern: ^(\\S.*)?\\S$\n      street:\n        description: The street name associated with this address. The street name\n          can include the street \"type\" or street suffix, e.g., Main Street. Ideally\n          this is fully spelled out and not abbreviated but we acknowledge that many\n          address datasets abbreviate the street name so it is acceptable.\n        type: string\n        minLength: 1\n        pattern: ^(\\S.*)?\\S$\n      number:\n        description: The house number for this address.  This field may not strictly\n          be a number. Values such as \"74B\", \"189 1/2\", \"208.5\" are common as the\n          number part of an address and they are not part of the \"unit\" of this address.\n        type: string\n        minLength: 1\n        pattern: ^(\\S.*)?\\S$\n      unit:\n        description: The suite/unit/apartment/floor number\n        type: string\n        minLength: 1\n        pattern: ^(\\S.*)?\\S$\n      address_levels:\n        description: 'The administrative levels present in an address. The number\n          of values in this list and their meaning is country-dependent. For example,\n          in the United States we expect two values: the state and the municipality.\n          In other countries there might be only one. Other countries could have three\n          or more. The array is ordered with the highest levels first.\n\n          Note: when a level is not known - most likely because the data provider\n          has not supplied it and we have not derived it from another source, the\n          array element container must be present, but the \"value\" field should be\n          omitted'\n        type: array\n        items:\n          $ref: '#/$defs/propertyContainers/addressLevelContainer'\n        minItems: 1\n        maxItems: 5\n      postal_city:\n        description: 'In some countries or regions, a mailing address may need to\n          specify a different city name than the city that actually contains the address\n          coordinates. This optional field can be used to specify the alternate city\n          name to use.\n\n          Example from US National Address Database: 716 East County Road, Winchester,\n          Indiana has \"Ridgeville\" as its postal city\n\n          Another example in Slovenia: Tomaj 71, 6221 Dutovlje, Slovenia'\n        type: string\n        pattern: ^(\\S.*)?\\S$\n$defs:\n  propertyContainers:\n    addressLevelContainer:\n      description: An address \"admin level\". We want to avoid the phrase \"admin level\"\n        and have chosen \"address level\". These represent states, regions, districts,\n        cities, neighborhoods, etc. The address schema defines several numbered levels\n        with per-country rules indicating which parts of a country's address goes\n        to which numbered level.\n      type: object\n      properties:\n        value:\n          type: string\n          minLength: 1\n          pattern: ^(\\S.*)?\\S$\n",
   "gitRepository": "https://github.com/ogcincubator/bblocks-overturemaps",
   "gitPath": "_sources/schemas/addresses/address"
 }
