@@ -1,5 +1,5 @@
 {
-  "name": "part",
+  "name": "Building Part schema",
   "itemClass": "schema",
   "abstract": "A single building part. Parts describe their shape and color and other properties. Each building part must contain the building with which it is associated.",
   "status": "under-development",

@@ -1,5 +1,5 @@
 {
-  "name": "land_cover",
+  "name": "Land Cover schema",
   "itemClass": "schema",
   "abstract": "Representation of the Earth's natural surfaces",
   "status": "under-development",

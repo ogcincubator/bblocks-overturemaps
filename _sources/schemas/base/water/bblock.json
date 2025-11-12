@@ -1,5 +1,5 @@
 {
-  "name": "water",
+  "name": "Water schema",
   "itemClass": "schema",
   "abstract": "Physical representations of inland and ocean marine surfaces. Translates `natural` and `waterway` tags from OpenStreetMap.",
   "status": "under-development",

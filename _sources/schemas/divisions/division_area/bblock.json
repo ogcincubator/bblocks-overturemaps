@@ -1,5 +1,5 @@
 {
-  "name": "division_area",
+  "name": "Division Area schema",
   "itemClass": "schema",
   "abstract": "Division areas are polygons that represent the land or maritime area covered by a division.\nEach division area belongs to a division which it references by ID, and for which the division area provides an area polygon. For ease of use, every division area repeats the subtype, names, country, and region properties of the division it belongs to.",
   "status": "under-development",

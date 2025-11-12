@@ -1,5 +1,5 @@
 {
-  "name": "building",
+  "name": "Building schema",
   "itemClass": "schema",
   "abstract": "A building is a man-made structure with a roof that exists permanently in one place. Buildings are compatible with GeoJSON Polygon features.",
   "status": "under-development",

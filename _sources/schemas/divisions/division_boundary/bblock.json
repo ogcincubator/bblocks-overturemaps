@@ -1,5 +1,5 @@
 {
-  "name": "boundary",
+  "name": "Boundary schema",
   "itemClass": "schema",
   "abstract": "Boundaries represent borders between divisions of the same subtype. Some boundaries may be disputed by the divisions on one or both sides.",
   "status": "under-development",

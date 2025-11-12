@@ -1,5 +1,5 @@
 {
-  "name": "land_use",
+  "name": "Land Use schema",
   "itemClass": "schema",
   "abstract": "Land use features from OpenStreetMap",
   "status": "under-development",

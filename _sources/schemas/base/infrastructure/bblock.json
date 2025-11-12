@@ -1,5 +1,5 @@
 {
-  "name": "Infrastructure Schema",
+  "name": "Infrastructure schema",
   "itemClass": "schema",
   "abstract": "Various features from OpenStreetMap such as bridges, airport runways, aerialways, or communication towers and lines.",
   "status": "under-development",

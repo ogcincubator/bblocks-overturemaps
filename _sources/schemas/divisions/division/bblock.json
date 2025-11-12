@@ -1,5 +1,5 @@
 {
-  "name": "division",
+  "name": "Division schema",
   "itemClass": "schema",
   "abstract": "Divisions are recognized official or non-official organizations of people as seen from a given political perspective. Examples include countries, provinces, cities, towns, neighborhoods, etc.",
   "status": "under-development",

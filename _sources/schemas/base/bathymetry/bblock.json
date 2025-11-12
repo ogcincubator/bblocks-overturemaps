@@ -1,5 +1,5 @@
 {
-  "name": "bathymetry",
+  "name": "Bathymetry schema",
   "itemClass": "schema",
   "abstract": "Topographic representation of an underwater area, such as a part of the ocean floor.",
   "status": "under-development",

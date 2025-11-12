@@ -1,5 +1,5 @@
 {
-  "name": "place",
+  "name": "Place schema",
   "itemClass": "schema",
   "abstract": "A Place is a point representation of a real-world facility, service, or amenity. Place features are compatible with GeoJSON Point features.",
   "status": "under-development",

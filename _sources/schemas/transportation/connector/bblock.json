@@ -1,5 +1,5 @@
 {
-  "name": "connector",
+  "name": "Transportation Connector schema",
   "itemClass": "schema",
   "abstract": "Connectors create physical connections between segments. Connectors are compatible with GeoJSON Point features.",
   "status": "under-development",
