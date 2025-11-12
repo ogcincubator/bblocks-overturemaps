@@ -1,4 +1,3 @@
----
 "$schema": https://json-schema.org/draft/2020-12/schema
 title: connector
 description: >-
@@ -19,3 +18,9 @@ properties:
     unevaluatedProperties: false
     allOf:
       - "$ref": bblocks://ogc.overturemaps.schemas.definitions#/$defs/propertyContainers/overtureFeaturePropertiesContainer
+    required: [ theme, type ]
+    properties:
+      theme:
+        const: transportation
+      type:
+        const: connector

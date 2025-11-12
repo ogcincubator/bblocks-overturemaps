@@ -21,9 +21,14 @@ properties:     # JSON Schema: Top-level object properties.
       - "$ref": https://geojson.org/schema/Point.json
   properties:   # GeoJSON: top-level object 'properties' property.
     unevaluatedProperties: false
+    required: [ theme, type ]
     allOf:
       - "$ref": bblocks://ogc.overturemaps.schemas.definitions#/$defs/propertyContainers/overtureFeaturePropertiesContainer
     properties: # JSON Schema: properties within GeoJSON top-level object 'properties' property
+      theme:
+        const: addresses
+      type:
+        const: address
       country: { "$ref": "bblocks://ogc.overturemaps.schemas.definitions#/$defs/propertyDefinitions/iso3166_1Alpha2CountryCode" }
       postcode:
         description: The postcode for the address

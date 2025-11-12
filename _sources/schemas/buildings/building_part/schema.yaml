@@ -20,8 +20,12 @@ properties:
       - "$ref": bblocks://ogc.overturemaps.schemas.definitions#/$defs/propertyContainers/namesContainer
       - "$ref": bblocks://ogc.overturemaps.schemas.definitions#/$defs/propertyContainers/levelContainer
       - "$ref": bblocks://ogc.overturemaps.schemas.buildings.definitions#/$defs/propertyContainers/shapeContainer
-    required: [building_id]
+    required: [ theme, type, building_id]
     properties:
+      theme:
+        const: buildings
+      type:
+        const: building_part
       building_id:
         description: The building ID to which this part belongs
         type: string

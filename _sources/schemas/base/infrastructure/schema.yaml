@@ -21,9 +21,15 @@ properties:
       - "$ref": bblocks://ogc.overturemaps.schemas.definitions#/$defs/propertyContainers/levelContainer
       - "$ref": bblocks://ogc.overturemaps.schemas.base.definitions#/$defs/propertyContainers/osmPropertiesContainer
     required:
+      - theme
+      - type
       - subtype
       - class
     properties:
+      theme:
+        const: base
+      type:
+        const: infrastructure
       subtype:
         description: Further description of the type of infrastructure.
         type: string

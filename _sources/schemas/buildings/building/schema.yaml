@@ -24,7 +24,12 @@ properties:
       - "$ref": bblocks://ogc.overturemaps.schemas.definitions#/$defs/propertyContainers/namesContainer
       - "$ref": bblocks://ogc.overturemaps.schemas.definitions#/$defs/propertyContainers/levelContainer
       - "$ref": bblocks://ogc.overturemaps.schemas.buildings.definitions#/$defs/propertyContainers/shapeContainer
+    required: [ theme, type ]
     properties:
+      theme:
+        const: buildings
+      type:
+        const: building
       subtype:
         description: >-
           A broad category of the building type/purpose. When the

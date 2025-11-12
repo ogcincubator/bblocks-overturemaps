@@ -27,6 +27,7 @@ properties:     # JSON Schema: Top-level object properties.
           not: { required: [country] }
         else:
           required: [subtype, class, division_ids, is_land, is_territorial, country]
+      - required: [ theme, type ]
     oneOf:
       - properties:
           is_land:
@@ -35,6 +36,10 @@ properties:     # JSON Schema: Top-level object properties.
           is_territorial:
             const: true
     properties: # JSON Schema: properties within GeoJSON top-level object 'properties' property
+      theme:
+        const: divisions
+      type:
+        const: division_boundary
       subtype: { "$ref": "bblocks://ogc.overturemaps.schemas.divisions.definitions#/$defs/propertyDefinitions/placetype" }
       class:
         type: string

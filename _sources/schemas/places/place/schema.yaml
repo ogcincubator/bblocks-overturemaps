@@ -20,7 +20,12 @@ properties:
     allOf:
       - "$ref": bblocks://ogc.overturemaps.schemas.definitions#/$defs/propertyContainers/overtureFeaturePropertiesContainer
       - "$ref": bblocks://ogc.overturemaps.schemas.definitions#/$defs/propertyContainers/namesContainer
+    required: [ theme, type ]
     properties:
+      theme:
+        const: places
+      type:
+        const: place
       categories:
         description: |
           The categories of the place. Complete list is available on

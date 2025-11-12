@@ -17,7 +17,7 @@ properties:
       - "$ref": https://geojson.org/schema/LineString.json
   properties:
     unevaluatedProperties: false
-    required: [subtype]
+    required: [theme, type, subtype]
     allOf:
       - title: "Common Segment Properties"
         properties:
@@ -51,6 +51,10 @@ properties:
         properties:
           subtype: { const: water }
     properties:
+      theme:
+        const: transportation
+      type:
+        const: segment
       subtype:
         description: Broad category of transportation segment.
         type: string
