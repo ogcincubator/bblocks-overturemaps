@@ -1,0 +1,4 @@
+examples:
+- snippets:
+  - language: json
+    ref: examples/bathymetry-example.yaml

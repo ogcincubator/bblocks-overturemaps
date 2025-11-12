@@ -1,0 +1,13 @@
+examples:
+- snippets:
+  - language: json
+    ref: examples/address.yaml
+- snippets:
+  - language: json
+    ref: examples/address_all_missing_address_levels.yaml
+- snippets:
+  - language: json
+    ref: examples/address_missing_address_level.yaml
+- snippets:
+  - language: json
+    ref: examples/address_postal_city.yaml

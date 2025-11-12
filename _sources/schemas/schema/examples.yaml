@@ -1,0 +1,60 @@
+examples:
+  - snippets:
+      - language: json
+        ref: ../addresses/address/examples/address.yaml
+
+  - snippets:
+      - language: json
+        ref: ../base/bathymetry/examples/bathymetry-example.yaml
+
+  - snippets:
+      - language: json
+        ref: ../base/infrastructure/examples/infrastructure-example.yaml
+
+  - snippets:
+      - language: json
+        ref: ../base/land_cover/examples/land-cover-example.yaml
+
+  - snippets:
+      - language: json
+        ref: ../base/land/examples/land-sand-example.yaml
+
+  - snippets:
+      - language: json
+        ref: ../base/land_use/examples/land-use-example.yaml
+
+  - snippets:
+      - language: json
+        ref: ../base/water/examples/water-body-disputed.yaml
+
+  - snippets:
+      - language: json
+        ref: ../buildings/building/examples/basic-sources.yaml
+
+  - snippets:
+      - language: json
+        ref: ../buildings/building_part/examples/building-part-basic.yaml
+
+  - snippets:
+      - language: json
+        ref: ../divisions/division_area/examples/country_land.yaml
+
+  - snippets:
+      - language: json
+        ref: ../divisions/division_boundary/examples/disputed.yaml
+
+  - snippets:
+      - language: json
+        ref: ../divisions/division/examples/capital_of.yaml
+
+  - snippets:
+      - language: json
+        ref: ../places/place/examples/timestamp-utc.yaml
+
+  - snippets:
+      - language: json
+        ref: ../transportation/connector/examples/timestamp-with-tz-offset.yaml
+
+  - snippets:
+      - language: json
+        ref: ../transportation/segment/examples/names-lexically-valid-language-tag.yaml

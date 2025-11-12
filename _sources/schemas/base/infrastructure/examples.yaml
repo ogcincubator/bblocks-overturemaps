@@ -1,0 +1,7 @@
+examples:
+- snippets:
+  - language: json
+    ref: examples/infrastructure-example.yaml
+- snippets:
+  - language: json
+    ref: examples/infrastructure-height-example.yaml

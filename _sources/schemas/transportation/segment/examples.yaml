@@ -1,0 +1,136 @@
+examples:
+- snippets:
+  - language: json
+    ref: examples/names-lexically-valid-language-tag.yaml
+- snippets:
+  - language: json
+    ref: examples/timestamp-leap-second.yaml
+- snippets:
+  - language: json
+    ref: examples/access-restriction-01-blanket.yaml
+- snippets:
+  - language: json
+    ref: examples/access-restriction-02-private-with-deliveries.yaml
+- snippets:
+  - language: json
+    ref: examples/access-restriction-03-motor-vehicles-destination-only.yaml
+- snippets:
+  - language: json
+    ref: examples/access-restriction-04-axle-limit.yaml
+- snippets:
+  - language: json
+    ref: examples/access-restriction.yaml
+- snippets:
+  - language: json
+    ref: examples/geometric-scoping.yaml
+- snippets:
+  - language: json
+    ref: examples/simple-road.yaml
+- snippets:
+  - language: json
+    ref: examples/speed-limits-01-simple.yaml
+- snippets:
+  - language: json
+    ref: examples/speed-limits-02-directional.yaml
+- snippets:
+  - language: json
+    ref: examples/speed-limits-03-variable-max.yaml
+- snippets:
+  - language: json
+    ref: examples/subjective-heading-scoping.yaml
+- snippets:
+  - language: json
+    ref: examples/subjective-status-scoping.yaml
+- snippets:
+  - language: json
+    ref: examples/subjective-usage-purpose-scoping.yaml
+- snippets:
+  - language: json
+    ref: examples/subjective-vehicle-attributes-scoping.yaml
+- snippets:
+  - language: json
+    ref: examples/temporal-scoping.yaml
+- snippets:
+  - language: json
+    ref: examples/turn-restriction-01-exit.yaml
+- snippets:
+  - language: json
+    ref: examples/turn-restriction-01-source.yaml
+- snippets:
+  - language: json
+    ref: examples/turn-restriction-01-target.yaml
+- snippets:
+  - language: json
+    ref: examples/turn-restriction-02-source.yaml
+- snippets:
+  - language: json
+    ref: examples/turn-restriction-02-target.yaml
+- snippets:
+  - language: json
+    ref: examples/turn-restriction-02-via.yaml
+- snippets:
+  - language: json
+    ref: examples/rail-freight.yaml
+- snippets:
+  - language: json
+    ref: examples/rail-tunnel.yaml
+- snippets:
+  - language: json
+    ref: examples/rail.yaml
+- snippets:
+  - language: json
+    ref: examples/road-destinations.yaml
+- snippets:
+  - language: json
+    ref: examples/road-restrictions-access.yaml
+- snippets:
+  - language: json
+    ref: examples/road-restrictions-prohibited-transitions.yaml
+- snippets:
+  - language: json
+    ref: examples/road-restrictions-speed-limits.yaml
+- snippets:
+  - language: json
+    ref: examples/road-abandoned.yaml
+- snippets:
+  - language: json
+    ref: examples/road-acesss-restriction.yaml
+- snippets:
+  - language: json
+    ref: examples/road-alley.yaml
+- snippets:
+  - language: json
+    ref: examples/road-covered.yaml
+- snippets:
+  - language: json
+    ref: examples/road-indoors.yaml
+- snippets:
+  - language: json
+    ref: examples/road-level.yaml
+- snippets:
+  - language: json
+    ref: examples/road-multiple-connectors.yaml
+- snippets:
+  - language: json
+    ref: examples/road-oneway-no-lanes.yaml
+- snippets:
+  - language: json
+    ref: examples/road-path.yaml
+- snippets:
+  - language: json
+    ref: examples/road-with-lr-name.yaml
+- snippets:
+  - language: json
+    ref: examples/road-with-lr-sources.yaml
+- snippets:
+  - language: json
+    ref: examples/road-with-lr-width.yaml
+- snippets:
+  - language: json
+    ref: examples/road-with-route.yaml
+- snippets:
+  - language: json
+    ref: examples/road.yaml
+- snippets:
+  - language: json
+    ref: examples/sidewalk.yaml

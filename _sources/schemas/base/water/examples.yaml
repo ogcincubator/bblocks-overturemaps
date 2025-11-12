@@ -1,0 +1,10 @@
+examples:
+- snippets:
+  - language: json
+    ref: examples/water-body-disputed.yaml
+- snippets:
+  - language: json
+    ref: examples/water-river-example.yaml
+- snippets:
+  - language: json
+    ref: examples/water-river-with-wikidata.yaml

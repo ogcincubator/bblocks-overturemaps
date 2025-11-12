@@ -1,0 +1,25 @@
+examples:
+- snippets:
+  - language: json
+    ref: examples/timestamp-utc.yaml
+- snippets:
+  - language: json
+    ref: examples/place-alternate-categories.yaml
+- snippets:
+  - language: json
+    ref: examples/place-no-emails-phones-socials-websites.yaml
+- snippets:
+  - language: json
+    ref: examples/place-null-categories.yaml
+- snippets:
+  - language: json
+    ref: examples/place-with-basic-category.yaml
+- snippets:
+  - language: json
+    ref: examples/place-with-operating-status.yaml
+- snippets:
+  - language: json
+    ref: examples/place.yaml
+- snippets:
+  - language: json
+    ref: examples/place2.yaml

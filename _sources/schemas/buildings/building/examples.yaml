@@ -1,0 +1,31 @@
+examples:
+- snippets:
+  - language: json
+    ref: examples/basic-sources.yaml
+- snippets:
+  - language: json
+    ref: examples/building-multipolygon.yaml
+- snippets:
+  - language: json
+    ref: examples/building-polygon.yaml
+- snippets:
+  - language: json
+    ref: examples/license-basic.yaml
+- snippets:
+  - language: json
+    ref: examples/name-basic.yaml
+- snippets:
+  - language: json
+    ref: examples/name-multiple.yaml
+- snippets:
+  - language: json
+    ref: examples/name-variations.yaml
+- snippets:
+  - language: json
+    ref: examples/outline.yaml
+- snippets:
+  - language: json
+    ref: examples/time-basic.yaml
+- snippets:
+  - language: json
+    ref: examples/time-precision-seconds.yaml

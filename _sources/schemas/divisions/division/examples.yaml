@@ -1,0 +1,31 @@
+examples:
+- snippets:
+  - language: json
+    ref: examples/capital_of.yaml
+- snippets:
+  - language: json
+    ref: examples/class.yaml
+- snippets:
+  - language: json
+    ref: examples/country.yaml
+- snippets:
+  - language: json
+    ref: examples/dependency.yaml
+- snippets:
+  - language: json
+    ref: examples/hierarchies-multiple.yaml
+- snippets:
+  - language: json
+    ref: examples/multiple_capital_division.yaml
+- snippets:
+  - language: json
+    ref: examples/perspectives.yaml
+- snippets:
+  - language: json
+    ref: examples/population.yaml
+- snippets:
+  - language: json
+    ref: examples/prominence.yaml
+- snippets:
+  - language: json
+    ref: examples/region.yaml

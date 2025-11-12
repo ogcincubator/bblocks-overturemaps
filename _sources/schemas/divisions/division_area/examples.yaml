@@ -1,0 +1,16 @@
+examples:
+- snippets:
+  - language: json
+    ref: examples/country_land.yaml
+- snippets:
+  - language: json
+    ref: examples/country_maritime.yaml
+- snippets:
+  - language: json
+    ref: examples/is_land.yaml
+- snippets:
+  - language: json
+    ref: examples/is_territorial.yaml
+- snippets:
+  - language: json
+    ref: examples/region_land.yaml

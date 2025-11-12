@@ -1,0 +1,22 @@
+examples:
+- snippets:
+  - language: json
+    ref: examples/disputed.yaml
+- snippets:
+  - language: json
+    ref: examples/disputed_both.yaml
+- snippets:
+  - language: json
+    ref: examples/is_land.yaml
+- snippets:
+  - language: json
+    ref: examples/is_territorial.yaml
+- snippets:
+  - language: json
+    ref: examples/land_county.yaml
+- snippets:
+  - language: json
+    ref: examples/land_region.yaml
+- snippets:
+  - language: json
+    ref: examples/maritime_country.yaml

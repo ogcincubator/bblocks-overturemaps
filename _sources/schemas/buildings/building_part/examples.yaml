@@ -1,0 +1,13 @@
+examples:
+- snippets:
+  - language: json
+    ref: examples/building-part-basic.yaml
+- snippets:
+  - language: json
+    ref: examples/building-part-name.yaml
+- snippets:
+  - language: json
+    ref: examples/part1.yaml
+- snippets:
+  - language: json
+    ref: examples/part2.yaml

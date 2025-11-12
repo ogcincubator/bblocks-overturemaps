@@ -1,0 +1,25 @@
+examples:
+- snippets:
+  - language: json
+    ref: examples/timestamp-with-tz-offset.yaml
+- snippets:
+  - language: json
+    ref: examples/connector.yaml
+- snippets:
+  - language: json
+    ref: examples/connector.yaml
+- snippets:
+  - language: json
+    ref: examples/turn-restriction-01-connector1.yaml
+- snippets:
+  - language: json
+    ref: examples/turn-restriction-01-connector2.yaml
+- snippets:
+  - language: json
+    ref: examples/turn-restriction-01-connector3.yaml
+- snippets:
+  - language: json
+    ref: examples/turn-restriction-02-connector1.yaml
+- snippets:
+  - language: json
+    ref: examples/turn-restriction-02-connector2.yaml
