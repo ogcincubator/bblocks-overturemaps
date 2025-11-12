@@ -12,6 +12,5 @@
     "schemas",
     "gers",
     "base"
-  ],
-  "schema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/base/land.yaml"
+  ]
 }

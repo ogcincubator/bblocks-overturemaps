@@ -12,6 +12,5 @@
     "schemas",
     "gers",
     "divisions"
-  ],
-  "schema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/divisions/division_area.yaml"
+  ]
 }

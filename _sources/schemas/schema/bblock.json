@@ -8,7 +8,9 @@
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
-    "overture-maps", "schemas", "gers"
+    "overture-maps",
+    "schemas",
+    "gers"
   ],
   "highlighted": true
 }

@@ -1,7 +1,7 @@
 {
-  "name": "bathymetry",
+  "name": "Shared divisions properties",
   "itemClass": "schema",
-  "abstract": "Topographic representation of an underwater area, such as a part of the ocean floor.",
+  "abstract": "Common schema definitions for divisions theme",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
   "dateOfLastChange": "2025-11-05",
@@ -10,7 +10,6 @@
   "tags": [
     "overture-maps",
     "schemas",
-    "gers",
-    "base"
+    "gers"
   ]
 }

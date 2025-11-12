@@ -12,6 +12,5 @@
     "schemas",
     "gers",
     "places"
-  ],
-  "schema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/places/place.yaml"
+  ]
 }

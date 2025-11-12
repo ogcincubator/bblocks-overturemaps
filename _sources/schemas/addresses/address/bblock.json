@@ -12,6 +12,5 @@
     "schemas",
     "gers",
     "addresses"
-  ],
-  "schema": "https://github.com/OvertureMaps/schema/raw/refs/heads/dev/schema/addresses/address.yaml"
+  ]
 }
