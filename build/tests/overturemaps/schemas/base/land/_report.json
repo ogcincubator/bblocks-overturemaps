@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for ogc.overturemaps.schemas.base.land - land",
-  "bblockName": "land",
+  "title": "Validation report for ogc.overturemaps.schemas.base.land - Land schema",
+  "bblockName": "Land schema",
   "bblockId": "ogc.overturemaps.schemas.base.land",
-  "generated": "2025-11-12T15:58:08.010818+00:00",
+  "generated": "2025-11-12T20:57:18.939915+00:00",
   "result": true,
   "items": [
     {

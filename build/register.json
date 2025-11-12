@@ -1,7 +1,7 @@
 {
   "name": "Overture Maps",
   "abstract": "This repository contains GERS and other Overture Maps-related building blocks.\n",
-  "modified": "2025-11-12T15:58:02.150269",
+  "modified": "2025-11-12T20:57:14.518706",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"4fa4cc94cf7d37823107d163051f795337c61afb",
@@ -138,7 +138,7 @@
     },
     {
       "itemIdentifier": "ogc.overturemaps.schemas.addresses.address",
-      "name": "address",
+      "name": "Address schema",
       "itemClass": "schema",
       "abstract": "Addresses are geographic points used for locating businesses and individuals. The rules, fields, and fieldnames of an address can vary extensively between locations. We use a simplified schema to capture worldwide address points. This initial schema is largely based on the OpenAddresses (www.openaddresses.io) project.\nThe address schema allows up to 5 \"admin levels\". Rather than have field names that apply across all countries, we provide an array called \"address_levels\" containing the necessary administrative levels for an address.",
       "status": "under-development",
@@ -224,7 +224,7 @@
     },
     {
       "itemIdentifier": "ogc.overturemaps.schemas.base.land_cover",
-      "name": "land_cover",
+      "name": "Land Cover schema",
       "itemClass": "schema",
       "abstract": "Representation of the Earth's natural surfaces",
       "status": "under-development",
@@ -310,7 +310,7 @@
     },
     {
       "itemIdentifier": "ogc.overturemaps.schemas.transportation.connector",
-      "name": "connector",
+      "name": "Transportation Connector schema",
       "itemClass": "schema",
       "abstract": "Connectors create physical connections between segments. Connectors are compatible with GeoJSON Point features.",
       "status": "under-development",
@@ -354,7 +354,7 @@
     },
     {
       "itemIdentifier": "ogc.overturemaps.schemas.transportation.segment",
-      "name": "segment",
+      "name": "Transportation Segment schema",
       "itemClass": "schema",
       "abstract": "Segments are paths which can be traveled by people or things. Segments are compatible with GeoJSON LineString features.",
       "status": "under-development",
@@ -398,7 +398,7 @@
     },
     {
       "itemIdentifier": "ogc.overturemaps.schemas.buildings.building",
-      "name": "building",
+      "name": "Building schema",
       "itemClass": "schema",
       "abstract": "A building is a man-made structure with a roof that exists permanently in one place. Buildings are compatible with GeoJSON Polygon features.",
       "status": "under-development",
@@ -414,8 +414,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.overturemaps.schemas.buildings.definitions",
-        "ogc.overturemaps.schemas.definitions"
+        "ogc.overturemaps.schemas.definitions",
+        "ogc.overturemaps.schemas.buildings.definitions"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/schema.yaml",
@@ -443,7 +443,7 @@
     },
     {
       "itemIdentifier": "ogc.overturemaps.schemas.buildings.building_part",
-      "name": "part",
+      "name": "Building Part schema",
       "itemClass": "schema",
       "abstract": "A single building part. Parts describe their shape and color and other properties. Each building part must contain the building with which it is associated.",
       "status": "under-development",
@@ -459,8 +459,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.overturemaps.schemas.buildings.definitions",
-        "ogc.overturemaps.schemas.definitions"
+        "ogc.overturemaps.schemas.definitions",
+        "ogc.overturemaps.schemas.buildings.definitions"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.yaml",
@@ -488,7 +488,7 @@
     },
     {
       "itemIdentifier": "ogc.overturemaps.schemas.places.place",
-      "name": "place",
+      "name": "Place schema",
       "itemClass": "schema",
       "abstract": "A Place is a point representation of a real-world facility, service, or amenity. Place features are compatible with GeoJSON Point features.",
       "status": "under-development",
@@ -504,8 +504,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.overturemaps.schemas.places.definitions",
-        "ogc.overturemaps.schemas.definitions"
+        "ogc.overturemaps.schemas.definitions",
+        "ogc.overturemaps.schemas.places.definitions"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/schema.yaml",
@@ -533,7 +533,7 @@
     },
     {
       "itemIdentifier": "ogc.overturemaps.schemas.base.bathymetry",
-      "name": "bathymetry",
+      "name": "Bathymetry schema",
       "itemClass": "schema",
       "abstract": "Topographic representation of an underwater area, such as a part of the ocean floor.",
       "status": "under-development",
@@ -549,8 +549,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.overturemaps.schemas.base.definitions",
-        "ogc.overturemaps.schemas.definitions"
+        "ogc.overturemaps.schemas.definitions",
+        "ogc.overturemaps.schemas.base.definitions"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/bathymetry/schema.yaml",
@@ -578,7 +578,7 @@
     },
     {
       "itemIdentifier": "ogc.overturemaps.schemas.base.infrastructure",
-      "name": "Infrastructure Schema",
+      "name": "Infrastructure schema",
       "itemClass": "schema",
       "abstract": "Various features from OpenStreetMap such as bridges, airport runways, aerialways, or communication towers and lines.",
       "status": "under-development",
@@ -594,8 +594,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.overturemaps.schemas.base.definitions",
-        "ogc.overturemaps.schemas.definitions"
+        "ogc.overturemaps.schemas.definitions",
+        "ogc.overturemaps.schemas.base.definitions"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/schema.yaml",
@@ -623,7 +623,7 @@
     },
     {
       "itemIdentifier": "ogc.overturemaps.schemas.base.land",
-      "name": "land",
+      "name": "Land schema",
       "itemClass": "schema",
       "abstract": "Physical representations of land surfaces. Global land derived from the inverse of OSM Coastlines. Translates `natural` tags from OpenStreetMap.",
       "status": "under-development",
@@ -639,8 +639,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.overturemaps.schemas.base.definitions",
-        "ogc.overturemaps.schemas.definitions"
+        "ogc.overturemaps.schemas.definitions",
+        "ogc.overturemaps.schemas.base.definitions"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land/schema.yaml",
@@ -668,7 +668,7 @@
     },
     {
       "itemIdentifier": "ogc.overturemaps.schemas.base.land_use",
-      "name": "land_use",
+      "name": "Land Use schema",
       "itemClass": "schema",
       "abstract": "Land use features from OpenStreetMap",
       "status": "under-development",
@@ -684,8 +684,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.overturemaps.schemas.base.definitions",
-        "ogc.overturemaps.schemas.definitions"
+        "ogc.overturemaps.schemas.definitions",
+        "ogc.overturemaps.schemas.base.definitions"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/schema.yaml",
@@ -713,7 +713,7 @@
     },
     {
       "itemIdentifier": "ogc.overturemaps.schemas.base.water",
-      "name": "water",
+      "name": "Water schema",
       "itemClass": "schema",
       "abstract": "Physical representations of inland and ocean marine surfaces. Translates `natural` and `waterway` tags from OpenStreetMap.",
       "status": "under-development",
@@ -729,8 +729,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.overturemaps.schemas.base.definitions",
-        "ogc.overturemaps.schemas.definitions"
+        "ogc.overturemaps.schemas.definitions",
+        "ogc.overturemaps.schemas.base.definitions"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/water/schema.yaml",
@@ -758,7 +758,7 @@
     },
     {
       "itemIdentifier": "ogc.overturemaps.schemas.divisions.division",
-      "name": "division",
+      "name": "Division schema",
       "itemClass": "schema",
       "abstract": "Divisions are recognized official or non-official organizations of people as seen from a given political perspective. Examples include countries, provinces, cities, towns, neighborhoods, etc.",
       "status": "under-development",
@@ -774,8 +774,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.overturemaps.schemas.divisions.definitions",
-        "ogc.overturemaps.schemas.definitions"
+        "ogc.overturemaps.schemas.definitions",
+        "ogc.overturemaps.schemas.divisions.definitions"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/schema.yaml",
@@ -803,7 +803,7 @@
     },
     {
       "itemIdentifier": "ogc.overturemaps.schemas.divisions.division_area",
-      "name": "division_area",
+      "name": "Division Area schema",
       "itemClass": "schema",
       "abstract": "Division areas are polygons that represent the land or maritime area covered by a division.\nEach division area belongs to a division which it references by ID, and for which the division area provides an area polygon. For ease of use, every division area repeats the subtype, names, country, and region properties of the division it belongs to.",
       "status": "under-development",
@@ -819,8 +819,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.overturemaps.schemas.divisions.definitions",
-        "ogc.overturemaps.schemas.definitions"
+        "ogc.overturemaps.schemas.definitions",
+        "ogc.overturemaps.schemas.divisions.definitions"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_area/schema.yaml",
@@ -848,7 +848,7 @@
     },
     {
       "itemIdentifier": "ogc.overturemaps.schemas.divisions.division_boundary",
-      "name": "boundary",
+      "name": "Boundary schema",
       "itemClass": "schema",
       "abstract": "Boundaries represent borders between divisions of the same subtype. Some boundaries may be disputed by the divisions on one or both sides.",
       "status": "under-development",
@@ -864,8 +864,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.overturemaps.schemas.divisions.definitions",
-        "ogc.overturemaps.schemas.definitions"
+        "ogc.overturemaps.schemas.definitions",
+        "ogc.overturemaps.schemas.divisions.definitions"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.yaml",
@@ -909,22 +909,22 @@
       "highlighted": true,
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.overturemaps.schemas.places.place",
-        "ogc.overturemaps.schemas.base.land_use",
-        "ogc.overturemaps.schemas.base.land_cover",
-        "ogc.overturemaps.schemas.base.land",
-        "ogc.overturemaps.schemas.buildings.building",
-        "ogc.overturemaps.schemas.divisions.division",
-        "ogc.overturemaps.schemas.buildings.building_part",
-        "ogc.overturemaps.schemas.base.infrastructure",
-        "ogc.overturemaps.schemas.base.bathymetry",
-        "ogc.overturemaps.schemas.divisions.division_boundary",
-        "ogc.geo.common.data_types.geojson",
         "ogc.overturemaps.schemas.transportation.segment",
-        "ogc.overturemaps.schemas.base.water",
+        "ogc.overturemaps.schemas.buildings.building",
+        "ogc.geo.common.data_types.geojson",
+        "ogc.overturemaps.schemas.buildings.building_part",
         "ogc.overturemaps.schemas.addresses.address",
         "ogc.overturemaps.schemas.transportation.connector",
-        "ogc.overturemaps.schemas.divisions.division_area"
+        "ogc.overturemaps.schemas.base.infrastructure",
+        "ogc.overturemaps.schemas.divisions.division",
+        "ogc.overturemaps.schemas.base.land_use",
+        "ogc.overturemaps.schemas.divisions.division_boundary",
+        "ogc.overturemaps.schemas.divisions.division_area",
+        "ogc.overturemaps.schemas.base.bathymetry",
+        "ogc.overturemaps.schemas.places.place",
+        "ogc.overturemaps.schemas.base.water",
+        "ogc.overturemaps.schemas.base.land",
+        "ogc.overturemaps.schemas.base.land_cover"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/schema/schema.yaml",

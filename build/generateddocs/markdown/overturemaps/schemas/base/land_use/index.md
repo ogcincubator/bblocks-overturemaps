@@ -1,5 +1,5 @@
 
-# land_use (Schema)
+# Land Use schema (Schema)
 
 `ogc.overturemaps.schemas.base.land_use` *v0.1*
 

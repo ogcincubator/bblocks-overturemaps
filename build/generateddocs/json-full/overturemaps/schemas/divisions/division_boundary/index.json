@@ -2,7 +2,7 @@
 
 {
   "itemIdentifier": "ogc.overturemaps.schemas.divisions.division_boundary",
-  "name": "boundary",
+  "name": "Boundary schema",
   "itemClass": "schema",
   "abstract": "Boundaries represent borders between divisions of the same subtype. Some boundaries may be disputed by the divisions on one or both sides.",
   "status": "under-development",
@@ -18,8 +18,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.overturemaps.schemas.divisions.definitions",
-    "ogc.overturemaps.schemas.definitions"
+    "ogc.overturemaps.schemas.definitions",
+    "ogc.overturemaps.schemas.divisions.definitions"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.yaml",

@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for ogc.overturemaps.schemas.base.land_use - land_use",
-  "bblockName": "land_use",
+  "title": "Validation report for ogc.overturemaps.schemas.base.land_use - Land Use schema",
+  "bblockName": "Land Use schema",
   "bblockId": "ogc.overturemaps.schemas.base.land_use",
-  "generated": "2025-11-12T15:58:08.376974+00:00",
+  "generated": "2025-11-12T20:57:19.170854+00:00",
   "result": true,
   "items": [
     {

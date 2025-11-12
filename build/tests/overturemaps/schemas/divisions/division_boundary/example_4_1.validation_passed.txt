@@ -1,5 +1,5 @@
-Validation report for ogc.overturemaps.schemas.divisions.division_boundary - boundary
-Generated 2025-11-12T15:58:09.354698+00:00
+Validation report for ogc.overturemaps.schemas.divisions.division_boundary - Boundary schema
+Generated 2025-11-12T20:57:19.745249+00:00
 === Files ===
 Using example_4_1.json from examples
 === End Files ===

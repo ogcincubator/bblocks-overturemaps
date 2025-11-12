@@ -1,5 +1,5 @@
 
-# Infrastructure Schema (Schema)
+# Infrastructure schema (Schema)
 
 `ogc.overturemaps.schemas.base.infrastructure` *v0.1*
 

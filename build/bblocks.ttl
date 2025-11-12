@@ -9,18 +9,18 @@
 
 <https://ogcincubator.github.io/bblocks-overturemaps/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:N0ca6b17f6a844a309e87fab48aa0f6a9 ;
+    prov:wasAttributedTo _:Nfe6a55bd699942b48c3ca9daacc1363a ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2025-11-12T15:58:11.263646"^^xsd:dateTime ;
-            prov:startedAtTime "2025-11-12T15:58:11.182527"^^xsd:dateTime ;
+            prov:endedAtTime "2025-11-12T20:57:21.424955"^^xsd:dateTime ;
+            prov:startedAtTime "2025-11-12T20:57:21.344892"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
-                    dct:format "application/yaml" ;
-                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-                [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:98dd728a55719aaca37442ab15f416212258975c" ;
-                    rdfs:seeAlso <https://ogcincubator.github.io/bblocks-overturemaps/build/register.json> ] ;
-            prov:wasAssociatedWith _:N0ca6b17f6a844a309e87fab48aa0f6a9 ] .
+                    dct:hasVersion "git:84c4f6404b0b285049d2d0bb7f4622a38ed040c7" ;
+                    rdfs:seeAlso <https://ogcincubator.github.io/bblocks-overturemaps/build/register.json> ],
+                [ a prov:Entity ;
+                    dct:format "application/yaml" ;
+                    rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
+            prov:wasAssociatedWith _:Nfe6a55bd699942b48c3ca9daacc1363a ] .
 
 <https://ogcincubator.github.io/ogc.overturemaps.schemas.schema> a skos:Concept,
         dcat:Dataset,
@@ -28,10 +28,10 @@
     rdfs:label "Overture Maps Schema" ;
     dct:abstract "A JSON Schema for the canonical GeoJSON form of Overture Maps Features."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.schema" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/schema/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.schema" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/schema/index.json" ] ;
     dct:hasVersion "0.1" ;
@@ -64,16 +64,16 @@
 <https://ogcincubator.github.io/ogc.overturemaps.schemas.addresses.address> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "address" ;
+    rdfs:label "Address schema" ;
     dct:abstract """Addresses are geographic points used for locating businesses and individuals. The rules, fields, and fieldnames of an address can vary extensively between locations. We use a simplified schema to capture worldwide address points. This initial schema is largely based on the OpenAddresses (www.openaddresses.io) project.
 The address schema allows up to 5 "admin levels". Rather than have field names that apply across all countries, we provide an array called "address_levels" containing the necessary administrative levels for an address."""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/addresses/address/index.json" ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/addresses/address/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.addresses.address" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/addresses/address/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.addresses.address" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-11-12"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
@@ -89,15 +89,15 @@ The address schema allows up to 5 "admin levels". Rather than have field names t
 <https://ogcincubator.github.io/ogc.overturemaps.schemas.base.bathymetry> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "bathymetry" ;
+    rdfs:label "Bathymetry schema" ;
     dct:abstract "Topographic representation of an underwater area, such as a part of the ocean floor."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/bathymetry/index.json" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.bathymetry" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/bathymetry/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.bathymetry" ] ;
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/bathymetry/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-11-12"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
@@ -114,15 +114,15 @@ The address schema allows up to 5 "admin levels". Rather than have field names t
 <https://ogcincubator.github.io/ogc.overturemaps.schemas.base.infrastructure> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "Infrastructure Schema" ;
+    rdfs:label "Infrastructure schema" ;
     dct:abstract "Various features from OpenStreetMap such as bridges, airport runways, aerialways, or communication towers and lines."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.infrastructure" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/infrastructure/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/infrastructure/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/infrastructure/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.infrastructure" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-11-12"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
@@ -139,15 +139,15 @@ The address schema allows up to 5 "admin levels". Rather than have field names t
 <https://ogcincubator.github.io/ogc.overturemaps.schemas.base.land> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "land" ;
+    rdfs:label "Land schema" ;
     dct:abstract "Physical representations of land surfaces. Global land derived from the inverse of OSM Coastlines. Translates `natural` tags from OpenStreetMap."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/land/index.md" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.land" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/land/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/land/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/land/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-11-12"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
@@ -164,15 +164,15 @@ The address schema allows up to 5 "admin levels". Rather than have field names t
 <https://ogcincubator.github.io/ogc.overturemaps.schemas.base.land_cover> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "land_cover" ;
+    rdfs:label "Land Cover schema" ;
     dct:abstract "Representation of the Earth's natural surfaces"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.land_cover" ],
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/land_cover/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/land_cover/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/land_cover/index.md" ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.land_cover" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-11-12"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
@@ -188,13 +188,13 @@ The address schema allows up to 5 "admin levels". Rather than have field names t
 <https://ogcincubator.github.io/ogc.overturemaps.schemas.base.land_use> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "land_use" ;
+    rdfs:label "Land Use schema" ;
     dct:abstract "Land use features from OpenStreetMap"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/land_use/index.md" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/land_use/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/land_use/index.md" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.land_use" ] ;
     dct:hasVersion "0.1" ;
@@ -213,15 +213,15 @@ The address schema allows up to 5 "admin levels". Rather than have field names t
 <https://ogcincubator.github.io/ogc.overturemaps.schemas.base.water> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "water" ;
+    rdfs:label "Water schema" ;
     dct:abstract "Physical representations of inland and ocean marine surfaces. Translates `natural` and `waterway` tags from OpenStreetMap."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.water" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/water/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/water/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/water/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.water" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-11-12"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
@@ -238,7 +238,7 @@ The address schema allows up to 5 "admin levels". Rather than have field names t
 <https://ogcincubator.github.io/ogc.overturemaps.schemas.buildings.building> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "building" ;
+    rdfs:label "Building schema" ;
     dct:abstract "A building is a man-made structure with a roof that exists permanently in one place. Buildings are compatible with GeoJSON Polygon features."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/markdown" ;
@@ -263,13 +263,13 @@ The address schema allows up to 5 "admin levels". Rather than have field names t
 <https://ogcincubator.github.io/ogc.overturemaps.schemas.buildings.building_part> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "part" ;
+    rdfs:label "Building Part schema" ;
     dct:abstract "A single building part. Parts describe their shape and color and other properties. Each building part must contain the building with which it is associated."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/buildings/building_part/index.json" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/buildings/building_part/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/buildings/building_part/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.buildings.building_part" ] ;
     dct:hasVersion "0.1" ;
@@ -288,7 +288,7 @@ The address schema allows up to 5 "admin levels". Rather than have field names t
 <https://ogcincubator.github.io/ogc.overturemaps.schemas.divisions.division> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "division" ;
+    rdfs:label "Division schema" ;
     dct:abstract "Divisions are recognized official or non-official organizations of people as seen from a given political perspective. Examples include countries, provinces, cities, towns, neighborhoods, etc."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
@@ -313,7 +313,7 @@ The address schema allows up to 5 "admin levels". Rather than have field names t
 <https://ogcincubator.github.io/ogc.overturemaps.schemas.divisions.division_area> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "division_area" ;
+    rdfs:label "Division Area schema" ;
     dct:abstract """Division areas are polygons that represent the land or maritime area covered by a division.
 Each division area belongs to a division which it references by ID, and for which the division area provides an area polygon. For ease of use, every division area repeats the subtype, names, country, and region properties of the division it belongs to."""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
@@ -339,15 +339,15 @@ Each division area belongs to a division which it references by ID, and for whic
 <https://ogcincubator.github.io/ogc.overturemaps.schemas.divisions.division_boundary> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "boundary" ;
+    rdfs:label "Boundary schema" ;
     dct:abstract "Boundaries represent borders between divisions of the same subtype. Some boundaries may be disputed by the divisions on one or both sides."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.divisions.division_boundary" ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/divisions/division_boundary/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/divisions/division_boundary/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.divisions.division_boundary" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/divisions/division_boundary/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-11-12"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
@@ -367,12 +367,12 @@ Each division area belongs to a division which it references by ID, and for whic
     rdfs:label "Shared places properties" ;
     dct:abstract "Common schema definitions for places theme"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.places.definitions" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/places/definitions/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/places/definitions/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/places/definitions/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.places.definitions" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-11-12"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
@@ -386,13 +386,13 @@ Each division area belongs to a division which it references by ID, and for whic
 <https://ogcincubator.github.io/ogc.overturemaps.schemas.places.place> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "place" ;
+    rdfs:label "Place schema" ;
     dct:abstract "A Place is a point representation of a real-world facility, service, or amenity. Place features are compatible with GeoJSON Point features."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/places/place/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.places.place" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/places/place/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/places/place/index.md" ] ;
     dct:hasVersion "0.1" ;
@@ -411,15 +411,15 @@ Each division area belongs to a division which it references by ID, and for whic
 <https://ogcincubator.github.io/ogc.overturemaps.schemas.transportation.connector> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "connector" ;
+    rdfs:label "Transportation Connector schema" ;
     dct:abstract "Connectors create physical connections between segments. Connectors are compatible with GeoJSON Point features."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/transportation/connector/index.md" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.transportation.connector" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/transportation/connector/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.transportation.connector" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/transportation/connector/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-11-12"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
@@ -435,15 +435,15 @@ Each division area belongs to a division which it references by ID, and for whic
 <https://ogcincubator.github.io/ogc.overturemaps.schemas.transportation.segment> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "segment" ;
+    rdfs:label "Transportation Segment schema" ;
     dct:abstract "Segments are paths which can be traveled by people or things. Segments are compatible with GeoJSON LineString features."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/transportation/segment/index.md" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/transportation/segment/index.json" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.transportation.segment" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/transportation/segment/index.json" ] ;
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/transportation/segment/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-11-12"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
@@ -462,12 +462,12 @@ Each division area belongs to a division which it references by ID, and for whic
     rdfs:label "Overture Maps Shared Building Properties" ;
     dct:abstract "Common schema definitions shared by building footprints and building parts"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/buildings/definitions/index.json" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/buildings/definitions/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.buildings.definitions" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.buildings.definitions" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/buildings/definitions/index.json" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-11-12"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
@@ -484,12 +484,12 @@ Each division area belongs to a division which it references by ID, and for whic
     rdfs:label "Shared divisions properties" ;
     dct:abstract "Common schema definitions for divisions theme"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/divisions/definitions/index.json" ],
+        [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/divisions/definitions/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.divisions.definitions" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/divisions/definitions/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.divisions.definitions" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-11-12"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
@@ -507,12 +507,12 @@ Each division area belongs to a division which it references by ID, and for whic
     rdfs:label "Base layer properties" ;
     dct:abstract "Common schema definitions the base theme (primarily from OSM)"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/definitions/index.json" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.definitions" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/definitions/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/definitions/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/definitions/index.md" ] ;
     dct:hasVersion "0.1" ;
     dct:modified "2025-11-12"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
@@ -530,10 +530,10 @@ Each division area belongs to a division which it references by ID, and for whic
     rdfs:label "Overture Maps Feature Schema Common definitions" ;
     dct:abstract "Common schema definitions shared by all themes."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/definitions/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.definitions" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/definitions/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/definitions/index.json" ] ;
     dct:hasVersion "0.1" ;
@@ -555,7 +555,7 @@ Each division area belongs to a division which it references by ID, and for whic
     bblocks:hasValidationReport <https://ogcincubator.github.io/bblocks-overturemaps/build/tests/report.html> ;
     bblocks:imports <https://opengeospatial.github.io/bblocks/register.json> .
 
-_:N0ca6b17f6a844a309e87fab48aa0f6a9 a prov:Agent,
+_:Nfe6a55bd699942b48c3ca9daacc1363a a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
     dct:hasVersion "0.4.9" ;

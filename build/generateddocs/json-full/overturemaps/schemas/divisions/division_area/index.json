@@ -2,7 +2,7 @@
 
 {
   "itemIdentifier": "ogc.overturemaps.schemas.divisions.division_area",
-  "name": "division_area",
+  "name": "Division Area schema",
   "itemClass": "schema",
   "abstract": "Division areas are polygons that represent the land or maritime area covered by a division.\nEach division area belongs to a division which it references by ID, and for which the division area provides an area polygon. For ease of use, every division area repeats the subtype, names, country, and region properties of the division it belongs to.",
   "status": "under-development",
@@ -18,8 +18,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.overturemaps.schemas.divisions.definitions",
-    "ogc.overturemaps.schemas.definitions"
+    "ogc.overturemaps.schemas.definitions",
+    "ogc.overturemaps.schemas.divisions.definitions"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_area/schema.yaml",

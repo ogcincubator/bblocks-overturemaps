@@ -2,7 +2,7 @@
 
 {
   "itemIdentifier": "ogc.overturemaps.schemas.divisions.division",
-  "name": "division",
+  "name": "Division schema",
   "itemClass": "schema",
   "abstract": "Divisions are recognized official or non-official organizations of people as seen from a given political perspective. Examples include countries, provinces, cities, towns, neighborhoods, etc.",
   "status": "under-development",
@@ -18,8 +18,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.overturemaps.schemas.divisions.definitions",
-    "ogc.overturemaps.schemas.definitions"
+    "ogc.overturemaps.schemas.definitions",
+    "ogc.overturemaps.schemas.divisions.definitions"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/schema.yaml",

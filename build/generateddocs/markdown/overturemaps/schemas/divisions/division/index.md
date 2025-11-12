@@ -1,5 +1,5 @@
 
-# division (Schema)
+# Division schema (Schema)
 
 `ogc.overturemaps.schemas.divisions.division` *v0.1*
 

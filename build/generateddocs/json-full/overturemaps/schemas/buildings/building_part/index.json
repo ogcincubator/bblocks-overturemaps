@@ -2,7 +2,7 @@
 
 {
   "itemIdentifier": "ogc.overturemaps.schemas.buildings.building_part",
-  "name": "part",
+  "name": "Building Part schema",
   "itemClass": "schema",
   "abstract": "A single building part. Parts describe their shape and color and other properties. Each building part must contain the building with which it is associated.",
   "status": "under-development",
@@ -18,8 +18,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.overturemaps.schemas.buildings.definitions",
-    "ogc.overturemaps.schemas.definitions"
+    "ogc.overturemaps.schemas.definitions",
+    "ogc.overturemaps.schemas.buildings.definitions"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.yaml",

@@ -1,5 +1,5 @@
-Validation report for ogc.overturemaps.schemas.base.land - land
-Generated 2025-11-12T15:58:08.010744+00:00
+Validation report for ogc.overturemaps.schemas.base.land - Land schema
+Generated 2025-11-12T20:57:18.939859+00:00
 === Files ===
 Using example_1_1.json from examples
 === End Files ===

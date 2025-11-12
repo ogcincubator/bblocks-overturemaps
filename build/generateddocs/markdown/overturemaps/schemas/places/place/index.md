@@ -1,5 +1,5 @@
 
-# place (Schema)
+# Place schema (Schema)
 
 `ogc.overturemaps.schemas.places.place` *v0.1*
 

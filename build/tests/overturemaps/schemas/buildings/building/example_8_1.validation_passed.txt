@@ -1,5 +1,5 @@
-Validation report for ogc.overturemaps.schemas.buildings.building - building
-Generated 2025-11-12T15:58:06.677414+00:00
+Validation report for ogc.overturemaps.schemas.buildings.building - Building schema
+Generated 2025-11-12T20:57:17.813321+00:00
 === Files ===
 Using example_8_1.json from examples
 === End Files ===

@@ -1,5 +1,5 @@
 
-# land_cover (Schema)
+# Land Cover schema (Schema)
 
 `ogc.overturemaps.schemas.base.land_cover` *v0.1*
 

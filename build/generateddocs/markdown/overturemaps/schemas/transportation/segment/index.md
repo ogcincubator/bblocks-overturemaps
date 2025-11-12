@@ -1,5 +1,5 @@
 
-# segment (Schema)
+# Transportation Segment schema (Schema)
 
 `ogc.overturemaps.schemas.transportation.segment` *v0.1*
 

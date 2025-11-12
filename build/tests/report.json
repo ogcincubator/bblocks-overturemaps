@@ -10,7 +10,7 @@
       "title": "Validation report for ogc.overturemaps.schemas.definitions - Overture Maps Feature Schema Common definitions",
       "bblockName": "Overture Maps Feature Schema Common definitions",
       "bblockId": "ogc.overturemaps.schemas.definitions",
-      "generated": "2025-11-12T15:58:04.752647+00:00",
+      "generated": "2025-11-12T20:57:16.525862+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -24,7 +24,7 @@
       "title": "Validation report for ogc.overturemaps.schemas.buildings.definitions - Overture Maps Shared Building Properties",
       "bblockName": "Overture Maps Shared Building Properties",
       "bblockId": "ogc.overturemaps.schemas.buildings.definitions",
-      "generated": "2025-11-12T15:58:04.758025+00:00",
+      "generated": "2025-11-12T20:57:16.530903+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -38,7 +38,7 @@
       "title": "Validation report for ogc.overturemaps.schemas.places.definitions - Shared places properties",
       "bblockName": "Shared places properties",
       "bblockId": "ogc.overturemaps.schemas.places.definitions",
-      "generated": "2025-11-12T15:58:04.762590+00:00",
+      "generated": "2025-11-12T20:57:16.535084+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -49,10 +49,10 @@
       }
     },
     "ogc.overturemaps.schemas.addresses.address": {
-      "title": "Validation report for ogc.overturemaps.schemas.addresses.address - address",
-      "bblockName": "address",
+      "title": "Validation report for ogc.overturemaps.schemas.addresses.address - Address schema",
+      "bblockName": "Address schema",
       "bblockId": "ogc.overturemaps.schemas.addresses.address",
-      "generated": "2025-11-12T15:58:05.043525+00:00",
+      "generated": "2025-11-12T20:57:16.693112+00:00",
       "result": true,
       "items": [
         {
@@ -211,7 +211,7 @@
       "title": "Validation report for ogc.overturemaps.schemas.base.definitions - Base layer properties",
       "bblockName": "Base layer properties",
       "bblockId": "ogc.overturemaps.schemas.base.definitions",
-      "generated": "2025-11-12T15:58:05.049129+00:00",
+      "generated": "2025-11-12T20:57:16.699163+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -222,10 +222,10 @@
       }
     },
     "ogc.overturemaps.schemas.base.land_cover": {
-      "title": "Validation report for ogc.overturemaps.schemas.base.land_cover - land_cover",
-      "bblockName": "land_cover",
+      "title": "Validation report for ogc.overturemaps.schemas.base.land_cover - Land Cover schema",
+      "bblockName": "Land Cover schema",
       "bblockId": "ogc.overturemaps.schemas.base.land_cover",
-      "generated": "2025-11-12T15:58:05.471987+00:00",
+      "generated": "2025-11-12T20:57:16.964757+00:00",
       "result": true,
       "items": [
         {
@@ -276,7 +276,7 @@
       "title": "Validation report for ogc.overturemaps.schemas.divisions.definitions - Shared divisions properties",
       "bblockName": "Shared divisions properties",
       "bblockId": "ogc.overturemaps.schemas.divisions.definitions",
-      "generated": "2025-11-12T15:58:05.477223+00:00",
+      "generated": "2025-11-12T20:57:16.970357+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -287,10 +287,10 @@
       }
     },
     "ogc.overturemaps.schemas.transportation.connector": {
-      "title": "Validation report for ogc.overturemaps.schemas.transportation.connector - connector",
-      "bblockName": "connector",
+      "title": "Validation report for ogc.overturemaps.schemas.transportation.connector - Transportation Connector schema",
+      "bblockName": "Transportation Connector schema",
       "bblockId": "ogc.overturemaps.schemas.transportation.connector",
-      "generated": "2025-11-12T15:58:05.625640+00:00",
+      "generated": "2025-11-12T20:57:17.166943+00:00",
       "result": true,
       "items": [
         {
@@ -590,10 +590,10 @@
       }
     },
     "ogc.overturemaps.schemas.transportation.segment": {
-      "title": "Validation report for ogc.overturemaps.schemas.transportation.segment - segment",
-      "bblockName": "segment",
+      "title": "Validation report for ogc.overturemaps.schemas.transportation.segment - Transportation Segment schema",
+      "bblockName": "Transportation Segment schema",
       "bblockId": "ogc.overturemaps.schemas.transportation.segment",
-      "generated": "2025-11-12T15:58:05.996848+00:00",
+      "generated": "2025-11-12T20:57:17.627554+00:00",
       "result": true,
       "items": [
         {
@@ -2225,10 +2225,10 @@
       }
     },
     "ogc.overturemaps.schemas.buildings.building": {
-      "title": "Validation report for ogc.overturemaps.schemas.buildings.building - building",
-      "bblockName": "building",
+      "title": "Validation report for ogc.overturemaps.schemas.buildings.building - Building schema",
+      "bblockName": "Building schema",
       "bblockId": "ogc.overturemaps.schemas.buildings.building",
-      "generated": "2025-11-12T15:58:06.680746+00:00",
+      "generated": "2025-11-12T20:57:17.816674+00:00",
       "result": true,
       "items": [
         {
@@ -2600,10 +2600,10 @@
       }
     },
     "ogc.overturemaps.schemas.buildings.building_part": {
-      "title": "Validation report for ogc.overturemaps.schemas.buildings.building_part - part",
-      "bblockName": "part",
+      "title": "Validation report for ogc.overturemaps.schemas.buildings.building_part - Building Part schema",
+      "bblockName": "Building Part schema",
       "bblockId": "ogc.overturemaps.schemas.buildings.building_part",
-      "generated": "2025-11-12T15:58:06.973841+00:00",
+      "generated": "2025-11-12T20:57:17.968791+00:00",
       "result": true,
       "items": [
         {
@@ -2759,10 +2759,10 @@
       }
     },
     "ogc.overturemaps.schemas.places.place": {
-      "title": "Validation report for ogc.overturemaps.schemas.places.place - place",
-      "bblockName": "place",
+      "title": "Validation report for ogc.overturemaps.schemas.places.place - Place schema",
+      "bblockName": "Place schema",
       "bblockId": "ogc.overturemaps.schemas.places.place",
-      "generated": "2025-11-12T15:58:07.112509+00:00",
+      "generated": "2025-11-12T20:57:18.068927+00:00",
       "result": true,
       "items": [
         {
@@ -3062,10 +3062,10 @@
       }
     },
     "ogc.overturemaps.schemas.base.bathymetry": {
-      "title": "Validation report for ogc.overturemaps.schemas.base.bathymetry - bathymetry",
-      "bblockName": "bathymetry",
+      "title": "Validation report for ogc.overturemaps.schemas.base.bathymetry - Bathymetry schema",
+      "bblockName": "Bathymetry schema",
       "bblockId": "ogc.overturemaps.schemas.base.bathymetry",
-      "generated": "2025-11-12T15:58:07.290039+00:00",
+      "generated": "2025-11-12T20:57:18.276612+00:00",
       "result": true,
       "items": [
         {
@@ -3113,10 +3113,10 @@
       }
     },
     "ogc.overturemaps.schemas.base.infrastructure": {
-      "title": "Validation report for ogc.overturemaps.schemas.base.infrastructure - Infrastructure Schema",
-      "bblockName": "Infrastructure Schema",
+      "title": "Validation report for ogc.overturemaps.schemas.base.infrastructure - Infrastructure schema",
+      "bblockName": "Infrastructure schema",
       "bblockId": "ogc.overturemaps.schemas.base.infrastructure",
-      "generated": "2025-11-12T15:58:07.692911+00:00",
+      "generated": "2025-11-12T20:57:18.565033+00:00",
       "result": true,
       "items": [
         {
@@ -3200,10 +3200,10 @@
       }
     },
     "ogc.overturemaps.schemas.base.land": {
-      "title": "Validation report for ogc.overturemaps.schemas.base.land - land",
-      "bblockName": "land",
+      "title": "Validation report for ogc.overturemaps.schemas.base.land - Land schema",
+      "bblockName": "Land schema",
       "bblockId": "ogc.overturemaps.schemas.base.land",
-      "generated": "2025-11-12T15:58:08.010818+00:00",
+      "generated": "2025-11-12T20:57:18.939915+00:00",
       "result": true,
       "items": [
         {
@@ -3251,10 +3251,10 @@
       }
     },
     "ogc.overturemaps.schemas.base.land_use": {
-      "title": "Validation report for ogc.overturemaps.schemas.base.land_use - land_use",
-      "bblockName": "land_use",
+      "title": "Validation report for ogc.overturemaps.schemas.base.land_use - Land Use schema",
+      "bblockName": "Land Use schema",
       "bblockId": "ogc.overturemaps.schemas.base.land_use",
-      "generated": "2025-11-12T15:58:08.376974+00:00",
+      "generated": "2025-11-12T20:57:19.170854+00:00",
       "result": true,
       "items": [
         {
@@ -3302,10 +3302,10 @@
       }
     },
     "ogc.overturemaps.schemas.base.water": {
-      "title": "Validation report for ogc.overturemaps.schemas.base.water - water",
-      "bblockName": "water",
+      "title": "Validation report for ogc.overturemaps.schemas.base.water - Water schema",
+      "bblockName": "Water schema",
       "bblockId": "ogc.overturemaps.schemas.base.water",
-      "generated": "2025-11-12T15:58:08.744569+00:00",
+      "generated": "2025-11-12T20:57:19.364809+00:00",
       "result": true,
       "items": [
         {
@@ -3425,10 +3425,10 @@
       }
     },
     "ogc.overturemaps.schemas.divisions.division": {
-      "title": "Validation report for ogc.overturemaps.schemas.divisions.division - division",
-      "bblockName": "division",
+      "title": "Validation report for ogc.overturemaps.schemas.divisions.division - Division schema",
+      "bblockName": "Division schema",
       "bblockId": "ogc.overturemaps.schemas.divisions.division",
-      "generated": "2025-11-12T15:58:08.926884+00:00",
+      "generated": "2025-11-12T20:57:19.506902+00:00",
       "result": true,
       "items": [
         {
@@ -3800,10 +3800,10 @@
       }
     },
     "ogc.overturemaps.schemas.divisions.division_area": {
-      "title": "Validation report for ogc.overturemaps.schemas.divisions.division_area - division_area",
-      "bblockName": "division_area",
+      "title": "Validation report for ogc.overturemaps.schemas.divisions.division_area - Division Area schema",
+      "bblockName": "Division Area schema",
       "bblockId": "ogc.overturemaps.schemas.divisions.division_area",
-      "generated": "2025-11-12T15:58:09.175827+00:00",
+      "generated": "2025-11-12T20:57:19.661164+00:00",
       "result": true,
       "items": [
         {
@@ -3995,10 +3995,10 @@
       }
     },
     "ogc.overturemaps.schemas.divisions.division_boundary": {
-      "title": "Validation report for ogc.overturemaps.schemas.divisions.division_boundary - boundary",
-      "bblockName": "boundary",
+      "title": "Validation report for ogc.overturemaps.schemas.divisions.division_boundary - Boundary schema",
+      "bblockName": "Boundary schema",
       "bblockId": "ogc.overturemaps.schemas.divisions.division_boundary",
-      "generated": "2025-11-12T15:58:09.361857+00:00",
+      "generated": "2025-11-12T20:57:19.752183+00:00",
       "result": true,
       "items": [
         {
@@ -4265,7 +4265,7 @@
       "title": "Validation report for ogc.overturemaps.schemas.schema - Overture Maps Schema",
       "bblockName": "Overture Maps Schema",
       "bblockId": "ogc.overturemaps.schemas.schema",
-      "generated": "2025-11-12T15:58:11.153153+00:00",
+      "generated": "2025-11-12T20:57:21.315869+00:00",
       "result": true,
       "items": [
         {

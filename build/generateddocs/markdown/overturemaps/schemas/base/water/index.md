@@ -1,5 +1,5 @@
 
-# water (Schema)
+# Water schema (Schema)
 
 `ogc.overturemaps.schemas.base.water` *v0.1*
 

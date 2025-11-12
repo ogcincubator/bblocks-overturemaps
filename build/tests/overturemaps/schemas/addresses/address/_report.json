@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for ogc.overturemaps.schemas.addresses.address - address",
-  "bblockName": "address",
+  "title": "Validation report for ogc.overturemaps.schemas.addresses.address - Address schema",
+  "bblockName": "Address schema",
   "bblockId": "ogc.overturemaps.schemas.addresses.address",
-  "generated": "2025-11-12T15:58:05.043525+00:00",
+  "generated": "2025-11-12T20:57:16.693112+00:00",
   "result": true,
   "items": [
     {

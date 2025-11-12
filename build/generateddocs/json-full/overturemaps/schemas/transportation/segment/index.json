@@ -2,7 +2,7 @@
 
 {
   "itemIdentifier": "ogc.overturemaps.schemas.transportation.segment",
-  "name": "segment",
+  "name": "Transportation Segment schema",
   "itemClass": "schema",
   "abstract": "Segments are paths which can be traveled by people or things. Segments are compatible with GeoJSON LineString features.",
   "status": "under-development",

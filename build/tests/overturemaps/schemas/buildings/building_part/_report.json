@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for ogc.overturemaps.schemas.buildings.building_part - part",
-  "bblockName": "part",
+  "title": "Validation report for ogc.overturemaps.schemas.buildings.building_part - Building Part schema",
+  "bblockName": "Building Part schema",
   "bblockId": "ogc.overturemaps.schemas.buildings.building_part",
-  "generated": "2025-11-12T15:58:06.973841+00:00",
+  "generated": "2025-11-12T20:57:17.968791+00:00",
   "result": true,
   "items": [
     {

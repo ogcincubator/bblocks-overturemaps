@@ -1,5 +1,5 @@
 
-# address (Schema)
+# Address schema (Schema)
 
 `ogc.overturemaps.schemas.addresses.address` *v0.1*
 

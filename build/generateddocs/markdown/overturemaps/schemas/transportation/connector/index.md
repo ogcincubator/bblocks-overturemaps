@@ -1,5 +1,5 @@
 
-# connector (Schema)
+# Transportation Connector schema (Schema)
 
 `ogc.overturemaps.schemas.transportation.connector` *v0.1*
 

@@ -1,5 +1,5 @@
-Validation report for ogc.overturemaps.schemas.divisions.division - division
-Generated 2025-11-12T15:58:08.867210+00:00
+Validation report for ogc.overturemaps.schemas.divisions.division - Division schema
+Generated 2025-11-12T20:57:19.451311+00:00
 === Files ===
 Using example_2_1.json from examples
 === End Files ===

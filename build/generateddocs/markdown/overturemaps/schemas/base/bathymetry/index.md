@@ -1,5 +1,5 @@
 
-# bathymetry (Schema)
+# Bathymetry schema (Schema)
 
 `ogc.overturemaps.schemas.base.bathymetry` *v0.1*
 

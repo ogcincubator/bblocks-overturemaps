@@ -1,5 +1,5 @@
 
-# boundary (Schema)
+# Boundary schema (Schema)
 
 `ogc.overturemaps.schemas.divisions.division_boundary` *v0.1*
 

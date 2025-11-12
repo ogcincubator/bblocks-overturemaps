@@ -1,5 +1,5 @@
 
-# building (Schema)
+# Building schema (Schema)
 
 `ogc.overturemaps.schemas.buildings.building` *v0.1*
 

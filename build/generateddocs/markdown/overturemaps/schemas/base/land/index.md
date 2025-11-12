@@ -1,5 +1,5 @@
 
-# land (Schema)
+# Land schema (Schema)
 
 `ogc.overturemaps.schemas.base.land` *v0.1*
 
