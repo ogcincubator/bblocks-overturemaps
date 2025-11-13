@@ -1,5 +1,5 @@
 Validation report for ogc.overturemaps.schemas.base.infrastructure - Infrastructure schema
-Generated 2025-11-12T20:57:18.562536+00:00
+Generated 2025-11-13T08:09:38.071435+00:00
 === Files ===
 Using example_1_1.json from examples
 === End Files ===

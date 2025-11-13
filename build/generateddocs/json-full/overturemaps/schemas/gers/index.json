@@ -1,0 +1,37 @@
+
+
+{
+  "itemIdentifier": "ogc.overturemaps.schemas.gers",
+  "name": "Global Entity Reference System identifier",
+  "itemClass": "schema",
+  "abstract": "The Global Entity Reference System (GERS) is a universal framework for structuring and matching map data across systems.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+  "dateOfLastChange": "2025-11-13",
+  "register": "ogc-building-blocks-register",
+  "version": "0.1",
+  "sources": [
+    {
+      "title": "GERS documentation",
+      "link": "https://docs.overturemaps.org/gers/"
+    }
+  ],
+  "tags": [
+    "overture-maps",
+    "schemas",
+    "gers"
+  ],
+  "shaclShapes": {},
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/gers/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/gers/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/gers/schema.yaml",
+  "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/gers/",
+  "rdfData": [],
+  "validationPassed": true,
+  "description": "The Global Entity Reference System (GERS) is a universal framework for structuring and matching map data across systems.\nGERS, coupled with Overture datasets, is a potential standard for identifying and referencing the physical and\nconceptual entities we've defined in our world. It's also a mechanism that can simplify the integration and exchange of\ndata layers.\n\nGERS provides stable identifiers called GERS IDs for real-world geospatial entities across data releases and maintains\nconsistency when entities appear in multiple source datasets.",
+  "annotatedSchema": "type: string\ndescription: \"A feature ID. This may be an ID associated with the Global Entity Reference\n  System (GERS) if\\u2014and-only-if the feature represents an entity that is part\n  of GERS.\"\nminLength: 1\npattern: ^(\\S.*)?\\S$\n",
+  "gitRepository": "https://github.com/ogcincubator/bblocks-overturemaps",
+  "gitPath": "_sources/schemas/gers"
+}

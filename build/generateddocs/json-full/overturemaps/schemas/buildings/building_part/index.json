@@ -7,7 +7,7 @@
   "abstract": "A single building part. Parts describe their shape and color and other properties. Each building part must contain the building with which it is associated.",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
-  "dateOfLastChange": "2025-11-12",
+  "dateOfLastChange": "2025-11-13",
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
@@ -18,8 +18,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.overturemaps.schemas.definitions",
-    "ogc.overturemaps.schemas.buildings.definitions"
+    "ogc.overturemaps.schemas.buildings.definitions",
+    "ogc.overturemaps.schemas.definitions"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.yaml",

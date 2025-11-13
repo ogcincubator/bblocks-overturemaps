@@ -7,7 +7,7 @@
   "abstract": "A Place is a point representation of a real-world facility, service, or amenity. Place features are compatible with GeoJSON Point features.",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
-  "dateOfLastChange": "2025-11-12",
+  "dateOfLastChange": "2025-11-13",
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
@@ -18,8 +18,8 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.overturemaps.schemas.definitions",
-    "ogc.overturemaps.schemas.places.definitions"
+    "ogc.overturemaps.schemas.places.definitions",
+    "ogc.overturemaps.schemas.definitions"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/schema.yaml",

@@ -1,5 +1,5 @@
 Validation report for ogc.overturemaps.schemas.schema - Overture Maps Schema
-Generated 2025-11-12T20:57:20.100492+00:00
+Generated 2025-11-13T08:09:39.233042+00:00
 === Files ===
 Using example_2_1.json from examples
 JSON-LD context is present - uplifting

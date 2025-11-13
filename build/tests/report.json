@@ -1,16 +1,16 @@
 {
   "summary": {
-    "total": 21,
-    "passed": 21,
+    "total": 22,
+    "passed": 22,
     "failed": 0,
     "result": true
   },
   "bblocks": {
-    "ogc.overturemaps.schemas.definitions": {
-      "title": "Validation report for ogc.overturemaps.schemas.definitions - Overture Maps Feature Schema Common definitions",
-      "bblockName": "Overture Maps Feature Schema Common definitions",
-      "bblockId": "ogc.overturemaps.schemas.definitions",
-      "generated": "2025-11-12T20:57:16.525862+00:00",
+    "ogc.overturemaps.schemas.buildings.definitions": {
+      "title": "Validation report for ogc.overturemaps.schemas.buildings.definitions - Overture Maps Shared Building Properties",
+      "bblockName": "Overture Maps Shared Building Properties",
+      "bblockId": "ogc.overturemaps.schemas.buildings.definitions",
+      "generated": "2025-11-13T08:09:35.904318+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -20,11 +20,11 @@
         "failed": 0
       }
     },
-    "ogc.overturemaps.schemas.buildings.definitions": {
-      "title": "Validation report for ogc.overturemaps.schemas.buildings.definitions - Overture Maps Shared Building Properties",
-      "bblockName": "Overture Maps Shared Building Properties",
-      "bblockId": "ogc.overturemaps.schemas.buildings.definitions",
-      "generated": "2025-11-12T20:57:16.530903+00:00",
+    "ogc.overturemaps.schemas.gers": {
+      "title": "Validation report for ogc.overturemaps.schemas.gers - Global Entity Reference System identifier",
+      "bblockName": "Global Entity Reference System identifier",
+      "bblockId": "ogc.overturemaps.schemas.gers",
+      "generated": "2025-11-13T08:09:35.908923+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -38,7 +38,21 @@
       "title": "Validation report for ogc.overturemaps.schemas.places.definitions - Shared places properties",
       "bblockName": "Shared places properties",
       "bblockId": "ogc.overturemaps.schemas.places.definitions",
-      "generated": "2025-11-12T20:57:16.535084+00:00",
+      "generated": "2025-11-13T08:09:35.913276+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.overturemaps.schemas.definitions": {
+      "title": "Validation report for ogc.overturemaps.schemas.definitions - Overture Maps Feature Schema Common definitions",
+      "bblockName": "Overture Maps Feature Schema Common definitions",
+      "bblockId": "ogc.overturemaps.schemas.definitions",
+      "generated": "2025-11-13T08:09:35.919873+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -52,7 +66,7 @@
       "title": "Validation report for ogc.overturemaps.schemas.addresses.address - Address schema",
       "bblockName": "Address schema",
       "bblockId": "ogc.overturemaps.schemas.addresses.address",
-      "generated": "2025-11-12T20:57:16.693112+00:00",
+      "generated": "2025-11-13T08:09:36.095465+00:00",
       "result": true,
       "items": [
         {
@@ -211,7 +225,7 @@
       "title": "Validation report for ogc.overturemaps.schemas.base.definitions - Base layer properties",
       "bblockName": "Base layer properties",
       "bblockId": "ogc.overturemaps.schemas.base.definitions",
-      "generated": "2025-11-12T20:57:16.699163+00:00",
+      "generated": "2025-11-13T08:09:36.101255+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -225,7 +239,7 @@
       "title": "Validation report for ogc.overturemaps.schemas.base.land_cover - Land Cover schema",
       "bblockName": "Land Cover schema",
       "bblockId": "ogc.overturemaps.schemas.base.land_cover",
-      "generated": "2025-11-12T20:57:16.964757+00:00",
+      "generated": "2025-11-13T08:09:36.440476+00:00",
       "result": true,
       "items": [
         {
@@ -272,11 +286,545 @@
         "failed": 0
       }
     },
+    "ogc.overturemaps.schemas.buildings.building": {
+      "title": "Validation report for ogc.overturemaps.schemas.buildings.building - Building schema",
+      "bblockName": "Building schema",
+      "bblockId": "ogc.overturemaps.schemas.buildings.building",
+      "generated": "2025-11-13T08:09:36.782734+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/buildings/building/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/buildings/building/example_2_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_2_1.json",
+            "exampleIndex": 2,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_2_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/buildings/building/example_3_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_3_1.json",
+            "exampleIndex": 3,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_3_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/buildings/building/example_4_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_4_1.json",
+            "exampleIndex": 4,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_4_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/buildings/building/example_5_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_5_1.json",
+            "exampleIndex": 5,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_5_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/buildings/building/example_6_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_6_1.json",
+            "exampleIndex": 6,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_6_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/buildings/building/example_7_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_7_1.json",
+            "exampleIndex": 7,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_7_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/buildings/building/example_8_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_8_1.json",
+            "exampleIndex": 8,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_8_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/buildings/building/example_9_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_9_1.json",
+            "exampleIndex": 9,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_9_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/buildings/building/example_10_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_10_1.json",
+            "exampleIndex": 10,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_10_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 10,
+        "passed": 10,
+        "failed": 0
+      }
+    },
+    "ogc.overturemaps.schemas.buildings.building_part": {
+      "title": "Validation report for ogc.overturemaps.schemas.buildings.building_part - Building Part schema",
+      "bblockName": "Building Part schema",
+      "bblockId": "ogc.overturemaps.schemas.buildings.building_part",
+      "generated": "2025-11-13T08:09:37.050353+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/buildings/building_part/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building_part/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/buildings/building_part/example_2_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building_part/example_2_1.json",
+            "exampleIndex": 2,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_2_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/buildings/building_part/example_3_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building_part/example_3_1.json",
+            "exampleIndex": 3,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_3_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/buildings/building_part/example_4_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building_part/example_4_1.json",
+            "exampleIndex": 4,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_4_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 4,
+        "passed": 4,
+        "failed": 0
+      }
+    },
     "ogc.overturemaps.schemas.divisions.definitions": {
       "title": "Validation report for ogc.overturemaps.schemas.divisions.definitions - Shared divisions properties",
       "bblockName": "Shared divisions properties",
       "bblockId": "ogc.overturemaps.schemas.divisions.definitions",
-      "generated": "2025-11-12T20:57:16.970357+00:00",
+      "generated": "2025-11-13T08:09:37.056217+00:00",
       "result": true,
       "items": [],
       "globalErrors": {},
@@ -286,11 +834,314 @@
         "failed": 0
       }
     },
+    "ogc.overturemaps.schemas.places.place": {
+      "title": "Validation report for ogc.overturemaps.schemas.places.place - Place schema",
+      "bblockName": "Place schema",
+      "bblockId": "ogc.overturemaps.schemas.places.place",
+      "generated": "2025-11-13T08:09:37.277874+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/places/place/example_1_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/places/place/example_2_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_2_1.json",
+            "exampleIndex": 2,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_2_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/places/place/example_3_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_3_1.json",
+            "exampleIndex": 3,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_3_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/places/place/example_4_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_4_1.json",
+            "exampleIndex": 4,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_4_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/places/place/example_5_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_5_1.json",
+            "exampleIndex": 5,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_5_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/places/place/example_6_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_6_1.json",
+            "exampleIndex": 6,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_6_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/places/place/example_7_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_7_1.json",
+            "exampleIndex": 7,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_7_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/overturemaps/schemas/places/place/example_8_1.json",
+            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_8_1.json",
+            "exampleIndex": 8,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_8_1.json from examples"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 8,
+        "passed": 8,
+        "failed": 0
+      }
+    },
     "ogc.overturemaps.schemas.transportation.connector": {
       "title": "Validation report for ogc.overturemaps.schemas.transportation.connector - Transportation Connector schema",
       "bblockName": "Transportation Connector schema",
       "bblockId": "ogc.overturemaps.schemas.transportation.connector",
-      "generated": "2025-11-12T20:57:17.166943+00:00",
+      "generated": "2025-11-13T08:09:37.324697+00:00",
       "result": true,
       "items": [
         {
@@ -593,7 +1444,7 @@
       "title": "Validation report for ogc.overturemaps.schemas.transportation.segment - Transportation Segment schema",
       "bblockName": "Transportation Segment schema",
       "bblockId": "ogc.overturemaps.schemas.transportation.segment",
-      "generated": "2025-11-12T20:57:17.627554+00:00",
+      "generated": "2025-11-13T08:09:37.674625+00:00",
       "result": true,
       "items": [
         {
@@ -2224,848 +3075,11 @@
         "failed": 0
       }
     },
-    "ogc.overturemaps.schemas.buildings.building": {
-      "title": "Validation report for ogc.overturemaps.schemas.buildings.building - Building schema",
-      "bblockName": "Building schema",
-      "bblockId": "ogc.overturemaps.schemas.buildings.building",
-      "generated": "2025-11-12T20:57:17.816674+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/buildings/building/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_1_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/buildings/building/example_2_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_2_1.json",
-            "exampleIndex": 2,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_2_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/buildings/building/example_3_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_3_1.json",
-            "exampleIndex": 3,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_3_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/buildings/building/example_4_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_4_1.json",
-            "exampleIndex": 4,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_4_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/buildings/building/example_5_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_5_1.json",
-            "exampleIndex": 5,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_5_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/buildings/building/example_6_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_6_1.json",
-            "exampleIndex": 6,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_6_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/buildings/building/example_7_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_7_1.json",
-            "exampleIndex": 7,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_7_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/buildings/building/example_8_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_8_1.json",
-            "exampleIndex": 8,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_8_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/buildings/building/example_9_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_9_1.json",
-            "exampleIndex": 9,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_9_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/buildings/building/example_10_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_10_1.json",
-            "exampleIndex": 10,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_10_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 10,
-        "passed": 10,
-        "failed": 0
-      }
-    },
-    "ogc.overturemaps.schemas.buildings.building_part": {
-      "title": "Validation report for ogc.overturemaps.schemas.buildings.building_part - Building Part schema",
-      "bblockName": "Building Part schema",
-      "bblockId": "ogc.overturemaps.schemas.buildings.building_part",
-      "generated": "2025-11-12T20:57:17.968791+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/buildings/building_part/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building_part/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_1_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/buildings/building_part/example_2_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building_part/example_2_1.json",
-            "exampleIndex": 2,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_2_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/buildings/building_part/example_3_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building_part/example_3_1.json",
-            "exampleIndex": 3,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_3_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/buildings/building_part/example_4_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building_part/example_4_1.json",
-            "exampleIndex": 4,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_4_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 4,
-        "passed": 4,
-        "failed": 0
-      }
-    },
-    "ogc.overturemaps.schemas.places.place": {
-      "title": "Validation report for ogc.overturemaps.schemas.places.place - Place schema",
-      "bblockName": "Place schema",
-      "bblockId": "ogc.overturemaps.schemas.places.place",
-      "generated": "2025-11-12T20:57:18.068927+00:00",
-      "result": true,
-      "items": [
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/places/place/example_1_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_1_1.json",
-            "exampleIndex": 1,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_1_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/places/place/example_2_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_2_1.json",
-            "exampleIndex": 2,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_2_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/places/place/example_3_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_3_1.json",
-            "exampleIndex": 3,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_3_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/places/place/example_4_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_4_1.json",
-            "exampleIndex": 4,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_4_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/places/place/example_5_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_5_1.json",
-            "exampleIndex": 5,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_5_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/places/place/example_6_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_6_1.json",
-            "exampleIndex": 6,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_6_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/places/place/example_7_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_7_1.json",
-            "exampleIndex": 7,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_7_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "source": {
-            "type": "EXAMPLE",
-            "requireFail": false,
-            "filename": "build/tests/overturemaps/schemas/places/place/example_8_1.json",
-            "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_8_1.json",
-            "exampleIndex": 8,
-            "snippetIndex": 1,
-            "language": "application/json"
-          },
-          "result": true,
-          "sections": [
-            {
-              "name": "FILES",
-              "title": "Files",
-              "entries": [
-                {
-                  "isError": false,
-                  "message": "Using example_8_1.json from examples"
-                }
-              ]
-            },
-            {
-              "name": "JSON_SCHEMA",
-              "title": "JSON Schema",
-              "entries": [
-                {
-                  "op": "validation",
-                  "result": true,
-                  "isError": false,
-                  "message": "Validation passed"
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "globalErrors": {},
-      "counts": {
-        "total": 8,
-        "passed": 8,
-        "failed": 0
-      }
-    },
     "ogc.overturemaps.schemas.base.bathymetry": {
       "title": "Validation report for ogc.overturemaps.schemas.base.bathymetry - Bathymetry schema",
       "bblockName": "Bathymetry schema",
       "bblockId": "ogc.overturemaps.schemas.base.bathymetry",
-      "generated": "2025-11-12T20:57:18.276612+00:00",
+      "generated": "2025-11-13T08:09:37.805627+00:00",
       "result": true,
       "items": [
         {
@@ -3116,7 +3130,7 @@
       "title": "Validation report for ogc.overturemaps.schemas.base.infrastructure - Infrastructure schema",
       "bblockName": "Infrastructure schema",
       "bblockId": "ogc.overturemaps.schemas.base.infrastructure",
-      "generated": "2025-11-12T20:57:18.565033+00:00",
+      "generated": "2025-11-13T08:09:38.074050+00:00",
       "result": true,
       "items": [
         {
@@ -3203,7 +3217,7 @@
       "title": "Validation report for ogc.overturemaps.schemas.base.land - Land schema",
       "bblockName": "Land schema",
       "bblockId": "ogc.overturemaps.schemas.base.land",
-      "generated": "2025-11-12T20:57:18.939915+00:00",
+      "generated": "2025-11-13T08:09:38.261165+00:00",
       "result": true,
       "items": [
         {
@@ -3254,7 +3268,7 @@
       "title": "Validation report for ogc.overturemaps.schemas.base.land_use - Land Use schema",
       "bblockName": "Land Use schema",
       "bblockId": "ogc.overturemaps.schemas.base.land_use",
-      "generated": "2025-11-12T20:57:19.170854+00:00",
+      "generated": "2025-11-13T08:09:38.388587+00:00",
       "result": true,
       "items": [
         {
@@ -3305,7 +3319,7 @@
       "title": "Validation report for ogc.overturemaps.schemas.base.water - Water schema",
       "bblockName": "Water schema",
       "bblockId": "ogc.overturemaps.schemas.base.water",
-      "generated": "2025-11-12T20:57:19.364809+00:00",
+      "generated": "2025-11-13T08:09:38.573022+00:00",
       "result": true,
       "items": [
         {
@@ -3428,7 +3442,7 @@
       "title": "Validation report for ogc.overturemaps.schemas.divisions.division - Division schema",
       "bblockName": "Division schema",
       "bblockId": "ogc.overturemaps.schemas.divisions.division",
-      "generated": "2025-11-12T20:57:19.506902+00:00",
+      "generated": "2025-11-13T08:09:38.711373+00:00",
       "result": true,
       "items": [
         {
@@ -3803,7 +3817,7 @@
       "title": "Validation report for ogc.overturemaps.schemas.divisions.division_area - Division Area schema",
       "bblockName": "Division Area schema",
       "bblockId": "ogc.overturemaps.schemas.divisions.division_area",
-      "generated": "2025-11-12T20:57:19.661164+00:00",
+      "generated": "2025-11-13T08:09:38.867949+00:00",
       "result": true,
       "items": [
         {
@@ -3998,7 +4012,7 @@
       "title": "Validation report for ogc.overturemaps.schemas.divisions.division_boundary - Boundary schema",
       "bblockName": "Boundary schema",
       "bblockId": "ogc.overturemaps.schemas.divisions.division_boundary",
-      "generated": "2025-11-12T20:57:19.752183+00:00",
+      "generated": "2025-11-13T08:09:38.962998+00:00",
       "result": true,
       "items": [
         {
@@ -4265,7 +4279,7 @@
       "title": "Validation report for ogc.overturemaps.schemas.schema - Overture Maps Schema",
       "bblockName": "Overture Maps Schema",
       "bblockId": "ogc.overturemaps.schemas.schema",
-      "generated": "2025-11-12T20:57:21.315869+00:00",
+      "generated": "2025-11-13T08:09:40.443755+00:00",
       "result": true,
       "items": [
         {

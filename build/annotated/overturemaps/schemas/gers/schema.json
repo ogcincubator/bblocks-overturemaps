@@ -1,0 +1,6 @@
+{
+  "type": "string",
+  "description": "A feature ID. This may be an ID associated with the Global Entity Reference System (GERS) if\u2014and-only-if the feature represents an entity that is part of GERS.",
+  "minLength": 1,
+  "pattern": "^(\\S.*)?\\S$"
+}

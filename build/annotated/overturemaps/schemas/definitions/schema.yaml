@@ -110,12 +110,7 @@ $defs:
         in which the feature changed. The downside to doing this is that the number
         would cease to be indicative of the "rate of change" of the feature.
     id:
-      type: string
-      description: "A feature ID. This may be an ID associated with the Global Entity
-        Reference System (GERS) if\u2014and-only-if the feature represents an entity
-        that is part of GERS."
-      minLength: 1
-      pattern: ^(\S.*)?\S$
+      $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/gers/schema.yaml
     iso3166_1Alpha2CountryCode:
       description: ISO 3166-1 alpha-2 country code.
       type: string
