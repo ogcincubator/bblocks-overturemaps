@@ -125,13 +125,7 @@ description: Common schema definitions shared by all themes
         doing this is that the number would cease to be indicative of
         the "rate of change" of the feature.
     id:
-      type: string
-      description: >-
-        A feature ID. This may be an ID associated with the Global
-        Entity Reference System (GERS) if—and-only-if the feature
-        represents an entity that is part of GERS.
-      minLength: 1
-      pattern: ^(\S.*)?\S$    # Leading and trailing whitespace are not allowed.
+      $ref: bblocks://ogc.overturemaps.schemas.gers
     iso3166_1Alpha2CountryCode:
       description: ISO 3166-1 alpha-2 country code.
       type: string

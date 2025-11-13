@@ -1,0 +1,21 @@
+{
+  "name": "Global Entity Reference System identifier",
+  "itemClass": "schema",
+  "abstract": "The Global Entity Reference System (GERS) is a universal framework for structuring and matching map data across systems.",
+  "status": "under-development",
+  "dateTimeAddition": "2025-11-05T14:07:00+01:00",
+  "dateOfLastChange": "2025-11-05",
+  "register": "ogc-building-blocks-register",
+  "version": "0.1",
+  "sources": [
+    {
+      "title": "GERS documentation",
+      "link": "https://docs.overturemaps.org/gers/"
+    }
+  ],
+  "tags": [
+    "overture-maps",
+    "schemas",
+    "gers"
+  ]
+}
