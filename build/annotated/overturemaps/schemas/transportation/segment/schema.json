@@ -34,7 +34,8 @@
               "$ref": "#/$defs/propertyContainers/accessContainer"
             },
             "level": {
-              "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyDefinitions/level"
+              "$ref": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json#/$defs/propertyDefinitions/level",
+              "x-jsonld-id": "https://w3id.org/ogc/om/hasLevel"
             },
             "level_rules": {
               "$ref": "#/$defs/propertyContainers/levelRulesContainer"
@@ -68,13 +69,16 @@
               "$ref": "#/$defs/propertyContainers/prohibitedTransitionsContainer"
             },
             "road_surface": {
-              "$ref": "#/$defs/propertyContainers/surfaceContainer"
+              "$ref": "#/$defs/propertyContainers/surfaceContainer",
+              "x-jsonld-id": "osm:hasSurfaceType",
+              "x-jsonld-base": "https://w3id.org/ogc/om/surfaces/"
             },
             "road_flags": {
               "$ref": "#/$defs/propertyContainers/roadFlagsContainer"
             },
             "speed_limits": {
-              "$ref": "#/$defs/propertyContainers/speedLimitsContainer"
+              "$ref": "#/$defs/propertyContainers/speedLimitsContainer",
+              "x-jsonld-id": "https://w3id.org/ogc/om/hasSpeedLimit"
             },
             "width_rules": {
               "$ref": "#/$defs/propertyContainers/widthRulesContainer"
@@ -154,7 +158,8 @@
         "routes": {
           "$ref": "#/$defs/propertyDefinitions/routes"
         }
-      }
+      },
+      "x-jsonld-id": "@nest"
     }
   },
   "$defs": {
@@ -448,7 +453,8 @@
             "description": "Speed value",
             "type": "integer",
             "minimum": 1,
-            "maximum": 350
+            "maximum": 350,
+            "x-jsonld-id": "rdf:value"
           },
           "unit": {
             "description": "Speed unit",
@@ -456,7 +462,8 @@
             "enum": [
               "km/h",
               "mph"
-            ]
+            ],
+            "x-jsonld-id": "http://qudt.org/schema/qudt/hasUnit"
           }
         },
         "required": [
@@ -903,10 +910,12 @@
                 },
                 "value": {
                   "type": "number",
-                  "minimum": 0
+                  "minimum": 0,
+                  "x-jsonld-id": "rdf:value"
                 },
                 "unit": {
-                  "$ref": "#/$defs/propertyDefinitions/vehicleScopeUnit"
+                  "$ref": "#/$defs/propertyDefinitions/vehicleScopeUnit",
+                  "x-jsonld-id": "http://qudt.org/vocab/unit/"
                 }
               }
             }
@@ -940,15 +949,18 @@
           "unevaluatedProperties": false,
           "properties": {
             "min_speed": {
-              "$ref": "#/$defs/propertyDefinitions/speed"
+              "$ref": "#/$defs/propertyDefinitions/speed",
+              "x-jsonld-id": "https://w3id.org/ogc/om/hasMinSpeed"
             },
             "max_speed": {
-              "$ref": "#/$defs/propertyDefinitions/speed"
+              "$ref": "#/$defs/propertyDefinitions/speed",
+              "x-jsonld-id": "https://w3id.org/ogc/om/hasMaxSpeed"
             },
             "is_max_speed_variable": {
               "description": "Indicates a variable speed corridor",
               "type": "boolean",
-              "default": false
+              "default": false,
+              "x-jsonld-id": "https://w3id.org/ogc/om/isMaxSpeedVariable"
             },
             "when": {
               "allOf": [
@@ -972,7 +984,9 @@
                 }
               ],
               "minProperties": 1,
-              "unevaluatedProperties": false
+              "unevaluatedProperties": false,
+              "x-jsonld-id": "https://w3id.org/ogc/om/when",
+              "x-jsonld-type": "@json"
             }
           }
         },
@@ -1191,7 +1205,8 @@
           "unevaluatedProperties": false,
           "properties": {
             "value": {
-              "$ref": "#/$defs/propertyDefinitions/roadSurface"
+              "$ref": "#/$defs/propertyDefinitions/roadSurface",
+              "x-jsonld-id": "@id"
             }
           }
         },
@@ -1223,5 +1238,9 @@
         "uniqueItems": true
       }
     }
+  },
+  "x-jsonld-prefixes": {
+    "om": "https://w3id.org/ogc/om/",
+    "qudt": "http://qudt.org/schema/qudt/"
   }
 }

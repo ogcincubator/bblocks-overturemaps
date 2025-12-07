@@ -7,7 +7,7 @@
   "abstract": "A building is a man-made structure with a roof that exists permanently in one place. Buildings are compatible with GeoJSON Polygon features.",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
-  "dateOfLastChange": "2025-11-13",
+  "dateOfLastChange": "2025-12-07",
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
@@ -26,9 +26,10 @@
     "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/buildings/building/schema.yaml",
+  "ldContext": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/buildings/building/",
   "rdfData": [],
-  "validationPassed": true,
+  "validationPassed": false,
   "testOutputs": "https://github.com/ogcincubator/bblocks-overturemaps/blob/master/build/tests/overturemaps/schemas/buildings/building/",
   "examples": [
     {
@@ -38,6 +39,16 @@
           "ref": "examples/basic-sources.yaml",
           "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          1,\n          1\n        ],\n        [\n          1,\n          0\n        ],\n        [\n          0,\n          0\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"sources\": [\n      {\n        \"dataset\": \"MyGreatDataset\",\n        \"property\": \"/geometry\",\n        \"update_time\": \"2024-04-26T23:55:01-08:00\",\n        \"confidence\": 0.3\n      }\n    ]\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld\",\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          1,\n          1\n        ],\n        [\n          1,\n          0\n        ],\n        [\n          0,\n          0\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"sources\": [\n      {\n        \"dataset\": \"MyGreatDataset\",\n        \"property\": \"/geometry\",\n        \"update_time\": \"2024-04-26T23:55:01-08:00\",\n        \"confidence\": 0.3\n      }\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_1_1.ttl"
         }
       ]
     },
@@ -48,6 +59,16 @@
           "ref": "examples/building-multipolygon.yaml",
           "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"MultiPolygon\",\n    \"coordinates\": [\n      [\n        [\n          [\n            0,\n            0\n          ],\n          [\n            0,\n            1\n          ],\n          [\n            1,\n            1\n          ],\n          [\n            1,\n            0\n          ],\n          [\n            0,\n            0\n          ]\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 0\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_2_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld\",\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"MultiPolygon\",\n    \"coordinates\": [\n      [\n        [\n          [\n            0,\n            0\n          ],\n          [\n            0,\n            1\n          ],\n          [\n            1,\n            1\n          ],\n          [\n            1,\n            0\n          ],\n          [\n            0,\n            0\n          ]\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 0\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_2_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_2_1.ttl"
         }
       ]
     },
@@ -58,6 +79,16 @@
           "ref": "examples/building-polygon.yaml",
           "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -77.036873,\n          38.897804\n        ],\n        [\n          -77.036873,\n          38.897559\n        ],\n        [\n          -77.03626,\n          38.897559\n        ],\n        [\n          -77.03626,\n          38.897804\n        ],\n        [\n          -77.036873,\n          38.897804\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"level\": 1,\n    \"height\": 21.34,\n    \"num_floors\": 4,\n    \"num_floors_underground\": 1,\n    \"subtype\": \"transportation\",\n    \"class\": \"parking\",\n    \"is_underground\": false,\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"microsoftMLBuildings,\",\n        \"confidence\": 1\n      },\n      {\n        \"property\": \"/properties/height\",\n        \"dataset\": \"metaLidarExtractions,\",\n        \"confidence\": 0.95\n      }\n    ]\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_3_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld\",\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -77.036873,\n          38.897804\n        ],\n        [\n          -77.036873,\n          38.897559\n        ],\n        [\n          -77.03626,\n          38.897559\n        ],\n        [\n          -77.03626,\n          38.897804\n        ],\n        [\n          -77.036873,\n          38.897804\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"level\": 1,\n    \"height\": 21.34,\n    \"num_floors\": 4,\n    \"num_floors_underground\": 1,\n    \"subtype\": \"transportation\",\n    \"class\": \"parking\",\n    \"is_underground\": false,\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"microsoftMLBuildings,\",\n        \"confidence\": 1\n      },\n      {\n        \"property\": \"/properties/height\",\n        \"dataset\": \"metaLidarExtractions,\",\n        \"confidence\": 0.95\n      }\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_3_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_3_1.ttl"
         }
       ]
     },
@@ -68,6 +99,16 @@
           "ref": "examples/license-basic.yaml",
           "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          1,\n          1\n        ],\n        [\n          1,\n          0\n        ],\n        [\n          0,\n          0\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"sources\": [\n      {\n        \"dataset\": \"MyGreatDataset\",\n        \"property\": \"/geometry\",\n        \"update_time\": \"2024-04-26T23:55:01-08:00\",\n        \"confidence\": 0.3,\n        \"license\": \"beep\"\n      }\n    ]\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_4_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld\",\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          1,\n          1\n        ],\n        [\n          1,\n          0\n        ],\n        [\n          0,\n          0\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"sources\": [\n      {\n        \"dataset\": \"MyGreatDataset\",\n        \"property\": \"/geometry\",\n        \"update_time\": \"2024-04-26T23:55:01-08:00\",\n        \"confidence\": 0.3,\n        \"license\": \"beep\"\n      }\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_4_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_4_1.ttl"
         }
       ]
     },
@@ -78,6 +119,16 @@
           "ref": "examples/name-basic.yaml",
           "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          1,\n          1\n        ],\n        [\n          1,\n          0\n        ],\n        [\n          0,\n          0\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"names\": {\n      \"primary\": \"Empire State Building\"\n    }\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_5_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld\",\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          1,\n          1\n        ],\n        [\n          1,\n          0\n        ],\n        [\n          0,\n          0\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"names\": {\n      \"primary\": \"Empire State Building\"\n    }\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_5_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_5_1.ttl"
         }
       ]
     },
@@ -88,6 +139,16 @@
           "ref": "examples/name-multiple.yaml",
           "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"names\": {\n      \"primary\": \"The White house\",\n      \"common\": {\n        \"es\": \"La Casa Blanca\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"official\",\n          \"value\": \"The White House\"\n        },\n        {\n          \"variant\": \"alternate\",\n          \"value\": \"White House\"\n        }\n      ]\n    }\n  },\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -77.036873,\n          38.897804\n        ],\n        [\n          -77.036873,\n          38.897559\n        ],\n        [\n          -77.03626,\n          38.897559\n        ],\n        [\n          -77.03626,\n          38.897804\n        ],\n        [\n          -77.036873,\n          38.897804\n        ]\n      ]\n    ]\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_6_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld\",\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"names\": {\n      \"primary\": \"The White house\",\n      \"common\": {\n        \"es\": \"La Casa Blanca\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"official\",\n          \"value\": \"The White House\"\n        },\n        {\n          \"variant\": \"alternate\",\n          \"value\": \"White House\"\n        }\n      ]\n    }\n  },\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -77.036873,\n          38.897804\n        ],\n        [\n          -77.036873,\n          38.897559\n        ],\n        [\n          -77.03626,\n          38.897559\n        ],\n        [\n          -77.03626,\n          38.897804\n        ],\n        [\n          -77.036873,\n          38.897804\n        ]\n      ]\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_6_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_6_1.ttl"
         }
       ]
     },
@@ -98,6 +159,16 @@
           "ref": "examples/name-variations.yaml",
           "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          1,\n          1\n        ],\n        [\n          1,\n          0\n        ],\n        [\n          0,\n          0\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"names\": {\n      \"primary\": \"Local value\",\n      \"common\": {\n        \"ru-Latn\": \"Language Script\",\n        \"en-US\": \"Language Region\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"official\",\n          \"language\": \"es\",\n          \"value\": \"Official Name\"\n        },\n        {\n          \"variant\": \"short\",\n          \"language\": \"es\",\n          \"value\": \"Official Spanish Name\"\n        },\n        {\n          \"variant\": \"alternate\",\n          \"language\": \"ru\",\n          \"value\": \"Official Russian Name\"\n        }\n      ]\n    }\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_7_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld\",\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          1,\n          1\n        ],\n        [\n          1,\n          0\n        ],\n        [\n          0,\n          0\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"names\": {\n      \"primary\": \"Local value\",\n      \"common\": {\n        \"ru-Latn\": \"Language Script\",\n        \"en-US\": \"Language Region\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"official\",\n          \"language\": \"es\",\n          \"value\": \"Official Name\"\n        },\n        {\n          \"variant\": \"short\",\n          \"language\": \"es\",\n          \"value\": \"Official Spanish Name\"\n        },\n        {\n          \"variant\": \"alternate\",\n          \"language\": \"ru\",\n          \"value\": \"Official Russian Name\"\n        }\n      ]\n    }\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_7_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_7_1.ttl"
         }
       ]
     },
@@ -108,6 +179,16 @@
           "ref": "examples/outline.yaml",
           "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -117.1710888,\n          32.7238481\n        ],\n        [\n          -117.1711025,\n          32.7239038\n        ],\n        [\n          -117.1711923,\n          32.7238882\n        ],\n        [\n          -117.1712198,\n          32.724\n        ],\n        [\n          -117.1712713,\n          32.7242091\n        ],\n        [\n          -117.1706665,\n          32.7243145\n        ],\n        [\n          -117.1705738,\n          32.7239379\n        ],\n        [\n          -117.1707783,\n          32.7239022\n        ],\n        [\n          -117.1710888,\n          32.7238481\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"level\": 1,\n    \"names\": {\n      \"primary\": \"Valentina by Alta\"\n    },\n    \"num_floors\": 8,\n    \"subtype\": \"commercial\",\n    \"class\": \"commercial\",\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\"\n      }\n    ]\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_8_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld\",\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -117.1710888,\n          32.7238481\n        ],\n        [\n          -117.1711025,\n          32.7239038\n        ],\n        [\n          -117.1711923,\n          32.7238882\n        ],\n        [\n          -117.1712198,\n          32.724\n        ],\n        [\n          -117.1712713,\n          32.7242091\n        ],\n        [\n          -117.1706665,\n          32.7243145\n        ],\n        [\n          -117.1705738,\n          32.7239379\n        ],\n        [\n          -117.1707783,\n          32.7239022\n        ],\n        [\n          -117.1710888,\n          32.7238481\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1,\n    \"level\": 1,\n    \"names\": {\n      \"primary\": \"Valentina by Alta\"\n    },\n    \"num_floors\": 8,\n    \"subtype\": \"commercial\",\n    \"class\": \"commercial\",\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\"\n      }\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_8_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_8_1.ttl"
         }
       ]
     },
@@ -118,6 +199,16 @@
           "ref": "examples/time-basic.yaml",
           "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          1,\n          1\n        ],\n        [\n          1,\n          0\n        ],\n        [\n          0,\n          0\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_9_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld\",\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          1,\n          1\n        ],\n        [\n          1,\n          0\n        ],\n        [\n          0,\n          0\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_9_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_9_1.ttl"
         }
       ]
     },
@@ -128,6 +219,16 @@
           "ref": "examples/time-precision-seconds.yaml",
           "code": "{\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          1,\n          1\n        ],\n        [\n          1,\n          0\n        ],\n        [\n          0,\n          0\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_10_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld\",\n  \"id\": \"overture:buildings:building:1234\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          0,\n          0\n        ],\n        [\n          0,\n          1\n        ],\n        [\n          1,\n          1\n        ],\n        [\n          1,\n          0\n        ],\n        [\n          0,\n          0\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"ext_foo\": \"I am a customer user property.\",\n    \"ext_bar\": \"Me too!\",\n    \"theme\": \"buildings\",\n    \"type\": \"building\",\n    \"version\": 1\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_10_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/buildings/building/example_10_1.ttl"
         }
       ]
     }

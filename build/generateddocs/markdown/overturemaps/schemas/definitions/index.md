@@ -386,6 +386,63 @@ $defs:
           $ref: '#/$defs/propertyDefinitions/featureVersion'
         sources:
           $ref: '#/$defs/propertyDefinitions/sources'
+x-jsonld-extra-terms:
+  id: '@id'
+  theme:
+    x-jsonld-id: https://w3id.org/ogc/om/theme
+    x-jsonld-type: '@id'
+    x-jsonld-context:
+      addresses: https://w3id.org/ogc/om/addresses
+      base: https://w3id.org/ogc/om/base
+      buildings: https://w3id.org/ogc/om/buildings
+      divisions: https://w3id.org/ogc/om/divisions
+      places: https://w3id.org/ogc/om/places
+      transportation: https://w3id.org/ogc/om/transportation
+  type:
+    x-jsonld-id: '@id'
+    x-jsonld-type: '@id'
+    x-jsonld-context:
+      address: https://w3id.org/ogc/om/Address
+      bathymetry: https://w3id.org/ogc/om/Bathymetry
+      building: https://w3id.org/ogc/om/Building
+      connector: https://w3id.org/ogc/om/Connector
+      division: https://w3id.org/ogc/om/Division
+      division_area: https://w3id.org/ogc/om/DivisionArea
+      division_boundary: https://w3id.org/ogc/om/DivisionBoundary
+      infrastructure: https://w3id.org/ogc/om/Infrastructure
+      land: https://w3id.org/ogc/om/Land
+      land_cover: https://w3id.org/ogc/om/LandCover
+      land_use: https://w3id.org/ogc/om/LandUse
+      building_part: https://w3id.org/ogc/om/BuildingPart
+      place: https://w3id.org/ogc/om/Place
+      segment: https://w3id.org/ogc/om/Segment
+      water: https://w3id.org/ogc/om/Water
+  wikidata:
+    x-jsonld-id: rdfs:seeAlso
+    x-jsonld-type: '@id'
+    x-jsonld-context:
+      '@base': https://www.wikidata.org/wiki/
+  address:
+    x-jsonld-id: http://www.w3.org/2006/vcard/ns#hasAddress
+    x-jsonld-type: '@id'
+    x-jsonld-context:
+      freeform: http://www.w3.org/1999/02/22-rdf-syntax-ns#value
+      locality: http://www.w3.org/2006/vcard/ns#hasLocality
+      postCode: http://www.w3.org/2006/vcard/ns#hasPostalCode
+      region: http://www.w3.org/2006/vcard/ns#hasRegion
+      countryName: http://www.w3.org/2006/vcard/ns#hasCountryName
+  allNames:
+    x-jsonld-id: '@nest'
+    x-jsonld-context:
+      primary: http://www.w3.org/2004/02/skos/core#prefLabel
+      common:
+        '@id': http://www.w3.org/2004/02/skos/core#altLabel
+        '@container': '@language'
+x-jsonld-prefixes:
+  om: https://w3id.org/ogc/om/
+  vcard: http://www.w3.org/2006/vcard/ns#
+  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+  skos: http://www.w3.org/2004/02/skos/core#
 
 ```
 
@@ -393,6 +450,86 @@ Links to the schema:
 
 * YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json)
 * JSON version: [schema.json](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "id": "@id",
+    "theme": {
+      "@id": "om:theme",
+      "@type": "@id",
+      "@context": {
+        "addresses": "om:addresses",
+        "base": "om:base",
+        "buildings": "om:buildings",
+        "divisions": "om:divisions",
+        "places": "om:places",
+        "transportation": "om:transportation"
+      }
+    },
+    "type": {
+      "@id": "@id",
+      "@type": "@id",
+      "@context": {
+        "address": "om:Address",
+        "bathymetry": "om:Bathymetry",
+        "building": "om:Building",
+        "connector": "om:Connector",
+        "division": "om:Division",
+        "division_area": "om:DivisionArea",
+        "division_boundary": "om:DivisionBoundary",
+        "infrastructure": "om:Infrastructure",
+        "land": "om:Land",
+        "land_cover": "om:LandCover",
+        "land_use": "om:LandUse",
+        "building_part": "om:BuildingPart",
+        "place": "om:Place",
+        "segment": "om:Segment",
+        "water": "om:Water"
+      }
+    },
+    "wikidata": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://www.wikidata.org/wiki/"
+      }
+    },
+    "address": {
+      "@id": "vcard:hasAddress",
+      "@type": "@id",
+      "@context": {
+        "freeform": "rdf:value",
+        "locality": "vcard:hasLocality",
+        "postCode": "vcard:hasPostalCode",
+        "region": "vcard:hasRegion",
+        "countryName": "vcard:hasCountryName"
+      }
+    },
+    "allNames": {
+      "@id": "@nest",
+      "@context": {
+        "primary": "skos:prefLabel",
+        "common": {
+          "@id": "skos:altLabel",
+          "@container": "@language"
+        }
+      }
+    },
+    "om": "https://w3id.org/ogc/om/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/context.jsonld)
 
 
 # For developers

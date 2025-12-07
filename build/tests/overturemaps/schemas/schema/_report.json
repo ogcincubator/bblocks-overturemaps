@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.overturemaps.schemas.schema - Overture Maps Schema",
   "bblockName": "Overture Maps Schema",
   "bblockId": "ogc.overturemaps.schemas.schema",
-  "generated": "2025-11-13T08:09:40.443755+00:00",
+  "generated": "2025-12-07T17:53:34.974438+00:00",
   "result": true,
   "items": [
     {
@@ -480,7 +480,7 @@
               "op": "ttl-create",
               "empty": false,
               "filename": "example_9_1.ttl",
-              "size": 37,
+              "size": 38,
               "isError": false,
               "message": "Output Turtle example_9_1.ttl created"
             }

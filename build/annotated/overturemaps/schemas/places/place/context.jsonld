@@ -1,0 +1,86 @@
+{
+  "@context": {
+    "id": {},
+    "type": {},
+    "coordinates": {},
+    "bbox": {},
+    "geometry": {},
+    "theme": {},
+    "version": {},
+    "sources": {
+      "@context": {
+        "between": {},
+        "property": {},
+        "dataset": {},
+        "license": {},
+        "record_id": {},
+        "update_time": {}
+      }
+    },
+    "names": {
+      "@context": {
+        "common": {},
+        "rules": {
+          "@context": {
+            "between": {},
+            "side": {},
+            "variant": {},
+            "language": {},
+            "perspectives": {
+              "@context": {
+                "mode": {},
+                "countries": {}
+              }
+            },
+            "value": {}
+          }
+        }
+      }
+    },
+    "primary": {},
+    "alternate": {},
+    "categories": {},
+    "basic_category": {},
+    "confidence": {},
+    "websites": {},
+    "socials": {},
+    "emails": {},
+    "phones": {},
+    "wikidata": {},
+    "brand": {},
+    "freeform": {},
+    "locality": {},
+    "postcode": {},
+    "region": {},
+    "country": {},
+    "addresses": {},
+    "operating_status": {},
+    "properties": {},
+    "address": {
+      "@id": "vcard:hasAddress",
+      "@type": "@id",
+      "@context": {
+        "freeform": "rdf:value",
+        "locality": "vcard:hasLocality",
+        "postCode": "vcard:hasPostalCode",
+        "region": "vcard:hasRegion",
+        "countryName": "vcard:hasCountryName"
+      }
+    },
+    "allNames": {
+      "@id": "@nest",
+      "@context": {
+        "primary": "skos:prefLabel",
+        "common": {
+          "@id": "skos:altLabel",
+          "@container": "@language"
+        }
+      }
+    },
+    "om": "https://w3id.org/ogc/om/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "@version": 1.1
+  }
+}

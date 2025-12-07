@@ -1,0 +1,167 @@
+{
+  "@context": {
+    "id": {},
+    "type": {},
+    "coordinates": {},
+    "bbox": {},
+    "geometry": {},
+    "between": {},
+    "value": {},
+    "subclass_rules": {},
+    "access_type": {},
+    "when": {
+      "@context": {
+        "during": {},
+        "heading": {},
+        "using": {},
+        "recognized": {},
+        "mode": {},
+        "vehicle": {
+          "@context": {
+            "dimension": {},
+            "comparison": {},
+            "value": "rdf:value",
+            "unit": "http://qudt.org/vocab/unit/"
+          }
+        }
+      }
+    },
+    "access_restrictions": {},
+    "level": "om:hasLevel",
+    "level_rules": {},
+    "theme": {},
+    "version": {},
+    "sources": {
+      "@context": {
+        "property": {},
+        "dataset": {},
+        "license": {},
+        "record_id": {},
+        "update_time": {},
+        "confidence": {}
+      }
+    },
+    "names": {
+      "@context": {
+        "primary": {},
+        "common": {},
+        "rules": {
+          "@context": {
+            "side": {},
+            "variant": {},
+            "language": {},
+            "perspectives": {
+              "@context": {
+                "mode": {},
+                "countries": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "subtype": {},
+    "class": {},
+    "labels": {},
+    "symbols": {},
+    "from_connector_id": {},
+    "to_segment_id": {},
+    "to_connector_id": {},
+    "final_heading": {},
+    "destinations": {},
+    "sequence": {
+      "@context": {
+        "segment_id": {}
+      }
+    },
+    "prohibited_transitions": {},
+    "road_surface": {
+      "@context": {
+        "@base": "https://w3id.org/ogc/om/surfaces/",
+        "value": "@id"
+      },
+      "@id": "osm:hasSurfaceType"
+    },
+    "values": {},
+    "road_flags": {},
+    "speed_limits": {
+      "@context": {
+        "min_speed": {
+          "@context": {
+            "value": "rdf:value",
+            "unit": "qudt:hasUnit"
+          },
+          "@id": "om:hasMinSpeed"
+        },
+        "max_speed": {
+          "@context": {
+            "value": "rdf:value",
+            "unit": "qudt:hasUnit"
+          },
+          "@id": "om:hasMaxSpeed"
+        },
+        "is_max_speed_variable": "om:isMaxSpeedVariable",
+        "when": {
+          "@context": {
+            "during": {},
+            "heading": {},
+            "using": {},
+            "recognized": {},
+            "mode": {},
+            "vehicle": {
+              "@context": {
+                "dimension": {},
+                "comparison": {},
+                "value": "rdf:value",
+                "unit": "http://qudt.org/vocab/unit/"
+              }
+            }
+          },
+          "@id": "om:when",
+          "@type": "@json"
+        }
+      },
+      "@id": "om:hasSpeedLimit"
+    },
+    "width_rules": {},
+    "subclass": {},
+    "rail_flags": {},
+    "connector_id": {},
+    "at": {},
+    "connectors": {},
+    "name": {},
+    "network": {},
+    "ref": {},
+    "symbol": {},
+    "wikidata": {},
+    "routes": {},
+    "properties": "@nest",
+    "address": {
+      "@id": "vcard:hasAddress",
+      "@type": "@id",
+      "@context": {
+        "freeform": "rdf:value",
+        "locality": "vcard:hasLocality",
+        "postCode": "vcard:hasPostalCode",
+        "region": "vcard:hasRegion",
+        "countryName": "vcard:hasCountryName"
+      }
+    },
+    "allNames": {
+      "@id": "@nest",
+      "@context": {
+        "primary": "skos:prefLabel",
+        "common": {
+          "@id": "skos:altLabel",
+          "@container": "@language"
+        }
+      }
+    },
+    "om": "https://w3id.org/ogc/om/",
+    "qudt": "http://qudt.org/schema/qudt/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "@version": 1.1
+  }
+}

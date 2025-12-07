@@ -34,6 +34,37 @@ A Place is a point representation of a real-world facility, service, or amenity.
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld",
+  "id": "timestamp-utc",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      0,
+      0
+    ]
+  },
+  "properties": {
+    "categories": {
+      "primary": "some_category"
+    },
+    "theme": "places",
+    "type": "place",
+    "version": 1,
+    "operating_status": "open"
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 2
 #### json
@@ -106,6 +137,83 @@ A Place is a point representation of a real-world facility, service, or amenity.
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld",
+  "id": "overture:places:place:1",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      0,
+      0
+    ]
+  },
+  "properties": {
+    "categories": {
+      "primary": "the1_category_you_want_first",
+      "alternate": [
+        "another_category"
+      ]
+    },
+    "confidence": 0.9,
+    "websites": [
+      "https://www.example.com"
+    ],
+    "emails": [
+      "info@example.com"
+    ],
+    "socials": [
+      "https://www.twitter.com/example"
+    ],
+    "phones": [
+      "+32 1207"
+    ],
+    "brand": {
+      "names": {
+        "primary": "My Sweet POI Brand"
+      },
+      "wikidata": "Q1000"
+    },
+    "addresses": [
+      {
+        "freeform": "770 Broadway, Floor 8",
+        "locality": "New York"
+      },
+      {
+        "freeform": "770 Broadway, #802",
+        "locality": "New York",
+        "region": "US-NY",
+        "country": "US"
+      }
+    ],
+    "theme": "places",
+    "type": "place",
+    "version": 1,
+    "names": {
+      "primary": "My Sweet POI",
+      "common": {
+        "es": "Something in Spanish"
+      },
+      "rules": [
+        {
+          "variant": "short",
+          "value": "MSPOI"
+        }
+      ]
+    },
+    "operating_status": "open"
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 3
 #### json
@@ -175,6 +283,80 @@ A Place is a point representation of a real-world facility, service, or amenity.
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld",
+  "id": "overture:places:place:1",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      0,
+      0
+    ]
+  },
+  "properties": {
+    "categories": {
+      "primary": "some_category"
+    },
+    "confidence": 0.9,
+    "brand": {
+      "names": {
+        "primary": "My Sweet POI Brand"
+      },
+      "wikidata": "Q1000"
+    },
+    "addresses": [
+      {
+        "freeform": "770 Broadway, Floor 8",
+        "locality": "New York"
+      },
+      {
+        "freeform": "770 Brodway, #802",
+        "locality": "New York",
+        "region": "US-NY",
+        "country": "US"
+      }
+    ],
+    "theme": "places",
+    "type": "place",
+    "version": 1,
+    "sources": [
+      {
+        "property": "",
+        "dataset": "metaPlaces",
+        "record_id": "10101"
+      },
+      {
+        "property": "/properties/brand",
+        "dataset": "msftPlaces",
+        "record_id": "10df72b8"
+      }
+    ],
+    "names": {
+      "primary": "My Sweet POI",
+      "common": {
+        "es": "Something in Spanish"
+      },
+      "rules": [
+        {
+          "variant": "short",
+          "value": "MSPOI"
+        }
+      ]
+    },
+    "operating_status": "open"
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 4
 #### json
@@ -226,6 +408,64 @@ A Place is a point representation of a real-world facility, service, or amenity.
   },
   "type": "Feature"
 }
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld",
+  "geometry": {
+    "coordinates": [
+      0,
+      0
+    ],
+    "type": "Point"
+  },
+  "id": "overture:places:place:1",
+  "properties": {
+    "addresses": [
+      {
+        "freeform": "770 Broadway, Floor 8",
+        "locality": "New York"
+      },
+      {
+        "country": "US",
+        "freeform": "770 Broadway #802",
+        "locality": "New York",
+        "region": "US-NY"
+      }
+    ],
+    "brand": {
+      "names": {
+        "primary": "Example"
+      },
+      "wikidata": "Q1000"
+    },
+    "emails": [
+      "info@example.com"
+    ],
+    "phones": [
+      "+32 1207"
+    ],
+    "socials": [
+      "https://www.twitter.com/example"
+    ],
+    "theme": "places",
+    "type": "place",
+    "version": 1,
+    "websites": [
+      "https://www.example.com"
+    ],
+    "operating_status": "open"
+  },
+  "type": "Feature"
+}
+```
+
+#### ttl
+```ttl
+
+
 ```
 
 
@@ -293,6 +533,78 @@ A Place is a point representation of a real-world facility, service, or amenity.
     "operating_status": "open"
   }
 }
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld",
+  "id": "overture:places:place:66",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      0,
+      0
+    ]
+  },
+  "properties": {
+    "basic_category": "casual_eatery",
+    "categories": {
+      "primary": "gas_station_sushi",
+      "alternate": [
+        "just_for_fun"
+      ]
+    },
+    "confidence": 0.9,
+    "websites": [
+      "https://www.example.com"
+    ],
+    "emails": [
+      "info@example.com"
+    ],
+    "socials": [
+      "https://www.twitter.com/example"
+    ],
+    "phones": [
+      "+32 1207"
+    ],
+    "brand": {
+      "names": {
+        "primary": "11-7"
+      },
+      "wikidata": "Q1000"
+    },
+    "addresses": [
+      {
+        "freeform": "1 Wasserman Way",
+        "locality": "District 11"
+      }
+    ],
+    "theme": "places",
+    "type": "place",
+    "version": 1,
+    "names": {
+      "primary": "11-7",
+      "common": {
+        "en": "Eleven Seven"
+      },
+      "rules": [
+        {
+          "variant": "short",
+          "value": "MSPOI"
+        }
+      ]
+    },
+    "operating_status": "open"
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
 ```
 
 
@@ -376,6 +688,92 @@ A Place is a point representation of a real-world facility, service, or amenity.
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld",
+  "id": "overture:places:place:1",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      0,
+      0
+    ]
+  },
+  "properties": {
+    "categories": {
+      "primary": "some_category"
+    },
+    "confidence": 0.9,
+    "websites": [
+      "https://www.example.com/"
+    ],
+    "emails": [
+      "info@example.com"
+    ],
+    "socials": [
+      "https://www.twitter.com/example"
+    ],
+    "phones": [
+      "+32 1207"
+    ],
+    "brand": {
+      "names": {
+        "primary": "My Sweet POI Brand"
+      },
+      "wikidata": "Q1000"
+    },
+    "addresses": [
+      {
+        "freeform": "770 Broadway, Floor 8",
+        "locality": "New York"
+      },
+      {
+        "freeform": "770 Broadway, #802",
+        "locality": "New York",
+        "region": "US-NY",
+        "country": "US"
+      }
+    ],
+    "theme": "places",
+    "type": "place",
+    "version": 1,
+    "sources": [
+      {
+        "property": "",
+        "dataset": "metaPlaces",
+        "record_id": "10101"
+      },
+      {
+        "property": "/properties/brand",
+        "dataset": "msftPlaces",
+        "record_id": "10df72b8"
+      }
+    ],
+    "names": {
+      "primary": "My Sweet POI",
+      "common": {
+        "es": "Something in Spanish"
+      },
+      "rules": [
+        {
+          "variant": "short",
+          "value": "MSPOI"
+        }
+      ]
+    },
+    "operating_status": "permanently_closed"
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 7
 #### json
@@ -457,6 +855,92 @@ A Place is a point representation of a real-world facility, service, or amenity.
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld",
+  "id": "overture:places:place:1",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      0,
+      0
+    ]
+  },
+  "properties": {
+    "categories": {
+      "primary": "some_category"
+    },
+    "confidence": 0.9,
+    "websites": [
+      "https://www.example.com"
+    ],
+    "emails": [
+      "info@example.com"
+    ],
+    "socials": [
+      "https://www.twitter.com/example"
+    ],
+    "phones": [
+      "+32 1207"
+    ],
+    "brand": {
+      "names": {
+        "primary": "My Sweet POI Brand"
+      },
+      "wikidata": "Q1000"
+    },
+    "operating_status": "open",
+    "addresses": [
+      {
+        "freeform": "770 Broadway, Floor 8",
+        "locality": "New York"
+      },
+      {
+        "freeform": "770 Brodway, #802",
+        "locality": "New York",
+        "region": "US-NY",
+        "country": "US"
+      }
+    ],
+    "theme": "places",
+    "type": "place",
+    "version": 1,
+    "sources": [
+      {
+        "property": "",
+        "dataset": "metaPlaces",
+        "record_id": "10101"
+      },
+      {
+        "property": "/properties/brand",
+        "dataset": "msftPlaces",
+        "record_id": "10df72b8"
+      }
+    ],
+    "names": {
+      "primary": "My Sweet POI",
+      "common": {
+        "es": "Something in Spanish"
+      },
+      "rules": [
+        {
+          "variant": "short",
+          "value": "MSPOI"
+        }
+      ]
+    }
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 8
 #### json
@@ -511,6 +995,67 @@ A Place is a point representation of a real-world facility, service, or amenity.
   },
   "type": "Feature"
 }
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld",
+  "geometry": {
+    "coordinates": [
+      0,
+      0
+    ],
+    "type": "Point"
+  },
+  "id": "overture:places:place:1",
+  "properties": {
+    "addresses": [
+      {
+        "freeform": "770 Broadway, Floor 8",
+        "locality": "New York"
+      },
+      {
+        "country": "US",
+        "freeform": "770 Broadway #802",
+        "locality": "New York",
+        "region": "US-NY"
+      }
+    ],
+    "brand": {
+      "names": {
+        "primary": "Example"
+      },
+      "wikidata": "Q1000"
+    },
+    "categories": {
+      "primary": "some_category"
+    },
+    "emails": [
+      "info@example.com"
+    ],
+    "phones": [
+      "+32 1207"
+    ],
+    "socials": [
+      "https://www.twitter.com/example"
+    ],
+    "theme": "places",
+    "type": "place",
+    "version": 1,
+    "websites": [
+      "https://www.example.com"
+    ],
+    "operating_status": "open"
+  },
+  "type": "Feature"
+}
+```
+
+#### ttl
+```ttl
+
+
 ```
 
 ## Schema
@@ -648,6 +1193,101 @@ Links to the schema:
 
 * YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/schema.json)
 * JSON version: [schema.json](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "id": {},
+    "type": {},
+    "coordinates": {},
+    "bbox": {},
+    "geometry": {},
+    "theme": {},
+    "version": {},
+    "sources": {
+      "@context": {
+        "between": {},
+        "property": {},
+        "dataset": {},
+        "license": {},
+        "record_id": {},
+        "update_time": {}
+      }
+    },
+    "names": {
+      "@context": {
+        "common": {},
+        "rules": {
+          "@context": {
+            "between": {},
+            "side": {},
+            "variant": {},
+            "language": {},
+            "perspectives": {
+              "@context": {
+                "mode": {},
+                "countries": {}
+              }
+            },
+            "value": {}
+          }
+        }
+      }
+    },
+    "primary": {},
+    "alternate": {},
+    "categories": {},
+    "basic_category": {},
+    "confidence": {},
+    "websites": {},
+    "socials": {},
+    "emails": {},
+    "phones": {},
+    "wikidata": {},
+    "brand": {},
+    "freeform": {},
+    "locality": {},
+    "postcode": {},
+    "region": {},
+    "country": {},
+    "addresses": {},
+    "operating_status": {},
+    "properties": {},
+    "address": {
+      "@id": "vcard:hasAddress",
+      "@type": "@id",
+      "@context": {
+        "freeform": "rdf:value",
+        "locality": "vcard:hasLocality",
+        "postCode": "vcard:hasPostalCode",
+        "region": "vcard:hasRegion",
+        "countryName": "vcard:hasCountryName"
+      }
+    },
+    "allNames": {
+      "@id": "@nest",
+      "@context": {
+        "primary": "skos:prefLabel",
+        "common": {
+          "@id": "skos:altLabel",
+          "@container": "@language"
+        }
+      }
+    },
+    "om": "https://w3id.org/ogc/om/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld)
 
 
 # For developers

@@ -27,6 +27,7 @@ properties:
           $ref: '#/$defs/propertyContainers/accessContainer'
         level:
           $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyDefinitions/level
+          x-jsonld-id: https://w3id.org/ogc/om/hasLevel
         level_rules:
           $ref: '#/$defs/propertyContainers/levelRulesContainer'
     - $ref: https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml#/$defs/propertyContainers/overtureFeaturePropertiesContainer
@@ -46,10 +47,13 @@ properties:
           $ref: '#/$defs/propertyContainers/prohibitedTransitionsContainer'
         road_surface:
           $ref: '#/$defs/propertyContainers/surfaceContainer'
+          x-jsonld-id: osm:hasSurfaceType
+          x-jsonld-base: https://w3id.org/ogc/om/surfaces/
         road_flags:
           $ref: '#/$defs/propertyContainers/roadFlagsContainer'
         speed_limits:
           $ref: '#/$defs/propertyContainers/speedLimitsContainer'
+          x-jsonld-id: https://w3id.org/ogc/om/hasSpeedLimit
         width_rules:
           $ref: '#/$defs/propertyContainers/widthRulesContainer'
         subclass:
@@ -106,6 +110,7 @@ properties:
         default: []
       routes:
         $ref: '#/$defs/propertyDefinitions/routes'
+    x-jsonld-id: '@nest'
 $defs:
   propertyDefinitions:
     destinationLabelType:
@@ -356,12 +361,14 @@ $defs:
           type: integer
           minimum: 1
           maximum: 350
+          x-jsonld-id: rdf:value
         unit:
           description: Speed unit
           type: string
           enum:
           - km/h
           - mph
+          x-jsonld-id: http://qudt.org/schema/qudt/hasUnit
       required:
       - value
       - unit
@@ -649,8 +656,10 @@ $defs:
               value:
                 type: number
                 minimum: 0
+                x-jsonld-id: rdf:value
               unit:
                 $ref: '#/$defs/propertyDefinitions/vehicleScopeUnit'
+                x-jsonld-id: http://qudt.org/vocab/unit/
     speedLimitsContainer:
       description: Rules governing speed on this road segment
       type: array
@@ -671,12 +680,15 @@ $defs:
         properties:
           min_speed:
             $ref: '#/$defs/propertyDefinitions/speed'
+            x-jsonld-id: https://w3id.org/ogc/om/hasMinSpeed
           max_speed:
             $ref: '#/$defs/propertyDefinitions/speed'
+            x-jsonld-id: https://w3id.org/ogc/om/hasMaxSpeed
           is_max_speed_variable:
             description: Indicates a variable speed corridor
             type: boolean
             default: false
+            x-jsonld-id: https://w3id.org/ogc/om/isMaxSpeedVariable
           when:
             allOf:
             - $ref: '#/$defs/propertyContainers/temporalScopeContainer'
@@ -687,6 +699,8 @@ $defs:
             - $ref: '#/$defs/propertyContainers/vehicleScopeContainer'
             minProperties: 1
             unevaluatedProperties: false
+            x-jsonld-id: https://w3id.org/ogc/om/when
+            x-jsonld-type: '@json'
       minLength: 1
       uniqueItems: true
     accessContainer:
@@ -827,6 +841,7 @@ $defs:
         properties:
           value:
             $ref: '#/$defs/propertyDefinitions/roadSurface'
+            x-jsonld-id: '@id'
       minItems: 1
       uniqueItems: true
       $comment: We should likely restrict the available surface types to the subset
@@ -854,3 +869,6 @@ $defs:
         unevaluatedProperties: false
       minItems: 1
       uniqueItems: true
+x-jsonld-prefixes:
+  om: https://w3id.org/ogc/om/
+  qudt: http://qudt.org/schema/qudt/

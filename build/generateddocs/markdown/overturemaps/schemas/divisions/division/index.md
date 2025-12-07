@@ -62,6 +62,65 @@ Divisions are recognized official or non-official organizations of people as see
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld",
+  "id": "example:division:locality:lj",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      14.5845,
+      46.057
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "locality",
+    "local_type": {
+      "en": "city"
+    },
+    "names": {
+      "primary": "Ljubljana"
+    },
+    "sources": [
+      {
+        "property": "",
+        "dataset": "OpenStreetMap",
+        "record_id": "N6968827.V76"
+      }
+    ],
+    "country": "SI",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:division:country:si",
+          "subtype": "country",
+          "name": "Slovenia"
+        }
+      ]
+    ],
+    "capital_of_divisions": [
+      {
+        "division_id": "example:division:country:si",
+        "subtype": "country"
+      }
+    ],
+    "parent_division_id": "example:division:country:si",
+    "population": 335509
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 2
 #### json
@@ -117,6 +176,66 @@ Divisions are recognized official or non-official organizations of people as see
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld",
+  "id": "example:division:locality:dk",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      12.0819247,
+      55.6433478
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "locality",
+    "local_type": {
+      "en": "city"
+    },
+    "names": {
+      "primary": "Roskilde"
+    },
+    "sources": [
+      {
+        "property": "",
+        "dataset": "OpenStreetMap",
+        "record_id": "N21040334"
+      }
+    ],
+    "country": "DK",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:division:country:dk",
+          "subtype": "country",
+          "name": "Denmark"
+        }
+      ]
+    ],
+    "capital_of_divisions": [
+      {
+        "division_id": "example:division:country:dk",
+        "subtype": "country"
+      }
+    ],
+    "parent_division_id": "example:division:country:dk",
+    "population": 50781,
+    "class": "city"
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 3
 #### json
@@ -157,6 +276,53 @@ Divisions are recognized official or non-official organizations of people as see
     ]
   }
 }
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld",
+  "id": "example:division:country:us",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -100.445882,
+      39.7837304
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "country",
+    "names": {
+      "primary": "United States"
+    },
+    "country": "US",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:division:country:us",
+          "subtype": "country",
+          "name": "United States"
+        }
+      ]
+    ],
+    "norms": {
+      "driving_side": "right"
+    },
+    "capital_division_ids": [
+      "example:division:locality:washington_dc"
+    ]
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
 ```
 
 
@@ -224,6 +390,78 @@ Divisions are recognized official or non-official organizations of people as see
     "parent_division_id": "example:division:country:us"
   }
 }
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld",
+  "id": "example:division:dependency:pr",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -66.4858295,
+      18.2247706
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "dependency",
+    "local_type": {
+      "en": "territory"
+    },
+    "names": {
+      "primary": "Puerto Rico",
+      "common": {
+        "en": "Puerto Rico",
+        "fr": "Porto Rico",
+        "es": "Puerto Rico",
+        "zh": "\u6ce2\u591a\u9ece\u5404"
+      },
+      "rules": [
+        {
+          "variant": "official",
+          "language": "es",
+          "value": "Estado Libre Asociado de Puerto Rico"
+        }
+      ]
+    },
+    "sources": [
+      {
+        "property": "",
+        "dataset": "OpenStreetMap",
+        "record_id": "R4422604.V41"
+      }
+    ],
+    "country": "PR",
+    "region": "US-PR",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:division:country:us",
+          "subtype": "country",
+          "name": "United States"
+        }
+      ]
+    ],
+    "norms": {
+      "driving_side": "right"
+    },
+    "capital_division_ids": [
+      "example:division:locality:san_juan"
+    ],
+    "parent_division_id": "example:division:country:us"
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
 ```
 
 
@@ -304,6 +542,89 @@ Divisions are recognized official or non-official organizations of people as see
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld",
+  "id": "example:division:borough:bronx",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -73.8785937,
+      40.8466508
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "borough",
+    "local_type": {
+      "en": "borough"
+    },
+    "names": {
+      "primary": "The Bronx"
+    },
+    "country": "US",
+    "region": "US-NY",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:division:country:us",
+          "subtype": "country",
+          "name": "United States"
+        },
+        {
+          "division_id": "example:division:region:us-ny",
+          "subtype": "region",
+          "name": "New York"
+        },
+        {
+          "division_id": "example:division:locality:nyc",
+          "subtype": "locality",
+          "name": "New York City"
+        },
+        {
+          "division_id": "example:division:borough:bronx",
+          "subtype": "borough",
+          "name": "The Bronx"
+        }
+      ],
+      [
+        {
+          "division_id": "example:division:country:us",
+          "subtype": "country",
+          "name": "United States"
+        },
+        {
+          "division_id": "example:division:region:us-ny",
+          "subtype": "region",
+          "name": "New York"
+        },
+        {
+          "division_id": "example:division:county:bronx",
+          "subtype": "county",
+          "name": "Bronx County"
+        },
+        {
+          "division_id": "example:division:borough:bronx",
+          "subtype": "borough",
+          "name": "The Bronx"
+        }
+      ]
+    ],
+    "parent_division_id": "example:division:locality:nyc"
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 6
 #### json
@@ -361,6 +682,68 @@ Divisions are recognized official or non-official organizations of people as see
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld",
+  "id": "example:division:region:pl-04",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      18.3392939,
+      53.3220016
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "region",
+    "local_type": {
+      "en": "province"
+    },
+    "names": {
+      "primary": "Woj Kujawsko-Pomorskie"
+    },
+    "sources": [
+      {
+        "property": "",
+        "dataset": "OpenStreetMap",
+        "record_id": "R223407.V254"
+      }
+    ],
+    "country": "PL",
+    "region": "PL-04",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:division:country:pl",
+          "subtype": "country",
+          "name": "Poland"
+        },
+        {
+          "division_id": "example:division:region:pl-04",
+          "subtype": "region",
+          "name": "Woj Kujawsko-Pomorskie"
+        }
+      ]
+    ],
+    "capital_division_ids": [
+      "example:division:locality:bydgoszcz",
+      "example:division:locality:torun"
+    ],
+    "parent_division_id": "example:division:country:pl"
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 7
 #### json
@@ -415,6 +798,67 @@ Divisions are recognized official or non-official organizations of people as see
     }
   }
 }
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld",
+  "id": "example:division:perspectives:trnc",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      33.6252379,
+      35.2245313
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "country",
+    "names": {
+      "primary": "Kuzey K\u0131br\u0131s",
+      "common": {
+        "en": "Northern Cyprus"
+      },
+      "rules": [
+        {
+          "variant": "short",
+          "value": "TRNC"
+        },
+        {
+          "variant": "official",
+          "language": "en",
+          "value": "Turkish Republic of Northern Cyprus"
+        }
+      ]
+    },
+    "country": "XX",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:perspectives:trnc",
+          "subtype": "country",
+          "name": "Kuzey K\u0131br\u0131s"
+        }
+      ]
+    ],
+    "perspectives": {
+      "mode": "accepted_by",
+      "countries": [
+        "TR"
+      ]
+    }
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
 ```
 
 
@@ -474,6 +918,68 @@ Divisions are recognized official or non-official organizations of people as see
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld",
+  "id": "example:division:region:ca-on",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -86.000977,
+      50.000678
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "region",
+    "local_type": {
+      "en": "province"
+    },
+    "names": {
+      "primary": "Ontario"
+    },
+    "sources": [
+      {
+        "property": "",
+        "dataset": "OpenStreetMap",
+        "record_id": "R68841.V267"
+      }
+    ],
+    "country": "CA",
+    "region": "CA-ON",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:division:country:ca",
+          "subtype": "country",
+          "name": "Canada"
+        },
+        {
+          "division_id": "example:division:region:ca-on",
+          "subtype": "region",
+          "name": "Ontario"
+        }
+      ]
+    ],
+    "capital_division_ids": [
+      "example:division:locality:toronto"
+    ],
+    "parent_division_id": "example:division:country:ca",
+    "population": 13550900
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 9
 #### json
@@ -531,6 +1037,68 @@ Divisions are recognized official or non-official organizations of people as see
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld",
+  "id": "example:division:locality:dk",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      12.0819247,
+      55.6433478
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "locality",
+    "local_type": {
+      "en": "city"
+    },
+    "names": {
+      "primary": "Roskilde"
+    },
+    "sources": [
+      {
+        "property": "",
+        "dataset": "OpenStreetMap",
+        "record_id": "N21040334"
+      }
+    ],
+    "country": "DK",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:division:country:dk",
+          "subtype": "country",
+          "name": "Denmark"
+        }
+      ]
+    ],
+    "capital_of_divisions": [
+      {
+        "division_id": "example:division:country:dk",
+        "subtype": "country"
+      }
+    ],
+    "parent_division_id": "example:division:country:dk",
+    "population": 50781,
+    "cartography": {
+      "prominence": 5
+    }
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 10
 #### json
@@ -585,6 +1153,67 @@ Divisions are recognized official or non-official organizations of people as see
     "parent_division_id": "example:division:country:us"
   }
 }
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld",
+  "id": "example:division:region:us-ny",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -75.8449946,
+      43.1561681
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division",
+    "version": 0,
+    "subtype": "region",
+    "local_type": {
+      "en": "state"
+    },
+    "names": {
+      "primary": "New York"
+    },
+    "sources": [
+      {
+        "property": "",
+        "dataset": "OpenStreetMap",
+        "record_id": "R61320.V468"
+      }
+    ],
+    "country": "US",
+    "region": "US-NY",
+    "hierarchies": [
+      [
+        {
+          "division_id": "example:division:country:us",
+          "subtype": "country",
+          "name": "United States"
+        },
+        {
+          "division_id": "example:division:region:us-ny",
+          "subtype": "region",
+          "name": "New York"
+        }
+      ]
+    ],
+    "capital_division_ids": [
+      "example:division:locality:albany"
+    ],
+    "parent_division_id": "example:division:country:us"
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
 ```
 
 ## Schema
@@ -789,6 +1418,105 @@ Links to the schema:
 
 * YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/schema.json)
 * JSON version: [schema.json](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "id": {},
+    "type": {},
+    "coordinates": {},
+    "bbox": {},
+    "geometry": {},
+    "theme": {},
+    "version": {},
+    "sources": {
+      "@context": {
+        "between": {},
+        "property": {},
+        "dataset": {},
+        "license": {},
+        "record_id": {},
+        "update_time": {},
+        "confidence": {}
+      }
+    },
+    "names": {
+      "@context": {
+        "primary": {},
+        "common": {},
+        "rules": {
+          "@context": {
+            "between": {},
+            "side": {},
+            "variant": {},
+            "language": {},
+            "value": {}
+          }
+        }
+      }
+    },
+    "cartography": {
+      "@context": {
+        "prominence": {},
+        "min_zoom": {},
+        "max_zoom": {},
+        "sort_key": {}
+      }
+    },
+    "subtype": {},
+    "class": {},
+    "local_type": {},
+    "country": {},
+    "region": {},
+    "division_id": {},
+    "name": {},
+    "hierarchies": {},
+    "parent_division_id": {},
+    "mode": {},
+    "countries": {},
+    "perspectives": {},
+    "driving_side": {},
+    "norms": {},
+    "population": {},
+    "capital_division_ids": {},
+    "capital_of_divisions": {},
+    "wikidata": {},
+    "properties": {},
+    "address": {
+      "@id": "vcard:hasAddress",
+      "@type": "@id",
+      "@context": {
+        "freeform": "rdf:value",
+        "locality": "vcard:hasLocality",
+        "postCode": "vcard:hasPostalCode",
+        "region": "vcard:hasRegion",
+        "countryName": "vcard:hasCountryName"
+      }
+    },
+    "allNames": {
+      "@id": "@nest",
+      "@context": {
+        "primary": "skos:prefLabel",
+        "common": {
+          "@id": "skos:altLabel",
+          "@container": "@language"
+        }
+      }
+    },
+    "om": "https://w3id.org/ogc/om/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld)
 
 
 # For developers

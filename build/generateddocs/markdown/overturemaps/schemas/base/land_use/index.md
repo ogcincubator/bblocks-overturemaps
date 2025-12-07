@@ -67,6 +67,70 @@ Land use features from OpenStreetMap
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/context.jsonld",
+  "id": "overture:land_use:example:1",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -83.8710175,
+          10.3469578
+        ],
+        [
+          -83.8700924,
+          10.3470179
+        ],
+        [
+          -83.870043,
+          10.3462819
+        ],
+        [
+          -83.8709681,
+          10.3462218
+        ],
+        [
+          -83.8710175,
+          10.3469578
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "base",
+    "type": "land_use",
+    "subtype": "recreation",
+    "class": "pitch",
+    "surface": "recreation_grass",
+    "source_tags": {
+      "leisure": "pitch",
+      "sport": "soccer"
+    },
+    "names": {
+      "primary": "Plaza Deportes Finca Tres"
+    },
+    "sources": [
+      {
+        "record_id": "w509487233@1",
+        "property": "",
+        "dataset": "OpenStreetMap"
+      }
+    ],
+    "version": 0
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 ## Schema
 
 ```yaml
@@ -255,6 +319,92 @@ Links to the schema:
 
 * YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/schema.json)
 * JSON version: [schema.json](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "id": {},
+    "type": {},
+    "coordinates": {},
+    "bbox": {},
+    "geometry": {},
+    "theme": {},
+    "version": {},
+    "sources": {
+      "@context": {
+        "between": {},
+        "property": {},
+        "dataset": {},
+        "license": {},
+        "record_id": {},
+        "update_time": {},
+        "confidence": {}
+      }
+    },
+    "names": {
+      "@context": {
+        "primary": {},
+        "common": {},
+        "rules": {
+          "@context": {
+            "between": {},
+            "side": {},
+            "variant": {},
+            "language": {},
+            "perspectives": {
+              "@context": {
+                "mode": {},
+                "countries": {}
+              }
+            },
+            "value": {}
+          }
+        }
+      }
+    },
+    "level": {},
+    "source_tags": {},
+    "wikidata": {},
+    "subtype": {},
+    "class": {},
+    "elevation": {},
+    "surface": {},
+    "properties": {},
+    "address": {
+      "@id": "vcard:hasAddress",
+      "@type": "@id",
+      "@context": {
+        "freeform": "rdf:value",
+        "locality": "vcard:hasLocality",
+        "postCode": "vcard:hasPostalCode",
+        "region": "vcard:hasRegion",
+        "countryName": "vcard:hasCountryName"
+      }
+    },
+    "allNames": {
+      "@id": "@nest",
+      "@context": {
+        "primary": "skos:prefLabel",
+        "common": {
+          "@id": "skos:altLabel",
+          "@container": "@language"
+        }
+      }
+    },
+    "om": "https://w3id.org/ogc/om/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/context.jsonld)
 
 
 # For developers

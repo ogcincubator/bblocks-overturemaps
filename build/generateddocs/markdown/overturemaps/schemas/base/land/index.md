@@ -110,6 +110,113 @@ Physical representations of land surfaces. Global land derived from the inverse 
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land/context.jsonld",
+  "id": "overture:land:example:1",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          34.4379197,
+          28.7592689
+        ],
+        [
+          34.4380109,
+          28.7595816
+        ],
+        [
+          34.4380173,
+          28.7601587
+        ],
+        [
+          34.4380538,
+          28.7606186
+        ],
+        [
+          34.438154,
+          28.7609863
+        ],
+        [
+          34.4380735,
+          28.7612459
+        ],
+        [
+          34.4377346,
+          28.7608396
+        ],
+        [
+          34.4377158,
+          28.7606139
+        ],
+        [
+          34.4377105,
+          28.7605527
+        ],
+        [
+          34.43763,
+          28.7604258
+        ],
+        [
+          34.4376407,
+          28.7603599
+        ],
+        [
+          34.4376488,
+          28.7602494
+        ],
+        [
+          34.4376863,
+          28.7599673
+        ],
+        [
+          34.4376675,
+          28.759798
+        ],
+        [
+          34.437689,
+          28.7596216
+        ],
+        [
+          34.4379197,
+          28.7592689
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "base",
+    "type": "land",
+    "subtype": "sand",
+    "class": "dune",
+    "names": {
+      "primary": "Hadeida"
+    },
+    "source_tags": {
+      "natural": "dune",
+      "surface": "sand"
+    },
+    "sources": [
+      {
+        "record_id": "w407753930@3",
+        "property": "",
+        "dataset": "OpenStreetMap"
+      }
+    ],
+    "version": 0
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 ## Schema
 
 ```yaml
@@ -224,6 +331,92 @@ Links to the schema:
 
 * YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land/schema.json)
 * JSON version: [schema.json](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "id": {},
+    "type": {},
+    "coordinates": {},
+    "bbox": {},
+    "geometry": {},
+    "theme": {},
+    "version": {},
+    "sources": {
+      "@context": {
+        "between": {},
+        "property": {},
+        "dataset": {},
+        "license": {},
+        "record_id": {},
+        "update_time": {},
+        "confidence": {}
+      }
+    },
+    "names": {
+      "@context": {
+        "primary": {},
+        "common": {},
+        "rules": {
+          "@context": {
+            "between": {},
+            "side": {},
+            "variant": {},
+            "language": {},
+            "perspectives": {
+              "@context": {
+                "mode": {},
+                "countries": {}
+              }
+            },
+            "value": {}
+          }
+        }
+      }
+    },
+    "level": {},
+    "source_tags": {},
+    "wikidata": {},
+    "subtype": {},
+    "class": {},
+    "elevation": {},
+    "surface": {},
+    "properties": {},
+    "address": {
+      "@id": "vcard:hasAddress",
+      "@type": "@id",
+      "@context": {
+        "freeform": "rdf:value",
+        "locality": "vcard:hasLocality",
+        "postCode": "vcard:hasPostalCode",
+        "region": "vcard:hasRegion",
+        "countryName": "vcard:hasCountryName"
+      }
+    },
+    "allNames": {
+      "@id": "@nest",
+      "@context": {
+        "primary": "skos:prefLabel",
+        "common": {
+          "@id": "skos:altLabel",
+          "@container": "@language"
+        }
+      }
+    },
+    "om": "https://w3id.org/ogc/om/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land/context.jsonld)
 
 
 # For developers

@@ -7,7 +7,7 @@
   "abstract": "Representation of the Earth's natural surfaces",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
-  "dateOfLastChange": "2025-11-13",
+  "dateOfLastChange": "2025-12-07",
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
@@ -25,9 +25,10 @@
     "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/land_cover/schema.yaml",
+  "ldContext": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/land_cover/",
   "rdfData": [],
-  "validationPassed": true,
+  "validationPassed": false,
   "testOutputs": "https://github.com/ogcincubator/bblocks-overturemaps/blob/master/build/tests/overturemaps/schemas/base/land_cover/",
   "examples": [
     {
@@ -37,6 +38,16 @@
           "ref": "examples/land-cover-example.yaml",
           "code": "{\n  \"id\": \"overture:land_cover:example:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -73.1902319,\n          41.6678018\n        ],\n        [\n          -73.1896302,\n          41.667817\n        ],\n        [\n          -73.1890448,\n          41.6667723\n        ],\n        [\n          -73.1899188,\n          41.6666994\n        ],\n        [\n          -73.1902319,\n          41.6678018\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"base\",\n    \"type\": \"land_cover\",\n    \"subtype\": \"forest\",\n    \"cartography\": {\n      \"min_zoom\": 11,\n      \"max_zoom\": 23,\n      \"sort_key\": 2\n    },\n    \"sources\": [\n      {\n        \"record_id\": \"x123\",\n        \"property\": \"\",\n        \"dataset\": \"some source\"\n      }\n    ],\n    \"version\": 0\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/base/land_cover/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/context.jsonld\",\n  \"id\": \"overture:land_cover:example:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -73.1902319,\n          41.6678018\n        ],\n        [\n          -73.1896302,\n          41.667817\n        ],\n        [\n          -73.1890448,\n          41.6667723\n        ],\n        [\n          -73.1899188,\n          41.6666994\n        ],\n        [\n          -73.1902319,\n          41.6678018\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"base\",\n    \"type\": \"land_cover\",\n    \"subtype\": \"forest\",\n    \"cartography\": {\n      \"min_zoom\": 11,\n      \"max_zoom\": 23,\n      \"sort_key\": 2\n    },\n    \"sources\": [\n      {\n        \"record_id\": \"x123\",\n        \"property\": \"\",\n        \"dataset\": \"some source\"\n      }\n    ],\n    \"version\": 0\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/base/land_cover/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/base/land_cover/example_1_1.ttl"
         }
       ]
     }

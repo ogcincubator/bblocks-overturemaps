@@ -72,6 +72,75 @@ A single building part. Parts describe their shape and color and other propertie
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/context.jsonld",
+  "id": "overture:buildings:part:1234",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -77.036873,
+          38.897804
+        ],
+        [
+          -77.036873,
+          38.897559
+        ],
+        [
+          -77.03626,
+          38.897559
+        ],
+        [
+          -77.03626,
+          38.897804
+        ],
+        [
+          -77.036873,
+          38.897804
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "ext_foo": "I am a customer user property.",
+    "ext_bar": "Me too!",
+    "theme": "buildings",
+    "type": "building_part",
+    "version": 1,
+    "level": 1,
+    "building_id": "abc123",
+    "height": 21.34,
+    "num_floors": 4,
+    "min_height": 15.0,
+    "min_floor": 2,
+    "roof_shape": "dome",
+    "roof_orientation": "across",
+    "roof_direction": 23.4,
+    "roof_height": 3.4,
+    "sources": [
+      {
+        "property": "",
+        "dataset": "microsoftMLBuildings"
+      },
+      {
+        "property": "/properties/height",
+        "dataset": "metaLidarExtractions"
+      }
+    ]
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 2
 #### json
@@ -131,6 +200,72 @@ A single building part. Parts describe their shape and color and other propertie
     ]
   }
 }
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/context.jsonld",
+  "id": "overture:buildings:part:2345",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -77.036873,
+          38.897804
+        ],
+        [
+          -77.036873,
+          38.897559
+        ],
+        [
+          -77.03626,
+          38.897559
+        ],
+        [
+          -77.03626,
+          38.897804
+        ],
+        [
+          -77.036873,
+          38.897804
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "buildings",
+    "type": "building_part",
+    "version": 1,
+    "level": 1,
+    "building_id": "abc1234",
+    "names": {
+      "primary": "East Wing"
+    },
+    "height": 21.34,
+    "num_floors": 4,
+    "min_height": 15.0,
+    "min_floor": 2,
+    "roof_shape": "dome",
+    "roof_orientation": "across",
+    "roof_direction": 23.4,
+    "roof_height": 3.4,
+    "sources": [
+      {
+        "property": "",
+        "dataset": "OpenStreetMap"
+      }
+    ]
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
 ```
 
 
@@ -210,6 +345,88 @@ A single building part. Parts describe their shape and color and other propertie
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/context.jsonld",
+  "id": "overture:buildings:part:100",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -117.1707971,
+          32.7240658
+        ],
+        [
+          -117.1712198,
+          32.724
+        ],
+        [
+          -117.1712713,
+          32.7242091
+        ],
+        [
+          -117.1706665,
+          32.7243145
+        ],
+        [
+          -117.1705738,
+          32.7239379
+        ],
+        [
+          -117.1707783,
+          32.7239022
+        ],
+        [
+          -117.1707949,
+          32.7240226
+        ],
+        [
+          -117.1707279,
+          32.7240319
+        ],
+        [
+          -117.1707635,
+          32.7241786
+        ],
+        [
+          -117.1708208,
+          32.7241677
+        ],
+        [
+          -117.1707971,
+          32.7240658
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "building_id": "1234",
+    "ext_foo": "I am a customer user property.",
+    "ext_bar": "Me too!",
+    "theme": "buildings",
+    "type": "building_part",
+    "version": 1,
+    "level": 1,
+    "num_floors": 8,
+    "sources": [
+      {
+        "property": "",
+        "dataset": "OpenStreetMap"
+      }
+    ]
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 4
 #### json
@@ -287,6 +504,88 @@ A single building part. Parts describe their shape and color and other propertie
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/context.jsonld",
+  "id": "overture:buildings:part:101",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -117.1712198,
+          32.724
+        ],
+        [
+          -117.1711923,
+          32.7238882
+        ],
+        [
+          -117.1711025,
+          32.7239038
+        ],
+        [
+          -117.1710888,
+          32.7238481
+        ],
+        [
+          -117.1707783,
+          32.7239022
+        ],
+        [
+          -117.1707949,
+          32.7240226
+        ],
+        [
+          -117.1707279,
+          32.7240319
+        ],
+        [
+          -117.1707635,
+          32.7241786
+        ],
+        [
+          -117.1708208,
+          32.7241677
+        ],
+        [
+          -117.1707971,
+          32.7240658
+        ],
+        [
+          -117.1712198,
+          32.724
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "building_id": "1234",
+    "ext_foo": "I am a customer user property.",
+    "ext_bar": "Me too!",
+    "theme": "buildings",
+    "type": "building_part",
+    "version": 1,
+    "level": 1,
+    "num_floors": 3,
+    "sources": [
+      {
+        "property": "",
+        "dataset": "OpenStreetMap"
+      }
+    ]
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 ## Schema
 
 ```yaml
@@ -328,6 +627,108 @@ Links to the schema:
 
 * YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.json)
 * JSON version: [schema.json](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "type": {},
+    "coordinates": {},
+    "bbox": {},
+    "geometry": {},
+    "theme": {},
+    "version": {},
+    "sources": {
+      "@context": {
+        "between": {},
+        "property": {},
+        "dataset": {},
+        "license": {},
+        "record_id": {},
+        "update_time": {},
+        "confidence": {}
+      }
+    },
+    "names": {
+      "@context": {
+        "primary": {},
+        "common": {},
+        "rules": {
+          "@context": {
+            "between": {},
+            "side": {},
+            "variant": {},
+            "language": {},
+            "perspectives": {
+              "@context": {
+                "mode": {},
+                "countries": {}
+              }
+            },
+            "value": {}
+          }
+        }
+      }
+    },
+    "level": {},
+    "height": {},
+    "is_underground": {},
+    "num_floors": {},
+    "num_floors_underground": {},
+    "min_height": {},
+    "min_floor": {},
+    "facade_color": {},
+    "facade_material": {},
+    "roof_material": {},
+    "roof_shape": {},
+    "roof_direction": {},
+    "roof_orientation": {},
+    "roof_color": {},
+    "roof_height": {},
+    "building_id": {},
+    "properties": {},
+    "id": "@id",
+    "wikidata": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://www.wikidata.org/wiki/"
+      }
+    },
+    "address": {
+      "@id": "vcard:hasAddress",
+      "@type": "@id",
+      "@context": {
+        "freeform": "rdf:value",
+        "locality": "vcard:hasLocality",
+        "postCode": "vcard:hasPostalCode",
+        "region": "vcard:hasRegion",
+        "countryName": "vcard:hasCountryName"
+      }
+    },
+    "allNames": {
+      "@id": "@nest",
+      "@context": {
+        "primary": "skos:prefLabel",
+        "common": {
+          "@id": "skos:altLabel",
+          "@container": "@language"
+        }
+      }
+    },
+    "om": "https://w3id.org/ogc/om/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/context.jsonld)
 
 
 # For developers

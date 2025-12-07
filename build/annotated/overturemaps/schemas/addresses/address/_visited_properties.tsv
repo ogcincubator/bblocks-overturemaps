@@ -1,0 +1,26 @@
+path	@id
+/id	
+/geometry	
+/geometry/type	
+/geometry/coordinates	
+/geometry/bbox	
+/properties	
+/properties/theme	
+/properties/type	
+/properties/version	
+/properties/sources	
+/properties/sources/between	
+/properties/sources/property	
+/properties/sources/dataset	
+/properties/sources/license	
+/properties/sources/record_id	
+/properties/sources/update_time	
+/properties/sources/confidence	
+/properties/country	
+/properties/postcode	
+/properties/street	
+/properties/number	
+/properties/unit	
+/properties/address_levels	
+/properties/address_levels/value	
+/properties/postal_city	

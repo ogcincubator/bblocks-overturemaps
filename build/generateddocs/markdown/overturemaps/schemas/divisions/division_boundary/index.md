@@ -51,6 +51,54 @@ Boundaries represent borders between divisions of the same subtype. Some boundar
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/context.jsonld",
+  "id": "example:division_boundary:disputed_both",
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division_boundary",
+    "version": 1,
+    "subtype": "country",
+    "class": "land",
+    "is_land": true,
+    "is_territorial": false,
+    "division_ids": [
+      "example:division:country:left",
+      "example:division:country:right"
+    ],
+    "is_disputed": true,
+    "perspectives": {
+      "mode": "disputed_by",
+      "countries": [
+        "XX"
+      ]
+    }
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 2
 #### json
@@ -95,6 +143,55 @@ Boundaries represent borders between divisions of the same subtype. Some boundar
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/context.jsonld",
+  "id": "example:division_boundary:disputed_both",
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division_boundary",
+    "version": 1,
+    "subtype": "country",
+    "class": "land",
+    "is_land": true,
+    "is_territorial": false,
+    "division_ids": [
+      "example:division:country:left",
+      "example:division:country:right"
+    ],
+    "is_disputed": true,
+    "perspectives": {
+      "mode": "disputed_by",
+      "countries": [
+        "XX",
+        "XY"
+      ]
+    }
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 3
 #### json
@@ -131,6 +228,47 @@ Boundaries represent borders between divisions of the same subtype. Some boundar
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/context.jsonld",
+  "id": "example:division_boundary:is_land:country:us",
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division_boundary",
+    "version": 1,
+    "subtype": "country",
+    "is_land": true,
+    "is_territorial": false,
+    "class": "land",
+    "division_ids": [
+      "example:division:country:left",
+      "example:division:country:right"
+    ]
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 4
 #### json
@@ -165,6 +303,47 @@ Boundaries represent borders between divisions of the same subtype. Some boundar
     ]
   }
 }
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/context.jsonld",
+  "id": "example:division_boundary:is_territorial:country:fi",
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division_boundary",
+    "version": 1,
+    "subtype": "country",
+    "is_territorial": true,
+    "is_land": false,
+    "class": "maritime",
+    "division_ids": [
+      "example:division:country:left",
+      "example:division:country:right"
+    ]
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
 ```
 
 
@@ -205,6 +384,49 @@ Boundaries represent borders between divisions of the same subtype. Some boundar
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/context.jsonld",
+  "id": "example:division_boundary:land",
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division_boundary",
+    "version": 1,
+    "subtype": "region",
+    "class": "land",
+    "country": "XX",
+    "region": "XX-01",
+    "is_land": true,
+    "is_territorial": false,
+    "division_ids": [
+      "example:division:region:left",
+      "example:division:region:right"
+    ]
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 6
 #### json
@@ -242,6 +464,48 @@ Boundaries represent borders between divisions of the same subtype. Some boundar
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/context.jsonld",
+  "id": "example:division_boundary:land",
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division_boundary",
+    "version": 1,
+    "subtype": "region",
+    "class": "land",
+    "country": "XX",
+    "is_land": true,
+    "is_territorial": false,
+    "division_ids": [
+      "example:division:region:left",
+      "example:division:region:right"
+    ]
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 7
 #### json
@@ -276,6 +540,47 @@ Boundaries represent borders between divisions of the same subtype. Some boundar
     ]
   }
 }
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/context.jsonld",
+  "id": "example:division_boundary:maritime",
+  "type": "Feature",
+  "geometry": {
+    "type": "LineString",
+    "coordinates": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "divisions",
+    "type": "division_boundary",
+    "version": 1,
+    "subtype": "country",
+    "class": "maritime",
+    "is_territorial": true,
+    "is_land": false,
+    "division_ids": [
+      "example:division:region:left",
+      "example:division:region:right"
+    ]
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
 ```
 
 ## Schema
@@ -424,6 +729,82 @@ Links to the schema:
 
 * YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.json)
 * JSON version: [schema.json](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "id": {},
+    "type": {},
+    "coordinates": {},
+    "bbox": {},
+    "geometry": {},
+    "theme": {},
+    "version": {},
+    "sources": {
+      "@context": {
+        "between": {},
+        "property": {},
+        "dataset": {},
+        "license": {},
+        "record_id": {},
+        "update_time": {},
+        "confidence": {}
+      }
+    },
+    "is_land": {},
+    "is_territorial": {},
+    "subtype": {},
+    "class": {},
+    "division_ids": {},
+    "country": {},
+    "region": {},
+    "is_disputed": {},
+    "mode": {},
+    "countries": {},
+    "perspectives": {},
+    "properties": {},
+    "wikidata": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://www.wikidata.org/wiki/"
+      }
+    },
+    "address": {
+      "@id": "vcard:hasAddress",
+      "@type": "@id",
+      "@context": {
+        "freeform": "rdf:value",
+        "locality": "vcard:hasLocality",
+        "postCode": "vcard:hasPostalCode",
+        "region": "vcard:hasRegion",
+        "countryName": "vcard:hasCountryName"
+      }
+    },
+    "allNames": {
+      "@id": "@nest",
+      "@context": {
+        "primary": "skos:prefLabel",
+        "common": {
+          "@id": "skos:altLabel",
+          "@container": "@language"
+        }
+      }
+    },
+    "om": "https://w3id.org/ogc/om/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/context.jsonld)
 
 
 # For developers

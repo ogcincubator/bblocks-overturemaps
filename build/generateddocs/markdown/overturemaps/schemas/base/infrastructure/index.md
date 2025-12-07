@@ -128,6 +128,131 @@ Various features from OpenStreetMap such as bridges, airport runways, aerialways
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/context.jsonld",
+  "id": "08b2748cc1383fff0001b38438099b73",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -85.6743541,
+          42.9676009
+        ],
+        [
+          -85.6743623,
+          42.9674649
+        ],
+        [
+          -85.6744114,
+          42.9674803
+        ],
+        [
+          -85.6744559,
+          42.9674919
+        ],
+        [
+          -85.6745302,
+          42.9675058
+        ],
+        [
+          -85.6746036,
+          42.9675151
+        ],
+        [
+          -85.6746959,
+          42.9675171
+        ],
+        [
+          -85.675835,
+          42.9674967
+        ],
+        [
+          -85.6758985,
+          42.9674915
+        ],
+        [
+          -85.6759656,
+          42.967483
+        ],
+        [
+          -85.6760399,
+          42.9674711
+        ],
+        [
+          -85.676099,
+          42.9674566
+        ],
+        [
+          -85.6761817,
+          42.9674324
+        ],
+        [
+          -85.676227,
+          42.9674184
+        ],
+        [
+          -85.6762149,
+          42.9675911
+        ],
+        [
+          -85.6761726,
+          42.9675857
+        ],
+        [
+          -85.676106,
+          42.9675781
+        ],
+        [
+          -85.6760499,
+          42.9675741
+        ],
+        [
+          -85.6759947,
+          42.9675723
+        ],
+        [
+          -85.6743541,
+          42.9676009
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "base",
+    "type": "infrastructure",
+    "subtype": "bridge",
+    "class": "bridge",
+    "names": {
+      "primary": "Gillett Bridge",
+      "rules": [
+        {
+          "variant": "alternate",
+          "value": "Interurban Bridge"
+        }
+      ]
+    },
+    "sources": [
+      {
+        "property": "",
+        "record_id": "w556368546@3",
+        "dataset": "OpenStreetMap"
+      }
+    ],
+    "version": 0
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 2
 #### json
@@ -161,6 +286,46 @@ Various features from OpenStreetMap such as bridges, airport runways, aerialways
     "version": 0
   }
 }
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/context.jsonld",
+  "id": "08b4035ac1518fff0001a9e45d5e1c9d",
+  "type": "Feature",
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      111.5341723,
+      25.1110193
+    ]
+  },
+  "properties": {
+    "theme": "base",
+    "type": "infrastructure",
+    "subtype": "power",
+    "class": "generator",
+    "height": 160.0,
+    "names": {
+      "primary": "DEW-G5000-195"
+    },
+    "sources": [
+      {
+        "property": "",
+        "record_id": "n10707323715@5",
+        "dataset": "OpenStreetMap"
+      }
+    ],
+    "version": 0
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
 ```
 
 ## Schema
@@ -399,6 +564,92 @@ Links to the schema:
 
 * YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/schema.json)
 * JSON version: [schema.json](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "id": {},
+    "type": {},
+    "coordinates": {},
+    "bbox": {},
+    "geometry": {},
+    "theme": {},
+    "version": {},
+    "sources": {
+      "@context": {
+        "between": {},
+        "property": {},
+        "dataset": {},
+        "license": {},
+        "record_id": {},
+        "update_time": {},
+        "confidence": {}
+      }
+    },
+    "names": {
+      "@context": {
+        "primary": {},
+        "common": {},
+        "rules": {
+          "@context": {
+            "between": {},
+            "side": {},
+            "variant": {},
+            "language": {},
+            "perspectives": {
+              "@context": {
+                "mode": {},
+                "countries": {}
+              }
+            },
+            "value": {}
+          }
+        }
+      }
+    },
+    "level": {},
+    "source_tags": {},
+    "wikidata": {},
+    "subtype": {},
+    "class": {},
+    "height": {},
+    "surface": {},
+    "properties": {},
+    "address": {
+      "@id": "vcard:hasAddress",
+      "@type": "@id",
+      "@context": {
+        "freeform": "rdf:value",
+        "locality": "vcard:hasLocality",
+        "postCode": "vcard:hasPostalCode",
+        "region": "vcard:hasRegion",
+        "countryName": "vcard:hasCountryName"
+      }
+    },
+    "allNames": {
+      "@id": "@nest",
+      "@context": {
+        "primary": "skos:prefLabel",
+        "common": {
+          "@id": "skos:altLabel",
+          "@container": "@language"
+        }
+      }
+    },
+    "om": "https://w3id.org/ogc/om/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/context.jsonld)
 
 
 # For developers

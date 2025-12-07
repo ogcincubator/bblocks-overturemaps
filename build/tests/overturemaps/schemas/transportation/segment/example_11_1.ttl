@@ -1,0 +1,11 @@
+@prefix om: <https://w3id.org/ogc/om/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] om:hasSpeedLimit [ om:hasMaxSpeed [ qudt:hasUnit "mph" ;
+                    rdf:value 65 ] ;
+            om:when "{\"heading\":\"forward\",\"mode\":[\"hgv\"]}"^^rdf:JSON ],
+        [ om:hasMaxSpeed [ qudt:hasUnit "mph" ;
+                    rdf:value 70 ] ] .
+

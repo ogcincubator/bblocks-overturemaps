@@ -60,6 +60,63 @@ A building is a man-made structure with a roof that exists permanently in one pl
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld",
+  "id": "overture:buildings:building:1234",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "ext_foo": "I am a customer user property.",
+    "ext_bar": "Me too!",
+    "theme": "buildings",
+    "type": "building",
+    "version": 1,
+    "sources": [
+      {
+        "dataset": "MyGreatDataset",
+        "property": "/geometry",
+        "update_time": "2024-04-26T23:55:01-08:00",
+        "confidence": 0.3
+      }
+    ]
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 2
 #### json
@@ -104,6 +161,57 @@ A building is a man-made structure with a roof that exists permanently in one pl
     "version": 0
   }
 }
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld",
+  "id": "overture:buildings:building:1234",
+  "type": "Feature",
+  "geometry": {
+    "type": "MultiPolygon",
+    "coordinates": [
+      [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            0
+          ]
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "ext_foo": "I am a customer user property.",
+    "ext_bar": "Me too!",
+    "theme": "buildings",
+    "type": "building",
+    "version": 0
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
 ```
 
 
@@ -169,6 +277,74 @@ A building is a man-made structure with a roof that exists permanently in one pl
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld",
+  "id": "overture:buildings:building:1234",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -77.036873,
+          38.897804
+        ],
+        [
+          -77.036873,
+          38.897559
+        ],
+        [
+          -77.03626,
+          38.897559
+        ],
+        [
+          -77.03626,
+          38.897804
+        ],
+        [
+          -77.036873,
+          38.897804
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "ext_foo": "I am a customer user property.",
+    "ext_bar": "Me too!",
+    "theme": "buildings",
+    "type": "building",
+    "version": 1,
+    "level": 1,
+    "height": 21.34,
+    "num_floors": 4,
+    "num_floors_underground": 1,
+    "subtype": "transportation",
+    "class": "parking",
+    "is_underground": false,
+    "sources": [
+      {
+        "property": "",
+        "dataset": "microsoftMLBuildings,",
+        "confidence": 1
+      },
+      {
+        "property": "/properties/height",
+        "dataset": "metaLidarExtractions,",
+        "confidence": 0.95
+      }
+    ]
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 4
 #### json
@@ -220,6 +396,62 @@ A building is a man-made structure with a roof that exists permanently in one pl
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld",
+  "id": "overture:buildings:building:1234",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "theme": "buildings",
+    "type": "building",
+    "version": 1,
+    "sources": [
+      {
+        "dataset": "MyGreatDataset",
+        "property": "/geometry",
+        "update_time": "2024-04-26T23:55:01-08:00",
+        "confidence": 0.3,
+        "license": "beep"
+      }
+    ]
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 5
 #### json
@@ -265,6 +497,58 @@ A building is a man-made structure with a roof that exists permanently in one pl
     }
   }
 }
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld",
+  "id": "overture:buildings:building:1234",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "ext_foo": "I am a customer user property.",
+    "ext_bar": "Me too!",
+    "theme": "buildings",
+    "type": "building",
+    "version": 1,
+    "names": {
+      "primary": "Empire State Building"
+    }
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
 ```
 
 
@@ -325,6 +609,71 @@ A building is a man-made structure with a roof that exists permanently in one pl
     ]
   }
 }
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld",
+  "id": "overture:buildings:building:1234",
+  "type": "Feature",
+  "properties": {
+    "ext_foo": "I am a customer user property.",
+    "ext_bar": "Me too!",
+    "theme": "buildings",
+    "type": "building",
+    "version": 1,
+    "names": {
+      "primary": "The White house",
+      "common": {
+        "es": "La Casa Blanca"
+      },
+      "rules": [
+        {
+          "variant": "official",
+          "value": "The White House"
+        },
+        {
+          "variant": "alternate",
+          "value": "White House"
+        }
+      ]
+    }
+  },
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -77.036873,
+          38.897804
+        ],
+        [
+          -77.036873,
+          38.897559
+        ],
+        [
+          -77.03626,
+          38.897559
+        ],
+        [
+          -77.03626,
+          38.897804
+        ],
+        [
+          -77.036873,
+          38.897804
+        ]
+      ]
+    ]
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
 ```
 
 
@@ -393,6 +742,79 @@ A building is a man-made structure with a roof that exists permanently in one pl
     }
   }
 }
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld",
+  "id": "overture:buildings:building:1234",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "ext_foo": "I am a customer user property.",
+    "ext_bar": "Me too!",
+    "theme": "buildings",
+    "type": "building",
+    "version": 1,
+    "names": {
+      "primary": "Local value",
+      "common": {
+        "ru-Latn": "Language Script",
+        "en-US": "Language Region"
+      },
+      "rules": [
+        {
+          "variant": "official",
+          "language": "es",
+          "value": "Official Name"
+        },
+        {
+          "variant": "short",
+          "language": "es",
+          "value": "Official Spanish Name"
+        },
+        {
+          "variant": "alternate",
+          "language": "ru",
+          "value": "Official Russian Name"
+        }
+      ]
+    }
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
 ```
 
 
@@ -468,6 +890,84 @@ A building is a man-made structure with a roof that exists permanently in one pl
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld",
+  "id": "overture:buildings:building:1234",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -117.1710888,
+          32.7238481
+        ],
+        [
+          -117.1711025,
+          32.7239038
+        ],
+        [
+          -117.1711923,
+          32.7238882
+        ],
+        [
+          -117.1712198,
+          32.724
+        ],
+        [
+          -117.1712713,
+          32.7242091
+        ],
+        [
+          -117.1706665,
+          32.7243145
+        ],
+        [
+          -117.1705738,
+          32.7239379
+        ],
+        [
+          -117.1707783,
+          32.7239022
+        ],
+        [
+          -117.1710888,
+          32.7238481
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "ext_foo": "I am a customer user property.",
+    "ext_bar": "Me too!",
+    "theme": "buildings",
+    "type": "building",
+    "version": 1,
+    "level": 1,
+    "names": {
+      "primary": "Valentina by Alta"
+    },
+    "num_floors": 8,
+    "subtype": "commercial",
+    "class": "commercial",
+    "sources": [
+      {
+        "property": "",
+        "dataset": "OpenStreetMap"
+      }
+    ]
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 9
 #### json
@@ -512,6 +1012,55 @@ A building is a man-made structure with a roof that exists permanently in one pl
 }
 ```
 
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld",
+  "id": "overture:buildings:building:1234",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "ext_foo": "I am a customer user property.",
+    "ext_bar": "Me too!",
+    "theme": "buildings",
+    "type": "building",
+    "version": 1
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
+```
+
 
 ### Example 10
 #### json
@@ -554,6 +1103,55 @@ A building is a man-made structure with a roof that exists permanently in one pl
     "version": 1
   }
 }
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld",
+  "id": "overture:buildings:building:1234",
+  "type": "Feature",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          0
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "ext_foo": "I am a customer user property.",
+    "ext_bar": "Me too!",
+    "theme": "buildings",
+    "type": "building",
+    "version": 1
+  }
+}
+```
+
+#### ttl
+```ttl
+
+
 ```
 
 ## Schema
@@ -710,6 +1308,110 @@ Links to the schema:
 
 * YAML version: [schema.yaml](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/schema.json)
 * JSON version: [schema.json](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/schema.yaml)
+
+
+# JSON-LD Context
+
+```jsonld
+{
+  "@context": {
+    "id": {},
+    "type": {},
+    "coordinates": {},
+    "bbox": {},
+    "geometry": {},
+    "theme": {},
+    "version": {},
+    "sources": {
+      "@context": {
+        "between": {},
+        "property": {},
+        "dataset": {},
+        "license": {},
+        "record_id": {},
+        "update_time": {},
+        "confidence": {}
+      }
+    },
+    "names": {
+      "@context": {
+        "primary": {},
+        "common": {},
+        "rules": {
+          "@context": {
+            "between": {},
+            "side": {},
+            "variant": {},
+            "language": {},
+            "perspectives": {
+              "@context": {
+                "mode": {},
+                "countries": {}
+              }
+            },
+            "value": {}
+          }
+        }
+      }
+    },
+    "level": {},
+    "height": {},
+    "is_underground": {},
+    "num_floors": {},
+    "num_floors_underground": {},
+    "min_height": {},
+    "min_floor": {},
+    "facade_color": {},
+    "facade_material": {},
+    "roof_material": {},
+    "roof_shape": {},
+    "roof_direction": {},
+    "roof_orientation": {},
+    "roof_color": {},
+    "roof_height": {},
+    "subtype": {},
+    "class": {},
+    "has_parts": {},
+    "properties": {},
+    "wikidata": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id",
+      "@context": {
+        "@base": "https://www.wikidata.org/wiki/"
+      }
+    },
+    "address": {
+      "@id": "vcard:hasAddress",
+      "@type": "@id",
+      "@context": {
+        "freeform": "rdf:value",
+        "locality": "vcard:hasLocality",
+        "postCode": "vcard:hasPostalCode",
+        "region": "vcard:hasRegion",
+        "countryName": "vcard:hasCountryName"
+      }
+    },
+    "allNames": {
+      "@id": "@nest",
+      "@context": {
+        "primary": "skos:prefLabel",
+        "common": {
+          "@id": "skos:altLabel",
+          "@container": "@language"
+        }
+      }
+    },
+    "om": "https://w3id.org/ogc/om/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "@version": 1.1
+  }
+}
+```
+
+You can find the full JSON-LD context here:
+[context.jsonld](https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld)
 
 
 # For developers

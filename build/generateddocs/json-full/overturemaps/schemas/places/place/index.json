@@ -7,7 +7,7 @@
   "abstract": "A Place is a point representation of a real-world facility, service, or amenity. Place features are compatible with GeoJSON Point features.",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
-  "dateOfLastChange": "2025-11-13",
+  "dateOfLastChange": "2025-12-07",
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
@@ -18,17 +18,18 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.overturemaps.schemas.places.definitions",
-    "ogc.overturemaps.schemas.definitions"
+    "ogc.overturemaps.schemas.definitions",
+    "ogc.overturemaps.schemas.places.definitions"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/places/place/schema.yaml",
+  "ldContext": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/places/place/",
   "rdfData": [],
-  "validationPassed": true,
+  "validationPassed": false,
   "testOutputs": "https://github.com/ogcincubator/bblocks-overturemaps/blob/master/build/tests/overturemaps/schemas/places/place/",
   "examples": [
     {
@@ -38,6 +39,16 @@
           "ref": "examples/timestamp-utc.yaml",
           "code": "{\n  \"id\": \"timestamp-utc\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"categories\": {\n      \"primary\": \"some_category\"\n    },\n    \"theme\": \"places\",\n    \"type\": \"place\",\n    \"version\": 1,\n    \"operating_status\": \"open\"\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld\",\n  \"id\": \"timestamp-utc\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"categories\": {\n      \"primary\": \"some_category\"\n    },\n    \"theme\": \"places\",\n    \"type\": \"place\",\n    \"version\": 1,\n    \"operating_status\": \"open\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_1_1.ttl"
         }
       ]
     },
@@ -48,6 +59,16 @@
           "ref": "examples/place-alternate-categories.yaml",
           "code": "{\n  \"id\": \"overture:places:place:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"categories\": {\n      \"primary\": \"the1_category_you_want_first\",\n      \"alternate\": [\n        \"another_category\"\n      ]\n    },\n    \"confidence\": 0.9,\n    \"websites\": [\n      \"https://www.example.com\"\n    ],\n    \"emails\": [\n      \"info@example.com\"\n    ],\n    \"socials\": [\n      \"https://www.twitter.com/example\"\n    ],\n    \"phones\": [\n      \"+32 1207\"\n    ],\n    \"brand\": {\n      \"names\": {\n        \"primary\": \"My Sweet POI Brand\"\n      },\n      \"wikidata\": \"Q1000\"\n    },\n    \"addresses\": [\n      {\n        \"freeform\": \"770 Broadway, Floor 8\",\n        \"locality\": \"New York\"\n      },\n      {\n        \"freeform\": \"770 Broadway, #802\",\n        \"locality\": \"New York\",\n        \"region\": \"US-NY\",\n        \"country\": \"US\"\n      }\n    ],\n    \"theme\": \"places\",\n    \"type\": \"place\",\n    \"version\": 1,\n    \"names\": {\n      \"primary\": \"My Sweet POI\",\n      \"common\": {\n        \"es\": \"Something in Spanish\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"short\",\n          \"value\": \"MSPOI\"\n        }\n      ]\n    },\n    \"operating_status\": \"open\"\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_2_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld\",\n  \"id\": \"overture:places:place:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"categories\": {\n      \"primary\": \"the1_category_you_want_first\",\n      \"alternate\": [\n        \"another_category\"\n      ]\n    },\n    \"confidence\": 0.9,\n    \"websites\": [\n      \"https://www.example.com\"\n    ],\n    \"emails\": [\n      \"info@example.com\"\n    ],\n    \"socials\": [\n      \"https://www.twitter.com/example\"\n    ],\n    \"phones\": [\n      \"+32 1207\"\n    ],\n    \"brand\": {\n      \"names\": {\n        \"primary\": \"My Sweet POI Brand\"\n      },\n      \"wikidata\": \"Q1000\"\n    },\n    \"addresses\": [\n      {\n        \"freeform\": \"770 Broadway, Floor 8\",\n        \"locality\": \"New York\"\n      },\n      {\n        \"freeform\": \"770 Broadway, #802\",\n        \"locality\": \"New York\",\n        \"region\": \"US-NY\",\n        \"country\": \"US\"\n      }\n    ],\n    \"theme\": \"places\",\n    \"type\": \"place\",\n    \"version\": 1,\n    \"names\": {\n      \"primary\": \"My Sweet POI\",\n      \"common\": {\n        \"es\": \"Something in Spanish\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"short\",\n          \"value\": \"MSPOI\"\n        }\n      ]\n    },\n    \"operating_status\": \"open\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_2_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_2_1.ttl"
         }
       ]
     },
@@ -58,6 +79,16 @@
           "ref": "examples/place-no-emails-phones-socials-websites.yaml",
           "code": "{\n  \"id\": \"overture:places:place:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"categories\": {\n      \"primary\": \"some_category\"\n    },\n    \"confidence\": 0.9,\n    \"brand\": {\n      \"names\": {\n        \"primary\": \"My Sweet POI Brand\"\n      },\n      \"wikidata\": \"Q1000\"\n    },\n    \"addresses\": [\n      {\n        \"freeform\": \"770 Broadway, Floor 8\",\n        \"locality\": \"New York\"\n      },\n      {\n        \"freeform\": \"770 Brodway, #802\",\n        \"locality\": \"New York\",\n        \"region\": \"US-NY\",\n        \"country\": \"US\"\n      }\n    ],\n    \"theme\": \"places\",\n    \"type\": \"place\",\n    \"version\": 1,\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"metaPlaces\",\n        \"record_id\": \"10101\"\n      },\n      {\n        \"property\": \"/properties/brand\",\n        \"dataset\": \"msftPlaces\",\n        \"record_id\": \"10df72b8\"\n      }\n    ],\n    \"names\": {\n      \"primary\": \"My Sweet POI\",\n      \"common\": {\n        \"es\": \"Something in Spanish\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"short\",\n          \"value\": \"MSPOI\"\n        }\n      ]\n    },\n    \"operating_status\": \"open\"\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_3_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld\",\n  \"id\": \"overture:places:place:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"categories\": {\n      \"primary\": \"some_category\"\n    },\n    \"confidence\": 0.9,\n    \"brand\": {\n      \"names\": {\n        \"primary\": \"My Sweet POI Brand\"\n      },\n      \"wikidata\": \"Q1000\"\n    },\n    \"addresses\": [\n      {\n        \"freeform\": \"770 Broadway, Floor 8\",\n        \"locality\": \"New York\"\n      },\n      {\n        \"freeform\": \"770 Brodway, #802\",\n        \"locality\": \"New York\",\n        \"region\": \"US-NY\",\n        \"country\": \"US\"\n      }\n    ],\n    \"theme\": \"places\",\n    \"type\": \"place\",\n    \"version\": 1,\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"metaPlaces\",\n        \"record_id\": \"10101\"\n      },\n      {\n        \"property\": \"/properties/brand\",\n        \"dataset\": \"msftPlaces\",\n        \"record_id\": \"10df72b8\"\n      }\n    ],\n    \"names\": {\n      \"primary\": \"My Sweet POI\",\n      \"common\": {\n        \"es\": \"Something in Spanish\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"short\",\n          \"value\": \"MSPOI\"\n        }\n      ]\n    },\n    \"operating_status\": \"open\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_3_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_3_1.ttl"
         }
       ]
     },
@@ -68,6 +99,16 @@
           "ref": "examples/place-null-categories.yaml",
           "code": "{\n  \"geometry\": {\n    \"coordinates\": [\n      0,\n      0\n    ],\n    \"type\": \"Point\"\n  },\n  \"id\": \"overture:places:place:1\",\n  \"properties\": {\n    \"addresses\": [\n      {\n        \"freeform\": \"770 Broadway, Floor 8\",\n        \"locality\": \"New York\"\n      },\n      {\n        \"country\": \"US\",\n        \"freeform\": \"770 Broadway #802\",\n        \"locality\": \"New York\",\n        \"region\": \"US-NY\"\n      }\n    ],\n    \"brand\": {\n      \"names\": {\n        \"primary\": \"Example\"\n      },\n      \"wikidata\": \"Q1000\"\n    },\n    \"emails\": [\n      \"info@example.com\"\n    ],\n    \"phones\": [\n      \"+32 1207\"\n    ],\n    \"socials\": [\n      \"https://www.twitter.com/example\"\n    ],\n    \"theme\": \"places\",\n    \"type\": \"place\",\n    \"version\": 1,\n    \"websites\": [\n      \"https://www.example.com\"\n    ],\n    \"operating_status\": \"open\"\n  },\n  \"type\": \"Feature\"\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_4_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld\",\n  \"geometry\": {\n    \"coordinates\": [\n      0,\n      0\n    ],\n    \"type\": \"Point\"\n  },\n  \"id\": \"overture:places:place:1\",\n  \"properties\": {\n    \"addresses\": [\n      {\n        \"freeform\": \"770 Broadway, Floor 8\",\n        \"locality\": \"New York\"\n      },\n      {\n        \"country\": \"US\",\n        \"freeform\": \"770 Broadway #802\",\n        \"locality\": \"New York\",\n        \"region\": \"US-NY\"\n      }\n    ],\n    \"brand\": {\n      \"names\": {\n        \"primary\": \"Example\"\n      },\n      \"wikidata\": \"Q1000\"\n    },\n    \"emails\": [\n      \"info@example.com\"\n    ],\n    \"phones\": [\n      \"+32 1207\"\n    ],\n    \"socials\": [\n      \"https://www.twitter.com/example\"\n    ],\n    \"theme\": \"places\",\n    \"type\": \"place\",\n    \"version\": 1,\n    \"websites\": [\n      \"https://www.example.com\"\n    ],\n    \"operating_status\": \"open\"\n  },\n  \"type\": \"Feature\"\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_4_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_4_1.ttl"
         }
       ]
     },
@@ -78,6 +119,16 @@
           "ref": "examples/place-with-basic-category.yaml",
           "code": "{\n  \"id\": \"overture:places:place:66\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"basic_category\": \"casual_eatery\",\n    \"categories\": {\n      \"primary\": \"gas_station_sushi\",\n      \"alternate\": [\n        \"just_for_fun\"\n      ]\n    },\n    \"confidence\": 0.9,\n    \"websites\": [\n      \"https://www.example.com\"\n    ],\n    \"emails\": [\n      \"info@example.com\"\n    ],\n    \"socials\": [\n      \"https://www.twitter.com/example\"\n    ],\n    \"phones\": [\n      \"+32 1207\"\n    ],\n    \"brand\": {\n      \"names\": {\n        \"primary\": \"11-7\"\n      },\n      \"wikidata\": \"Q1000\"\n    },\n    \"addresses\": [\n      {\n        \"freeform\": \"1 Wasserman Way\",\n        \"locality\": \"District 11\"\n      }\n    ],\n    \"theme\": \"places\",\n    \"type\": \"place\",\n    \"version\": 1,\n    \"names\": {\n      \"primary\": \"11-7\",\n      \"common\": {\n        \"en\": \"Eleven Seven\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"short\",\n          \"value\": \"MSPOI\"\n        }\n      ]\n    },\n    \"operating_status\": \"open\"\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_5_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld\",\n  \"id\": \"overture:places:place:66\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"basic_category\": \"casual_eatery\",\n    \"categories\": {\n      \"primary\": \"gas_station_sushi\",\n      \"alternate\": [\n        \"just_for_fun\"\n      ]\n    },\n    \"confidence\": 0.9,\n    \"websites\": [\n      \"https://www.example.com\"\n    ],\n    \"emails\": [\n      \"info@example.com\"\n    ],\n    \"socials\": [\n      \"https://www.twitter.com/example\"\n    ],\n    \"phones\": [\n      \"+32 1207\"\n    ],\n    \"brand\": {\n      \"names\": {\n        \"primary\": \"11-7\"\n      },\n      \"wikidata\": \"Q1000\"\n    },\n    \"addresses\": [\n      {\n        \"freeform\": \"1 Wasserman Way\",\n        \"locality\": \"District 11\"\n      }\n    ],\n    \"theme\": \"places\",\n    \"type\": \"place\",\n    \"version\": 1,\n    \"names\": {\n      \"primary\": \"11-7\",\n      \"common\": {\n        \"en\": \"Eleven Seven\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"short\",\n          \"value\": \"MSPOI\"\n        }\n      ]\n    },\n    \"operating_status\": \"open\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_5_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_5_1.ttl"
         }
       ]
     },
@@ -88,6 +139,16 @@
           "ref": "examples/place-with-operating-status.yaml",
           "code": "{\n  \"id\": \"overture:places:place:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"categories\": {\n      \"primary\": \"some_category\"\n    },\n    \"confidence\": 0.9,\n    \"websites\": [\n      \"https://www.example.com/\"\n    ],\n    \"emails\": [\n      \"info@example.com\"\n    ],\n    \"socials\": [\n      \"https://www.twitter.com/example\"\n    ],\n    \"phones\": [\n      \"+32 1207\"\n    ],\n    \"brand\": {\n      \"names\": {\n        \"primary\": \"My Sweet POI Brand\"\n      },\n      \"wikidata\": \"Q1000\"\n    },\n    \"addresses\": [\n      {\n        \"freeform\": \"770 Broadway, Floor 8\",\n        \"locality\": \"New York\"\n      },\n      {\n        \"freeform\": \"770 Broadway, #802\",\n        \"locality\": \"New York\",\n        \"region\": \"US-NY\",\n        \"country\": \"US\"\n      }\n    ],\n    \"theme\": \"places\",\n    \"type\": \"place\",\n    \"version\": 1,\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"metaPlaces\",\n        \"record_id\": \"10101\"\n      },\n      {\n        \"property\": \"/properties/brand\",\n        \"dataset\": \"msftPlaces\",\n        \"record_id\": \"10df72b8\"\n      }\n    ],\n    \"names\": {\n      \"primary\": \"My Sweet POI\",\n      \"common\": {\n        \"es\": \"Something in Spanish\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"short\",\n          \"value\": \"MSPOI\"\n        }\n      ]\n    },\n    \"operating_status\": \"permanently_closed\"\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_6_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld\",\n  \"id\": \"overture:places:place:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"categories\": {\n      \"primary\": \"some_category\"\n    },\n    \"confidence\": 0.9,\n    \"websites\": [\n      \"https://www.example.com/\"\n    ],\n    \"emails\": [\n      \"info@example.com\"\n    ],\n    \"socials\": [\n      \"https://www.twitter.com/example\"\n    ],\n    \"phones\": [\n      \"+32 1207\"\n    ],\n    \"brand\": {\n      \"names\": {\n        \"primary\": \"My Sweet POI Brand\"\n      },\n      \"wikidata\": \"Q1000\"\n    },\n    \"addresses\": [\n      {\n        \"freeform\": \"770 Broadway, Floor 8\",\n        \"locality\": \"New York\"\n      },\n      {\n        \"freeform\": \"770 Broadway, #802\",\n        \"locality\": \"New York\",\n        \"region\": \"US-NY\",\n        \"country\": \"US\"\n      }\n    ],\n    \"theme\": \"places\",\n    \"type\": \"place\",\n    \"version\": 1,\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"metaPlaces\",\n        \"record_id\": \"10101\"\n      },\n      {\n        \"property\": \"/properties/brand\",\n        \"dataset\": \"msftPlaces\",\n        \"record_id\": \"10df72b8\"\n      }\n    ],\n    \"names\": {\n      \"primary\": \"My Sweet POI\",\n      \"common\": {\n        \"es\": \"Something in Spanish\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"short\",\n          \"value\": \"MSPOI\"\n        }\n      ]\n    },\n    \"operating_status\": \"permanently_closed\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_6_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_6_1.ttl"
         }
       ]
     },
@@ -98,6 +159,16 @@
           "ref": "examples/place.yaml",
           "code": "{\n  \"id\": \"overture:places:place:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"categories\": {\n      \"primary\": \"some_category\"\n    },\n    \"confidence\": 0.9,\n    \"websites\": [\n      \"https://www.example.com\"\n    ],\n    \"emails\": [\n      \"info@example.com\"\n    ],\n    \"socials\": [\n      \"https://www.twitter.com/example\"\n    ],\n    \"phones\": [\n      \"+32 1207\"\n    ],\n    \"brand\": {\n      \"names\": {\n        \"primary\": \"My Sweet POI Brand\"\n      },\n      \"wikidata\": \"Q1000\"\n    },\n    \"operating_status\": \"open\",\n    \"addresses\": [\n      {\n        \"freeform\": \"770 Broadway, Floor 8\",\n        \"locality\": \"New York\"\n      },\n      {\n        \"freeform\": \"770 Brodway, #802\",\n        \"locality\": \"New York\",\n        \"region\": \"US-NY\",\n        \"country\": \"US\"\n      }\n    ],\n    \"theme\": \"places\",\n    \"type\": \"place\",\n    \"version\": 1,\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"metaPlaces\",\n        \"record_id\": \"10101\"\n      },\n      {\n        \"property\": \"/properties/brand\",\n        \"dataset\": \"msftPlaces\",\n        \"record_id\": \"10df72b8\"\n      }\n    ],\n    \"names\": {\n      \"primary\": \"My Sweet POI\",\n      \"common\": {\n        \"es\": \"Something in Spanish\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"short\",\n          \"value\": \"MSPOI\"\n        }\n      ]\n    }\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_7_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld\",\n  \"id\": \"overture:places:place:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"categories\": {\n      \"primary\": \"some_category\"\n    },\n    \"confidence\": 0.9,\n    \"websites\": [\n      \"https://www.example.com\"\n    ],\n    \"emails\": [\n      \"info@example.com\"\n    ],\n    \"socials\": [\n      \"https://www.twitter.com/example\"\n    ],\n    \"phones\": [\n      \"+32 1207\"\n    ],\n    \"brand\": {\n      \"names\": {\n        \"primary\": \"My Sweet POI Brand\"\n      },\n      \"wikidata\": \"Q1000\"\n    },\n    \"operating_status\": \"open\",\n    \"addresses\": [\n      {\n        \"freeform\": \"770 Broadway, Floor 8\",\n        \"locality\": \"New York\"\n      },\n      {\n        \"freeform\": \"770 Brodway, #802\",\n        \"locality\": \"New York\",\n        \"region\": \"US-NY\",\n        \"country\": \"US\"\n      }\n    ],\n    \"theme\": \"places\",\n    \"type\": \"place\",\n    \"version\": 1,\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"metaPlaces\",\n        \"record_id\": \"10101\"\n      },\n      {\n        \"property\": \"/properties/brand\",\n        \"dataset\": \"msftPlaces\",\n        \"record_id\": \"10df72b8\"\n      }\n    ],\n    \"names\": {\n      \"primary\": \"My Sweet POI\",\n      \"common\": {\n        \"es\": \"Something in Spanish\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"short\",\n          \"value\": \"MSPOI\"\n        }\n      ]\n    }\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_7_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_7_1.ttl"
         }
       ]
     },
@@ -108,6 +179,16 @@
           "ref": "examples/place2.yaml",
           "code": "{\n  \"geometry\": {\n    \"coordinates\": [\n      0,\n      0\n    ],\n    \"type\": \"Point\"\n  },\n  \"id\": \"overture:places:place:1\",\n  \"properties\": {\n    \"addresses\": [\n      {\n        \"freeform\": \"770 Broadway, Floor 8\",\n        \"locality\": \"New York\"\n      },\n      {\n        \"country\": \"US\",\n        \"freeform\": \"770 Broadway #802\",\n        \"locality\": \"New York\",\n        \"region\": \"US-NY\"\n      }\n    ],\n    \"brand\": {\n      \"names\": {\n        \"primary\": \"Example\"\n      },\n      \"wikidata\": \"Q1000\"\n    },\n    \"categories\": {\n      \"primary\": \"some_category\"\n    },\n    \"emails\": [\n      \"info@example.com\"\n    ],\n    \"phones\": [\n      \"+32 1207\"\n    ],\n    \"socials\": [\n      \"https://www.twitter.com/example\"\n    ],\n    \"theme\": \"places\",\n    \"type\": \"place\",\n    \"version\": 1,\n    \"websites\": [\n      \"https://www.example.com\"\n    ],\n    \"operating_status\": \"open\"\n  },\n  \"type\": \"Feature\"\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_8_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld\",\n  \"geometry\": {\n    \"coordinates\": [\n      0,\n      0\n    ],\n    \"type\": \"Point\"\n  },\n  \"id\": \"overture:places:place:1\",\n  \"properties\": {\n    \"addresses\": [\n      {\n        \"freeform\": \"770 Broadway, Floor 8\",\n        \"locality\": \"New York\"\n      },\n      {\n        \"country\": \"US\",\n        \"freeform\": \"770 Broadway #802\",\n        \"locality\": \"New York\",\n        \"region\": \"US-NY\"\n      }\n    ],\n    \"brand\": {\n      \"names\": {\n        \"primary\": \"Example\"\n      },\n      \"wikidata\": \"Q1000\"\n    },\n    \"categories\": {\n      \"primary\": \"some_category\"\n    },\n    \"emails\": [\n      \"info@example.com\"\n    ],\n    \"phones\": [\n      \"+32 1207\"\n    ],\n    \"socials\": [\n      \"https://www.twitter.com/example\"\n    ],\n    \"theme\": \"places\",\n    \"type\": \"place\",\n    \"version\": 1,\n    \"websites\": [\n      \"https://www.example.com\"\n    ],\n    \"operating_status\": \"open\"\n  },\n  \"type\": \"Feature\"\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_8_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/places/place/example_8_1.ttl"
         }
       ]
     }

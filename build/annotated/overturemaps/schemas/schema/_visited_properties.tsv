@@ -30,7 +30,7 @@ path	@id
 /properties/address_levels	
 /properties/address_levels/value	
 /properties/postal_city	
-/properties/level	
+/properties/level	https://w3id.org/ogc/om/hasLevel
 /properties/cartography	
 /properties/cartography/prominence	
 /properties/cartography/min_zoom	
@@ -128,8 +128,8 @@ path	@id
 /properties/access_restrictions/when/vehicle	
 /properties/access_restrictions/when/vehicle/dimension	
 /properties/access_restrictions/when/vehicle/comparison	
-/properties/access_restrictions/when/vehicle/value	
-/properties/access_restrictions/when/vehicle/unit	
+/properties/access_restrictions/when/vehicle/value	rdf:value
+/properties/access_restrictions/when/vehicle/unit	http://qudt.org/vocab/unit/
 /properties/level_rules	
 /properties/level_rules/between	
 /properties/level_rules/value	
@@ -150,20 +150,20 @@ path	@id
 /properties/prohibited_transitions/sequence/segment_id	
 /properties/prohibited_transitions/final_heading	
 /properties/prohibited_transitions/when	
-/properties/road_surface	
+/properties/road_surface	osm:hasSurfaceType
 /properties/road_surface/between	
-/properties/road_surface/value	
+/properties/road_surface/value	@id
 /properties/road_flags	
 /properties/road_flags/between	
 /properties/road_flags/values	
-/properties/speed_limits	
+/properties/speed_limits	https://w3id.org/ogc/om/hasSpeedLimit
 /properties/speed_limits/between	
-/properties/speed_limits/min_speed	
-/properties/speed_limits/min_speed/value	
-/properties/speed_limits/min_speed/unit	
-/properties/speed_limits/max_speed	
-/properties/speed_limits/is_max_speed_variable	
-/properties/speed_limits/when	
+/properties/speed_limits/min_speed	https://w3id.org/ogc/om/hasMinSpeed
+/properties/speed_limits/min_speed/value	rdf:value
+/properties/speed_limits/min_speed/unit	http://qudt.org/schema/qudt/hasUnit
+/properties/speed_limits/max_speed	https://w3id.org/ogc/om/hasMaxSpeed
+/properties/speed_limits/is_max_speed_variable	https://w3id.org/ogc/om/isMaxSpeedVariable
+/properties/speed_limits/when	https://w3id.org/ogc/om/when
 /properties/width_rules	
 /properties/width_rules/between	
 /properties/width_rules/value	

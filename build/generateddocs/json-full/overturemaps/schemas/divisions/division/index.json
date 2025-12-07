@@ -7,7 +7,7 @@
   "abstract": "Divisions are recognized official or non-official organizations of people as seen from a given political perspective. Examples include countries, provinces, cities, towns, neighborhoods, etc.",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
-  "dateOfLastChange": "2025-11-13",
+  "dateOfLastChange": "2025-12-07",
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
@@ -18,17 +18,18 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.overturemaps.schemas.definitions",
-    "ogc.overturemaps.schemas.divisions.definitions"
+    "ogc.overturemaps.schemas.divisions.definitions",
+    "ogc.overturemaps.schemas.definitions"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/divisions/division/schema.yaml",
+  "ldContext": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/divisions/division/",
   "rdfData": [],
-  "validationPassed": true,
+  "validationPassed": false,
   "testOutputs": "https://github.com/ogcincubator/bblocks-overturemaps/blob/master/build/tests/overturemaps/schemas/divisions/division/",
   "examples": [
     {
@@ -38,6 +39,16 @@
           "ref": "examples/capital_of.yaml",
           "code": "{\n  \"id\": \"example:division:locality:lj\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      14.5845,\n      46.057\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"locality\",\n    \"local_type\": {\n      \"en\": \"city\"\n    },\n    \"names\": {\n      \"primary\": \"Ljubljana\"\n    },\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\",\n        \"record_id\": \"N6968827.V76\"\n      }\n    ],\n    \"country\": \"SI\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:division:country:si\",\n          \"subtype\": \"country\",\n          \"name\": \"Slovenia\"\n        }\n      ]\n    ],\n    \"capital_of_divisions\": [\n      {\n        \"division_id\": \"example:division:country:si\",\n        \"subtype\": \"country\"\n      }\n    ],\n    \"parent_division_id\": \"example:division:country:si\",\n    \"population\": 335509\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld\",\n  \"id\": \"example:division:locality:lj\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      14.5845,\n      46.057\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"locality\",\n    \"local_type\": {\n      \"en\": \"city\"\n    },\n    \"names\": {\n      \"primary\": \"Ljubljana\"\n    },\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\",\n        \"record_id\": \"N6968827.V76\"\n      }\n    ],\n    \"country\": \"SI\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:division:country:si\",\n          \"subtype\": \"country\",\n          \"name\": \"Slovenia\"\n        }\n      ]\n    ],\n    \"capital_of_divisions\": [\n      {\n        \"division_id\": \"example:division:country:si\",\n        \"subtype\": \"country\"\n      }\n    ],\n    \"parent_division_id\": \"example:division:country:si\",\n    \"population\": 335509\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_1_1.ttl"
         }
       ]
     },
@@ -48,6 +59,16 @@
           "ref": "examples/class.yaml",
           "code": "{\n  \"id\": \"example:division:locality:dk\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      12.0819247,\n      55.6433478\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"locality\",\n    \"local_type\": {\n      \"en\": \"city\"\n    },\n    \"names\": {\n      \"primary\": \"Roskilde\"\n    },\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\",\n        \"record_id\": \"N21040334\"\n      }\n    ],\n    \"country\": \"DK\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:division:country:dk\",\n          \"subtype\": \"country\",\n          \"name\": \"Denmark\"\n        }\n      ]\n    ],\n    \"capital_of_divisions\": [\n      {\n        \"division_id\": \"example:division:country:dk\",\n        \"subtype\": \"country\"\n      }\n    ],\n    \"parent_division_id\": \"example:division:country:dk\",\n    \"population\": 50781,\n    \"class\": \"city\"\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_2_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld\",\n  \"id\": \"example:division:locality:dk\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      12.0819247,\n      55.6433478\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"locality\",\n    \"local_type\": {\n      \"en\": \"city\"\n    },\n    \"names\": {\n      \"primary\": \"Roskilde\"\n    },\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\",\n        \"record_id\": \"N21040334\"\n      }\n    ],\n    \"country\": \"DK\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:division:country:dk\",\n          \"subtype\": \"country\",\n          \"name\": \"Denmark\"\n        }\n      ]\n    ],\n    \"capital_of_divisions\": [\n      {\n        \"division_id\": \"example:division:country:dk\",\n        \"subtype\": \"country\"\n      }\n    ],\n    \"parent_division_id\": \"example:division:country:dk\",\n    \"population\": 50781,\n    \"class\": \"city\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_2_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_2_1.ttl"
         }
       ]
     },
@@ -58,6 +79,16 @@
           "ref": "examples/country.yaml",
           "code": "{\n  \"id\": \"example:division:country:us\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -100.445882,\n      39.7837304\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"country\",\n    \"names\": {\n      \"primary\": \"United States\"\n    },\n    \"country\": \"US\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:division:country:us\",\n          \"subtype\": \"country\",\n          \"name\": \"United States\"\n        }\n      ]\n    ],\n    \"norms\": {\n      \"driving_side\": \"right\"\n    },\n    \"capital_division_ids\": [\n      \"example:division:locality:washington_dc\"\n    ]\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_3_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld\",\n  \"id\": \"example:division:country:us\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -100.445882,\n      39.7837304\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"country\",\n    \"names\": {\n      \"primary\": \"United States\"\n    },\n    \"country\": \"US\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:division:country:us\",\n          \"subtype\": \"country\",\n          \"name\": \"United States\"\n        }\n      ]\n    ],\n    \"norms\": {\n      \"driving_side\": \"right\"\n    },\n    \"capital_division_ids\": [\n      \"example:division:locality:washington_dc\"\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_3_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_3_1.ttl"
         }
       ]
     },
@@ -68,6 +99,16 @@
           "ref": "examples/dependency.yaml",
           "code": "{\n  \"id\": \"example:division:dependency:pr\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -66.4858295,\n      18.2247706\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"dependency\",\n    \"local_type\": {\n      \"en\": \"territory\"\n    },\n    \"names\": {\n      \"primary\": \"Puerto Rico\",\n      \"common\": {\n        \"en\": \"Puerto Rico\",\n        \"fr\": \"Porto Rico\",\n        \"es\": \"Puerto Rico\",\n        \"zh\": \"\\u6ce2\\u591a\\u9ece\\u5404\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"official\",\n          \"language\": \"es\",\n          \"value\": \"Estado Libre Asociado de Puerto Rico\"\n        }\n      ]\n    },\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\",\n        \"record_id\": \"R4422604.V41\"\n      }\n    ],\n    \"country\": \"PR\",\n    \"region\": \"US-PR\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:division:country:us\",\n          \"subtype\": \"country\",\n          \"name\": \"United States\"\n        }\n      ]\n    ],\n    \"norms\": {\n      \"driving_side\": \"right\"\n    },\n    \"capital_division_ids\": [\n      \"example:division:locality:san_juan\"\n    ],\n    \"parent_division_id\": \"example:division:country:us\"\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_4_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld\",\n  \"id\": \"example:division:dependency:pr\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -66.4858295,\n      18.2247706\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"dependency\",\n    \"local_type\": {\n      \"en\": \"territory\"\n    },\n    \"names\": {\n      \"primary\": \"Puerto Rico\",\n      \"common\": {\n        \"en\": \"Puerto Rico\",\n        \"fr\": \"Porto Rico\",\n        \"es\": \"Puerto Rico\",\n        \"zh\": \"\\u6ce2\\u591a\\u9ece\\u5404\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"official\",\n          \"language\": \"es\",\n          \"value\": \"Estado Libre Asociado de Puerto Rico\"\n        }\n      ]\n    },\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\",\n        \"record_id\": \"R4422604.V41\"\n      }\n    ],\n    \"country\": \"PR\",\n    \"region\": \"US-PR\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:division:country:us\",\n          \"subtype\": \"country\",\n          \"name\": \"United States\"\n        }\n      ]\n    ],\n    \"norms\": {\n      \"driving_side\": \"right\"\n    },\n    \"capital_division_ids\": [\n      \"example:division:locality:san_juan\"\n    ],\n    \"parent_division_id\": \"example:division:country:us\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_4_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_4_1.ttl"
         }
       ]
     },
@@ -78,6 +119,16 @@
           "ref": "examples/hierarchies-multiple.yaml",
           "code": "{\n  \"id\": \"example:division:borough:bronx\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -73.8785937,\n      40.8466508\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"borough\",\n    \"local_type\": {\n      \"en\": \"borough\"\n    },\n    \"names\": {\n      \"primary\": \"The Bronx\"\n    },\n    \"country\": \"US\",\n    \"region\": \"US-NY\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:division:country:us\",\n          \"subtype\": \"country\",\n          \"name\": \"United States\"\n        },\n        {\n          \"division_id\": \"example:division:region:us-ny\",\n          \"subtype\": \"region\",\n          \"name\": \"New York\"\n        },\n        {\n          \"division_id\": \"example:division:locality:nyc\",\n          \"subtype\": \"locality\",\n          \"name\": \"New York City\"\n        },\n        {\n          \"division_id\": \"example:division:borough:bronx\",\n          \"subtype\": \"borough\",\n          \"name\": \"The Bronx\"\n        }\n      ],\n      [\n        {\n          \"division_id\": \"example:division:country:us\",\n          \"subtype\": \"country\",\n          \"name\": \"United States\"\n        },\n        {\n          \"division_id\": \"example:division:region:us-ny\",\n          \"subtype\": \"region\",\n          \"name\": \"New York\"\n        },\n        {\n          \"division_id\": \"example:division:county:bronx\",\n          \"subtype\": \"county\",\n          \"name\": \"Bronx County\"\n        },\n        {\n          \"division_id\": \"example:division:borough:bronx\",\n          \"subtype\": \"borough\",\n          \"name\": \"The Bronx\"\n        }\n      ]\n    ],\n    \"parent_division_id\": \"example:division:locality:nyc\"\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_5_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld\",\n  \"id\": \"example:division:borough:bronx\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -73.8785937,\n      40.8466508\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"borough\",\n    \"local_type\": {\n      \"en\": \"borough\"\n    },\n    \"names\": {\n      \"primary\": \"The Bronx\"\n    },\n    \"country\": \"US\",\n    \"region\": \"US-NY\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:division:country:us\",\n          \"subtype\": \"country\",\n          \"name\": \"United States\"\n        },\n        {\n          \"division_id\": \"example:division:region:us-ny\",\n          \"subtype\": \"region\",\n          \"name\": \"New York\"\n        },\n        {\n          \"division_id\": \"example:division:locality:nyc\",\n          \"subtype\": \"locality\",\n          \"name\": \"New York City\"\n        },\n        {\n          \"division_id\": \"example:division:borough:bronx\",\n          \"subtype\": \"borough\",\n          \"name\": \"The Bronx\"\n        }\n      ],\n      [\n        {\n          \"division_id\": \"example:division:country:us\",\n          \"subtype\": \"country\",\n          \"name\": \"United States\"\n        },\n        {\n          \"division_id\": \"example:division:region:us-ny\",\n          \"subtype\": \"region\",\n          \"name\": \"New York\"\n        },\n        {\n          \"division_id\": \"example:division:county:bronx\",\n          \"subtype\": \"county\",\n          \"name\": \"Bronx County\"\n        },\n        {\n          \"division_id\": \"example:division:borough:bronx\",\n          \"subtype\": \"borough\",\n          \"name\": \"The Bronx\"\n        }\n      ]\n    ],\n    \"parent_division_id\": \"example:division:locality:nyc\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_5_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_5_1.ttl"
         }
       ]
     },
@@ -88,6 +139,16 @@
           "ref": "examples/multiple_capital_division.yaml",
           "code": "{\n  \"id\": \"example:division:region:pl-04\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      18.3392939,\n      53.3220016\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"region\",\n    \"local_type\": {\n      \"en\": \"province\"\n    },\n    \"names\": {\n      \"primary\": \"Woj Kujawsko-Pomorskie\"\n    },\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\",\n        \"record_id\": \"R223407.V254\"\n      }\n    ],\n    \"country\": \"PL\",\n    \"region\": \"PL-04\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:division:country:pl\",\n          \"subtype\": \"country\",\n          \"name\": \"Poland\"\n        },\n        {\n          \"division_id\": \"example:division:region:pl-04\",\n          \"subtype\": \"region\",\n          \"name\": \"Woj Kujawsko-Pomorskie\"\n        }\n      ]\n    ],\n    \"capital_division_ids\": [\n      \"example:division:locality:bydgoszcz\",\n      \"example:division:locality:torun\"\n    ],\n    \"parent_division_id\": \"example:division:country:pl\"\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_6_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld\",\n  \"id\": \"example:division:region:pl-04\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      18.3392939,\n      53.3220016\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"region\",\n    \"local_type\": {\n      \"en\": \"province\"\n    },\n    \"names\": {\n      \"primary\": \"Woj Kujawsko-Pomorskie\"\n    },\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\",\n        \"record_id\": \"R223407.V254\"\n      }\n    ],\n    \"country\": \"PL\",\n    \"region\": \"PL-04\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:division:country:pl\",\n          \"subtype\": \"country\",\n          \"name\": \"Poland\"\n        },\n        {\n          \"division_id\": \"example:division:region:pl-04\",\n          \"subtype\": \"region\",\n          \"name\": \"Woj Kujawsko-Pomorskie\"\n        }\n      ]\n    ],\n    \"capital_division_ids\": [\n      \"example:division:locality:bydgoszcz\",\n      \"example:division:locality:torun\"\n    ],\n    \"parent_division_id\": \"example:division:country:pl\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_6_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_6_1.ttl"
         }
       ]
     },
@@ -98,6 +159,16 @@
           "ref": "examples/perspectives.yaml",
           "code": "{\n  \"id\": \"example:division:perspectives:trnc\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      33.6252379,\n      35.2245313\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"country\",\n    \"names\": {\n      \"primary\": \"Kuzey K\\u0131br\\u0131s\",\n      \"common\": {\n        \"en\": \"Northern Cyprus\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"short\",\n          \"value\": \"TRNC\"\n        },\n        {\n          \"variant\": \"official\",\n          \"language\": \"en\",\n          \"value\": \"Turkish Republic of Northern Cyprus\"\n        }\n      ]\n    },\n    \"country\": \"XX\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:perspectives:trnc\",\n          \"subtype\": \"country\",\n          \"name\": \"Kuzey K\\u0131br\\u0131s\"\n        }\n      ]\n    ],\n    \"perspectives\": {\n      \"mode\": \"accepted_by\",\n      \"countries\": [\n        \"TR\"\n      ]\n    }\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_7_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld\",\n  \"id\": \"example:division:perspectives:trnc\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      33.6252379,\n      35.2245313\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"country\",\n    \"names\": {\n      \"primary\": \"Kuzey K\\u0131br\\u0131s\",\n      \"common\": {\n        \"en\": \"Northern Cyprus\"\n      },\n      \"rules\": [\n        {\n          \"variant\": \"short\",\n          \"value\": \"TRNC\"\n        },\n        {\n          \"variant\": \"official\",\n          \"language\": \"en\",\n          \"value\": \"Turkish Republic of Northern Cyprus\"\n        }\n      ]\n    },\n    \"country\": \"XX\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:perspectives:trnc\",\n          \"subtype\": \"country\",\n          \"name\": \"Kuzey K\\u0131br\\u0131s\"\n        }\n      ]\n    ],\n    \"perspectives\": {\n      \"mode\": \"accepted_by\",\n      \"countries\": [\n        \"TR\"\n      ]\n    }\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_7_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_7_1.ttl"
         }
       ]
     },
@@ -108,6 +179,16 @@
           "ref": "examples/population.yaml",
           "code": "{\n  \"id\": \"example:division:region:ca-on\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -86.000977,\n      50.000678\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"region\",\n    \"local_type\": {\n      \"en\": \"province\"\n    },\n    \"names\": {\n      \"primary\": \"Ontario\"\n    },\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\",\n        \"record_id\": \"R68841.V267\"\n      }\n    ],\n    \"country\": \"CA\",\n    \"region\": \"CA-ON\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:division:country:ca\",\n          \"subtype\": \"country\",\n          \"name\": \"Canada\"\n        },\n        {\n          \"division_id\": \"example:division:region:ca-on\",\n          \"subtype\": \"region\",\n          \"name\": \"Ontario\"\n        }\n      ]\n    ],\n    \"capital_division_ids\": [\n      \"example:division:locality:toronto\"\n    ],\n    \"parent_division_id\": \"example:division:country:ca\",\n    \"population\": 13550900\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_8_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld\",\n  \"id\": \"example:division:region:ca-on\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -86.000977,\n      50.000678\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"region\",\n    \"local_type\": {\n      \"en\": \"province\"\n    },\n    \"names\": {\n      \"primary\": \"Ontario\"\n    },\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\",\n        \"record_id\": \"R68841.V267\"\n      }\n    ],\n    \"country\": \"CA\",\n    \"region\": \"CA-ON\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:division:country:ca\",\n          \"subtype\": \"country\",\n          \"name\": \"Canada\"\n        },\n        {\n          \"division_id\": \"example:division:region:ca-on\",\n          \"subtype\": \"region\",\n          \"name\": \"Ontario\"\n        }\n      ]\n    ],\n    \"capital_division_ids\": [\n      \"example:division:locality:toronto\"\n    ],\n    \"parent_division_id\": \"example:division:country:ca\",\n    \"population\": 13550900\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_8_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_8_1.ttl"
         }
       ]
     },
@@ -118,6 +199,16 @@
           "ref": "examples/prominence.yaml",
           "code": "{\n  \"id\": \"example:division:locality:dk\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      12.0819247,\n      55.6433478\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"locality\",\n    \"local_type\": {\n      \"en\": \"city\"\n    },\n    \"names\": {\n      \"primary\": \"Roskilde\"\n    },\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\",\n        \"record_id\": \"N21040334\"\n      }\n    ],\n    \"country\": \"DK\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:division:country:dk\",\n          \"subtype\": \"country\",\n          \"name\": \"Denmark\"\n        }\n      ]\n    ],\n    \"capital_of_divisions\": [\n      {\n        \"division_id\": \"example:division:country:dk\",\n        \"subtype\": \"country\"\n      }\n    ],\n    \"parent_division_id\": \"example:division:country:dk\",\n    \"population\": 50781,\n    \"cartography\": {\n      \"prominence\": 5\n    }\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_9_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld\",\n  \"id\": \"example:division:locality:dk\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      12.0819247,\n      55.6433478\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"locality\",\n    \"local_type\": {\n      \"en\": \"city\"\n    },\n    \"names\": {\n      \"primary\": \"Roskilde\"\n    },\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\",\n        \"record_id\": \"N21040334\"\n      }\n    ],\n    \"country\": \"DK\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:division:country:dk\",\n          \"subtype\": \"country\",\n          \"name\": \"Denmark\"\n        }\n      ]\n    ],\n    \"capital_of_divisions\": [\n      {\n        \"division_id\": \"example:division:country:dk\",\n        \"subtype\": \"country\"\n      }\n    ],\n    \"parent_division_id\": \"example:division:country:dk\",\n    \"population\": 50781,\n    \"cartography\": {\n      \"prominence\": 5\n    }\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_9_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_9_1.ttl"
         }
       ]
     },
@@ -128,6 +219,16 @@
           "ref": "examples/region.yaml",
           "code": "{\n  \"id\": \"example:division:region:us-ny\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -75.8449946,\n      43.1561681\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"region\",\n    \"local_type\": {\n      \"en\": \"state\"\n    },\n    \"names\": {\n      \"primary\": \"New York\"\n    },\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\",\n        \"record_id\": \"R61320.V468\"\n      }\n    ],\n    \"country\": \"US\",\n    \"region\": \"US-NY\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:division:country:us\",\n          \"subtype\": \"country\",\n          \"name\": \"United States\"\n        },\n        {\n          \"division_id\": \"example:division:region:us-ny\",\n          \"subtype\": \"region\",\n          \"name\": \"New York\"\n        }\n      ]\n    ],\n    \"capital_division_ids\": [\n      \"example:division:locality:albany\"\n    ],\n    \"parent_division_id\": \"example:division:country:us\"\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_10_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld\",\n  \"id\": \"example:division:region:us-ny\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -75.8449946,\n      43.1561681\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division\",\n    \"version\": 0,\n    \"subtype\": \"region\",\n    \"local_type\": {\n      \"en\": \"state\"\n    },\n    \"names\": {\n      \"primary\": \"New York\"\n    },\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\",\n        \"record_id\": \"R61320.V468\"\n      }\n    ],\n    \"country\": \"US\",\n    \"region\": \"US-NY\",\n    \"hierarchies\": [\n      [\n        {\n          \"division_id\": \"example:division:country:us\",\n          \"subtype\": \"country\",\n          \"name\": \"United States\"\n        },\n        {\n          \"division_id\": \"example:division:region:us-ny\",\n          \"subtype\": \"region\",\n          \"name\": \"New York\"\n        }\n      ]\n    ],\n    \"capital_division_ids\": [\n      \"example:division:locality:albany\"\n    ],\n    \"parent_division_id\": \"example:division:country:us\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_10_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division/example_10_1.ttl"
         }
       ]
     }

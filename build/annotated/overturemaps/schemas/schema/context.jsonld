@@ -21,7 +21,8 @@
         "coordinates": {
           "@container": "@list",
           "@id": "geojson:coordinates"
-        }
+        },
+        "geometries": {}
       },
       "@id": "geojson:geometry"
     },
@@ -29,7 +30,317 @@
       "@container": "@list",
       "@id": "geojson:bbox"
     },
+    "theme": {},
+    "version": {},
+    "sources": {
+      "@context": {
+        "between": {},
+        "property": {},
+        "dataset": {},
+        "license": {},
+        "record_id": {},
+        "update_time": {}
+      }
+    },
+    "country": {},
+    "postcode": {},
+    "street": {},
+    "number": {},
+    "unit": {},
+    "address_levels": {
+      "@context": {
+        "value": {}
+      }
+    },
+    "postal_city": {},
+    "level": "om:hasLevel",
+    "cartography": {
+      "@context": {
+        "prominence": {},
+        "min_zoom": {},
+        "max_zoom": {},
+        "sort_key": {}
+      }
+    },
+    "depth": {},
+    "names": {
+      "@context": {
+        "primary": {},
+        "common": {},
+        "rules": {
+          "@context": {
+            "between": {},
+            "side": {},
+            "variant": {},
+            "language": {},
+            "value": {}
+          }
+        }
+      }
+    },
+    "source_tags": {},
+    "wikidata": {},
+    "subtype": {},
+    "class": {},
+    "height": {},
+    "surface": {},
+    "elevation": {},
+    "is_salt": {},
+    "is_intermittent": {},
+    "is_underground": {},
+    "num_floors": {},
+    "num_floors_underground": {},
+    "min_height": {},
+    "min_floor": {},
+    "facade_color": {},
+    "facade_material": {},
+    "roof_material": {},
+    "roof_shape": {},
+    "roof_direction": {},
+    "roof_orientation": {},
+    "roof_color": {},
+    "roof_height": {},
+    "has_parts": {},
+    "building_id": {},
+    "is_land": {},
+    "is_territorial": {},
+    "division_ids": {},
+    "region": {},
+    "is_disputed": {},
+    "perspectives": {
+      "@context": {
+        "mode": {},
+        "countries": {}
+      }
+    },
+    "local_type": {},
+    "hierarchies": {
+      "@context": {
+        "name": {}
+      }
+    },
+    "parent_division_id": {},
+    "norms": {
+      "@context": {
+        "driving_side": {}
+      }
+    },
+    "population": {},
+    "capital_division_ids": {},
+    "capital_of_divisions": {},
+    "division_id": {},
+    "categories": {
+      "@context": {
+        "primary": {},
+        "alternate": {}
+      }
+    },
+    "basic_category": {},
+    "confidence": {},
+    "websites": {},
+    "socials": {},
+    "emails": {},
+    "phones": {},
+    "brand": {},
+    "addresses": {
+      "@context": {
+        "freeform": {},
+        "locality": {}
+      }
+    },
+    "operating_status": {},
+    "subclass_rules": {
+      "@context": {
+        "between": {},
+        "value": {}
+      }
+    },
+    "access_restrictions": {
+      "@context": {
+        "between": {},
+        "access_type": {},
+        "when": {
+          "@context": {
+            "during": {},
+            "heading": {},
+            "using": {},
+            "recognized": {},
+            "mode": {},
+            "vehicle": {
+              "@context": {
+                "dimension": {},
+                "comparison": {},
+                "value": "rdf:value",
+                "unit": "http://qudt.org/vocab/unit/"
+              }
+            }
+          }
+        }
+      }
+    },
+    "level_rules": {
+      "@context": {
+        "between": {},
+        "value": {}
+      }
+    },
+    "destinations": {
+      "@context": {
+        "labels": {
+          "@context": {
+            "value": {}
+          }
+        },
+        "symbols": {},
+        "from_connector_id": {},
+        "to_segment_id": {},
+        "to_connector_id": {},
+        "when": {
+          "@context": {
+            "heading": {}
+          }
+        },
+        "final_heading": {}
+      }
+    },
+    "prohibited_transitions": {
+      "@context": {
+        "between": {},
+        "sequence": {
+          "@context": {
+            "connector_id": {},
+            "segment_id": {}
+          }
+        },
+        "final_heading": {},
+        "when": {
+          "@context": {
+            "heading": {},
+            "during": {},
+            "using": {},
+            "recognized": {},
+            "mode": {},
+            "vehicle": {
+              "@context": {
+                "dimension": {},
+                "comparison": {},
+                "value": "rdf:value",
+                "unit": "http://qudt.org/vocab/unit/"
+              }
+            }
+          }
+        }
+      }
+    },
+    "road_surface": {
+      "@context": {
+        "@base": "https://w3id.org/ogc/om/surfaces/",
+        "between": {},
+        "value": "@id"
+      },
+      "@id": "osm:hasSurfaceType"
+    },
+    "road_flags": {
+      "@context": {
+        "between": {},
+        "values": {}
+      }
+    },
+    "speed_limits": {
+      "@context": {
+        "between": {},
+        "min_speed": {
+          "@context": {
+            "value": "rdf:value",
+            "unit": "qudt:hasUnit"
+          },
+          "@id": "om:hasMinSpeed"
+        },
+        "max_speed": {
+          "@context": {
+            "value": "rdf:value",
+            "unit": "qudt:hasUnit"
+          },
+          "@id": "om:hasMaxSpeed"
+        },
+        "is_max_speed_variable": "om:isMaxSpeedVariable",
+        "when": {
+          "@context": {
+            "during": {},
+            "heading": {},
+            "using": {},
+            "recognized": {},
+            "mode": {},
+            "vehicle": {
+              "@context": {
+                "dimension": {},
+                "comparison": {},
+                "value": "rdf:value",
+                "unit": "http://qudt.org/vocab/unit/"
+              }
+            }
+          },
+          "@id": "om:when",
+          "@type": "@json"
+        }
+      },
+      "@id": "om:hasSpeedLimit"
+    },
+    "width_rules": {
+      "@context": {
+        "between": {},
+        "value": {}
+      }
+    },
+    "subclass": {},
+    "rail_flags": {
+      "@context": {
+        "between": {},
+        "values": {}
+      }
+    },
+    "connectors": {
+      "@context": {
+        "connector_id": {},
+        "at": {}
+      }
+    },
+    "routes": {
+      "@context": {
+        "between": {},
+        "name": {},
+        "network": {},
+        "ref": {},
+        "symbol": {}
+      }
+    },
+    "address": {
+      "@id": "vcard:hasAddress",
+      "@type": "@id",
+      "@context": {
+        "freeform": "rdf:value",
+        "locality": "vcard:hasLocality",
+        "postCode": "vcard:hasPostalCode",
+        "region": "vcard:hasRegion",
+        "countryName": "vcard:hasCountryName"
+      }
+    },
+    "allNames": {
+      "@id": "@nest",
+      "@context": {
+        "primary": "skos:prefLabel",
+        "common": {
+          "@id": "skos:altLabel",
+          "@container": "@language"
+        }
+      }
+    },
     "geojson": "https://purl.org/geojson/vocab#",
+    "om": "https://w3id.org/ogc/om/",
+    "vcard": "http://www.w3.org/2006/vcard/ns#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "qudt": "http://qudt.org/schema/qudt/",
     "@version": 1.1
   }
 }

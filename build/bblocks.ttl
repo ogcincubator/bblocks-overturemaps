@@ -1,69 +1,85 @@
 @prefix bblocks: <https://www.opengis.net/def/bblocks/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
 @prefix schema: <https://schema.org/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <https://ogcincubator.github.io/bblocks-overturemaps/build/bblocks.ttl> a prov:Entity ;
     dct:format "text/turtle" ;
-    prov:wasAttributedTo _:N36233a0a353d40f5ac0819ff7e5fb993 ;
+    prov:wasAttributedTo _:Nb3057533997a49d799b207dd605be194 ;
     prov:wasGeneratedBy [ a prov:Activity ;
-            prov:endedAtTime "2025-11-13T08:09:40.580616"^^xsd:dateTime ;
-            prov:startedAtTime "2025-11-13T08:09:40.473311"^^xsd:dateTime ;
+            prov:endedAtTime "2025-12-07T17:53:35.120202"^^xsd:dateTime ;
+            prov:startedAtTime "2025-12-07T17:53:35.011979"^^xsd:dateTime ;
             prov:used [ a prov:Entity ;
                     dct:format "application/yaml" ;
                     rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
                 [ a prov:Entity ;
                     dct:format "application/json" ;
-                    dct:hasVersion "git:3fcbffcdc60739da9b7bbf04bbc680e1bdee055f" ;
+                    dct:hasVersion "git:f3b60c28216e156be4a478d131d82996af172bc6" ;
                     rdfs:seeAlso <https://ogcincubator.github.io/bblocks-overturemaps/build/register.json> ] ;
-            prov:wasAssociatedWith _:N36233a0a353d40f5ac0819ff7e5fb993 ] .
+            prov:wasAssociatedWith _:Nb3057533997a49d799b207dd605be194 ] .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.schema> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.schema> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Overture Maps Schema" ;
     dct:abstract "A JSON Schema for the canonical GeoJSON form of Overture Maps Features."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/schema/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.schema" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.schema> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/schema/index.md" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/schema/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/schema/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Overture Maps Schema" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.geo.common.data_types.geojson>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.addresses.address>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.base.bathymetry>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.base.infrastructure>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.base.land>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.base.land_cover>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.base.land_use>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.base.water>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.buildings.building>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.buildings.building_part>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.divisions.division>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.divisions.division_area>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.divisions.division_boundary>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.places.place>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.transportation.connector>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.transportation.segment> ;
-    bblocks:hasJsonLdContext <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/schema/context.jsonld> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/schema/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/schema/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/schema/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/schema/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/schema/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.geo.common.data_types.geojson>,
+        <bblocks://ogc.overturemaps.schemas.addresses.address>,
+        <bblocks://ogc.overturemaps.schemas.base.bathymetry>,
+        <bblocks://ogc.overturemaps.schemas.base.infrastructure>,
+        <bblocks://ogc.overturemaps.schemas.base.land>,
+        <bblocks://ogc.overturemaps.schemas.base.land_cover>,
+        <bblocks://ogc.overturemaps.schemas.base.land_use>,
+        <bblocks://ogc.overturemaps.schemas.base.water>,
+        <bblocks://ogc.overturemaps.schemas.buildings.building>,
+        <bblocks://ogc.overturemaps.schemas.buildings.building_part>,
+        <bblocks://ogc.overturemaps.schemas.divisions.division>,
+        <bblocks://ogc.overturemaps.schemas.divisions.division_area>,
+        <bblocks://ogc.overturemaps.schemas.divisions.division_boundary>,
+        <bblocks://ogc.overturemaps.schemas.places.place>,
+        <bblocks://ogc.overturemaps.schemas.transportation.connector>,
+        <bblocks://ogc.overturemaps.schemas.transportation.segment> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
 <https://docs.overturemaps.org/gers/> rdfs:label "GERS documentation" .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.addresses.address> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.addresses.address> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Address schema" ;
@@ -71,519 +87,798 @@
 The address schema allows up to 5 "admin levels". Rather than have field names that apply across all countries, we provide an array called "address_levels" containing the necessary administrative levels for an address."""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.addresses.address" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/addresses/address/index.json" ],
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.addresses.address> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/addresses/address/index.md" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/addresses/address/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/addresses/address/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Address schema" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "addresses",
         "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.overturemaps.schemas.definitions> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.overturemaps.schemas.definitions> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.base.bathymetry> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.base.bathymetry> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Bathymetry schema" ;
     dct:abstract "Topographic representation of an underwater area, such as a part of the ocean floor."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/bathymetry/index.json" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.bathymetry> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/bathymetry/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.bathymetry" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/bathymetry/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/bathymetry/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Bathymetry schema" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "base",
         "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.overturemaps.schemas.base.definitions>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.definitions> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/bathymetry/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/bathymetry/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/bathymetry/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/bathymetry/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/bathymetry/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.overturemaps.schemas.base.definitions>,
+        <bblocks://ogc.overturemaps.schemas.definitions> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.base.infrastructure> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.base.infrastructure> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Infrastructure schema" ;
     dct:abstract "Various features from OpenStreetMap such as bridges, airport runways, aerialways, or communication towers and lines."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/infrastructure/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.infrastructure" ],
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/infrastructure/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/infrastructure/index.md" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/infrastructure/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.infrastructure> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Infrastructure schema" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "base",
         "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.overturemaps.schemas.base.definitions>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.definitions> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.overturemaps.schemas.base.definitions>,
+        <bblocks://ogc.overturemaps.schemas.definitions> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.base.land> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.base.land> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Land schema" ;
     dct:abstract "Physical representations of land surfaces. Global land derived from the inverse of OSM Coastlines. Translates `natural` tags from OpenStreetMap."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/land/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.land" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.land> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/land/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/land/index.json" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/land/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Land schema" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "base",
         "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.overturemaps.schemas.base.definitions>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.definitions> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.overturemaps.schemas.base.definitions>,
+        <bblocks://ogc.overturemaps.schemas.definitions> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.base.land_cover> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.base.land_cover> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Land Cover schema" ;
     dct:abstract "Representation of the Earth's natural surfaces"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/land_cover/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.land_cover" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.land_cover> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/land_cover/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/land_cover/index.md" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/land_cover/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Land Cover schema" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "base",
         "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.overturemaps.schemas.definitions> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_cover/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.overturemaps.schemas.definitions> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.base.land_use> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.base.land_use> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Land Use schema" ;
     dct:abstract "Land use features from OpenStreetMap"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/land_use/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.land_use" ],
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/land_use/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/land_use/index.md" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/land_use/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.land_use> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Land Use schema" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "base",
         "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.overturemaps.schemas.base.definitions>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.definitions> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.overturemaps.schemas.base.definitions>,
+        <bblocks://ogc.overturemaps.schemas.definitions> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.base.water> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.base.water> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Water schema" ;
     dct:abstract "Physical representations of inland and ocean marine surfaces. Translates `natural` and `waterway` tags from OpenStreetMap."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.water" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/water/index.json" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/water/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/water/index.md" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/water/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.water> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Water schema" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "base",
         "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.overturemaps.schemas.base.definitions>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.definitions> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/water/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/water/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/water/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/water/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/water/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.overturemaps.schemas.base.definitions>,
+        <bblocks://ogc.overturemaps.schemas.definitions> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.buildings.building> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.buildings.building> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Building schema" ;
     dct:abstract "A building is a man-made structure with a roof that exists permanently in one place. Buildings are compatible with GeoJSON Polygon features."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.buildings.building" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/buildings/building/index.json" ],
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.buildings.building> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/buildings/building/index.md" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/buildings/building/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/buildings/building/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Building schema" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "buildings",
         "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.overturemaps.schemas.buildings.definitions>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.definitions> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.overturemaps.schemas.buildings.definitions>,
+        <bblocks://ogc.overturemaps.schemas.definitions> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.buildings.building_part> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.buildings.building_part> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Building Part schema" ;
     dct:abstract "A single building part. Parts describe their shape and color and other properties. Each building part must contain the building with which it is associated."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/buildings/building_part/index.json" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.buildings.building_part> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/buildings/building_part/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.buildings.building_part" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/buildings/building_part/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/buildings/building_part/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Building Part schema" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "buildings",
         "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.overturemaps.schemas.buildings.definitions>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.definitions> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/building_part/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.overturemaps.schemas.buildings.definitions>,
+        <bblocks://ogc.overturemaps.schemas.definitions> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.divisions.division> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.divisions.division> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Division schema" ;
     dct:abstract "Divisions are recognized official or non-official organizations of people as seen from a given political perspective. Examples include countries, provinces, cities, towns, neighborhoods, etc."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.divisions.division" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/divisions/division/index.json" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/divisions/division/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/divisions/division/index.md" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/divisions/division/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.divisions.division> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Division schema" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "divisions",
         "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.overturemaps.schemas.definitions>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.divisions.definitions> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.overturemaps.schemas.definitions>,
+        <bblocks://ogc.overturemaps.schemas.divisions.definitions> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.divisions.division_area> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.divisions.division_area> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Division Area schema" ;
     dct:abstract """Division areas are polygons that represent the land or maritime area covered by a division.
 Each division area belongs to a division which it references by ID, and for which the division area provides an area polygon. For ease of use, every division area repeats the subtype, names, country, and region properties of the division it belongs to."""^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.divisions.division_area" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/divisions/division_area/index.json" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/divisions/division_area/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/divisions/division_area/index.md" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/divisions/division_area/index.md> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.divisions.division_area> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Division Area schema" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "divisions",
         "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.overturemaps.schemas.definitions>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.divisions.definitions> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_area/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_area/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_area/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_area/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_area/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
+    bblocks:dependsOn <bblocks://ogc.overturemaps.schemas.definitions>,
+        <bblocks://ogc.overturemaps.schemas.divisions.definitions> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.divisions.division_boundary> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.divisions.division_boundary> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Boundary schema" ;
     dct:abstract "Boundaries represent borders between divisions of the same subtype. Some boundaries may be disputed by the divisions on one or both sides."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.divisions.division_boundary" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/divisions/division_boundary/index.json> ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.divisions.division_boundary> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/divisions/division_boundary/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/divisions/division_boundary/index.json" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/divisions/division_boundary/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Boundary schema" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "divisions",
         "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.overturemaps.schemas.definitions>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.divisions.definitions> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.overturemaps.schemas.definitions>,
+        <bblocks://ogc.overturemaps.schemas.divisions.definitions> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.gers> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.gers> a skos:Concept,
         dcat:Dataset,
-        bblocks:Schema ;
+        bblocks:Datatype ;
     rdfs:label "Global Entity Reference System identifier" ;
     dct:abstract "The Global Entity Reference System (GERS) is a universal framework for structuring and matching map data across systems."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.gers" ],
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.gers> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/gers/index.json" ],
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/gers/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/gers/index.md" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/gers/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     dct:source <https://docs.overturemaps.org/gers/> ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Global Entity Reference System identifier" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/gers/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/gers/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/gers/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/gers/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.places.definitions> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.places.definitions> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Shared places properties" ;
     dct:abstract "Common schema definitions for places theme"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/places/definitions/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/places/definitions/index.md" ],
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/places/definitions/index.json> ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.places.definitions" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.places.definitions> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/places/definitions/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Shared places properties" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/definitions/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/definitions/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/definitions/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/definitions/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.places.place> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.places.place> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Place schema" ;
     dct:abstract "A Place is a point representation of a real-world facility, service, or amenity. Place features are compatible with GeoJSON Point features."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/places/place/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.places.place" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.places.place> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/places/place/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/places/place/index.md" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/places/place/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Place schema" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "gers",
         "overture-maps",
         "places",
         "schemas" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.overturemaps.schemas.definitions>,
-        <https://ogcincubator.github.io/ogc.overturemaps.schemas.places.definitions> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/places/place/context.jsonld> ;
+            prof:hasRole role:mapping ] ;
+    bblocks:dependsOn <bblocks://ogc.overturemaps.schemas.definitions>,
+        <bblocks://ogc.overturemaps.schemas.places.definitions> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.transportation.connector> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.transportation.connector> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Transportation Connector schema" ;
     dct:abstract "Connectors create physical connections between segments. Connectors are compatible with GeoJSON Point features."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/transportation/connector/index.json" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.transportation.connector> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/transportation/connector/index.json> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/transportation/connector/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.transportation.connector" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/transportation/connector/index.md> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Transportation Connector schema" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "gers",
         "overture-maps",
         "schemas",
         "transportation" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.overturemaps.schemas.definitions> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.overturemaps.schemas.definitions> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.transportation.segment> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.transportation.segment> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Transportation Segment schema" ;
     dct:abstract "Segments are paths which can be traveled by people or things. Segments are compatible with GeoJSON LineString features."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.transportation.segment" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/transportation/segment/index.json" ],
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.transportation.segment> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/transportation/segment/index.md" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/transportation/segment/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/transportation/segment/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Transportation Segment schema" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "gers",
         "overture-maps",
         "schemas",
         "transportation" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.overturemaps.schemas.definitions> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/segment/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/segment/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/segment/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/segment/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/segment/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.overturemaps.schemas.definitions> ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/transportation/segment/context.jsonld> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed false .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.buildings.definitions> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.buildings.definitions> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Overture Maps Shared Building Properties" ;
     dct:abstract "Common schema definitions shared by building footprints and building parts"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.buildings.definitions" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/buildings/definitions/index.json" ],
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.buildings.definitions> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/buildings/definitions/index.md" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/buildings/definitions/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/buildings/definitions/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Overture Maps Shared Building Properties" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/definitions/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/definitions/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/definitions/schema.yaml> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/buildings/definitions/schema.json> ;
+            prof:hasRole role:schema ] ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.divisions.definitions> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.divisions.definitions> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Shared divisions properties" ;
     dct:abstract "Common schema definitions for divisions theme"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/divisions/definitions/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.divisions.definitions" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.divisions.definitions> ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/divisions/definitions/index.md" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/divisions/definitions/index.md> ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/divisions/definitions/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Shared divisions properties" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.overturemaps.schemas.definitions> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/definitions/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/definitions/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/definitions/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/definitions/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.overturemaps.schemas.definitions> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.base.definitions> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.base.definitions> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Base layer properties" ;
     dct:abstract "Common schema definitions the base theme (primarily from OSM)"^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/definitions/index.md" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.definitions> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/base/definitions/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/definitions/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.base.definitions" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/base/definitions/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Base layer properties" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.overturemaps.schemas.definitions> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/definitions/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.overturemaps.schemas.definitions> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
-<https://ogcincubator.github.io/ogc.overturemaps.schemas.definitions> a skos:Concept,
+<bblocks://ogc.overturemaps.schemas.definitions> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Overture Maps Feature Schema Common definitions" ;
     dct:abstract "Common schema definitions shared by all themes."^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
     dct:created "2025-11-05T14:07:00+01:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/definitions/index.md" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.definitions> ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/markdown/overturemaps/schemas/definitions/index.md> ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/definitions/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/bblocks-overturemaps/bblock/ogc.overturemaps.schemas.definitions" ] ;
+            rdfs:isDefinedBy <https://ogcincubator.github.io/bblocks-overturemaps/build/generateddocs/json-full/overturemaps/schemas/definitions/index.json> ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-11-13"^^xsd:date ;
+    dct:modified "2025-12-07"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    skos:prefLabel "Overture Maps Feature Schema Common definitions" ;
+    skos:topConceptOf <https://ogcincubator.github.io/bblocks-overturemaps/> ;
     dcat:keyword "gers",
         "overture-maps",
         "schemas" ;
-    bblocks:dependsOn <https://ogcincubator.github.io/ogc.overturemaps.schemas.gers> ;
-    bblocks:hasSchema <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json>,
-        <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml> ;
-    bblocks:status <http://www.opengis.net/def/status/under-development> .
+    prof:hasResource [ dct:conformsTo <https://www.w3.org/TR/json-ld11/> ;
+            dct:format "application/ld+json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/context.jsonld> ;
+            prof:hasRole role:mapping ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/json" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.json> ;
+            prof:hasRole role:schema ],
+        [ dct:conformsTo <https://json-schema.org/draft/2020-12/schema> ;
+            dct:format "application/yaml" ;
+            prof:hasArtifact <https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/definitions/schema.yaml> ;
+            prof:hasRole role:schema ] ;
+    bblocks:dependsOn <bblocks://ogc.overturemaps.schemas.gers> ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/definitions/context.jsonld> ;
+    bblocks:status <http://www.opengis.net/def/status/under-development> ;
+    bblocks:validationPassed true .
 
 <https://ogcincubator.github.io/bblocks-overturemaps/> a skos:ConceptScheme,
         dcat:Catalog ;
     rdfs:label "Building Blocks - Overture Maps" ;
     dct:abstract """This repository contains GERS and other Overture Maps-related building blocks.
 """^^<https://www.w3.org/ns/iana/media-types/text/markdown> ;
+    dct:modified "2025-12-07T17:53:23.937927"^^xsd:dateTime ;
+    owl:imports <https://opengeospatial.github.io/bblocks/register.json> ;
+    skos:hasTopConcept <bblocks://ogc.overturemaps.schemas.addresses.address>,
+        <bblocks://ogc.overturemaps.schemas.base.bathymetry>,
+        <bblocks://ogc.overturemaps.schemas.base.definitions>,
+        <bblocks://ogc.overturemaps.schemas.base.infrastructure>,
+        <bblocks://ogc.overturemaps.schemas.base.land>,
+        <bblocks://ogc.overturemaps.schemas.base.land_cover>,
+        <bblocks://ogc.overturemaps.schemas.base.land_use>,
+        <bblocks://ogc.overturemaps.schemas.base.water>,
+        <bblocks://ogc.overturemaps.schemas.buildings.building>,
+        <bblocks://ogc.overturemaps.schemas.buildings.building_part>,
+        <bblocks://ogc.overturemaps.schemas.buildings.definitions>,
+        <bblocks://ogc.overturemaps.schemas.definitions>,
+        <bblocks://ogc.overturemaps.schemas.divisions.definitions>,
+        <bblocks://ogc.overturemaps.schemas.divisions.division>,
+        <bblocks://ogc.overturemaps.schemas.divisions.division_area>,
+        <bblocks://ogc.overturemaps.schemas.divisions.division_boundary>,
+        <bblocks://ogc.overturemaps.schemas.gers>,
+        <bblocks://ogc.overturemaps.schemas.places.definitions>,
+        <bblocks://ogc.overturemaps.schemas.places.place>,
+        <bblocks://ogc.overturemaps.schemas.schema>,
+        <bblocks://ogc.overturemaps.schemas.transportation.connector>,
+        <bblocks://ogc.overturemaps.schemas.transportation.segment> ;
     skos:prefLabel "Building Blocks - Overture Maps" ;
-    bblocks:hasValidationReport <https://ogcincubator.github.io/bblocks-overturemaps/build/tests/report.html> ;
-    bblocks:imports <https://opengeospatial.github.io/bblocks/register.json> .
+    foaf:homepage <https://ogcincubator.github.io/bblocks-overturemaps/> ;
+    bblocks:hasValidationReport <https://ogcincubator.github.io/bblocks-overturemaps/build/tests/report.html> .
 
-_:N36233a0a353d40f5ac0819ff7e5fb993 a prov:Agent,
+_:Nb3057533997a49d799b207dd605be194 a prov:Agent,
         schema:SoftwareApplication ;
     rdfs:label "OGC-NA tools" ;
-    dct:hasVersion "0.4.9" ;
+    dct:hasVersion "0.5.3" ;
     rdfs:seeAlso <https://github.com/opengeospatial/ogc-na-tools> .
 

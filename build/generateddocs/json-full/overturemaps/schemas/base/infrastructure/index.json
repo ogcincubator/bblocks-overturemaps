@@ -7,7 +7,7 @@
   "abstract": "Various features from OpenStreetMap such as bridges, airport runways, aerialways, or communication towers and lines.",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
-  "dateOfLastChange": "2025-11-13",
+  "dateOfLastChange": "2025-12-07",
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
@@ -26,9 +26,10 @@
     "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/infrastructure/schema.yaml",
+  "ldContext": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/infrastructure/",
   "rdfData": [],
-  "validationPassed": true,
+  "validationPassed": false,
   "testOutputs": "https://github.com/ogcincubator/bblocks-overturemaps/blob/master/build/tests/overturemaps/schemas/base/infrastructure/",
   "examples": [
     {
@@ -38,6 +39,16 @@
           "ref": "examples/infrastructure-example.yaml",
           "code": "{\n  \"id\": \"08b2748cc1383fff0001b38438099b73\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -85.6743541,\n          42.9676009\n        ],\n        [\n          -85.6743623,\n          42.9674649\n        ],\n        [\n          -85.6744114,\n          42.9674803\n        ],\n        [\n          -85.6744559,\n          42.9674919\n        ],\n        [\n          -85.6745302,\n          42.9675058\n        ],\n        [\n          -85.6746036,\n          42.9675151\n        ],\n        [\n          -85.6746959,\n          42.9675171\n        ],\n        [\n          -85.675835,\n          42.9674967\n        ],\n        [\n          -85.6758985,\n          42.9674915\n        ],\n        [\n          -85.6759656,\n          42.967483\n        ],\n        [\n          -85.6760399,\n          42.9674711\n        ],\n        [\n          -85.676099,\n          42.9674566\n        ],\n        [\n          -85.6761817,\n          42.9674324\n        ],\n        [\n          -85.676227,\n          42.9674184\n        ],\n        [\n          -85.6762149,\n          42.9675911\n        ],\n        [\n          -85.6761726,\n          42.9675857\n        ],\n        [\n          -85.676106,\n          42.9675781\n        ],\n        [\n          -85.6760499,\n          42.9675741\n        ],\n        [\n          -85.6759947,\n          42.9675723\n        ],\n        [\n          -85.6743541,\n          42.9676009\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"base\",\n    \"type\": \"infrastructure\",\n    \"subtype\": \"bridge\",\n    \"class\": \"bridge\",\n    \"names\": {\n      \"primary\": \"Gillett Bridge\",\n      \"rules\": [\n        {\n          \"variant\": \"alternate\",\n          \"value\": \"Interurban Bridge\"\n        }\n      ]\n    },\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"record_id\": \"w556368546@3\",\n        \"dataset\": \"OpenStreetMap\"\n      }\n    ],\n    \"version\": 0\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/base/infrastructure/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/context.jsonld\",\n  \"id\": \"08b2748cc1383fff0001b38438099b73\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -85.6743541,\n          42.9676009\n        ],\n        [\n          -85.6743623,\n          42.9674649\n        ],\n        [\n          -85.6744114,\n          42.9674803\n        ],\n        [\n          -85.6744559,\n          42.9674919\n        ],\n        [\n          -85.6745302,\n          42.9675058\n        ],\n        [\n          -85.6746036,\n          42.9675151\n        ],\n        [\n          -85.6746959,\n          42.9675171\n        ],\n        [\n          -85.675835,\n          42.9674967\n        ],\n        [\n          -85.6758985,\n          42.9674915\n        ],\n        [\n          -85.6759656,\n          42.967483\n        ],\n        [\n          -85.6760399,\n          42.9674711\n        ],\n        [\n          -85.676099,\n          42.9674566\n        ],\n        [\n          -85.6761817,\n          42.9674324\n        ],\n        [\n          -85.676227,\n          42.9674184\n        ],\n        [\n          -85.6762149,\n          42.9675911\n        ],\n        [\n          -85.6761726,\n          42.9675857\n        ],\n        [\n          -85.676106,\n          42.9675781\n        ],\n        [\n          -85.6760499,\n          42.9675741\n        ],\n        [\n          -85.6759947,\n          42.9675723\n        ],\n        [\n          -85.6743541,\n          42.9676009\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"base\",\n    \"type\": \"infrastructure\",\n    \"subtype\": \"bridge\",\n    \"class\": \"bridge\",\n    \"names\": {\n      \"primary\": \"Gillett Bridge\",\n      \"rules\": [\n        {\n          \"variant\": \"alternate\",\n          \"value\": \"Interurban Bridge\"\n        }\n      ]\n    },\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"record_id\": \"w556368546@3\",\n        \"dataset\": \"OpenStreetMap\"\n      }\n    ],\n    \"version\": 0\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/base/infrastructure/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/base/infrastructure/example_1_1.ttl"
         }
       ]
     },
@@ -48,6 +59,16 @@
           "ref": "examples/infrastructure-height-example.yaml",
           "code": "{\n  \"id\": \"08b4035ac1518fff0001a9e45d5e1c9d\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      111.5341723,\n      25.1110193\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"base\",\n    \"type\": \"infrastructure\",\n    \"subtype\": \"power\",\n    \"class\": \"generator\",\n    \"height\": 160.0,\n    \"names\": {\n      \"primary\": \"DEW-G5000-195\"\n    },\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"record_id\": \"n10707323715@5\",\n        \"dataset\": \"OpenStreetMap\"\n      }\n    ],\n    \"version\": 0\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/base/infrastructure/example_2_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/infrastructure/context.jsonld\",\n  \"id\": \"08b4035ac1518fff0001a9e45d5e1c9d\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      111.5341723,\n      25.1110193\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"base\",\n    \"type\": \"infrastructure\",\n    \"subtype\": \"power\",\n    \"class\": \"generator\",\n    \"height\": 160.0,\n    \"names\": {\n      \"primary\": \"DEW-G5000-195\"\n    },\n    \"sources\": [\n      {\n        \"property\": \"\",\n        \"record_id\": \"n10707323715@5\",\n        \"dataset\": \"OpenStreetMap\"\n      }\n    ],\n    \"version\": 0\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/base/infrastructure/example_2_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/base/infrastructure/example_2_1.ttl"
         }
       ]
     }

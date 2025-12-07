@@ -7,7 +7,7 @@
   "abstract": "Connectors create physical connections between segments. Connectors are compatible with GeoJSON Point features.",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
-  "dateOfLastChange": "2025-11-13",
+  "dateOfLastChange": "2025-12-07",
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
@@ -25,9 +25,10 @@
     "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/transportation/connector/schema.yaml",
+  "ldContext": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/transportation/connector/",
   "rdfData": [],
-  "validationPassed": true,
+  "validationPassed": false,
   "testOutputs": "https://github.com/ogcincubator/bblocks-overturemaps/blob/master/build/tests/overturemaps/schemas/transportation/connector/",
   "examples": [
     {
@@ -37,6 +38,16 @@
           "ref": "examples/timestamp-with-tz-offset.yaml",
           "code": "{\n  \"id\": \"timestamp-with-tz-offset\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 0\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/context.jsonld\",\n  \"id\": \"timestamp-with-tz-offset\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 0\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_1_1.ttl"
         }
       ]
     },
@@ -47,6 +58,16 @@
           "ref": "examples/connector.yaml",
           "code": "{\n  \"id\": \"overture:transportation:connector:example\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 0\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_2_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/context.jsonld\",\n  \"id\": \"overture:transportation:connector:example\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 0\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_2_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_2_1.ttl"
         }
       ]
     },
@@ -57,6 +78,16 @@
           "ref": "examples/connector.yaml",
           "code": "{\n  \"id\": \"overture:transportation:connector:example\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 0\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_3_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/context.jsonld\",\n  \"id\": \"overture:transportation:connector:example\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      0,\n      0\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 0\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_3_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_3_1.ttl"
         }
       ]
     },
@@ -67,6 +98,16 @@
           "ref": "examples/turn-restriction-01-connector1.yaml",
           "code": "{\n  \"id\": \"overture:transportation:example:simple-turn-restriction-connector1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -113.57831482025354,\n      50.018860947117304\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 0\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_4_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/context.jsonld\",\n  \"id\": \"overture:transportation:example:simple-turn-restriction-connector1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -113.57831482025354,\n      50.018860947117304\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 0\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_4_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_4_1.ttl"
         }
       ]
     },
@@ -77,6 +118,16 @@
           "ref": "examples/turn-restriction-01-connector2.yaml",
           "code": "{\n  \"id\": \"overture:transportation:example:simple-turn-restriction-connector2\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -113.57851814418316,\n      50.01923724443006\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 1\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_5_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/context.jsonld\",\n  \"id\": \"overture:transportation:example:simple-turn-restriction-connector2\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -113.57851814418316,\n      50.01923724443006\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 1\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_5_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_5_1.ttl"
         }
       ]
     },
@@ -87,6 +138,16 @@
           "ref": "examples/turn-restriction-01-connector3.yaml",
           "code": "{\n  \"id\": \"overture:transportation:example:simple-turn-restriction-connector3\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -113.57816369068271,\n      50.01919400284882\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 1\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_6_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/context.jsonld\",\n  \"id\": \"overture:transportation:example:simple-turn-restriction-connector3\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -113.57816369068271,\n      50.01919400284882\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 1\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_6_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_6_1.ttl"
         }
       ]
     },
@@ -97,6 +158,16 @@
           "ref": "examples/turn-restriction-02-connector1.yaml",
           "code": "{\n  \"id\": \"overture:transportation:example:via-turn-restriction-connector1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -71.11234408150312,\n      42.30149091145671\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 1\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_7_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/context.jsonld\",\n  \"id\": \"overture:transportation:example:via-turn-restriction-connector1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -71.11234408150312,\n      42.30149091145671\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 1\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_7_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_7_1.ttl"
         }
       ]
     },
@@ -107,6 +178,16 @@
           "ref": "examples/turn-restriction-02-connector2.yaml",
           "code": "{\n  \"id\": \"overture:transportation:example:via-turn-restriction-connector2\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -71.11248901211202,\n      42.3013264259736\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 1\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_8_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/transportation/connector/context.jsonld\",\n  \"id\": \"overture:transportation:example:via-turn-restriction-connector2\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -71.11248901211202,\n      42.3013264259736\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"transportation\",\n    \"type\": \"connector\",\n    \"version\": 1\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_8_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/transportation/connector/example_8_1.ttl"
         }
       ]
     }

@@ -2,8 +2,8 @@
   "title": "Validation report for ogc.overturemaps.schemas.places.place - Place schema",
   "bblockName": "Place schema",
   "bblockId": "ogc.overturemaps.schemas.places.place",
-  "generated": "2025-11-13T08:09:37.277874+00:00",
-  "result": true,
+  "generated": "2025-12-07T17:53:29.608578+00:00",
+  "result": false,
   "items": [
     {
       "source": {
@@ -15,7 +15,7 @@
         "snippetIndex": 1,
         "language": "application/json"
       },
-      "result": true,
+      "result": false,
       "sections": [
         {
           "name": "FILES",
@@ -24,6 +24,25 @@
             {
               "isError": false,
               "message": "Using example_1_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_1_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_1_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_1_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_1_1.ttl created"
             }
           ]
         },
@@ -51,7 +70,7 @@
         "snippetIndex": 1,
         "language": "application/json"
       },
-      "result": true,
+      "result": false,
       "sections": [
         {
           "name": "FILES",
@@ -60,6 +79,25 @@
             {
               "isError": false,
               "message": "Using example_2_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_2_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_2_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_2_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_2_1.ttl created"
             }
           ]
         },
@@ -87,7 +125,7 @@
         "snippetIndex": 1,
         "language": "application/json"
       },
-      "result": true,
+      "result": false,
       "sections": [
         {
           "name": "FILES",
@@ -96,6 +134,25 @@
             {
               "isError": false,
               "message": "Using example_3_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_3_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_3_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_3_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_3_1.ttl created"
             }
           ]
         },
@@ -123,7 +180,7 @@
         "snippetIndex": 1,
         "language": "application/json"
       },
-      "result": true,
+      "result": false,
       "sections": [
         {
           "name": "FILES",
@@ -132,6 +189,25 @@
             {
               "isError": false,
               "message": "Using example_4_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_4_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_4_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_4_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_4_1.ttl created"
             }
           ]
         },
@@ -159,7 +235,7 @@
         "snippetIndex": 1,
         "language": "application/json"
       },
-      "result": true,
+      "result": false,
       "sections": [
         {
           "name": "FILES",
@@ -168,6 +244,25 @@
             {
               "isError": false,
               "message": "Using example_5_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_5_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_5_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_5_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_5_1.ttl created"
             }
           ]
         },
@@ -195,7 +290,7 @@
         "snippetIndex": 1,
         "language": "application/json"
       },
-      "result": true,
+      "result": false,
       "sections": [
         {
           "name": "FILES",
@@ -204,6 +299,25 @@
             {
               "isError": false,
               "message": "Using example_6_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_6_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_6_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_6_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_6_1.ttl created"
             }
           ]
         },
@@ -231,7 +345,7 @@
         "snippetIndex": 1,
         "language": "application/json"
       },
-      "result": true,
+      "result": false,
       "sections": [
         {
           "name": "FILES",
@@ -240,6 +354,25 @@
             {
               "isError": false,
               "message": "Using example_7_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_7_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_7_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_7_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_7_1.ttl created"
             }
           ]
         },
@@ -267,7 +400,7 @@
         "snippetIndex": 1,
         "language": "application/json"
       },
-      "result": true,
+      "result": false,
       "sections": [
         {
           "name": "FILES",
@@ -276,6 +409,25 @@
             {
               "isError": false,
               "message": "Using example_8_1.json from examples"
+            },
+            {
+              "op": "jsonld-uplift",
+              "isError": false,
+              "message": "JSON-LD context is present - uplifting"
+            },
+            {
+              "op": "jsonld-create",
+              "filename": "example_8_1.jsonld",
+              "isError": false,
+              "message": "Output JSON-LD example_8_1.jsonld created"
+            },
+            {
+              "op": "ttl-create",
+              "empty": true,
+              "filename": "example_8_1.ttl",
+              "size": 0,
+              "isError": true,
+              "message": "**Empty** output Turtle example_8_1.ttl created"
             }
           ]
         },
@@ -297,7 +449,7 @@
   "globalErrors": {},
   "counts": {
     "total": 8,
-    "passed": 8,
-    "failed": 0
+    "passed": 0,
+    "failed": 8
   }
 }

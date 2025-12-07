@@ -1,0 +1,25 @@
+path	@id
+/id	
+/geometry	
+/geometry/type	
+/geometry/coordinates	
+/geometry/bbox	
+/properties	
+/properties/theme	
+/properties/type	
+/properties/version	
+/properties/sources	
+/properties/sources/between	
+/properties/sources/property	
+/properties/sources/dataset	
+/properties/sources/license	
+/properties/sources/record_id	
+/properties/sources/update_time	
+/properties/sources/confidence	
+/properties/level	
+/properties/cartography	
+/properties/cartography/prominence	
+/properties/cartography/min_zoom	
+/properties/cartography/max_zoom	
+/properties/cartography/sort_key	
+/properties/depth	

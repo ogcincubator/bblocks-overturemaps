@@ -7,7 +7,7 @@
   "abstract": "Land use features from OpenStreetMap",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
-  "dateOfLastChange": "2025-11-13",
+  "dateOfLastChange": "2025-12-07",
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
@@ -26,9 +26,10 @@
     "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/land_use/schema.yaml",
+  "ldContext": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/base/land_use/",
   "rdfData": [],
-  "validationPassed": true,
+  "validationPassed": false,
   "testOutputs": "https://github.com/ogcincubator/bblocks-overturemaps/blob/master/build/tests/overturemaps/schemas/base/land_use/",
   "examples": [
     {
@@ -38,6 +39,16 @@
           "ref": "examples/land-use-example.yaml",
           "code": "{\n  \"id\": \"overture:land_use:example:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -83.8710175,\n          10.3469578\n        ],\n        [\n          -83.8700924,\n          10.3470179\n        ],\n        [\n          -83.870043,\n          10.3462819\n        ],\n        [\n          -83.8709681,\n          10.3462218\n        ],\n        [\n          -83.8710175,\n          10.3469578\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"base\",\n    \"type\": \"land_use\",\n    \"subtype\": \"recreation\",\n    \"class\": \"pitch\",\n    \"surface\": \"recreation_grass\",\n    \"source_tags\": {\n      \"leisure\": \"pitch\",\n      \"sport\": \"soccer\"\n    },\n    \"names\": {\n      \"primary\": \"Plaza Deportes Finca Tres\"\n    },\n    \"sources\": [\n      {\n        \"record_id\": \"w509487233@1\",\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\"\n      }\n    ],\n    \"version\": 0\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/base/land_use/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/base/land_use/context.jsonld\",\n  \"id\": \"overture:land_use:example:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Polygon\",\n    \"coordinates\": [\n      [\n        [\n          -83.8710175,\n          10.3469578\n        ],\n        [\n          -83.8700924,\n          10.3470179\n        ],\n        [\n          -83.870043,\n          10.3462819\n        ],\n        [\n          -83.8709681,\n          10.3462218\n        ],\n        [\n          -83.8710175,\n          10.3469578\n        ]\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"base\",\n    \"type\": \"land_use\",\n    \"subtype\": \"recreation\",\n    \"class\": \"pitch\",\n    \"surface\": \"recreation_grass\",\n    \"source_tags\": {\n      \"leisure\": \"pitch\",\n      \"sport\": \"soccer\"\n    },\n    \"names\": {\n      \"primary\": \"Plaza Deportes Finca Tres\"\n    },\n    \"sources\": [\n      {\n        \"record_id\": \"w509487233@1\",\n        \"property\": \"\",\n        \"dataset\": \"OpenStreetMap\"\n      }\n    ],\n    \"version\": 0\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/base/land_use/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/base/land_use/example_1_1.ttl"
         }
       ]
     }

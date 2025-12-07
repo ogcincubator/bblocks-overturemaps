@@ -1,0 +1,20 @@
+@prefix ns1: <osm:> .
+@prefix om: <https://w3id.org/ogc/om/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] om:hasLevel -1 ;
+    om:hasSpeedLimit [ om:hasMaxSpeed [ qudt:hasUnit "km/h" ;
+                    rdf:value 30 ] ;
+            om:when "{\"during\":\"Mo-Sa 09:00-12:00, We 15:00-18:00\"}"^^rdf:JSON ],
+        [ om:hasMaxSpeed [ qudt:hasUnit "mph" ;
+                    rdf:value 55 ] ;
+            om:when "{\"mode\":[\"truck\"]}"^^rdf:JSON ],
+        [ om:hasMaxSpeed [ qudt:hasUnit "mph" ;
+                    rdf:value 110 ] ;
+            om:hasMinSpeed [ qudt:hasUnit "km/h" ;
+                    rdf:value 90 ] ;
+            om:isMaxSpeedVariable true ] ;
+    ns1:hasSurfaceType <https://w3id.org/ogc/om/surfaces/gravel> .
+

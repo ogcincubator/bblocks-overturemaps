@@ -7,7 +7,7 @@
   "abstract": "Addresses are geographic points used for locating businesses and individuals. The rules, fields, and fieldnames of an address can vary extensively between locations. We use a simplified schema to capture worldwide address points. This initial schema is largely based on the OpenAddresses (www.openaddresses.io) project.\nThe address schema allows up to 5 \"admin levels\". Rather than have field names that apply across all countries, we provide an array called \"address_levels\" containing the necessary administrative levels for an address.",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
-  "dateOfLastChange": "2025-11-13",
+  "dateOfLastChange": "2025-12-07",
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
@@ -25,9 +25,10 @@
     "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/addresses/address/schema.yaml",
+  "ldContext": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/addresses/address/",
   "rdfData": [],
-  "validationPassed": true,
+  "validationPassed": false,
   "testOutputs": "https://github.com/ogcincubator/bblocks-overturemaps/blob/master/build/tests/overturemaps/schemas/addresses/address/",
   "examples": [
     {
@@ -37,6 +38,16 @@
           "ref": "examples/address.yaml",
           "code": "{\n  \"id\": \"overture:addresses:address:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -71.2086153,\n      42.3373725\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"addresses\",\n    \"type\": \"address\",\n    \"version\": 0,\n    \"country\": \"US\",\n    \"address_levels\": [\n      {\n        \"value\": \"MA\"\n      },\n      {\n        \"value\": \"NEWTON CENTRE\"\n      }\n    ],\n    \"postcode\": \"02459\",\n    \"street\": \"COMMONWEALTH AVE\",\n    \"number\": \"1000\"\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/addresses/address/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/context.jsonld\",\n  \"id\": \"overture:addresses:address:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -71.2086153,\n      42.3373725\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"addresses\",\n    \"type\": \"address\",\n    \"version\": 0,\n    \"country\": \"US\",\n    \"address_levels\": [\n      {\n        \"value\": \"MA\"\n      },\n      {\n        \"value\": \"NEWTON CENTRE\"\n      }\n    ],\n    \"postcode\": \"02459\",\n    \"street\": \"COMMONWEALTH AVE\",\n    \"number\": \"1000\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/addresses/address/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/addresses/address/example_1_1.ttl"
         }
       ]
     },
@@ -47,6 +58,16 @@
           "ref": "examples/address_all_missing_address_levels.yaml",
           "code": "{\n  \"id\": \"overture:addresses:addres:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -71.2086153,\n      42.3373725\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"addresses\",\n    \"type\": \"address\",\n    \"version\": 0,\n    \"country\": \"US\",\n    \"address_levels\": [\n      {},\n      {}\n    ],\n    \"postcode\": \"02459\",\n    \"street\": \"COMMONWEALTH AVE\",\n    \"number\": \"1000\"\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/addresses/address/example_2_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/context.jsonld\",\n  \"id\": \"overture:addresses:addres:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -71.2086153,\n      42.3373725\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"addresses\",\n    \"type\": \"address\",\n    \"version\": 0,\n    \"country\": \"US\",\n    \"address_levels\": [\n      {},\n      {}\n    ],\n    \"postcode\": \"02459\",\n    \"street\": \"COMMONWEALTH AVE\",\n    \"number\": \"1000\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/addresses/address/example_2_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/addresses/address/example_2_1.ttl"
         }
       ]
     },
@@ -57,6 +78,16 @@
           "ref": "examples/address_missing_address_level.yaml",
           "code": "{\n  \"id\": \"overture:addresses:addres:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -71.2086153,\n      42.3373725\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"addresses\",\n    \"type\": \"address\",\n    \"version\": 0,\n    \"country\": \"US\",\n    \"address_levels\": [\n      {\n        \"value\": \"MA\"\n      },\n      {}\n    ],\n    \"postcode\": \"02459\",\n    \"street\": \"COMMONWEALTH AVE\",\n    \"number\": \"1000\"\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/addresses/address/example_3_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/context.jsonld\",\n  \"id\": \"overture:addresses:addres:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -71.2086153,\n      42.3373725\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"addresses\",\n    \"type\": \"address\",\n    \"version\": 0,\n    \"country\": \"US\",\n    \"address_levels\": [\n      {\n        \"value\": \"MA\"\n      },\n      {}\n    ],\n    \"postcode\": \"02459\",\n    \"street\": \"COMMONWEALTH AVE\",\n    \"number\": \"1000\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/addresses/address/example_3_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/addresses/address/example_3_1.ttl"
         }
       ]
     },
@@ -67,6 +98,16 @@
           "ref": "examples/address_postal_city.yaml",
           "code": "{\n  \"id\": \"overture:addresses:address:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -71.2086153,\n      42.3373725\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"addresses\",\n    \"type\": \"address\",\n    \"version\": 0,\n    \"country\": \"US\",\n    \"address_levels\": [\n      {\n        \"value\": \"MA\"\n      },\n      {\n        \"value\": \"NEWTON CENTRE\"\n      }\n    ],\n    \"postcode\": \"02459\",\n    \"street\": \"COMMONWEALTH AVE\",\n    \"number\": \"1000\",\n    \"postal_city\": \"Some City\"\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/addresses/address/example_4_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/addresses/address/context.jsonld\",\n  \"id\": \"overture:addresses:address:1\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"Point\",\n    \"coordinates\": [\n      -71.2086153,\n      42.3373725\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"addresses\",\n    \"type\": \"address\",\n    \"version\": 0,\n    \"country\": \"US\",\n    \"address_levels\": [\n      {\n        \"value\": \"MA\"\n      },\n      {\n        \"value\": \"NEWTON CENTRE\"\n      }\n    ],\n    \"postcode\": \"02459\",\n    \"street\": \"COMMONWEALTH AVE\",\n    \"number\": \"1000\",\n    \"postal_city\": \"Some City\"\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/addresses/address/example_4_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/addresses/address/example_4_1.ttl"
         }
       ]
     }

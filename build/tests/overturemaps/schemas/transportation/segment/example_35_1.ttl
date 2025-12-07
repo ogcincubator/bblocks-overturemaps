@@ -1,0 +1,4 @@
+@prefix ns1: <osm:> .
+
+[] ns1:hasSurfaceType <https://w3id.org/ogc/om/surfaces/unknown> .
+

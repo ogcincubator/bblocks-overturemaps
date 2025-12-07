@@ -7,7 +7,7 @@
   "abstract": "Boundaries represent borders between divisions of the same subtype. Some boundaries may be disputed by the divisions on one or both sides.",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
-  "dateOfLastChange": "2025-11-13",
+  "dateOfLastChange": "2025-12-07",
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
@@ -18,17 +18,18 @@
   ],
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.overturemaps.schemas.definitions",
-    "ogc.overturemaps.schemas.divisions.definitions"
+    "ogc.overturemaps.schemas.divisions.definitions",
+    "ogc.overturemaps.schemas.definitions"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.yaml",
     "application/json": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/schema.json"
   },
   "sourceSchema": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/divisions/division_boundary/schema.yaml",
+  "ldContext": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/context.jsonld",
   "sourceFiles": "https://ogcincubator.github.io/bblocks-overturemaps/_sources/schemas/divisions/division_boundary/",
   "rdfData": [],
-  "validationPassed": true,
+  "validationPassed": false,
   "testOutputs": "https://github.com/ogcincubator/bblocks-overturemaps/blob/master/build/tests/overturemaps/schemas/divisions/division_boundary/",
   "examples": [
     {
@@ -38,6 +39,16 @@
           "ref": "examples/disputed.yaml",
           "code": "{\n  \"id\": \"example:division_boundary:disputed_both\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        0,\n        1\n      ],\n      [\n        1,\n        2\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division_boundary\",\n    \"version\": 1,\n    \"subtype\": \"country\",\n    \"class\": \"land\",\n    \"is_land\": true,\n    \"is_territorial\": false,\n    \"division_ids\": [\n      \"example:division:country:left\",\n      \"example:division:country:right\"\n    ],\n    \"is_disputed\": true,\n    \"perspectives\": {\n      \"mode\": \"disputed_by\",\n      \"countries\": [\n        \"XX\"\n      ]\n    }\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_1_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/context.jsonld\",\n  \"id\": \"example:division_boundary:disputed_both\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        0,\n        1\n      ],\n      [\n        1,\n        2\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division_boundary\",\n    \"version\": 1,\n    \"subtype\": \"country\",\n    \"class\": \"land\",\n    \"is_land\": true,\n    \"is_territorial\": false,\n    \"division_ids\": [\n      \"example:division:country:left\",\n      \"example:division:country:right\"\n    ],\n    \"is_disputed\": true,\n    \"perspectives\": {\n      \"mode\": \"disputed_by\",\n      \"countries\": [\n        \"XX\"\n      ]\n    }\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_1_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_1_1.ttl"
         }
       ]
     },
@@ -48,6 +59,16 @@
           "ref": "examples/disputed_both.yaml",
           "code": "{\n  \"id\": \"example:division_boundary:disputed_both\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        0,\n        1\n      ],\n      [\n        1,\n        2\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division_boundary\",\n    \"version\": 1,\n    \"subtype\": \"country\",\n    \"class\": \"land\",\n    \"is_land\": true,\n    \"is_territorial\": false,\n    \"division_ids\": [\n      \"example:division:country:left\",\n      \"example:division:country:right\"\n    ],\n    \"is_disputed\": true,\n    \"perspectives\": {\n      \"mode\": \"disputed_by\",\n      \"countries\": [\n        \"XX\",\n        \"XY\"\n      ]\n    }\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_2_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/context.jsonld\",\n  \"id\": \"example:division_boundary:disputed_both\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        0,\n        1\n      ],\n      [\n        1,\n        2\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division_boundary\",\n    \"version\": 1,\n    \"subtype\": \"country\",\n    \"class\": \"land\",\n    \"is_land\": true,\n    \"is_territorial\": false,\n    \"division_ids\": [\n      \"example:division:country:left\",\n      \"example:division:country:right\"\n    ],\n    \"is_disputed\": true,\n    \"perspectives\": {\n      \"mode\": \"disputed_by\",\n      \"countries\": [\n        \"XX\",\n        \"XY\"\n      ]\n    }\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_2_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_2_1.ttl"
         }
       ]
     },
@@ -58,6 +79,16 @@
           "ref": "examples/is_land.yaml",
           "code": "{\n  \"id\": \"example:division_boundary:is_land:country:us\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        0,\n        1\n      ],\n      [\n        1,\n        2\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division_boundary\",\n    \"version\": 1,\n    \"subtype\": \"country\",\n    \"is_land\": true,\n    \"is_territorial\": false,\n    \"class\": \"land\",\n    \"division_ids\": [\n      \"example:division:country:left\",\n      \"example:division:country:right\"\n    ]\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_3_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/context.jsonld\",\n  \"id\": \"example:division_boundary:is_land:country:us\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        0,\n        1\n      ],\n      [\n        1,\n        2\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division_boundary\",\n    \"version\": 1,\n    \"subtype\": \"country\",\n    \"is_land\": true,\n    \"is_territorial\": false,\n    \"class\": \"land\",\n    \"division_ids\": [\n      \"example:division:country:left\",\n      \"example:division:country:right\"\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_3_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_3_1.ttl"
         }
       ]
     },
@@ -68,6 +99,16 @@
           "ref": "examples/is_territorial.yaml",
           "code": "{\n  \"id\": \"example:division_boundary:is_territorial:country:fi\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        0,\n        1\n      ],\n      [\n        1,\n        2\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division_boundary\",\n    \"version\": 1,\n    \"subtype\": \"country\",\n    \"is_territorial\": true,\n    \"is_land\": false,\n    \"class\": \"maritime\",\n    \"division_ids\": [\n      \"example:division:country:left\",\n      \"example:division:country:right\"\n    ]\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_4_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/context.jsonld\",\n  \"id\": \"example:division_boundary:is_territorial:country:fi\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        0,\n        1\n      ],\n      [\n        1,\n        2\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division_boundary\",\n    \"version\": 1,\n    \"subtype\": \"country\",\n    \"is_territorial\": true,\n    \"is_land\": false,\n    \"class\": \"maritime\",\n    \"division_ids\": [\n      \"example:division:country:left\",\n      \"example:division:country:right\"\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_4_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_4_1.ttl"
         }
       ]
     },
@@ -78,6 +119,16 @@
           "ref": "examples/land_county.yaml",
           "code": "{\n  \"id\": \"example:division_boundary:land\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        0,\n        1\n      ],\n      [\n        1,\n        2\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division_boundary\",\n    \"version\": 1,\n    \"subtype\": \"region\",\n    \"class\": \"land\",\n    \"country\": \"XX\",\n    \"region\": \"XX-01\",\n    \"is_land\": true,\n    \"is_territorial\": false,\n    \"division_ids\": [\n      \"example:division:region:left\",\n      \"example:division:region:right\"\n    ]\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_5_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/context.jsonld\",\n  \"id\": \"example:division_boundary:land\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        0,\n        1\n      ],\n      [\n        1,\n        2\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division_boundary\",\n    \"version\": 1,\n    \"subtype\": \"region\",\n    \"class\": \"land\",\n    \"country\": \"XX\",\n    \"region\": \"XX-01\",\n    \"is_land\": true,\n    \"is_territorial\": false,\n    \"division_ids\": [\n      \"example:division:region:left\",\n      \"example:division:region:right\"\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_5_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_5_1.ttl"
         }
       ]
     },
@@ -88,6 +139,16 @@
           "ref": "examples/land_region.yaml",
           "code": "{\n  \"id\": \"example:division_boundary:land\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        0,\n        1\n      ],\n      [\n        1,\n        2\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division_boundary\",\n    \"version\": 1,\n    \"subtype\": \"region\",\n    \"class\": \"land\",\n    \"country\": \"XX\",\n    \"is_land\": true,\n    \"is_territorial\": false,\n    \"division_ids\": [\n      \"example:division:region:left\",\n      \"example:division:region:right\"\n    ]\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_6_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/context.jsonld\",\n  \"id\": \"example:division_boundary:land\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        0,\n        1\n      ],\n      [\n        1,\n        2\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division_boundary\",\n    \"version\": 1,\n    \"subtype\": \"region\",\n    \"class\": \"land\",\n    \"country\": \"XX\",\n    \"is_land\": true,\n    \"is_territorial\": false,\n    \"division_ids\": [\n      \"example:division:region:left\",\n      \"example:division:region:right\"\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_6_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_6_1.ttl"
         }
       ]
     },
@@ -98,6 +159,16 @@
           "ref": "examples/maritime_country.yaml",
           "code": "{\n  \"id\": \"example:division_boundary:maritime\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        0,\n        1\n      ],\n      [\n        1,\n        2\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division_boundary\",\n    \"version\": 1,\n    \"subtype\": \"country\",\n    \"class\": \"maritime\",\n    \"is_territorial\": true,\n    \"is_land\": false,\n    \"division_ids\": [\n      \"example:division:region:left\",\n      \"example:division:region:right\"\n    ]\n  }\n}",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_7_1.json"
+        },
+        {
+          "language": "jsonld",
+          "code": "{\n  \"@context\": \"https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/divisions/division_boundary/context.jsonld\",\n  \"id\": \"example:division_boundary:maritime\",\n  \"type\": \"Feature\",\n  \"geometry\": {\n    \"type\": \"LineString\",\n    \"coordinates\": [\n      [\n        0,\n        1\n      ],\n      [\n        1,\n        2\n      ]\n    ]\n  },\n  \"properties\": {\n    \"theme\": \"divisions\",\n    \"type\": \"division_boundary\",\n    \"version\": 1,\n    \"subtype\": \"country\",\n    \"class\": \"maritime\",\n    \"is_territorial\": true,\n    \"is_land\": false,\n    \"division_ids\": [\n      \"example:division:region:left\",\n      \"example:division:region:right\"\n    ]\n  }\n}",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_7_1.jsonld"
+        },
+        {
+          "language": "ttl",
+          "code": "\n",
+          "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/divisions/division_boundary/example_7_1.ttl"
         }
       ]
     }

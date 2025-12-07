@@ -1,0 +1,35 @@
+@prefix om: <https://w3id.org/ogc/om/> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[] om:hasSpeedLimit [ om:hasMinSpeed [ qudt:hasUnit "mph" ;
+                    rdf:value 40 ] ;
+            om:when "{\"heading\":\"forward\",\"vehicle\":[{\"comparison\":\"less_than\",\"dimension\":\"axle_count\",\"value\":3},{\"comparison\":\"less_than_equal\",\"dimension\":\"weight\",\"unit\":\"kg\",\"value\":600},{\"comparison\":\"less_than\",\"dimension\":\"height\",\"unit\":\"ft\",\"value\":12}]}"^^rdf:JSON ],
+        [ om:hasMaxSpeed [ qudt:hasUnit "km/h" ;
+                    rdf:value 20 ] ],
+        [ om:hasMinSpeed [ qudt:hasUnit "mph" ;
+                    rdf:value 25 ] ;
+            om:when "{\"heading\":\"forward\",\"mode\":[\"car\",\"hgv\"]}"^^rdf:JSON ],
+        [ om:hasMaxSpeed [ qudt:hasUnit "mph" ;
+                    rdf:value 60 ] ;
+            om:isMaxSpeedVariable true ;
+            om:when "{\"heading\":\"forward\",\"using\":[\"at_destination\"]}"^^rdf:JSON ],
+        [ om:hasMinSpeed [ qudt:hasUnit "mph" ;
+                    rdf:value 25 ] ;
+            om:when "{\"during\":\"PH\"}"^^rdf:JSON ],
+        [ om:hasMaxSpeed [ qudt:hasUnit "km/h" ;
+                    rdf:value 30 ] ;
+            om:hasMinSpeed [ qudt:hasUnit "mph" ;
+                    rdf:value 20 ] ;
+            om:isMaxSpeedVariable true ;
+            om:when "{\"during\":\"PH\",\"heading\":\"forward\",\"mode\":[\"car\",\"hgv\"],\"recognized\":[\"as_employee\"],\"using\":[\"at_destination\"],\"vehicle\":[{\"comparison\":\"less_than\",\"dimension\":\"axle_count\",\"value\":3},{\"comparison\":\"less_than_equal\",\"dimension\":\"weight\",\"unit\":\"kg\",\"value\":600},{\"comparison\":\"less_than\",\"dimension\":\"height\",\"unit\":\"ft\",\"value\":12}]}"^^rdf:JSON ],
+        [ om:hasMinSpeed [ qudt:hasUnit "mph" ;
+                    rdf:value 25 ] ;
+            om:when "{\"heading\":\"forward\",\"recognized\":[\"as_employee\"]}"^^rdf:JSON ],
+        [ om:hasMaxSpeed [ qudt:hasUnit "km/h" ;
+                    rdf:value 100 ] ;
+            om:hasMinSpeed [ qudt:hasUnit "km/h" ;
+                    rdf:value 75 ] ;
+            om:when "{\"heading\":\"forward\"}"^^rdf:JSON ] .
+

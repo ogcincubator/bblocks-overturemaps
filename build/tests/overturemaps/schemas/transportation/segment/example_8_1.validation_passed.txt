@@ -1,7 +1,10 @@
 Validation report for ogc.overturemaps.schemas.transportation.segment - Transportation Segment schema
-Generated 2025-11-13T08:09:37.453515+00:00
+Generated 2025-12-07T17:53:30.255000+00:00
 === Files ===
 Using example_8_1.json from examples
+JSON-LD context is present - uplifting
+Output JSON-LD example_8_1.jsonld created
+Output Turtle example_8_1.ttl created
 === End Files ===
 
 === JSON Schema ===

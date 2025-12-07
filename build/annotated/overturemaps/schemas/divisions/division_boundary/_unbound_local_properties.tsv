@@ -1,0 +1,15 @@
+path
+/id
+/geometry
+/properties
+/properties/is_land
+/properties/is_territorial
+/properties/theme
+/properties/type
+/properties/subtype
+/properties/class
+/properties/division_ids
+/properties/country
+/properties/region
+/properties/is_disputed
+/properties/perspectives

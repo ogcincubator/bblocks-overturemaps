@@ -1,5 +1,5 @@
 
-# Global Entity Reference System identifier (Schema)
+# Global Entity Reference System identifier (Datatype)
 
 `ogc.overturemaps.schemas.gers` *v0.1*
 

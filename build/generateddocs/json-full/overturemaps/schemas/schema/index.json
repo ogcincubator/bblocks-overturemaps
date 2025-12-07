@@ -7,7 +7,7 @@
   "abstract": "A JSON Schema for the canonical GeoJSON form of Overture Maps Features.",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
-  "dateOfLastChange": "2025-11-13",
+  "dateOfLastChange": "2025-12-07",
   "register": "ogc-building-blocks-register",
   "version": "0.1",
   "tags": [
@@ -18,22 +18,22 @@
   "highlighted": true,
   "shaclShapes": {},
   "dependsOn": [
-    "ogc.overturemaps.schemas.base.land_cover",
-    "ogc.overturemaps.schemas.transportation.connector",
     "ogc.overturemaps.schemas.places.place",
+    "ogc.overturemaps.schemas.divisions.division_area",
+    "ogc.overturemaps.schemas.buildings.building",
+    "ogc.overturemaps.schemas.addresses.address",
+    "ogc.overturemaps.schemas.transportation.connector",
+    "ogc.overturemaps.schemas.base.bathymetry",
+    "ogc.overturemaps.schemas.divisions.division",
+    "ogc.overturemaps.schemas.base.land",
+    "ogc.overturemaps.schemas.transportation.segment",
+    "ogc.overturemaps.schemas.divisions.division_boundary",
+    "ogc.overturemaps.schemas.buildings.building_part",
     "ogc.overturemaps.schemas.base.infrastructure",
     "ogc.geo.common.data_types.geojson",
-    "ogc.overturemaps.schemas.addresses.address",
-    "ogc.overturemaps.schemas.base.water",
-    "ogc.overturemaps.schemas.base.bathymetry",
-    "ogc.overturemaps.schemas.buildings.building_part",
-    "ogc.overturemaps.schemas.base.land",
-    "ogc.overturemaps.schemas.divisions.division_area",
-    "ogc.overturemaps.schemas.transportation.segment",
-    "ogc.overturemaps.schemas.buildings.building",
+    "ogc.overturemaps.schemas.base.land_cover",
     "ogc.overturemaps.schemas.base.land_use",
-    "ogc.overturemaps.schemas.divisions.division_boundary",
-    "ogc.overturemaps.schemas.divisions.division"
+    "ogc.overturemaps.schemas.base.water"
   ],
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/bblocks-overturemaps/build/annotated/overturemaps/schemas/schema/schema.yaml",
@@ -61,7 +61,7 @@
         },
         {
           "language": "ttl",
-          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<overture:addresses:address:1> a <file:///github/workspace/address>,\n        geojson:Feature ;\n    geojson:geometry [ a geojson:Point ;\n            geojson:coordinates ( -7.120862e+01 4.233737e+01 ) ] .\n\n",
+          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<overture:addresses:address:1> a vcard:hasAddress,\n        geojson:Feature ;\n    geojson:geometry [ a geojson:Point ;\n            geojson:coordinates ( -7.120862e+01 4.233737e+01 ) ] .\n\n",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/schema/example_1_1.ttl"
         }
       ]
@@ -221,7 +221,7 @@
         },
         {
           "language": "ttl",
-          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<overture:buildings:part:1234> a <file:///github/workspace/building_part>,\n        geojson:Feature ;\n    geojson:geometry [ a geojson:Polygon ;\n            geojson:coordinates ( ( ( -7.703687e+01 3.88978e+01 ) ( -7.703687e+01 3.889756e+01 ) ( -7.703626e+01 3.889756e+01 ) ( -7.703626e+01 3.88978e+01 ) ( -7.703687e+01 3.88978e+01 ) ) ) ] .\n\n",
+          "code": "@prefix geojson: <https://purl.org/geojson/vocab#> .\n@prefix om: <https://w3id.org/ogc/om/> .\n@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n<overture:buildings:part:1234> a <file:///github/workspace/building_part>,\n        geojson:Feature ;\n    geojson:geometry [ a geojson:Polygon ;\n            geojson:coordinates ( ( ( -7.703687e+01 3.88978e+01 ) ( -7.703687e+01 3.889756e+01 ) ( -7.703626e+01 3.889756e+01 ) ( -7.703626e+01 3.88978e+01 ) ( -7.703687e+01 3.88978e+01 ) ) ) ] ;\n    om:hasLevel 1 .\n\n",
           "url": "https://ogcincubator.github.io/bblocks-overturemaps/build/tests/overturemaps/schemas/schema/example_9_1.ttl"
         }
       ]
