@@ -1,0 +1,30 @@
+{
+  "@context": {
+    "om": "https://w3id.org/ogc/om/",
+    "qudt": "http://qudt.org/schema/qudt/",
+    "unit": "http://qudt.org/vocab/unit/",
+    "properties": "@nest",
+    "road_surface": {
+      "@id": "osm:hasSurfaceType",
+      "@context": {
+        "@base": "https://w3id.org/ogc/om/surfaces/",
+        "value": "@id"
+      }
+    },
+    "level": "om:hasLevel",
+    "speed_limits": {
+      "@id": "om:hasSpeedLimit",
+      "@context": {
+        "value": "rdf:value",
+        "unit": "qudt:hasUnit",
+        "min_speed": "om:hasMinSpeed",
+        "max_speed": "om:hasMaxSpeed",
+        "is_max_speed_variable": "om:isMaxSpeedVariable",
+        "when": {
+          "@id": "om:when",
+          "@type": "@json"
+        }
+      }
+    }
+  }
+}

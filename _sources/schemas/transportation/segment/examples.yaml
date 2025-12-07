@@ -1,136 +1,180 @@
-examples:
 - snippets:
-  - language: json
-    ref: examples/names-lexically-valid-language-tag.yaml
+    - language: json
+      ref: examples/names-lexically-valid-language-tag.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/timestamp-leap-second.yaml
+    - language: json
+      ref: examples/timestamp-leap-second.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/access-restriction-01-blanket.yaml
+    - language: json
+      ref: examples/access-restriction-01-blanket.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/access-restriction-02-private-with-deliveries.yaml
+    - language: json
+      ref: examples/access-restriction-02-private-with-deliveries.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/access-restriction-03-motor-vehicles-destination-only.yaml
+    - language: json
+      ref: examples/access-restriction-03-motor-vehicles-destination-only.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/access-restriction-04-axle-limit.yaml
+    - language: json
+      ref: examples/access-restriction-04-axle-limit.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/access-restriction.yaml
+    - language: json
+      ref: examples/access-restriction.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/geometric-scoping.yaml
+    - language: json
+      ref: examples/geometric-scoping.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/simple-road.yaml
+    - language: json
+      ref: examples/simple-road.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/speed-limits-01-simple.yaml
+    - language: json
+      ref: examples/speed-limits-01-simple.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/speed-limits-02-directional.yaml
+    - language: json
+      ref: examples/speed-limits-02-directional.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/speed-limits-03-variable-max.yaml
+    - language: json
+      ref: examples/speed-limits-03-variable-max.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/subjective-heading-scoping.yaml
+    - language: json
+      ref: examples/subjective-heading-scoping.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/subjective-status-scoping.yaml
+    - language: json
+      ref: examples/subjective-status-scoping.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/subjective-usage-purpose-scoping.yaml
+    - language: json
+      ref: examples/subjective-usage-purpose-scoping.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/subjective-vehicle-attributes-scoping.yaml
+    - language: json
+      ref: examples/subjective-vehicle-attributes-scoping.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/temporal-scoping.yaml
+    - language: json
+      ref: examples/temporal-scoping.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/turn-restriction-01-exit.yaml
+    - language: json
+      ref: examples/turn-restriction-01-exit.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/turn-restriction-01-source.yaml
+    - language: json
+      ref: examples/turn-restriction-01-source.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/turn-restriction-01-target.yaml
+    - language: json
+      ref: examples/turn-restriction-01-target.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/turn-restriction-02-source.yaml
+    - language: json
+      ref: examples/turn-restriction-02-source.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/turn-restriction-02-target.yaml
+    - language: json
+      ref: examples/turn-restriction-02-target.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/turn-restriction-02-via.yaml
+    - language: json
+      ref: examples/turn-restriction-02-via.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/rail-freight.yaml
+    - language: json
+      ref: examples/rail-freight.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/rail-tunnel.yaml
+    - language: json
+      ref: examples/rail-tunnel.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/rail.yaml
+    - language: json
+      ref: examples/rail.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/road-destinations.yaml
+    - language: json
+      ref: examples/road-destinations.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/road-restrictions-access.yaml
+    - language: json
+      ref: examples/road-restrictions-access.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/road-restrictions-prohibited-transitions.yaml
+    - language: json
+      ref: examples/road-restrictions-prohibited-transitions.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/road-restrictions-speed-limits.yaml
+    - language: json
+      ref: examples/road-restrictions-speed-limits.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/road-abandoned.yaml
+    - language: json
+      ref: examples/road-abandoned.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/road-acesss-restriction.yaml
+    - language: json
+      ref: examples/road-acesss-restriction.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/road-alley.yaml
+    - language: json
+      ref: examples/road-alley.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/road-covered.yaml
+    - language: json
+      ref: examples/road-covered.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/road-indoors.yaml
+    - language: json
+      ref: examples/road-indoors.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/road-level.yaml
+    - language: json
+      ref: examples/road-level.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/road-multiple-connectors.yaml
+    - language: json
+      ref: examples/road-multiple-connectors.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/road-oneway-no-lanes.yaml
+    - language: json
+      ref: examples/road-oneway-no-lanes.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/road-path.yaml
+    - language: json
+      ref: examples/road-path.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/road-with-lr-name.yaml
+    - language: json
+      ref: examples/road-with-lr-name.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/road-with-lr-sources.yaml
+    - language: json
+      ref: examples/road-with-lr-sources.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/road-with-lr-width.yaml
+    - language: json
+      ref: examples/road-with-lr-width.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/road-with-route.yaml
+    - language: json
+      ref: examples/road-with-route.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/road.yaml
+    - language: json
+      ref: examples/road.yaml
+  base-uri: urn:oms:gers/
 - snippets:
-  - language: json
-    ref: examples/sidewalk.yaml
+    - language: json
+      ref: examples/sidewalk.yaml
+  base-uri: urn:oms:gers/

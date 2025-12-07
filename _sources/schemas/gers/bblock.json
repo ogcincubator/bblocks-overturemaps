@@ -1,6 +1,6 @@
 {
   "name": "Global Entity Reference System identifier",
-  "itemClass": "schema",
+  "itemClass": "datatype",
   "abstract": "The Global Entity Reference System (GERS) is a universal framework for structuring and matching map data across systems.",
   "status": "under-development",
   "dateTimeAddition": "2025-11-05T14:07:00+01:00",
